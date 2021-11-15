@@ -49,6 +49,8 @@ public class ImageDownloader implements PBICallable {
 	@Override
 	public void run() throws Exception {
 		File target = new File(new File("blog_post_images"), img.getName());
+		if(target.exists())
+			return;
 		target.getParentFile().mkdirs();
 		FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
 	}

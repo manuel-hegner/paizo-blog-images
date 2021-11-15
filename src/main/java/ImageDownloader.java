@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
@@ -47,6 +49,7 @@ public class ImageDownloader implements PBICallable {
 		return img.getName();
 	}
 
+	private DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
 	@Override
 	public void run() throws Exception {
 		File target = new File(new File("blog_post_images"), img.getName());
@@ -60,27 +63,28 @@ public class ImageDownloader implements PBICallable {
 			String txt = "== Summary ==\n"
 			+ "\n"
 			+ "{{File\n"
-			+ "| year     = 2021\n"
+			+ "| year     = "+post.getDate().getYear()+"\n"
 			+ "| copy     = Paizo Inc.\n"
-			+ "| artist   = Eva Widermann\n"
-			+ "| print    = Guns & Gears\n"
-			+ "| page     = 36\n"
+			+ "| artist   = \n"
+			+ "| print    = \n"
+			+ "| page     = \n"
 			+ "| web      = {{Cite web\n"
-			+ "  | author = [[Michael Sayre]]\n"
-			+ "  | date   = October 25, 2021\n"
-			+ "  | title  = Guns and Gears Authors!\n"
+			+ "  | author = \n"
+			+ "  | date   = "+FORMAT.format(post.getDate())+"\n"
+			+ "  | title  = "+post.getTitle()+"\n"
 			+ "  | page   = Paizo Blog\n"
 			+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
 			+ "  }}   \n"
-			+ "| summary  = Silver and purple mage [[automaton]].\n"
-			+ "| keyword1 = automatons\n"
-			+ "| keyword2 = full-body portraits\n"
+			+ "| summary  = "+img.getAlt()+"\n"
+			+ "| keyword1 = \n"
+			+ "| keyword2 = \n"
 			+ "}}   \n"
 			+ "\n"
 			+ "== Licensing ==\n"
 			+ "\n"
-			+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}\n"
-			+ ""
+			+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
+			
+			Files.writeString(descr.toPath(), txt);
 		}
 	}
 

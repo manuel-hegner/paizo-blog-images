@@ -6,15 +6,14 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.TextStyle;
-import java.time.temporal.TemporalField;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
+import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.RegExUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import lombok.RequiredArgsConstructor;
@@ -46,6 +45,8 @@ public class ArticleDetailsExtractor implements PBICallable {
 		
 		findDate(post);
 		post.setTitle(findTitle(post));
+		post.setTags(findTags(post));
+		post.setImages(findImages(post));
 		
 		post.setHtml(null);
 		
@@ -54,6 +55,39 @@ public class ArticleDetailsExtractor implements PBICallable {
 		Jackson.BLOG_WRITER.writeValue(target, post);
 	}
 	
+	private List<BlogImage> findImages(BlogPost post) {
+		var imgs = post.getHtml()
+			.getElementsByAttributeValueStarting("src", "https://cdn.paizo.com/")
+			.stream()
+			.map(e->e.attr("src"))
+			.filter(StringUtils::isNotBlank)
+			.map(l-> {
+				BlogImage img = new BlogImage();
+				img.setFullPath(l);
+				img.setName(l.substring(l.lastIndexOf("/")+1));
+				return img;
+			})
+			.collect(Collectors.toList());
+		if(imgs.isEmpty())
+			return null;
+		return imgs;
+	}
+
+	private String[] findTags(BlogPost post) {
+		String[] tags = post.getHtml()
+			.getElementsByAttributeValueStarting("href", "https://paizo.com/community/blog/tags/")
+			.stream()
+			.map(e->e.attr("href"))
+			.filter(StringUtils::isNotBlank)
+			.map(l->StringUtils.removeStart(l, "https://paizo.com/community/blog/tags/"))
+			.distinct()
+			.sorted()
+			.toArray(String[]::new);
+		if(tags.length == 0)
+			return null;
+		return tags;
+	}
+
 	private String findTitle(BlogPost post) {
 		var first = post.getHtml().getElementsByAttributeValue("itemprop", "headline").first();
 		if (first != null)

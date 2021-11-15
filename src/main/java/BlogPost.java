@@ -1,4 +1,5 @@
 import java.time.ZonedDateTime;
+import java.util.List;
 
 import org.jsoup.nodes.Element;
 
@@ -11,5 +12,7 @@ public class BlogPost {
 	private String id;
 	private String title;
 	private ZonedDateTime date;
+	private String[] tags;
+	private List<BlogImage> images;
 	private Element html;
 }

@@ -11,6 +11,7 @@ public class BlogPost {
 
 	private String id;
 	private String title;
+	private String author;
 	private ZonedDateTime date;
 	private String[] tags;
 	private List<BlogImage> images;

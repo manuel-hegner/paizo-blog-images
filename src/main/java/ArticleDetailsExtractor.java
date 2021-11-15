@@ -50,6 +50,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setTitle(findTitle(post));
 		post.setTags(findTags(post));
 		post.setImages(findImages(post));
+		post.setAuthor(findAuthor(post));
 		
 		post.setHtml(null);
 		
@@ -58,6 +59,13 @@ public class ArticleDetailsExtractor implements PBICallable {
 		Jackson.BLOG_WRITER.writeValue(target, post);
 	}
 	
+	private String findAuthor(BlogPost post) {
+        var authEl = post.getHtml().getElementsByAttributeValueContaining("style", "margin-left: 20px; font-weight: bold;").first();
+        if(authEl == null)
+        	return null;
+        return authEl.ownText();
+	}
+
 	private List<BlogImage> findImages(BlogPost post) {
 		var imgs = post.getHtml()
 			.getElementsByAttributeValueStarting("src", "https://cdn.paizo.com/")

@@ -67,11 +67,10 @@ public class ArticleExtractor implements Callable<Void> {
 		
 		BlogPost blogPost = new BlogPost();
 		blogPost.setId(blog);
-		blogPost.setHtml(post.toString());
+		blogPost.setHtml(post);
 		
 		target.getParentFile().mkdirs();
-		ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-		mapper.writeValue(target, blogPost);
+		Jackson.MAPPER.writeValue(target, blogPost);
 		return null;
 	}
 }

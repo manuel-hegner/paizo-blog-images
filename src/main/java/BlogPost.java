@@ -1,3 +1,5 @@
+import org.jsoup.nodes.Element;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -5,5 +7,5 @@ import lombok.Setter;
 public class BlogPost {
 
 	private String id;
-	private String html;
+	private Element html;
 }

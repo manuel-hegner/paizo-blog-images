@@ -15,6 +15,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 
 import lombok.RequiredArgsConstructor;
 
@@ -59,17 +60,20 @@ public class ArticleDetailsExtractor implements PBICallable {
 		var imgs = post.getHtml()
 			.getElementsByAttributeValueStarting("src", "https://cdn.paizo.com/")
 			.stream()
-			.map(e->e.attr("src"))
-			.filter(StringUtils::isNotBlank)
-			.map(l-> {
+			.map(e->Pair.of(e.attr("src"), e.attr("alt")))
+			.filter(p->StringUtils.isNotBlank(p.getKey()))
+			.map(p-> {
+				String l = p.getKey();
 				if(l.contains("?"))
 					l=l.substring(0,l.indexOf("?"));
-				return l;
+				return Pair.of(l, p.getValue());
 			})
-			.map(l-> {
+			.map(p-> {
 				BlogImage img = new BlogImage();
+				String l = p.getKey();
 				img.setFullPath(l);
 				img.setName(l.substring(l.lastIndexOf("/")+1));
+				img.setAlt(StringUtils.stripToNull(p.getValue().replaceAll("\s+", " ")));
 				return img;
 			})
 			.collect(Collectors.toList());

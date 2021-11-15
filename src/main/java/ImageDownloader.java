@@ -24,7 +24,7 @@ public class ImageDownloader implements PBICallable {
 			for(BlogImage img : post.getImages()) {
 				String old = IMAGES.put(img.getName(), img.getFullPath());
 				if(old == null) {
-					pool.submit(new ImageDownloader(img));
+					pool.submit(new ImageDownloader(post, img));
 				}
 				else if(!old.equals(img.getFullPath())) {
 					System.err.println("same name "+img.getName()+" for:\n\t"+img.getFullPath()+"\n\t"+old);
@@ -39,6 +39,7 @@ public class ImageDownloader implements PBICallable {
 		}
 	}
 	
+	private final BlogPost post;
 	private final BlogImage img;
 
 	@Override
@@ -49,10 +50,38 @@ public class ImageDownloader implements PBICallable {
 	@Override
 	public void run() throws Exception {
 		File target = new File(new File("blog_post_images"), img.getName());
-		if(target.exists())
-			return;
-		target.getParentFile().mkdirs();
-		FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
+		if(!target.exists()) {
+			target.getParentFile().mkdirs();
+			FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
+		}
+		
+		File descr = new File(target.getParentFile(), target.getName()+".txt");
+		if(!descr.exists()) {
+			String txt = "== Summary ==\n"
+			+ "\n"
+			+ "{{File\n"
+			+ "| year     = 2021\n"
+			+ "| copy     = Paizo Inc.\n"
+			+ "| artist   = Eva Widermann\n"
+			+ "| print    = Guns & Gears\n"
+			+ "| page     = 36\n"
+			+ "| web      = {{Cite web\n"
+			+ "  | author = [[Michael Sayre]]\n"
+			+ "  | date   = October 25, 2021\n"
+			+ "  | title  = Guns and Gears Authors!\n"
+			+ "  | page   = Paizo Blog\n"
+			+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
+			+ "  }}   \n"
+			+ "| summary  = Silver and purple mage [[automaton]].\n"
+			+ "| keyword1 = automatons\n"
+			+ "| keyword2 = full-body portraits\n"
+			+ "}}   \n"
+			+ "\n"
+			+ "== Licensing ==\n"
+			+ "\n"
+			+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}\n"
+			+ ""
+		}
 	}
 
 }

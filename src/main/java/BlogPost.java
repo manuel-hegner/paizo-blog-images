@@ -9,6 +9,7 @@ import lombok.Setter;
 public class BlogPost {
 
 	private String id;
+	private String title;
 	private ZonedDateTime date;
 	private Element html;
 }

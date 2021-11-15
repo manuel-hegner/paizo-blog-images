@@ -45,7 +45,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		BlogPost post = Jackson.BLOG_READER.readValue(file);
 		
 		findDate(post);
-		findTitle(post);
+		post.setTitle(findTitle(post));
 		
 		post.setHtml(null);
 		
@@ -54,9 +54,14 @@ public class ArticleDetailsExtractor implements PBICallable {
 		Jackson.BLOG_WRITER.writeValue(target, post);
 	}
 	
-	private void findTitle(BlogPost post) {
-		// TODO Auto-generated method stub
-		
+	private String findTitle(BlogPost post) {
+		var first = post.getHtml().getElementsByAttributeValue("itemprop", "headline").first();
+		if (first != null)
+			return first.text();
+		first = post.getHtml().getElementsByTag("h1").first();
+		if (first != null)
+			return first.text();
+		return null;
 	}
 
 	private static final ZoneId PST = ZoneId.of("PST", ZoneId.SHORT_IDS);

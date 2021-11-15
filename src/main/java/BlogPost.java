@@ -1,3 +1,5 @@
+import java.time.ZonedDateTime;
+
 import org.jsoup.nodes.Element;
 
 import lombok.Getter;
@@ -7,5 +9,6 @@ import lombok.Setter;
 public class BlogPost {
 
 	private String id;
+	private ZonedDateTime date;
 	private Element html;
 }

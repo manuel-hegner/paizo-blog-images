@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.deser.std.FromStringDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -31,7 +32,9 @@ public class Jackson {
 		
 		return new ObjectMapper(yaml)
 			.addMixIn(Element.class, ElementMixIn.class)
+			.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
 			.setSerializationInclusion(Include.NON_NULL)
+			.findAndRegisterModules()
 			.registerModule(new SimpleModule()
 				.addDeserializer(Element.class, new FromStringDeserializer<>(Element.class) {
 					@Override

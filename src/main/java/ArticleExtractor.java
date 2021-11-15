@@ -1,28 +1,23 @@
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.jackson.Jacksonized;
 
+@Getter
 @RequiredArgsConstructor
-public class ArticleExtractor implements Callable<Void> {
+public class ArticleExtractor implements PBICallable {
 	
-	private static final Pattern LINK = Pattern.compile("^https://paizo\\.com/community/blog/([0-9a-z]+)(\\?.*)?");
+	private static final Pattern LINK = Pattern.compile("^https://paizo\\.com/community/blog/([0-9a-z]{5,})(\\?.*)?");
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
@@ -51,26 +46,25 @@ public class ArticleExtractor implements Callable<Void> {
 		}
 	}
 	
-	private final String blog;
+	private final String blogId;
 
 	@Override
-	public Void call() throws Exception {
-		File target = new File("blog_posts/"+blog+".yaml");
+	public void run() throws Exception {
+		File target = new File("blog_posts/"+blogId+".yaml");
 		if(target.exists())
-			return null;
+			return;
 		
-		String url = "https://paizo.com/community/blog/"+blog;
+		String url = "https://paizo.com/community/blog/"+blogId;
 		var doc = Jsoup.connect(url).maxBodySize(0).get();
 		var post = doc.getElementsByAttributeValue("itemtype", "http://schema.org/BlogPosting").get(0);
 		post.getElementsByAttributeValue("itemprop", "comment").remove();
 		
 		
 		BlogPost blogPost = new BlogPost();
-		blogPost.setId(blog);
+		blogPost.setId(blogId);
 		blogPost.setHtml(post);
 		
 		target.getParentFile().mkdirs();
 		Jackson.BLOG_WRITER.writeValue(target, blogPost);
-		return null;
 	}
 }

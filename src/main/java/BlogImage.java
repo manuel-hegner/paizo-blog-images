@@ -6,5 +6,6 @@ public class BlogImage {
 
 	private String name;
 	private String fullPath;
+	private String artist;
 	private String alt;
 }

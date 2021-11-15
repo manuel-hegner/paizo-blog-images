@@ -10,12 +10,14 @@ import java.time.format.TextStyle;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
+import org.jsoup.nodes.Element;
 
 import lombok.RequiredArgsConstructor;
 
@@ -60,26 +62,40 @@ public class ArticleDetailsExtractor implements PBICallable {
 		var imgs = post.getHtml()
 			.getElementsByAttributeValueStarting("src", "https://cdn.paizo.com/")
 			.stream()
-			.map(e->Pair.of(e.attr("src"), e.attr("alt")))
-			.filter(p->StringUtils.isNotBlank(p.getKey()))
-			.map(p-> {
-				String l = p.getKey();
-				if(l.contains("?"))
-					l=l.substring(0,l.indexOf("?"));
-				return Pair.of(l, p.getValue());
-			})
-			.map(p-> {
-				BlogImage img = new BlogImage();
-				String l = p.getKey();
-				img.setFullPath(l);
-				img.setName(l.substring(l.lastIndexOf("/")+1));
-				img.setAlt(StringUtils.stripToNull(p.getValue().replaceAll("\s+", " ")));
-				return img;
-			})
+			.map(this::toImage)
+			.filter(Objects::nonNull)
 			.collect(Collectors.toList());
 		if(imgs.isEmpty())
 			return null;
 		return imgs;
+	}
+	
+	private BlogImage toImage(Element e) {
+		BlogImage img = new BlogImage();
+		String src = e.attr("src");
+		String alt = e.attr("alt");
+		if(StringUtils.isBlank(src))
+			return null;
+		if(src.contains("?"))
+			src=src.substring(0,src.indexOf("?"));
+		
+		var sib = e.parent().nextElementSibling();
+		if(sib != null) {
+			String nextText = sib.text();
+			if(nextText.contains(" by ")) {
+				String by = nextText.substring(nextText.indexOf(" by ")+4);
+				by = StringUtils.removeEnd(by, ".");
+				if(by.contains(" from "))
+					by = by.substring(0, by.indexOf(" from "));
+				img.setArtist(by);
+			}
+		}
+		
+		
+		img.setFullPath(src);
+		img.setName(src.substring(src.lastIndexOf("/")+1));
+		img.setAlt(StringUtils.stripToNull(alt.replaceAll("\s+", " ")));
+		return img;
 	}
 
 	private String[] findTags(BlogPost post) {

@@ -62,6 +62,11 @@ public class ArticleDetailsExtractor implements PBICallable {
 			.map(e->e.attr("src"))
 			.filter(StringUtils::isNotBlank)
 			.map(l-> {
+				if(l.contains("?"))
+					l=l.substring(0,l.indexOf("?"));
+				return l;
+			})
+			.map(l-> {
 				BlogImage img = new BlogImage();
 				img.setFullPath(l);
 				img.setName(l.substring(l.lastIndexOf("/")+1));

@@ -70,7 +70,7 @@ public class ArticleExtractor implements Callable<Void> {
 		blogPost.setHtml(post);
 		
 		target.getParentFile().mkdirs();
-		Jackson.MAPPER.writeValue(target, blogPost);
+		Jackson.BLOG_WRITER.writeValue(target, blogPost);
 		return null;
 	}
 }

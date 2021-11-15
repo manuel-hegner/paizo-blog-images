@@ -1,16 +1,27 @@
+import java.io.IOException;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.json.JsonWriteFeature;
+import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.deser.std.FromStringDeserializer;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
 
 public class Jackson {
 
 	public static final ObjectMapper MAPPER = create();
+	public static final ObjectReader BLOG_READER = MAPPER.readerFor(BlogPost.class);
+	public static final ObjectWriter BLOG_WRITER = MAPPER.writerFor(BlogPost.class);
 
+	@SuppressWarnings("serial")
 	private static ObjectMapper create() {
 		YAMLFactory yaml = new YAMLFactory()
 			.enable(YAMLGenerator.Feature.MINIMIZE_QUOTES)
@@ -19,17 +30,20 @@ public class Jackson {
 		
 		
 		return new ObjectMapper(yaml)
-			.addMixIn(Element.class, ElementMixIn.class);
+			.addMixIn(Element.class, ElementMixIn.class)
+			.setSerializationInclusion(Include.NON_NULL)
+			.registerModule(new SimpleModule()
+				.addDeserializer(Element.class, new FromStringDeserializer<>(Element.class) {
+					@Override
+					protected Element _deserialize(String html, DeserializationContext ctxt) throws IOException {
+						return Jsoup.parseBodyFragment(html).body().child(0);
+					}
+				}));
 	}
 	
 	public static interface ElementMixIn {
 		@Override
 		@JsonValue
 		String toString();
-		
-		@JsonCreator
-		public static Element parse(String html) {
-			return Jsoup.parse(html);
-		}
 	}
 }

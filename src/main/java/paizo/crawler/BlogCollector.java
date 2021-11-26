@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import lombok.RequiredArgsConstructor;
 
@@ -56,25 +57,14 @@ public class BlogCollector implements Callable<Void> {
 			if(resp.statusCode()<200 || resp.statusCode()>299)
 				throw new IllegalStateException(resp.statusCode()+"\t"+resp.statusMessage());
 			
-			var raw = resp.body();
+			var doc = resp.parse();
 			
-			var m = OLDER.matcher(raw);
-			if(m.find()) {
-				String link = m.group(1);
-				if(link.startsWith("https://paizo.com/community/blog/")) {
-					if(maxDepth>0) {
-						COUNTER.incrementAndGet();
-						POOL.submit(new BlogCollector(changes, maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
-					}
-				}
-				else {
-					System.err.println("Unknown "+url);
-				}
-			}
+			findLinks(doc.toString());
+			clean(doc);
 			
 			File target = new File("blog/"+name.replaceAll("[^a-zA-Z0-9]", "_")+".html");
 			target.getParentFile().mkdirs();
-			Files.writeString(target.toPath(), raw);
+			Files.writeString(target.toPath(), doc.toString());
 			System.out.println("Written "+target);
 			changes.add(target);
 			return null;
@@ -84,6 +74,27 @@ public class BlogCollector implements Callable<Void> {
 			throw e;
 		} finally {
 			COUNTER.decrementAndGet();
+		}
+	}
+
+	private void clean(Document doc) {
+		//doc.getElementsByTag("script").remove();
+		//doc.getElementsByClass("sub-menu").remove();
+	}
+
+	private void findLinks(String raw) {
+		var m = OLDER.matcher(raw);
+		if(m.find()) {
+			String link = m.group(1);
+			if(link.startsWith("https://paizo.com/community/blog/")) {
+				if(maxDepth>0) {
+					COUNTER.incrementAndGet();
+					POOL.submit(new BlogCollector(changes, maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
+				}
+			}
+			else {
+				System.err.println("Unknown "+url);
+			}
 		}
 	}
 }

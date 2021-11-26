@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class BlogCollector implements Callable<Void> {
 	
-	private static ExecutorService POOL = Executors.newWorkStealingPool();
+	private static MyPool POOL = new MyPool("Blog Collector");
 	private static AtomicInteger COUNTER = new AtomicInteger(0);
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -34,7 +34,6 @@ public class BlogCollector implements Callable<Void> {
 			Thread.sleep(100);
 		}
 		POOL.shutdown();
-		POOL.awaitTermination(1, TimeUnit.HOURS);
 		return changes.toArray(File[]::new);
 	}
 
@@ -48,8 +47,6 @@ public class BlogCollector implements Callable<Void> {
 	@Override
 	public Void call() throws Exception {
 		try {
-			if(maxDepth<0)
-				return null;
 			
 			var resp = Jsoup.connect(url)
 				.timeout((int)TimeUnit.MINUTES.toMillis(5))
@@ -65,8 +62,10 @@ public class BlogCollector implements Callable<Void> {
 			if(m.find()) {
 				String link = m.group(1);
 				if(link.startsWith("https://paizo.com/community/blog/")) {
-					COUNTER.incrementAndGet();
-					POOL.submit(new BlogCollector(changes, maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
+					if(maxDepth>0) {
+						COUNTER.incrementAndGet();
+						POOL.submit(new BlogCollector(changes, maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
+					}
 				}
 				else {
 					System.err.println("Unknown "+url);

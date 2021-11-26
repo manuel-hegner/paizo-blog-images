@@ -25,7 +25,7 @@ public class ArticleExtractor implements PBICallable {
 	}
 	
 	public static void run(File[] files) throws IOException, InterruptedException {
-		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
+		var pool = new MyPool("Article Extractor");
 		var links = Collections.synchronizedSet(new HashSet<String>());
 		for(var f:files) {
 			System.out.println("Blog extractor parsing "+f);
@@ -46,10 +46,6 @@ public class ArticleExtractor implements PBICallable {
 		
 		System.out.println("Waiting for queue");
 		pool.shutdown();
-		while(!pool.isTerminated()) {
-			Thread.sleep(1000);
-			System.out.println(pool.getQueuedSubmissionCount()+" remaining");
-		}
 	}
 	
 	private final String blogId;

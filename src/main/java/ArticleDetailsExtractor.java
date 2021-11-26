@@ -16,14 +16,14 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.jsoup.nodes.Element;
 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class ArticleDetailsExtractor implements PBICallable {
-	public static void main(String[] args) throws InterruptedException {
+	
+	public static void main(String... args) throws InterruptedException {
 		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
 		for(var f:new File("blog_posts").listFiles()) {
 			pool.submit(new ArticleDetailsExtractor(f));

@@ -19,7 +19,7 @@ public class ArticleExtractor implements PBICallable {
 	
 	private static final Pattern LINK = Pattern.compile("^https://paizo\\.com/community/blog/([0-9a-z]{5,})(\\?.*)?");
 	
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String... args) throws IOException, InterruptedException {
 		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
 		var links = Collections.synchronizedSet(new HashSet<String>());
 		for(var f:new File("blog").listFiles()) {

@@ -1,10 +1,4 @@
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -13,8 +7,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 
@@ -27,15 +19,20 @@ public class BlogCollector implements Callable<Void> {
 	private static AtomicInteger COUNTER = new AtomicInteger(0);
 	
 	public static void main(String[] args) throws InterruptedException {
+		start(Integer.MAX_VALUE);
+	}
+	
+	public static void start(int maxDepth) throws InterruptedException {
 		COUNTER.incrementAndGet();
-		POOL.submit(new BlogCollector("https://paizo.com/community/blog", "current"));
+		POOL.submit(new BlogCollector(maxDepth, "https://paizo.com/community/blog", "current"));
 		while(COUNTER.get()>0) {
 			Thread.sleep(100);
 		}
 		POOL.shutdown();
 		POOL.awaitTermination(1, TimeUnit.HOURS);
 	}
-	
+
+	private final int maxDepth;
 	private final String url;
 	private final String name;
 	
@@ -43,6 +40,8 @@ public class BlogCollector implements Callable<Void> {
 	
 	@Override
 	public Void call() throws Exception {
+		if(maxDepth<0)
+			return null;
 		try {
 			var resp = Jsoup.connect(url)
 				.timeout((int)TimeUnit.MINUTES.toMillis(5))
@@ -59,7 +58,7 @@ public class BlogCollector implements Callable<Void> {
 				String link = m.group(1);
 				if(link.startsWith("https://paizo.com/community/blog/")) {
 					COUNTER.incrementAndGet();
-					POOL.submit(new BlogCollector(link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
+					POOL.submit(new BlogCollector(maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
 				}
 				else {
 					System.err.println("Unknown "+url);

@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 public class ImageDownloader implements PBICallable {
 	
 	private static final Map<String, String> IMAGES = new HashMap<>();
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String... args) throws InterruptedException, IOException {
 		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
 		for(var f:new File("blog_posts_details").listFiles()) {
 			BlogPost post = Jackson.BLOG_READER.readValue(f);

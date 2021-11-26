@@ -58,6 +58,7 @@ public class ArticleExtractor implements PBICallable {
 		
 		String url = "https://paizo.com/community/blog/"+blogId;
 		var doc = Jsoup.connect(url).maxBodySize(0).get();
+		HTMLCleaner.clean(doc);
 		var post = doc.getElementsByAttributeValue("itemtype", "http://schema.org/BlogPosting").get(0);
 		post.getElementsByAttributeValue("itemprop", "comment").remove();
 		

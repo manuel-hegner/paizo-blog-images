@@ -60,7 +60,7 @@ public class BlogCollector implements Callable<Void> {
 			var doc = resp.parse();
 			
 			findLinks(doc.toString());
-			clean(doc);
+			HTMLCleaner.clean(doc);
 			
 			File target = new File("blog/"+name.replaceAll("[^a-zA-Z0-9]", "_")+".html");
 			target.getParentFile().mkdirs();
@@ -75,11 +75,6 @@ public class BlogCollector implements Callable<Void> {
 		} finally {
 			COUNTER.decrementAndGet();
 		}
-	}
-
-	private void clean(Document doc) {
-		//doc.getElementsByTag("script").remove();
-		//doc.getElementsByClass("sub-menu").remove();
 	}
 
 	private void findLinks(String raw) {

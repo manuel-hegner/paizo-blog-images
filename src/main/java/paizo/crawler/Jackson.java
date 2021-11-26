@@ -1,3 +1,4 @@
+package paizo.crawler;
 import java.io.IOException;
 
 import org.jsoup.Jsoup;

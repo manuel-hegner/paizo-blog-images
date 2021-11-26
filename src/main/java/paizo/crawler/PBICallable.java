@@ -1,3 +1,4 @@
+package paizo.crawler;
 import java.util.concurrent.Callable;
 
 public interface PBICallable extends Callable<Void> {

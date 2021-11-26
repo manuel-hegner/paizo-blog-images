@@ -1,3 +1,4 @@
+package paizo.crawler;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,3 +1,4 @@
+package paizo.crawler;
 import java.io.File;
 import java.time.DayOfWeek;
 import java.time.LocalDate;

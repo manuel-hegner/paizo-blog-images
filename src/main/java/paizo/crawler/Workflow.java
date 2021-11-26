@@ -1,3 +1,4 @@
+package paizo.crawler;
 
 public class Workflow {
 	public static void main(String[] args) throws Exception {

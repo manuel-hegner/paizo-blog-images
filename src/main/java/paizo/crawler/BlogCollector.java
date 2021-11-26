@@ -1,3 +1,4 @@
+package paizo.crawler;
 import java.io.File;
 import java.nio.file.Files;
 import java.util.concurrent.Callable;

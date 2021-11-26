@@ -21,9 +21,14 @@ public class ArticleExtractor implements PBICallable {
 	private static final Pattern LINK = Pattern.compile("^https://paizo\\.com/community/blog/([0-9a-z]{5,})(\\?.*)?");
 	
 	public static void main(String... args) throws IOException, InterruptedException {
+		run(new File("blog").listFiles());
+	}
+	
+	public static void run(File[] files) throws IOException, InterruptedException {
 		var pool = (ForkJoinPool)Executors.newWorkStealingPool();
 		var links = Collections.synchronizedSet(new HashSet<String>());
-		for(var f:new File("blog").listFiles()) {
+		for(var f:files) {
+			System.out.println("Blog extractor parsing "+f);
 			var doc = Jsoup.parse(f, StandardCharsets.UTF_8.name());
 			doc.getElementsByAttributeValueMatching("href", LINK)
 				.stream()

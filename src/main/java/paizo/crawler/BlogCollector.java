@@ -1,6 +1,9 @@
 package paizo.crawler;
 import java.io.File;
 import java.nio.file.Files;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,16 +26,19 @@ public class BlogCollector implements Callable<Void> {
 		start(Integer.MAX_VALUE);
 	}
 	
-	public static void start(int maxDepth) throws InterruptedException {
+	public static File[] start(int maxDepth) throws InterruptedException {
+		var changes = Collections.synchronizedSet(new HashSet<File>());
 		COUNTER.incrementAndGet();
-		POOL.submit(new BlogCollector(maxDepth, "https://paizo.com/community/blog", "current"));
+		POOL.submit(new BlogCollector(changes, maxDepth, "https://paizo.com/community/blog", "current"));
 		while(COUNTER.get()>0) {
 			Thread.sleep(100);
 		}
 		POOL.shutdown();
 		POOL.awaitTermination(1, TimeUnit.HOURS);
+		return changes.toArray(File[]::new);
 	}
 
+	private final Set<File> changes;
 	private final int maxDepth;
 	private final String url;
 	private final String name;
@@ -41,9 +47,10 @@ public class BlogCollector implements Callable<Void> {
 	
 	@Override
 	public Void call() throws Exception {
-		if(maxDepth<0)
-			return null;
 		try {
+			if(maxDepth<0)
+				return null;
+			
 			var resp = Jsoup.connect(url)
 				.timeout((int)TimeUnit.MINUTES.toMillis(5))
 				.maxBodySize(0)
@@ -59,7 +66,7 @@ public class BlogCollector implements Callable<Void> {
 				String link = m.group(1);
 				if(link.startsWith("https://paizo.com/community/blog/")) {
 					COUNTER.incrementAndGet();
-					POOL.submit(new BlogCollector(maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
+					POOL.submit(new BlogCollector(changes, maxDepth-1, link, StringUtils.removeStart(link, "https://paizo.com/community/blog/")));
 				}
 				else {
 					System.err.println("Unknown "+url);
@@ -70,6 +77,7 @@ public class BlogCollector implements Callable<Void> {
 			target.getParentFile().mkdirs();
 			Files.writeString(target.toPath(), raw);
 			System.out.println("Written "+target);
+			changes.add(target);
 			return null;
 		} catch (Exception e) {
 			System.err.println("Failed "+url);

@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.deser.std.FromStringDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class Jackson {
 
@@ -35,6 +36,7 @@ public class Jackson {
 			.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
 			.setSerializationInclusion(Include.NON_NULL)
 			.findAndRegisterModules()
+			.registerModule(new JavaTimeModule())
 			.registerModule(new SimpleModule()
 				.addDeserializer(Element.class, new FromStringDeserializer<>(Element.class) {
 					@Override

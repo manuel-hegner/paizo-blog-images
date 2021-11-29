@@ -22,7 +22,7 @@ public class PageCreator {
 		List<HashedImage> hashes = List.of(Jackson.MAPPER
 				.readValue(new File("wiki/hashes.yaml"), HashedImage[].class));
 		RockerRuntime.getInstance().setReloading(true);
-		File pages = new File("pages/");
+		File pages = new File("docs/");
 		pages.mkdir();
 		
 	

@@ -7,8 +7,6 @@ import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ForkJoinPool;
 
 import org.apache.commons.io.FileUtils;
 
@@ -30,7 +28,6 @@ public class ImageDownloader implements PBICallable {
 				if(old == null) {
 					File target = Path.of(
 							"blog_post_images",
-							post.getDate()==null?"unknown-date":DIR_FORMAT.format(post.getDate()),
 							img.getName().trim()
 					).toFile();
 					
@@ -57,42 +54,46 @@ public class ImageDownloader implements PBICallable {
 	}
 
 	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
-	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
 	@Override
 	public void run() throws Exception {
 		
 		if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
+			
 		}
 		
 		File descr = new File(target.getParentFile(), target.getName()+".txt");
 		if(!descr.exists()) {
-			String txt = "== Summary ==\n"
-			+ "\n"
-			+ "{{File\n"
-			+ "| year     = "+(post.getDate()==null?"":post.getDate().getYear())+"\n"
-			+ "| copy     = Paizo Inc.\n"
-			+ "| artist   = \n"
-			+ "| print    = \n"
-			+ "| page     = \n"
-			+ "| web      = {{Cite web\n"
-			+ "  | author = \n"
-			+ "  | date   = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
-			+ "  | title  = "+post.getTitle()+"\n"
-			+ "  | page   = Paizo Blog\n"
-			+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
-			+ "  }}   \n"
-			+ "| summary  = "+img.getAlt()+"\n"
-			+ "| keyword1 = \n"
-			+ "| keyword2 = \n"
-			+ "}}   \n"
-			+ "\n"
-			+ "== Licensing ==\n"
-			+ "\n"
-			+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
+			String txt = wikitext(post, img);
 			
 			Files.writeString(descr.toPath(), txt);
 		}
+	}
+	
+	public static String wikitext(BlogPost post, BlogImage img) {
+		return "== Summary ==\n"
+				+ "\n"
+				+ "{{File\n"
+				+ "| year     = "+(post.getDate()==null?"":post.getDate().getYear())+"\n"
+				+ "| copy     = Paizo Inc.\n"
+				+ "| artist   = \n"
+				+ "| print    = \n"
+				+ "| page     = \n"
+				+ "| web      = {{Cite web\n"
+				+ "  | author = \n"
+				+ "  | date   = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
+				+ "  | title  = "+post.getTitle()+"\n"
+				+ "  | page   = Paizo Blog\n"
+				+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
+				+ "  }}   \n"
+				+ "| summary  = "+img.getAlt()+"\n"
+				+ "| keyword1 = \n"
+				+ "| keyword2 = \n"
+				+ "}}   \n"
+				+ "\n"
+				+ "== Licensing ==\n"
+				+ "\n"
+				+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
 	}
 }

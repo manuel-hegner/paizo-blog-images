@@ -6,5 +6,6 @@ public class Workflow {
 		ArticleExtractor.run(result1);
 		ArticleDetailsExtractor.main();
 		ImageDownloader.main();
+		PageCreator.main();
 	}
 }

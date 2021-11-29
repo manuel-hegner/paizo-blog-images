@@ -23,6 +23,9 @@ public class MyPool {
 			public T call() throws Exception {
 				try {
 					return job.call();
+				} catch(Exception e) {
+					e.printStackTrace();
+					return null;
 				} finally {
 					done.incrementAndGet();
 				}
@@ -32,7 +35,7 @@ public class MyPool {
 
 	public void shutdown() throws InterruptedException {
 		pool.shutdown();
-		System.out.println(name+": submitted "+submitted.get()+" taks");
+		System.out.println(name+": submitted "+submitted.get()+" tasks");
 		while(!pool.isTerminated()) {
 			Thread.sleep(1000);
 			System.out.println(name+": \tdone "+done.get()+"/"+submitted.get());

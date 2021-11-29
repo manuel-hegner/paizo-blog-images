@@ -9,9 +9,7 @@ import java.util.concurrent.Callable;
 import javax.imageio.ImageIO;
 
 import com.google.common.collect.Lists;
-
-import dev.brachtendorf.jimagehash.hashAlgorithms.HashingAlgorithm;
-import dev.brachtendorf.jimagehash.hashAlgorithms.PerceptiveHash;
+ 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -48,7 +46,7 @@ public class BlogHasher implements Callable<Void> {
 				if(f.exists()) {
 					var raw = ImageIO.read(f);
 					if(raw != null) {
-						img.setHash(hash(raw));
+						img.setHash(WikiHasher.hash(raw));
 						changed = true;
 					}
 				}
@@ -76,10 +74,5 @@ public class BlogHasher implements Callable<Void> {
 		}
 		
 		return null;
-	}
-	
-	public static String hash(BufferedImage img) {
-		HashingAlgorithm hasher = new PerceptiveHash(64);
-		return Base64.getEncoder().encodeToString(hasher.hash(img).toByteArray());
 	}
 }

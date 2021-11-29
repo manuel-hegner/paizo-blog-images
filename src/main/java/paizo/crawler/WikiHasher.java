@@ -1,15 +1,18 @@
 package paizo.crawler;
 
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Base64;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Callable;
 
 import javax.imageio.ImageIO;
 
+import org.apache.commons.io.IOUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.internal.StringUtil;
 
@@ -22,14 +25,18 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
-		/*BufferedImage wiki = ImageIO.read(new File("180px-Bosk.jpg"));
-		BufferedImage paizo = ImageIO.read(new File("blog_post_images/20180718-Bosk.jpg"));
+		/*BufferedImage wiki = ImageIO.read(new File("Crimson_throne.jpg"));
+		BufferedImage paizo = ImageIO.read(new File("blog_post_images/PZO9000-2-CrimsonThrone.jpg"));
 		
-		byte[] hW = hash(wiki);
-		byte[] hP = hash(paizo);
+		String hW = hash(wiki);
+		String hP = hash(paizo);
 		
-		System.out.println(Base64.getEncoder().encodeToString(hW));
-		System.out.println(Base64.getEncoder().encodeToString(hP));
+		System.out.println(hW);
+		System.out.println(hP);
+		
+		byte[] bytes = IOUtils.toByteArray(new URL("https://pathfinderwiki.com/mediawiki/images/thumb/3/36/Crimson_throne.jpg/180px-Crimson_throne.jpg"));
+		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
+		System.out.println(hash(img));
 		
 		System.exit(0);*/
 		hash(
@@ -62,11 +69,14 @@ public class WikiHasher implements Callable<Void> {
 			var doc = Jsoup.connect(url).maxBodySize(0).get();
 			for(var e:doc.getElementsByClass("image")) {
 				String name = e.attr("href").substring(6);
-				pool.submit(new WikiHasher(known, name, StringUtil.resolve(doc.baseUri(), e.getElementsByTag("img").attr("src"))));
+				String imgUrl = StringUtil.resolve(doc.baseUri(), e.getElementsByTag("img").attr("src"));
+				imgUrl = imgUrl.substring(0, imgUrl.lastIndexOf('/')).replace("/thumb/", "/");
+				pool.submit(new WikiHasher(known, name, imgUrl));
 			}
 		}
 		
 		pool.shutdown();
+		known.sort(Comparator.comparing(HashedImage::getName));
 		Jackson.MAPPER.writeValue(file, known);
 	}
 	
@@ -80,25 +90,25 @@ public class WikiHasher implements Callable<Void> {
 			if(known.stream().anyMatch(i->i.getName().equals(name)))
 				return null;
 		}
-		try(InputStream in = new URL(url).openStream()) {
-			BufferedImage img = ImageIO.read(in);
-			
-			HashedImage hi = new HashedImage();
-			hi.setName(name);
-			hi.setUrl(url);
-			hi.setHash(hash(img));
-			synchronized (known) {
-				if(known.stream().anyMatch(i->i.getName().equals(name)))
-					return null;
-				known.add(hi);
-			}
+		
+		byte[] bytes = IOUtils.toByteArray(new URL(url));
+		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
+		
+		HashedImage hi = new HashedImage();
+		hi.setName(name);
+		hi.setUrl(url);
+		hi.setHash(hash(img));
+		synchronized (known) {
+			if(known.stream().anyMatch(i->i.getName().equals(name)))
+				return null;
+			known.add(hi);
 		}
 		
 		return null;
 	}
 	
 	public static String hash(BufferedImage img) {
-		HashingAlgorithm hasher = new PerceptiveHash(64);
+		HashingAlgorithm hasher = new PerceptiveHash(128);
 		return Base64.getEncoder().encodeToString(hasher.hash(img).toByteArray());
 	}
 }

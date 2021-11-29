@@ -39,6 +39,10 @@
 			.raw-text {
 				height: 30rem;
 			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
 		</style>
 	</head>
 	<body>
@@ -65,17 +69,23 @@
 		}
 		<br>
 		@if(post.getImages() != null) {
-		<div class="g2">
+		<div>
 		@for(BlogImage img : post.getImages()) {
-			@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
-				<a href="@link" download>
-					<img src="@link">
-				</a>
-				@if(img.getWiki() != null) {
-					Matched to @img.getWiki()
+			<div class="w100 g2 @if(img.getWikiImage() == null) {not-uploaded}">
+				@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
+					<div>
+						<a href="@link" download>
+							<img src="@link">
+						</a><br>
+						@if(img.getWikiImage() != null) {
+							Already uploaded as <a href="https://pathfinderwiki.com/wiki/@img.getWikiImage()">@img.getWikiImage()</a>
+						} else {
+							Not yet uploaded to <a href="https://pathfinderwiki.com/wiki/Special:Upload">Wiki</a>
+						}
+					</div>
 				}
-			}
-			<textarea readonly class="w100 raw-text">@ImageDownloader.wikitext(post, img)</textarea>
+				<textarea readonly class="w100 raw-text">@ImageDownloader.wikitext(post, img)</textarea>
+			</div>
 		}
 		</div>
 		}

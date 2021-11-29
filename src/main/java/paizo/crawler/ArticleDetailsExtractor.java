@@ -51,8 +51,10 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setHtml(null);
 		
 		File target = new File(new File("blog_posts_details"), file.getName());
-		target.getParentFile().mkdirs();
-		Jackson.BLOG_WRITER.writeValue(target, post);
+		if(!target.exists()) {
+			target.getParentFile().mkdirs();
+			Jackson.BLOG_WRITER.writeValue(target, post);
+		}
 	}
 	
 	private static final ZoneId ZONE = ZoneId.of("US/Pacific");

@@ -86,11 +86,6 @@ public class WikiHasher implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
-		synchronized (known) {
-			if(known.stream().anyMatch(i->i.getName().equals(name)))
-				return null;
-		}
-		
 		byte[] bytes = IOUtils.toByteArray(new URL(url));
 		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
 		
@@ -99,8 +94,7 @@ public class WikiHasher implements Callable<Void> {
 		hi.setUrl(url);
 		hi.setHash(hash(img));
 		synchronized (known) {
-			if(known.stream().anyMatch(i->i.getName().equals(name)))
-				return null;
+			known.removeIf(i->i.getName().equals(name));
 			known.add(hi);
 		}
 		

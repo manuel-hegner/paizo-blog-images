@@ -9,5 +9,5 @@ public class HashedImage {
 
 	private String name;
 	private String url;
-	private byte[] hash;
+	private String hash;
 }

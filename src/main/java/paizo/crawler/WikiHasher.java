@@ -21,8 +21,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
-	public static void main(String[] args) throws Exception {
-		BufferedImage wiki = ImageIO.read(new File("Bosk.jpg"));
+	public static void main(String... args) throws Exception {
+		/*BufferedImage wiki = ImageIO.read(new File("180px-Bosk.jpg"));
 		BufferedImage paizo = ImageIO.read(new File("blog_post_images/20180718-Bosk.jpg"));
 		
 		byte[] hW = hash(wiki);
@@ -31,7 +31,7 @@ public class WikiHasher implements Callable<Void> {
 		System.out.println(Base64.getEncoder().encodeToString(hW));
 		System.out.println(Base64.getEncoder().encodeToString(hP));
 		
-		System.exit(0);
+		System.exit(0);*/
 		hash(
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100"/*,
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=500",
@@ -47,7 +47,8 @@ public class WikiHasher implements Callable<Void> {
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20110328010531&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101107020746&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101103210808&limit=500"
-		*/);
+			*/
+		);
 	}
 
 	private static void hash(String... urls) throws Exception {
@@ -96,8 +97,8 @@ public class WikiHasher implements Callable<Void> {
 		return null;
 	}
 	
-	public static byte[] hash(BufferedImage img) {
+	public static String hash(BufferedImage img) {
 		HashingAlgorithm hasher = new PerceptiveHash(64);
-		return hasher.hash(img).toByteArray();
+		return Base64.getEncoder().encodeToString(hasher.hash(img).toByteArray());
 	}
 }

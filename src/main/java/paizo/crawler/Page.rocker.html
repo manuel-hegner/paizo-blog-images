@@ -31,6 +31,11 @@
 				width: 100%;
 			}
 			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
 			.raw-text {
 				height: 30rem;
 			}
@@ -64,7 +69,7 @@
 		@for(BlogImage img : post.getImages()) {
 			@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
 				<a href="@link" download>
-					<img class="w100" src="@link">
+					<img src="@link">
 				</a>
 				@if(img.getWiki() != null) {
 					Matched to @img.getWiki()

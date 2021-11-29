@@ -113,6 +113,9 @@ public class ArticleExtractor implements PBICallable {
 	@Override
 	public void run() throws Exception {
 		File target = new File("blog_posts/"+blogId+".yaml");
+		
+		if(target.exists())
+			return;
 
 		String url = "https://paizo.com/community/blog/"+blogId;
 		var doc = Jsoup.connect(url).maxBodySize(0).get();
@@ -125,7 +128,7 @@ public class ArticleExtractor implements PBICallable {
 		blogPost.setId(blogId);
 		blogPost.setHtml(post);
 		blogPost.setDate(date);
-
+		
 		target.getParentFile().mkdirs();
 		Jackson.BLOG_WRITER.writeValue(target, blogPost);
 	}

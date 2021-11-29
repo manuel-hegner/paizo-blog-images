@@ -5,15 +5,12 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import lombok.RequiredArgsConstructor;
 
@@ -59,7 +56,7 @@ public class BlogCollector implements Callable<Void> {
 			
 			var doc = resp.parse();
 			
-			findLinks(doc.toString());
+			findNextLink(doc.toString());
 			HTMLCleaner.clean(doc);
 			
 			File target = new File("blog/"+name.replaceAll("[^a-zA-Z0-9]", "_")+".html");
@@ -77,7 +74,7 @@ public class BlogCollector implements Callable<Void> {
 		}
 	}
 
-	private void findLinks(String raw) {
+	private void findNextLink(String raw) {
 		var m = OLDER.matcher(raw);
 		if(m.find()) {
 			String link = m.group(1);

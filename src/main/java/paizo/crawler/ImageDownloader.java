@@ -95,5 +95,4 @@ public class ImageDownloader implements PBICallable {
 			Files.writeString(descr.toPath(), txt);
 		}
 	}
-
 }

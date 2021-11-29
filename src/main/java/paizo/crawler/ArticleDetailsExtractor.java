@@ -42,6 +42,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		BlogPost post = Jackson.BLOG_READER.readValue(file);
 		
 		findDate(post);
+		moveTimeZone(post);
 		post.setTitle(findTitle(post));
 		post.setTags(findTags(post));
 		post.setImages(findImages(post));
@@ -54,6 +55,13 @@ public class ArticleDetailsExtractor implements PBICallable {
 		Jackson.BLOG_WRITER.writeValue(target, post);
 	}
 	
+	private static final ZoneId ZONE = ZoneId.of("US/Pacific");
+	private void moveTimeZone(BlogPost post) {
+		if(post.getDate()==null)
+			return;
+		post.setDate(post.getDate().withZoneSameInstant(ZONE));
+	}
+
 	private String findAuthor(BlogPost post) {
         var authEl = post.getHtml().getElementsByAttributeValueContaining("style", "margin-left: 20px; font-weight: bold;").first();
         if(authEl == null)
@@ -133,6 +141,9 @@ public class ArticleDetailsExtractor implements PBICallable {
 			.map(d->d.getDisplayName(TextStyle.FULL, Locale.US))
 			.toArray(String[]::new);
 	private void findDate(BlogPost post) {
+		if(post.getDate()!=null)
+			return;
+
 		var dateElem = post.getHtml().getElementsByClass("date").first();
 		if(dateElem == null)
 			return;

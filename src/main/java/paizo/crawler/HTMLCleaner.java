@@ -14,5 +14,9 @@ public class HTMLCleaner {
 		doc.getElementsByTag("nav").remove();
 		doc.getElementsByClass("sub-menu").remove();
 		doc.getElementsByAttributeValueMatching("href", COMMENTS_LINK).forEach(Element::empty);
+		doc.getElementsByTag("time").forEach(e-> {
+			if(e.hasAttr("datetime"))
+				e.empty();
+		});
 	}
 }

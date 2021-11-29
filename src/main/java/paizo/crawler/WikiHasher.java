@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Base64;
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -21,6 +22,16 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String[] args) throws Exception {
+		BufferedImage wiki = ImageIO.read(new File("Bosk.jpg"));
+		BufferedImage paizo = ImageIO.read(new File("blog_post_images/20180718-Bosk.jpg"));
+		
+		byte[] hW = hash(wiki);
+		byte[] hP = hash(paizo);
+		
+		System.out.println(Base64.getEncoder().encodeToString(hW));
+		System.out.println(Base64.getEncoder().encodeToString(hP));
+		
+		System.exit(0);
 		hash(
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100"/*,
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=500",

@@ -86,6 +86,15 @@ public class ArticleDetailsExtractor implements PBICallable {
 	private BlogImage toImage(Element e) {
 		BlogImage img = new BlogImage();
 		String src = e.absUrl("src");
+		if(e.parent().tagName().equals("a")) {
+			int extensionIndex = src.lastIndexOf('.');
+			if(extensionIndex>0) {
+				String path = src.substring(0, extensionIndex-4);
+				String pUrl = e.parent().absUrl("href");
+				if(pUrl.startsWith(path))
+					src = pUrl;
+			}
+		}
 		String alt = e.attr("alt");
 		if(StringUtils.isBlank(src))
 			return null;

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.OffsetDateTime;
 import java.time.ZonedDateTime;
+import java.time.chrono.ChronoZonedDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -114,7 +115,7 @@ public class ArticleExtractor implements PBICallable {
 	public void run() throws Exception {
 		File target = new File("blog_posts/"+blogId+".yaml");
 		
-		if(target.exists())
+		if(target.exists() && (date==null || date.plusDays(30).isBefore(ZonedDateTime.now())))
 			return;
 
 		String url = "https://paizo.com/community/blog/"+blogId;

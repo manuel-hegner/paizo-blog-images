@@ -16,7 +16,9 @@ jobs:
           java-version: 17
           cache: maven
       - name: Run Workflow
-        run: mvn compile exec:java -Dexec.mainClass="paizo.crawler.Workflow"
+        run: |
+          mvn compile exec:java -Dexec.mainClass="paizo.crawler.Workflow"
+          mvn clean
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"

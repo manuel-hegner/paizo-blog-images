@@ -2,11 +2,13 @@ package paizo.crawler;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 
@@ -28,7 +30,7 @@ public class ImageDownloader implements PBICallable {
 				if(old == null) {
 					File target = Path.of(
 							"blog_post_images",
-							img.getName().trim()
+							img.getName()
 					).toFile();
 					
 					if(!target.exists()) {
@@ -56,18 +58,9 @@ public class ImageDownloader implements PBICallable {
 	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
 	@Override
 	public void run() throws Exception {
-		
 		if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
-			
-		}
-		
-		File descr = new File(target.getParentFile(), target.getName()+".txt");
-		if(!descr.exists()) {
-			String txt = wikitext(post, img);
-			
-			Files.writeString(descr.toPath(), txt);
 		}
 	}
 	

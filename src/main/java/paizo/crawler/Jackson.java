@@ -41,7 +41,7 @@ public class Jackson {
 				.addDeserializer(Element.class, new FromStringDeserializer<>(Element.class) {
 					@Override
 					protected Element _deserialize(String html, DeserializationContext ctxt) throws IOException {
-						return Jsoup.parseBodyFragment(html).body().child(0);
+						return Jsoup.parseBodyFragment(html, "https://paizo.com").body().child(0);
 					}
 				}));
 	}

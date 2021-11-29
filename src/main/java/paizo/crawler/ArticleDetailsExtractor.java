@@ -71,8 +71,10 @@ public class ArticleDetailsExtractor implements PBICallable {
 
 	private List<BlogImage> findImages(BlogPost post) {
 		var imgs = post.getHtml()
-			.getElementsByAttributeValueStarting("src", "https://cdn.paizo.com/")
+			.getElementsByAttribute("src")
 			.stream()
+			.filter(e->!e.attr("src").contains("image/button"))
+			.filter(e->!e.attr("src").contains("youtube.com"))
 			.map(this::toImage)
 			.filter(Objects::nonNull)
 			.collect(Collectors.toList());
@@ -83,12 +85,14 @@ public class ArticleDetailsExtractor implements PBICallable {
 	
 	private BlogImage toImage(Element e) {
 		BlogImage img = new BlogImage();
-		String src = e.attr("src");
+		String src = e.absUrl("src");
 		String alt = e.attr("alt");
 		if(StringUtils.isBlank(src))
 			return null;
 		if(src.contains("?"))
 			src=src.substring(0,src.indexOf("?"));
+		
+		src=src.trim().replaceAll("\\s", "");
 		
 		var sib = e.parent().nextElementSibling();
 		if(sib != null) {

@@ -6,6 +6,8 @@ public class Workflow {
 		ArticleExtractor.run(result1);
 		ArticleDetailsExtractor.main();
 		ImageDownloader.main();
+		WikiHasher.main();
+		BlogHasher.main();
 		PageCreator.main();
 	}
 }

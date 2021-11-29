@@ -56,7 +56,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 	}
 	
 	private static final ZoneId ZONE = ZoneId.of("US/Pacific");
-	private void moveTimeZone(BlogPost post) {
+	public static void moveTimeZone(BlogPost post) {
 		if(post.getDate()==null)
 			return;
 		post.setDate(post.getDate().withZoneSameInstant(ZONE));

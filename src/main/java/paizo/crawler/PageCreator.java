@@ -10,6 +10,7 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.tuple.Pair;
 
 import com.fizzed.rocker.runtime.RockerRuntime;
 
@@ -42,7 +43,8 @@ public class PageCreator {
 			Page p = Page.template(
 					month.getKey(),
 					month.getValue(),
-					allPosts.keySet().stream()
+					allPosts.entrySet().stream()
+						.map(e->Pair.of(e.getKey(), e.getValue().stream().filter(po->!po.checked()).filter(po->po.getImages()!=null).flatMap(po->po.getImages().stream()).filter(i->i.getWikiImage()==null).count()))
 						.sorted()
 						.collect(Collectors.toList())
 			);

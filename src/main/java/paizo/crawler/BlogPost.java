@@ -1,9 +1,12 @@
 package paizo.crawler;
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.jsoup.nodes.Element;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,5 +28,10 @@ public class BlogPost {
 			return "unknown-date";
 		else
 			return DIR_FORMAT.format(date);
+	}
+	
+	@JsonIgnore
+	public boolean checked() {
+		return date!=null && !date.toLocalDate().isAfter(LocalDate.of(2012,02,28));
 	}
 }

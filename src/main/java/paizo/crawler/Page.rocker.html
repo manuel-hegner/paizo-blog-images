@@ -1,7 +1,8 @@
 
 @import java.util.List
+@import org.apache.commons.lang3.tuple.Pair
 
-@args (String key, List<BlogPost> posts, List<String> groups)
+@args (String key, List<BlogPost> posts, List<Pair<String, Long>> groups)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,12 +44,20 @@
 			.not-uploaded {
 				background-color: lightsalmon;
 			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
 		</style>
 	</head>
 	<body>
 	<div>
-	@for(String gr : groups) {
-		<a href="@(gr).html">@gr</a>
+	@for(Pair<String, Long> gr : groups) {
+		<a @if(gr.getValue()==0) {class="small"} href="@(gr.getKey()).html">@gr.getKey()@if(gr.getValue()>0) { (@gr.getValue())}</a>
 	}
 	</div>
 	@for(BlogPost post : posts) {
@@ -71,7 +80,7 @@
 		@if(post.getImages() != null) {
 		<div>
 		@for(BlogImage img : post.getImages()) {
-			<div class="w100 g2 @if(img.getWikiImage() == null) {not-uploaded}">
+			<div class="w100 g2 @if(img.getWikiImage() == null && !post.checked()) {not-uploaded}">
 				@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
 					<div>
 						<a href="@link" download>
@@ -80,7 +89,11 @@
 						@if(img.getWikiImage() != null) {
 							Already uploaded as <a href="https://pathfinderwiki.com/wiki/@img.getWikiImage()">@img.getWikiImage()</a>
 						} else {
-							Maybe no yet uploaded to <a href="https://pathfinderwiki.com/wiki/Special:Upload">Wiki</a>
+							@if(post.checked()) {
+								Manually checked
+							} else {
+								Maybe no yet uploaded to <a href="https://pathfinderwiki.com/wiki/Special:Upload">Wiki</a>
+							}
 						}
 					</div>
 				}

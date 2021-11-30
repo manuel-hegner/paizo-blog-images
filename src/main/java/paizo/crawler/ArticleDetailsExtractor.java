@@ -91,9 +91,9 @@ public class ArticleDetailsExtractor implements PBICallable {
 		if(e.parent().tagName().equals("a")) {
 			int extensionIndex = src.lastIndexOf('.');
 			if(extensionIndex>0) {
-				String path = src.substring(0, extensionIndex-4);
+				String path = src.substring(0, extensionIndex-4).toLowerCase();
 				String pUrl = e.parent().absUrl("href");
-				if(pUrl.startsWith(path))
+				if(pUrl.toLowerCase().startsWith(path))
 					src = pUrl;
 			}
 		}

@@ -1,8 +1,6 @@
 package paizo.crawler;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.Base64;
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -19,7 +17,7 @@ public class BlogHasher implements Callable<Void> {
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, HashedImage[].class));
 		
-		var pool = new MyPool("Image Hasher");
+		var pool = new MyPool("Blog Hasher");
 		for(var f:new File("blog_posts_details").listFiles()) {
 			BlogPost post = Jackson.BLOG_READER.readValue(f);
 			if(post.getImages() == null)
@@ -54,7 +52,7 @@ public class BlogHasher implements Callable<Void> {
 			
 			if(img.getWikiImage() == null && img.getHash() != null) {
 				var match = known.stream()
-					.filter(hi->hi.getHash().equals(img.getHash()))
+					.filter(hi->WikiHasher.similarHashes(hi.getHash(), img.getHash()))
 					.findAny();
 				
 				if(match.isPresent()) {

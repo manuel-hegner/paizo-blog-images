@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.jsoup.Jsoup;
 
 import lombok.RequiredArgsConstructor;
 
@@ -57,7 +58,12 @@ public class ImageDownloader implements PBICallable {
 	public void run() throws Exception {
 		if(!target.exists()) {
 			target.getParentFile().mkdirs();
-			FileUtils.copyURLToFile(new URL(img.getFullPath()), target);
+			
+			if(img.getName().startsWith("PZO8500-KnightlyMission"))
+				System.out.println();
+			
+			byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
+			FileUtils.writeByteArrayToFile(target, bytes);
 		}
 	}
 	

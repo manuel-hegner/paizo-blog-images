@@ -24,8 +24,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
-		//hash(true, "https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100");
-		hash(false,
+		hash(true, "https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100");
+		/*hash(false,
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20121006205929&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20191106205929&limit=500",
@@ -41,7 +41,7 @@ public class WikiHasher implements Callable<Void> {
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101107020746&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101103210808&limit=500"
 			
-		);
+		);*/
 	}
 
 	private static void hash(boolean replace, String... urls) throws Exception {

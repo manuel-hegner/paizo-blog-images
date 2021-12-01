@@ -32,6 +32,6 @@ public class BlogPost {
 	
 	@JsonIgnore
 	public boolean checked() {
-		return date!=null && !date.toLocalDate().isAfter(LocalDate.of(2012,02,28));
+		return date!=null && !date.toLocalDate().isAfter(LocalDate.of(2013,11,28));
 	}
 }

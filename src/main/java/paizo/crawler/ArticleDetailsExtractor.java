@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
@@ -22,14 +23,16 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ArticleDetailsExtractor implements PBICallable {
 	
-	public static void main(String... args) throws InterruptedException {
+	public static void main(String... args) throws Exception {
+		var blacklist = Jackson.MAPPER.readValue(new File("meta/blacklist.yaml"), Pattern[].class);
 		var pool = new MyPool("Article Details Extractor");
 		for(var f:new File("blog_posts").listFiles()) {
-			pool.submit(new ArticleDetailsExtractor(f));
+			pool.submit(new ArticleDetailsExtractor(blacklist, f));
 		}
 		pool.shutdown();
 	}
 	
+	private final Pattern[] blacklist;
 	private final File file;
 
 	@Override
@@ -79,6 +82,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 			.filter(e->!e.attr("src").contains("youtube.com"))
 			.map(this::toImage)
 			.filter(Objects::nonNull)
+			.filter(img->!Arrays.stream(blacklist).anyMatch(p->p.matcher(img.getFullPath()).matches()))
 			.collect(Collectors.toList());
 		if(imgs.isEmpty())
 			return null;

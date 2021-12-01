@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class BlogHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
-		File file = new File("wiki/hashes.yaml");
+		File file = new File("meta/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, HashedImage[].class));
 		

@@ -59,7 +59,7 @@ public class WikiHasher implements Callable<Void> {
 	}
 
 	private static void hash(String... urls) throws Exception {
-		File file = new File("wiki/hashes.yaml");
+		File file = new File("meta/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, HashedImage[].class));
 		

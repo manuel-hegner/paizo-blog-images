@@ -80,7 +80,7 @@
 		@if(post.getImages() != null) {
 		<div>
 		@for(BlogImage img : post.getImages()) {
-			<div class="w100 g2 @if(img.getWikiImage() == null && !post.checked()) {not-uploaded}">
+			<div class="w100 g2 @if(img.getWikiImage() == null) {not-uploaded}">
 				@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
 					<div>
 						<a href="@link" download>

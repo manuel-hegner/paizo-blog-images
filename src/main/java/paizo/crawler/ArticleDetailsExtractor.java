@@ -69,9 +69,17 @@ public class ArticleDetailsExtractor implements PBICallable {
 
 	private String findAuthor(BlogPost post) {
         var authEl = post.getHtml().getElementsByAttributeValueContaining("style", "margin-left: 20px; font-weight: bold;").first();
-        if(authEl == null)
+        if(authEl != null)
+        	return StringUtils.trimToNull(authEl.ownText());
+
+        var article = post.getHtml().getElementsByAttributeValue("itemprop", "articlebody").first();
+        if(article == null)
         	return null;
-        return authEl.ownText();
+        var last = article.children().last();
+        if(last.is("p") && last.ownText().length()<40)
+        	return StringUtils.trimToNull(last.ownText());
+
+        return null;
 	}
 
 	private List<BlogImage> findImages(BlogPost post) {

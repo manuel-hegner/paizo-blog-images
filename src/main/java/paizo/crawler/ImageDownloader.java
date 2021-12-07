@@ -6,6 +6,8 @@ import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
@@ -73,11 +75,11 @@ public class ImageDownloader implements PBICallable {
 				+ "{{File\n"
 				+ "| year     = "+(post.getDate()==null?"":post.getDate().getYear())+"\n"
 				+ "| copy     = Paizo Inc.\n"
-				+ "| artist   = \n"
+				+ "| artist   = "+Objects.requireNonNullElse(img.getArtist(),"")+"\n"
 				+ "| print    = \n"
 				+ "| page     = \n"
 				+ "| web      = {{Cite web\n"
-				+ "  | author = \n"
+				+ "  | author = "+Optional.ofNullable(post.getAuthor()).map(a->"[["+a+"]]").orElse("")+"\n"
 				+ "  | date   = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
 				+ "  | title  = "+post.getTitle()+"\n"
 				+ "  | page   = Paizo Blog\n"

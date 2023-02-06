@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class ArticleDetailsExtractor implements PBICallable {
-	
+
 	public static void main(String... args) throws Exception {
 		var blacklist = Jackson.MAPPER.readValue(new File("meta/blacklist.yaml"), Pattern[].class);
 		var pool = new MyPool("Article Details Extractor");
@@ -31,7 +31,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		}
 		pool.shutdown();
 	}
-	
+
 	private final Pattern[] blacklist;
 	private final File file;
 
@@ -43,24 +43,31 @@ public class ArticleDetailsExtractor implements PBICallable {
 	@Override
 	public void run() throws Exception {
 		BlogPost post = Jackson.BLOG_READER.readValue(file);
-		
+
+		removeInvisible(post);
 		findDate(post);
 		moveTimeZone(post);
 		post.setTitle(findTitle(post));
 		post.setTags(findTags(post));
 		post.setImages(findImages(post));
 		post.setAuthor(findAuthor(post));
-		
+
 		post.setHtml(null);
-		
+
 		File target = new File(new File("blog_posts_details"), file.getName());
-		if(!target.exists()) {
+		//if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			Jackson.BLOG_WRITER.writeValue(target, post);
-		}
+		//}
 	}
-	
-	private static final ZoneId ZONE = ZoneId.of("US/Pacific");
+
+	private void removeInvisible(BlogPost post) {
+        post.getHtml()
+            .getElementsByAttributeValueContaining("style", "display:none;")
+            .remove();
+    }
+
+    private static final ZoneId ZONE = ZoneId.of("US/Pacific");
 	public static void moveTimeZone(BlogPost post) {
 		if(post.getDate()==null)
 			return;
@@ -96,7 +103,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 			return null;
 		return imgs;
 	}
-	
+
 	private BlogImage toImage(Element e) {
 		BlogImage img = new BlogImage();
 		String src = e.absUrl("src");
@@ -114,9 +121,9 @@ public class ArticleDetailsExtractor implements PBICallable {
 			return null;
 		if(src.contains("?"))
 			src=src.substring(0,src.indexOf("?"));
-		
+
 		src=src.trim().replaceAll("\\s", "");
-		
+
 		var sib = e.parent().nextElementSibling();
 		if(sib != null) {
 			String nextText = sib.text();
@@ -128,8 +135,8 @@ public class ArticleDetailsExtractor implements PBICallable {
 				img.setArtist(by);
 			}
 		}
-		
-		
+
+
 		img.setFullPath(src);
 		img.setName(src.substring(src.lastIndexOf("/")+1));
 		img.setAlt(StringUtils.stripToNull(alt.replaceAll("\s+", " ")));
@@ -199,7 +206,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 				//unparsable
 			}
 		}
-			
-		
+
+
 	}
 }

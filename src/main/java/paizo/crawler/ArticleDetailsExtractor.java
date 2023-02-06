@@ -55,15 +55,15 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setHtml(null);
 
 		File target = new File(new File("blog_posts_details"), file.getName());
-		//if(!target.exists()) {
+		if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			Jackson.BLOG_WRITER.writeValue(target, post);
-		//}
+		}
 	}
 
 	private void removeInvisible(BlogPost post) {
         post.getHtml()
-            .getElementsByAttributeValueContaining("style", "display:none;")
+            .getElementsByAttributeValueMatching("style", "display *: *none")
             .remove();
     }
 

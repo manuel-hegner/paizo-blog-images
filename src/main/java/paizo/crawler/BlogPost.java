@@ -21,7 +21,7 @@ public class BlogPost {
 	private String[] tags;
 	private List<BlogImage> images;
 	private Element html;
-	
+
 	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
 	public String printedDate() {
 		if(date == null)
@@ -29,9 +29,9 @@ public class BlogPost {
 		else
 			return DIR_FORMAT.format(date);
 	}
-	
+
 	@JsonIgnore
 	public boolean checked() {
-		return date!=null && date.toLocalDate().isBefore(LocalDate.of(2018,5,1));
+		return date!=null && date.toLocalDate().isBefore(LocalDate.of(2018,7,1));
 	}
 }

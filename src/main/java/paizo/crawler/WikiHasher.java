@@ -24,7 +24,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
-		hash(true, "https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100");
+	    hash(true,
+	        "https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100",
+	        "https://starfinderwiki.com/wiki/Special:ListFiles?limit=100"
+	    );
 		/*hash(false,
 			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20121006205929&limit=500",
@@ -40,7 +43,7 @@ public class WikiHasher implements Callable<Void> {
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20110328010531&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101107020746&limit=500",
 			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101103210808&limit=500"
-			
+
 		);*/
 	}
 
@@ -48,9 +51,9 @@ public class WikiHasher implements Callable<Void> {
 		File file = new File("meta/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, HashedImage[].class));
-		
+
 		MyPool pool = new MyPool("wiki hashing");
-		
+
 		for(String url : urls) {
 			var doc = Jsoup.connect(url).maxBodySize(0).get();
 			for(var e:doc.getElementsByClass("image")) {
@@ -60,12 +63,12 @@ public class WikiHasher implements Callable<Void> {
 				pool.submit(new WikiHasher(replace, known, name, imgUrl));
 			}
 		}
-		
+
 		pool.shutdown();
 		known.sort(Comparator.comparing(HashedImage::getName));
 		Jackson.MAPPER.writeValue(file, known);
 	}
-	
+
 	private final boolean replace;
 	private final List<HashedImage> known;
 	private final String name;
@@ -75,14 +78,14 @@ public class WikiHasher implements Callable<Void> {
 	public Void call() throws Exception {
 		if(!replace) {
 			synchronized (known) {
-				if(known.stream().anyMatch(k->k.getName().equals(name)))
+				if(known.stream().anyMatch(k->k.getUrl().equals(url)))
 					return null;
 			}
 		}
-		
+
 		byte[] bytes = IOUtils.toByteArray(new URL(url));
 		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
-		
+
 		HashedImage hi = new HashedImage();
 		hi.setName(name);
 		hi.setUrl(url);
@@ -99,14 +102,14 @@ public class WikiHasher implements Callable<Void> {
 			}
 			known.add(hi);
 		}
-		
+
 		return null;
 	}
-	
+
 	public static Hash hash(BufferedImage img) {
 		return HASHER.hash(img);
 	}
-	
+
 	private static final HashingAlgorithm HASHER = new PerceptiveHash(128);
 	public static boolean similarHashes(Hash h1, Hash h2) {
 		return h1.normalizedHammingDistance(h2)<0.1;

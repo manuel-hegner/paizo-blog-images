@@ -32,6 +32,6 @@ public class BlogPost {
 
 	@JsonIgnore
 	public boolean checked() {
-		return date!=null && date.toLocalDate().isBefore(LocalDate.of(2020,7,1));
+		return date!=null && date.toLocalDate().isBefore(LocalDate.of(2021,2,1));
 	}
 }

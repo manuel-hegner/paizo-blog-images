@@ -1,18 +1,19 @@
 package paizo.crawler;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import org.jsoup.HttpStatusException;
+
+import com.google.common.util.concurrent.Uninterruptibles;
 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class MyPool {
-	
+
 	private final String name;
-	private final ExecutorService pool = Executors.newWorkStealingPool();
+	private final ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 	private final AtomicInteger submitted = new AtomicInteger();
 	private final AtomicInteger done = new AtomicInteger();
 
@@ -22,14 +23,31 @@ public class MyPool {
 			@Override
 			public T call() throws Exception {
 				try {
-					return job.call();
-				} catch(Exception e) {
-					e.printStackTrace();
-					return null;
+					return execute();
 				} finally {
 					done.incrementAndGet();
 				}
 			}
+
+            private T execute() {
+                try {
+                    while(true) {
+                        try {
+                            return job.call();
+                        } catch(HttpStatusException e) {
+                            if(e.getStatusCode() == 429) { //too many requests
+                                Uninterruptibles.sleepUninterruptibly(5, TimeUnit.MINUTES);
+                            }
+                            else {
+                                throw e;
+                            }
+                        }
+                    }
+                } catch(Exception e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            }
 		});
 	}
 
@@ -41,5 +59,5 @@ public class MyPool {
 			System.out.println(name+": \tdone "+done.get()+"/"+submitted.get());
 		}
 	}
-	
+
 }

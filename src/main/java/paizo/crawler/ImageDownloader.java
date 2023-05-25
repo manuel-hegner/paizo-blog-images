@@ -1,4 +1,5 @@
 package paizo.crawler;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -9,14 +10,17 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.jsoup.Jsoup;
 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class ImageDownloader implements PBICallable {
-	
+
 	private static final Map<String, String> IMAGES = new HashMap<>();
 	public static void main(String... args) throws InterruptedException, IOException {
 		var pool = new MyPool("Image Downloader");
@@ -24,7 +28,7 @@ public class ImageDownloader implements PBICallable {
 			BlogPost post = Jackson.BLOG_READER.readValue(f);
 			if(post.getImages() == null)
 				continue;
-			
+
 			for(BlogImage img : post.getImages()) {
 				String old = IMAGES.put(img.getName(), img.getFullPath());
 				if(old == null) {
@@ -32,7 +36,7 @@ public class ImageDownloader implements PBICallable {
 							"blog_post_images",
 							img.getName()
 					).toFile();
-					
+
 					if(!target.exists()) {
 						pool.submit(new ImageDownloader(post, img, target));
 					}
@@ -41,11 +45,11 @@ public class ImageDownloader implements PBICallable {
 					//System.err.println("same name "+img.getName()+" for:\n\t"+img.getFullPath()+"\n\t"+old);
 				}
 			}
-			
+
 		}
 		pool.shutdown();
 	}
-	
+
 	private final BlogPost post;
 	private final BlogImage img;
 	private final File target;
@@ -60,15 +64,21 @@ public class ImageDownloader implements PBICallable {
 	public void run() throws Exception {
 		if(!target.exists()) {
 			target.getParentFile().mkdirs();
-			
-			if(img.getName().startsWith("PZO8500-KnightlyMission"))
-				System.out.println();
-			
+
 			byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
-			FileUtils.writeByteArrayToFile(target, bytes);
+			var img = ImageIO.read(new ByteArrayInputStream(bytes));
+			var cropped = Cropper.crop(img);
+			if(cropped == img || img == null)
+			    FileUtils.writeByteArrayToFile(target, bytes);
+			else
+			    ImageIO.write(
+			        cropped,
+			        FilenameUtils.getExtension(target.getName()),
+			        target
+			    );
 		}
 	}
-	
+
 	public static String wikitext(BlogPost post, BlogImage img) {
 		return "== Summary ==\n"
 				+ "\n"

@@ -4,9 +4,12 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 
@@ -14,7 +17,12 @@ import org.apache.commons.io.IOUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.internal.StringUtil;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.collect.Lists;
+import com.google.common.util.concurrent.Uninterruptibles;
 
 import dev.brachtendorf.jimagehash.hash.Hash;
 import dev.brachtendorf.jimagehash.hashAlgorithms.HashingAlgorithm;
@@ -24,27 +32,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
-	    hash(true,
-	        "https://pathfinderwiki.com/wiki/Special:ListFiles?limit=100",
-	        "https://starfinderwiki.com/wiki/Special:ListFiles?limit=100"
+	    hash(false,
+	        "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000",
+	        "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000"
 	    );
-		/*hash(false,
-			"https://pathfinderwiki.com/wiki/Special:ListFiles?limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20121006205929&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20191106205929&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20180619211405&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20170519060003&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20160715135515&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20150811040511&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20141115001824&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20140326134233&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20130916235453&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20120730193747&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20110328010531&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101107020746&limit=500",
-			"https://pathfinderwiki.com/mediawiki/index.php?title=Special:ListFiles&offset=20101103210808&limit=500"
-
-		);*/
 	}
 
 	private static void hash(boolean replace, String... urls) throws Exception {
@@ -55,13 +46,20 @@ public class WikiHasher implements Callable<Void> {
 		MyPool pool = new MyPool("wiki hashing");
 
 		for(String url : urls) {
-			var doc = Jsoup.connect(url).maxBodySize(0).get();
-			for(var e:doc.getElementsByClass("image")) {
-				String name = e.attr("href").substring(6);
-				String imgUrl = StringUtil.resolve(doc.baseUri(), e.getElementsByTag("img").attr("src"));
-				imgUrl = imgUrl.substring(0, imgUrl.lastIndexOf('/')).replace("/thumb/", "/");
-				pool.submit(new WikiHasher(replace, known, name, imgUrl));
-			}
+		    String aicontinue = null;
+		    List<JsonNode> all = new ArrayList<>();
+		    do {
+		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(new URL(url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue)))));
+
+    		    aicontinue = result.path("continue").path("aicontinue").asText();
+    		    ((ArrayNode)(result.get("query").get("allimages"))).elements().forEachRemaining(all::add);
+		    } while(!aicontinue.isEmpty());
+
+		    for(var n:all) {
+		        String name = n.get("name").asText();
+		        String imgUrl = n.get("url").asText();
+		        pool.submit(new WikiHasher(replace, known, name, imgUrl));
+		    }
 		}
 
 		pool.shutdown();
@@ -83,8 +81,19 @@ public class WikiHasher implements Callable<Void> {
 			}
 		}
 
+		if(name.endsWith(".svg") || name.endsWith(".mp3")) {
+		    return null;
+		}
+
+		Uninterruptibles.sleepUninterruptibly((int)(Math.random()*20), TimeUnit.SECONDS);
+
 		byte[] bytes = IOUtils.toByteArray(new URL(url));
 		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
+		if(img == null) {
+		    System.err.println("\tCould not parse "+url);
+		    return null;
+		}
+		img = Cropper.crop(img);
 
 		HashedImage hi = new HashedImage();
 		hi.setName(name);

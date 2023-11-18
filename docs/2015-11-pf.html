@@ -1,0 +1,3573 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2015-11</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2015-11-all.html" >All</option>
+			<option value="2015-11-pf.html" selected>Pathfinder only</option>
+			<option value="2015-11-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" selected>2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2015-11-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li9x">
+			The Evergreen Desert
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">johnDerekMurphy</span>
+				<span class="tag">kimSokol</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0710E-MagaliDelroya.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0710E-MagaliDelroya.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Magali_Delroya.jpg">Magali_Delroya.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = November 30, 2015
+  | title  = The Evergreen Desert
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9x
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9x}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0711E-VCRoderus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0711E-VCRoderus.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Roderus.jpg">Roderus.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = November 30, 2015
+  | title  = The Evergreen Desert
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9x
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9x}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0710E-TheDarkIris.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0710E-TheDarkIris.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Dark_Iris.jpg">Dark_Iris.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = November 30, 2015
+  | title  = The Evergreen Desert
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9x
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9x}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li9l">
+			Meet the Villains—Lazzero Dalvera
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/clerics</span>
+				<span class="tag">hellsVengeance</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">lazzero</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90103-Lazzero.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90103-Lazzero.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lazzero_Dalvera.jpg">Lazzero_Dalvera.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = November 25, 2015
+  | title  = Meet the Villains—Lazzero Dalvera
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9l
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9l}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li9h">
+			What&#39;s New With Obsidian&#39;s Adventure Card Game?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">licensedProducts</span>
+				<span class="tag">obsidianEntertainment</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">pathfinderAdventurePath/riseOfTheRunelords</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-ToxicCloud.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-ToxicCloud.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-ChainMail.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-ChainMail.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-RustedChainMail.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-RustedChainMail.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-MasterworkChainMail.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-MasterworkChainMail.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000-ShopkeepersDaughter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000-ShopkeepersDaughter.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-BlacksmithSon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151124-BlacksmithSon.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Nathan Davis]]
+  | date   = November 24, 2015
+  | title  = What&#39;s New With Obsidian&#39;s Adventure Card Game?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9h}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li9m">
+			Getting the Band Back Together
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151123-WebsterWedding.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151123-WebsterWedding.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = November 23, 2015
+  | title  = Getting the Band Back Together
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151123-MoonscarGame.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151123-MoonscarGame.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = November 23, 2015
+  | title  = Getting the Band Back Together
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9m}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li9k">
+			Stocking Stuffers
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WZK71815-8-46-PR_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WZK71815-8-46-PR_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 21, 2015
+  | title  = Stocking Stuffers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9k
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9k}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-01_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-01_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 21, 2015
+  | title  = Stocking Stuffers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9k
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9k}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-02_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-02_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 21, 2015
+  | title  = Stocking Stuffers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9k
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9k}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-03_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOWZK2015-03_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 21, 2015
+  | title  = Stocking Stuffers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li9k
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li9k}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li95">
+			Do You Think Flattery Will Keep You Alive?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">bestiary5</span>
+				<span class="tag">community</span>
+				<span class="tag">contests</span>
+				<span class="tag">kentHamilton</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">people/artists/benWootten</span>
+				<span class="tag">people/artists/jorgeFares</span>
+				<span class="tag">wayneEngland</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-WyrmwraithSpread.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-WyrmwraithSpread.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 19, 2015
+  | title  = Do You Think Flattery Will Keep You Alive?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li95
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li95}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Cetus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Cetus.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Cetus.jpg">Cetus.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 19, 2015
+  | title  = Do You Think Flattery Will Keep You Alive?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li95
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li95}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-JungleDrake.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-JungleDrake.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Jungle_drake.jpg">Jungle_drake.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 19, 2015
+  | title  = Do You Think Flattery Will Keep You Alive?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li95
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li95}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Kurobozu.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Kurobozu.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kurobozu.jpg">Kurobozu.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 19, 2015
+  | title  = Do You Think Flattery Will Keep You Alive?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li95
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li95}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-ThriaeConstructor.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-ThriaeConstructor.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Thriae_constructor.jpg">Thriae_constructor.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 19, 2015
+  | title  = Do You Think Flattery Will Keep You Alive?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li95
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li95}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li8z">
+			Hello, Mountain!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">hollowMountain</span>
+				<span class="tag">pathfinderComics</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DYN0025-A_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DYN0025-A_180.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Hollow_Mountain_1_Gomez.jpg">Hollow_Mountain_1_Gomez.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James L. Sutter]]
+  | date   = November 18, 2015
+  | title  = Hello, Mountain!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8z}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li8v">
+			Meet the Geeks
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">mummysMask</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">people/artists/francescoGraziani</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9079-Wati.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9079-Wati.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tanis O&#39;Connor]]
+  | date   = November 17, 2015
+  | title  = Meet the Geeks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6812-ScryingMirror.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6812-ScryingMirror.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tanis O&#39;Connor]]
+  | date   = November 17, 2015
+  | title  = Meet the Geeks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8v}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li8r">
+			OPC Log—16 Neth 4715
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo3.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tonya Woldridge]]
+  | date   = November 16, 2015
+  | title  = OPC Log—16 Neth 4715
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8r}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo2.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tonya Woldridge]]
+  | date   = November 16, 2015
+  | title  = OPC Log—16 Neth 4715
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8r}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151116-Photo1.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tonya Woldridge]]
+  | date   = November 16, 2015
+  | title  = OPC Log—16 Neth 4715
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8r}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li8l">
+			Singles Bar
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">rustyDragonInn</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151113-RustyDragonInn.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151113-RustyDragonInn.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 14, 2015
+  | title  = Singles Bar
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8l
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8l}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li8d">
+			You Only Die Twice!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">bestiary5</span>
+				<span class="tag">community</span>
+				<span class="tag">contests</span>
+				<span class="tag">joseParodi</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">people/artists/benWootten</span>
+				<span class="tag">people/artists/daveAllsop</span>
+				<span class="tag">people/artists/jimNelson</span>
+				<span class="tag">wayneEngland</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Akaname.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Akaname.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Akaname.jpg">Akaname.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 12, 2015
+  | title  = You Only Die Twice!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8d}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Encantado.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Encantado.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Encantado.jpg">Encantado.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 12, 2015
+  | title  = You Only Die Twice!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8d}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-DeepOneHybrid.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-DeepOneHybrid.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Deep_one_hybrid.jpg">Deep_one_hybrid.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 12, 2015
+  | title  = You Only Die Twice!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8d}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Papinijuwari.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Papinijuwari.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Papinijuwari.jpg">Papinijuwari.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 12, 2015
+  | title  = You Only Die Twice!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li8d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li8d}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li86">
+			Journey into the Meraz
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">ertaAltNZ</span>
+				<span class="tag">firatSolhan</span>
+				<span class="tag">pathfinderModules</span>
+				<span class="tag">rogierVanDeBeek</span>
+				<span class="tag">tomaszChistowski</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-SunbleachedTower.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-SunbleachedTower.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sunbleached_Tower.jpg">Sunbleached_Tower.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle &amp; Crystal Frasier]]
+  | date   = November 11, 2015
+  | title  = Journey into the Meraz
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li86
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li86}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-TrelmarixianCultist.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-TrelmarixianCultist.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Trelmarixian_Cultist.jpg">Trelmarixian_Cultist.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle &amp; Crystal Frasier]]
+  | date   = November 11, 2015
+  | title  = Journey into the Meraz
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li86
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li86}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-BoneSigil.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-BoneSigil.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Bone_sigil.jpg">Bone_sigil.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle &amp; Crystal Frasier]]
+  | date   = November 11, 2015
+  | title  = Journey into the Meraz
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li86
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li86}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-Introduction.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-Introduction.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ravenous_Blade.jpg">Ravenous_Blade.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle &amp; Crystal Frasier]]
+  | date   = November 11, 2015
+  | title  = Journey into the Meraz
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li86
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li86}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-Dimayen.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9548-Dimayen.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Dimayen.jpg">Dimayen.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle &amp; Crystal Frasier]]
+  | date   = November 11, 2015
+  | title  = Journey into the Meraz
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li86
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li86}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li7z">
+			Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">adventureCardGameHomebrew</span>
+				<span class="tag">community</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-ShadowDemon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-ShadowDemon.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CorruptedSoldier_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6022-FallingBell.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6022-FallingBell.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-SirIlivan.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-SirIlivan.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO60XX-FriendsAndEnemies.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO60XX-FriendsAndEnemies.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO60XX-FriendsAndEnemies2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO60XX-FriendsAndEnemies2.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Codex_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Codex_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jen &quot;Iammars&quot; McTeague]]
+  | date   = November 10, 2015
+  | title  = Homebrew Scenario Design with Jen &quot;Iammars&quot; McTeague
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7z}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li7w">
+			Updated My Journal
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0610E_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0610E_180.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:The_Wounded_Wisp.jpg">The_Wounded_Wisp.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Linda Zayas-Palmer]]
+  | date   = November 10, 2015
+  | title  = Updated My Journal
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7w
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7w}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li7p">
+			In the Cargo Hold
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">rustyDragonInn</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Crate.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Crate.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 06, 2015
+  | title  = In the Cargo Hold
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7p
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7p}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Barrels.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Barrels.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 06, 2015
+  | title  = In the Cargo Hold
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7p
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7p}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Ranzak.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20151106-Ranzak.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = November 06, 2015
+  | title  = In the Cargo Hold
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7p
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7p}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li7n">
+			Who&#39;s the Master?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics/alain</span>
+				<span class="tag">iconics/amiri</span>
+				<span class="tag">iconics/imrijka</span>
+				<span class="tag">pathfinderPlayerCompanion</span>
+				<span class="tag">simul</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463_180.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Weapon_Master&#39;s_Handbook.jpg">Weapon_Master&#39;s_Handbook.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = November 06, 2015
+  | title  = Who&#39;s the Master?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7n}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Imrijka.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Imrijka.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Imrijka_and_lock.jpg">Imrijka_and_lock.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = November 06, 2015
+  | title  = Who&#39;s the Master?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7n}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Amiri.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Amiri.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Amiri_bolts.jpg">Amiri_bolts.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = November 06, 2015
+  | title  = Who&#39;s the Master?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7n}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Alain.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9463-Alain.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Alain_charges.jpg">Alain_charges.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = November 06, 2015
+  | title  = Who&#39;s the Master?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li7n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li7n}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li76">
+			Remember Remember, It&#39;s Bestiary 5 This November!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">alexandruSabo</span>
+				<span class="tag">bestiary5</span>
+				<span class="tag">contests</span>
+				<span class="tag">danielLPez</span>
+				<span class="tag">joseParodi</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">people/artists/benWootten</span>
+				<span class="tag">people/artists/damienMammoliti</span>
+				<span class="tag">people/artists/daveAllsop</span>
+				<span class="tag">tomaszChistowski</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Wyrmwraith.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Wyrmwraith.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 05, 2015
+  | title  = Remember Remember, It&#39;s Bestiary 5 This November!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li76
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li76}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Dwiergeth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Dwiergeth.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Dwiergeth.jpg">Dwiergeth.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 05, 2015
+  | title  = Remember Remember, It&#39;s Bestiary 5 This November!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li76
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li76}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Muse.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Muse.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Muse.jpg">Muse.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 05, 2015
+  | title  = Remember Remember, It&#39;s Bestiary 5 This November!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li76
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li76}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Peuchen.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-Peuchen.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Peuchen.jpg">Peuchen.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 05, 2015
+  | title  = Remember Remember, It&#39;s Bestiary 5 This November!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li76
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li76}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-DanavaTitan.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1133-DanavaTitan.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Danava_titan.jpg">Danava_titan.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liz Courts]]
+  | date   = November 05, 2015
+  | title  = Remember Remember, It&#39;s Bestiary 5 This November!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li76
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li76}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li79">
+			Explore and Unearth the Secrets of Occult Realms
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286_180.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Occult_Realms.jpg">Occult_Realms.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-Denebrum.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-Denebrum.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Denebrum_neothelid.jpg">Denebrum_neothelid.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-GrandSarret.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-GrandSarret.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Grand_Sarret.jpg">Grand_Sarret.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-EtherealPlane.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-EtherealPlane.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Crystal_ball.jpg">Crystal_ball.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-PsychogenicAdvancement.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-PsychogenicAdvancement.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Mathus_Lelspith.jpg">Mathus_Lelspith.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-Azlanti.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9286-Azlanti.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Azlanti.jpg">Azlanti.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz &amp; Jessica Price]]
+  | date   = November 04, 2015
+  | title  = Explore and Unearth the Secrets of Occult Realms
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li79
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li79}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li6y">
+			When Should We Errata a Card?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Alain.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Alain.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-AlainLancer.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-AlainLancer.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-Pegasus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-Pegasus.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-GauntletOfRuin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-GauntletOfRuin.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-Eustoyriax.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6023-Eustoyriax.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6026-InfiniteRod.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6026-InfiniteRod.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000-PR-Horsechopper.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000-PR-Horsechopper.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6802-Kyra.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6802-Kyra.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-AncientLibrary.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-AncientLibrary.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-HeadlessLord.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-HeadlessLord.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6807-Disintegrate.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6807-Disintegrate.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6006-IntoTheEye.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6006-IntoTheEye.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-RidingHorse.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-RidingHorse.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6026-DireGriffon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6026-DireGriffon.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-AbyssalRift.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-AbyssalRift.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6010-FringesOfTheEye.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6010-FringesOfTheEye.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6014-TeleportationChamber.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6014-TeleportationChamber.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6809-StealSoul.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6809-StealSoul.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6005-SummonMonster.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6005-SummonMonster.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6013-WerecrodileOld.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6013-WerecrodileOld.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6013-WerecrodileNew.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6013-WerecrodileNew.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ElvenEntanglement.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ElvenEntanglement.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-TangleTrap.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-TangleTrap.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Vinst.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-Vinst.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ArborealBlight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ArborealBlight.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CarrionGolem.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-CarrionGolem.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-DemonicHorde.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-DemonicHorde.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-Restoration.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6004-Restoration.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6804-NatureAdept.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6804-NatureAdept.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6807-ArcaneCollector.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6807-ArcaneCollector.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2015
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = November 03, 2015
+  | title  = When Should We Errata a Card?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5li6y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5li6y}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2015-11-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5li6u">
+			New Recruits, New Achievements!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	</body>
+</html>

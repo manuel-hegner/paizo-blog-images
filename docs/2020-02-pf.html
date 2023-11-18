@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2020-02</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2020-02-all.html" >All</option>
+			<option value="2020-02-pf.html" selected>Pathfinder only</option>
+			<option value="2020-02-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" selected>2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2020-2-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4m">
+			Core Design: Valeros
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/valeros</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6000.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Rise_of_the_Runelords_Base_Set.jpg">Rise_of_the_Runelords_Base_Set.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_RotRValerosFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_RotRValerosFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_RotRValerosBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_RotRValerosBack.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_SSValerosFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_SSValerosFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_SSValerosBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_SSValerosBack.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CDValerosFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CDValerosFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CDValerosBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CDValerosBack.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCharFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCharFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCharBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCharBack.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCompatriot.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosCompatriot.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosDrunkenAvenger.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022620_CoreValerosDrunkenAvenger.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chad Brown]]
+  | date   = Februar 28, 2020
+  | title  = Core Design: Valeros
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4m}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4o">
+			February 2020 Pathfinder Society Releases
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_PACS.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_PACS.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James Case]]
+  | date   = Februar 27, 2020
+  | title  = February 2020 Pathfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4o
+  }}   
+| summary  = Logo for the Pathfinder Adventure Card Society
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4o}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_PFSLogo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_PFSLogo.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pathfinder_Society_logo_2019.png">Pathfinder_Society_logo_2019.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James Case]]
+  | date   = Februar 27, 2020
+  | title  = February 2020 Pathfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4o
+  }}   
+| summary  = Logo for the Pathfinder Society (second edition)
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4o}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Zig.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Zig.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Zig.jpg">Zig.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Chris Bjors
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James Case]]
+  | date   = Februar 27, 2020
+  | title  = February 2020 Pathfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4o
+  }}   
+| summary  = Full-body illustration of the goblin character Zig
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4o}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Urwal.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Urwal.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Urwal.jpg">Urwal.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Raphael Madureira
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James Case]]
+  | date   = Februar 27, 2020
+  | title  = February 2020 Pathfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4o
+  }}   
+| summary  = Illustration of Verdant Wheel faction leader Urwal
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4o}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Neidre.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022720_Neidre.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Neidre_Fliavazzana.jpg">Neidre_Fliavazzana.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Przemyslaw Golab
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James Case]]
+  | date   = Februar 27, 2020
+  | title  = February 2020 Pathfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4o
+  }}   
+| summary  = action pose illustration of a gnome wearing leather armor holding a sickle
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4o}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4i">
+			Make Your Game Your Own
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderGamemasteryGuide</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022520_GMGCover.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022520_GMGCover.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 26, 2020
+  | title  = Make Your Game Your Own
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4i
+  }}   
+| summary  = Pathfinder second edition gamemastery guide
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4i}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GMGToC.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GMGToC.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 26, 2020
+  | title  = Make Your Game Your Own
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4i
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4i}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GMGToC02.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GMGToC02.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 26, 2020
+  | title  = Make Your Game Your Own
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4i
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4i}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4h">
+			The Threefold Conspiracy: Gray Matter
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">theThreefoldConspiracy</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GrayMatter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022420_GrayMatter.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Gray_matter.jpg">Gray_matter.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Nathaniel James
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 26, 2020
+  | title  = The Threefold Conspiracy: Gray Matter
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4h
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4h}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4j">
+			Dragons and Things Returns
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">dragonsandThings</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4g">
+			This Week on Twitch, Feb 24 - Mar 1
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_UpdatedTwitch.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_UpdatedTwitch.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 24, 2020
+  | title  = This Week on Twitch, Feb 24 - Mar 1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4g
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4g}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_DaT.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_DaT.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 24, 2020
+  | title  = This Week on Twitch, Feb 24 - Mar 1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4g
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4g}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_SFLore.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_SFLore.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 24, 2020
+  | title  = This Week on Twitch, Feb 24 - Mar 1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4g
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4g}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_PFMagic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_PFMagic.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 24, 2020
+  | title  = This Week on Twitch, Feb 24 - Mar 1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4g
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4g}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_DaT.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/022120_DaT.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 24, 2020
+  | title  = This Week on Twitch, Feb 24 - Mar 1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4g
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4g}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh4d">
+			Monster Making
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021920_ailuran.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021920_ailuran.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ailuran.jpg">Ailuran.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Adam Daigle]]
+  | date   = Februar 20, 2020
+  | title  = Monster Making
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh4d
+  }}   
+| summary  = .
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh4d}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh47">
+			Rise of the Runelords: Shalelu Be Food?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath/riseOfTheRunelords</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021820_Runelords.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021820_Runelords.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Shalelu_vs_goblins.jpg">Shalelu_vs_goblins.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Michele Giorgi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 19, 2020
+  | title  = Rise of the Runelords: Shalelu Be Food?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh47
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh47}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh44">
+			This Week on Twitch, Feb 17 - Feb 23
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_UpdatedTwitch.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_UpdatedTwitch.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 17, 2020
+  | title  = This Week on Twitch, Feb 17 - Feb 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh44
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh44}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_Society.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_Society.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 17, 2020
+  | title  = This Week on Twitch, Feb 17 - Feb 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh44
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh44}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_Modify.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_Modify.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 17, 2020
+  | title  = This Week on Twitch, Feb 17 - Feb 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh44
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh44}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_QueueTimes.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021420_QueueTimes.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 17, 2020
+  | title  = This Week on Twitch, Feb 17 - Feb 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh44
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh44}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh43">
+			Organized Play Foundation: Call for Volunteers
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh42">
+			Organized Play: New Faces, New Places
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh41">
+			Tales From The Drift: Radio Silence
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">talesFromTheDrift</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021120_Diaspora.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/021120_Diaspora.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Diaspora.jpg">Diaspora.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Leonardo Borazio
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 12, 2020
+  | title  = Tales From The Drift: Radio Silence
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh41
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh41}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3z">
+			This Week on Twitch, Feb 10 - Feb 16
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_TwitchSchedule.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_TwitchSchedule.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 10, 2020
+  | title  = This Week on Twitch, Feb 10 - Feb 16
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_godHost.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_godHost.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 10, 2020
+  | title  = This Week on Twitch, Feb 10 - Feb 16
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3z}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_BYOW.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020720_BYOW.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 10, 2020
+  | title  = This Week on Twitch, Feb 10 - Feb 16
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3z
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3z}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3w">
+			February Update— Achievement Points , Stars, Novas, Spotlights and Conventions!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3v">
+			Paizo People: Additions and Promotions
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+				<span class="tag">paizoStaff</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_LoganBonner_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_LoganBonner_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/121919_JamesCaseBlog_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/121919_JamesCaseBlog_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_GlennElliot.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_GlennElliot.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_MaryssaLagervall.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_MaryssaLagervall.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_PatrickHurley_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_PatrickHurley_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_KieranNewton.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_KieranNewton.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_MarkSeifter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_MarkSeifter.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_AaronShanks_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020520_AaronShanks_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = Februar 06, 2020
+  | title  = Paizo People: Additions and Promotions
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3v
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3v}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3q">
+			Tales From The Drift: Chef&#39;s Surprise
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">talesFromTheDrift</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020320_Idari.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020320_Idari.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Idari.jpg">Idari.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Leonardo Borazio
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 05, 2020
+  | title  = Tales From The Drift: Chef&#39;s Surprise
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3q
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3q}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3u">
+			Extinction Curse Extravaganza!
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3t">
+			Pathfinder: Wrath of the Righteous Now On Kickstarter!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">computerGames</span>
+				<span class="tag">owlcatGames</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">videoGames</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020420_Wrath.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/020420_Wrath.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 04, 2020
+  | title  = Pathfinder: Wrath of the Righteous Now On Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3t
+  }}   
+| summary  = Pathfinder:Wrath of the Righteous keyart
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3t}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3p">
+			Pathfinder LIVE Presents “A Taste of Trunau” Featuring The Glass Cannon Podcast
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-2-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sh3n">
+			This Week on Twitch, Feb 3 - Feb 9
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013020_TwitchSchedule.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013020_TwitchSchedule.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 03, 2020
+  | title  = This Week on Twitch, Feb 3 - Feb 9
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3n}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013020_ConspiracyCampaign.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013020_ConspiracyCampaign.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 03, 2020
+  | title  = This Week on Twitch, Feb 3 - Feb 9
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3n}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013120_HowTo.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/013120_HowTo.png">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Februar 03, 2020
+  | title  = This Week on Twitch, Feb 3 - Feb 9
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sh3n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sh3n}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

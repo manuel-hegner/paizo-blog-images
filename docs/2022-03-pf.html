@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2022-03</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2022-03-all.html" >All</option>
+			<option value="2022-03-pf.html" selected>Pathfinder only</option>
+			<option value="2022-03-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" selected>2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2022-3-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si0a">
+			Starfinder Society Faction Preview: The Cognates
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety/factions</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0005_Royo.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0005_Royo.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jessica Catalan]]
+  | date   = März 31, 2022
+  | title  = Starfinder Society Faction Preview: The Cognates
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si0a
+  }}   
+| summary  = Artist Bruno Cesar: The ysoki Starfinder Royo stands dressed in an old-fashioned tweed suit, clutching old books under one arm and examining a pocket watch.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si0a}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0005_Cognates_Logo.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0005_Cognates_Logo.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Luis Fernando Mesquita
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jessica Catalan]]
+  | date   = März 31, 2022
+  | title  = Starfinder Society Faction Preview: The Cognates
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si0a
+  }}   
+| summary  = Four colored lines form a pair of interlocking elongated hexagons.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si0a}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si0b">
+			International Transgender Day of Visibility
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si09">
+			Now Available: Goblin Adventures Galore!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAccessories</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/March2022_NewReleases.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/March2022_NewReleases.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 30, 2022
+  | title  = Now Available: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si09
+  }}   
+| summary  = Paizo March 2022 new releases spread of promotional art
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5503_GoblinFireworksFight_1200.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5503_GoblinFireworksFight_1200.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 30, 2022
+  | title  = Now Available: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si09
+  }}   
+| summary  = Goblin Firework Fight box mock up
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si09}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si08">
+			Introducing the Outlaws of Alkenstar Player’s Guide
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">outlawsOfAlkenstar</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/OutlawsOfAlkenstar_PlayersGuide.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/OutlawsOfAlkenstar_PlayersGuide.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Outlaws_of_Alkenstar_Player&#39;s_Guide.png">Outlaws_of_Alkenstar_Player&#39;s_Guide.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 28, 2022
+  | title  = Introducing the Outlaws of Alkenstar Player’s Guide
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si08
+  }}   
+| summary  = Outlaws of Alkenstar Player&#39;s Guide Cover featuring the iconic inventor, Droven and their automaton, Whirp jumping away from an explosion
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si08}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si00">
+			Today on Paizo LIVE: Goblin Adventures Galore!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoStaff</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_Toolbox_Opener_Pixoloid_FInal.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_Toolbox_Opener_Pixoloid_FInal.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Mark Molnar
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 25, 2022
+  | title  = Today on Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si00
+  }}   
+| summary  = Two large bat-like aliens creep on the rafters above a long hallway full of other beings who don&#39;t seem to notice their presence
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si00}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_AdventureToolboxOpener.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_AdventureToolboxOpener.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Loïc Canavaggia
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 25, 2022
+  | title  = Today on Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si00
+  }}   
+| summary  = Pathfinder Iconic witch, Feiya, floats the backs of three Tyrannosaurus&#39;s that she is guiding with a red magic from her outstretched staff
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si00}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244%20_AdventureToolboxOpener.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244%20_AdventureToolboxOpener.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Rustan Curman
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 25, 2022
+  | title  = Today on Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si00
+  }}   
+| summary  = A robot punching an armored vest soldier in the chin so hard they appear to have an out of body experience
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si00}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzz">
+			March 2022 Organized Play Scenario Previews
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS04_MelorianCadusys.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS04_MelorianCadusys.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jessica Catalan]]
+  | date   = März 24, 2022
+  | title  = March 2022 Organized Play Scenario Previews
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzz
+  }}   
+| summary  = A dark haired, smiling priestess of Iomedae
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0312_CasiraBintMeji.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0312_CasiraBintMeji.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jessica Catalan]]
+  | date   = März 24, 2022
+  | title  = March 2022 Organized Play Scenario Previews
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzz
+  }}   
+| summary  = A Startled halfling scribe, wearing small glasses with their hair up in a large bun
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0312_KhayratAl-Maren.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0312_KhayratAl-Maren.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Felipe Fornitani
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jessica Catalan]]
+  | date   = März 24, 2022
+  | title  = March 2022 Organized Play Scenario Previews
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzz
+  }}   
+| summary  = A short haired, blonde, worried looking sylph elf, with two earrings handing from their right ear
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzy">
+			Last Chance for the Kobold Hoard!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAccessories</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WZK68504_RedKobold.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WZK68504_RedKobold.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 21, 2022
+  | title  = Last Chance for the Kobold Hoard!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzy
+  }}   
+| summary  = A red kobold holding a spear
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzy}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzo">
+			On the Next Paizo LIVE: Goblin Adventures Galore!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoStaff</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/19_GreasedPig.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/19_GreasedPig.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Illustration by Kiki Moch Rizky: A small pig splashing through the mud
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/25_TrickyPig.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/25_TrickyPig.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Kiki Moch Rizky
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Illustration by Kiki Moch Rizky: A pink pig trotting with its nose in the air
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90174_PathfinderAP_ShadowsOfTheAncients_1200.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90174_PathfinderAP_ShadowsOfTheAncients_1200.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Setiawan Lee
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Illustration by Setiawan Lee. Pathfinder Strength of Thousands Adventure Path: Shadow&#39;s of the Ancients
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_StarfinderAP_Icebound_1200.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_StarfinderAP_Icebound_1200.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Rodrigo Gonzalez Toledo
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Cover Art by Rodrigo Gonzalez Toledo. Starfinder Horizons of the Vast Adventure Path: Icebound
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_PathfinderAP_BurningTundra_1200.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_PathfinderAP_BurningTundra_1200.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = David Alvarez
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Illustration by David Alvarez. Pathfinder Adventure Path Question for the Frozen Flame: Burning Tundra
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244_StarfinderAP_AlliesAgainstTheEye_1200.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244_StarfinderAP_AlliesAgainstTheEye_1200.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Rodrigo Gonzalez
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = März 18, 2022
+  | title  = On the Next Paizo LIVE: Goblin Adventures Galore!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzo
+  }}   
+| summary  = Cover Art by Rodrigo Gonzalez Toledo. Starfinde Horizons of the Vast Adventure Path: Allies Against The Eye
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzo}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzx">
+			Stand with Ukraine Humble Bundle
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">humbleBundle</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/StandWithUkraine_HBGraphic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/StandWithUkraine_HBGraphic.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 18, 2022
+  | title  = Stand with Ukraine Humble Bundle
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzx
+  }}   
+| summary  = Stand With Ukraine
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzx}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzw">
+			Organized Play Preview: 2022 Interactive Events
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFS_Year3_3-98Cover.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFS_Year3_3-98Cover.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = März 17, 2022
+  | title  = Organized Play Preview: 2022 Interactive Events
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzw
+  }}   
+| summary  = Pathfinder Society Second Edition: Year of Shattered Sanctuaries - Expedition Into Pallid Peril By Rigby Bendele
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzw}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SFS_Season4_4-99Cover.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SFS_Season4_4-99Cover.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = März 17, 2022
+  | title  = Organized Play Preview: 2022 Interactive Events
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzw
+  }}   
+| summary  = Starfinder Society Year of the Data Scourge - A Time of Crisis by Dennis Muldoon
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzv">
+			Tales of Lost Omens: Dyrani Of The Harvest
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9304_StarstoneCheerleaders_2000.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9304_StarstoneCheerleaders_2000.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 16, 2022
+  | title  = Tales of Lost Omens: Dyrani Of The Harvest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzv
+  }}   
+| summary  = A woman dressed in fancy clothing is cautiously approaching the edge of a giant chasm in a city. A bunch of rowdy drunks and street punks are cheering the woman on
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzv}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzm">
+			Goblins Raid Sandpoint: Hilarity Ensues
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAccessories</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_Box3D.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_Box3D.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 14, 2022
+  | title  = Goblins Raid Sandpoint: Hilarity Ensues
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzm
+  }}   
+| summary  = Pathfinder Goblin Firework Fight Box
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_BasicGoblin.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_BasicGoblin.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 14, 2022
+  | title  = Goblins Raid Sandpoint: Hilarity Ensues
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzm
+  }}   
+| summary  = Pathfinder Goblin Firework Fight: Basic Goblin Holding Torch Card
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_GreasedPig.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFGoblinFireworkFight_GreasedPig.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 14, 2022
+  | title  = Goblins Raid Sandpoint: Hilarity Ensues
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzm
+  }}   
+| summary  = Pathfinder Goblin Firework Fight: Greased Pig Squealy Nord Card
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzm}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzk">
+			Don’t Miss the Pathfinder First Edition Character Options Humble Bundle!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">humbleBundle</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Team]]
+  | date   = März 12, 2022
+  | title  = Don’t Miss the Pathfinder First Edition Character Options Humble Bundle!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzk
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_2.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Team]]
+  | date   = März 12, 2022
+  | title  = Don’t Miss the Pathfinder First Edition Character Options Humble Bundle!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzk
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/031322_PF1stEdition_HumbleBundle_3.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Team]]
+  | date   = März 12, 2022
+  | title  = Don’t Miss the Pathfinder First Edition Character Options Humble Bundle!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzk
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzk}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzi">
+			Gen Con Indy 2022: Call for Volunteers &amp; Important Dates
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzf">
+			Pathfinder Infinite: February Month In Review
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">pathfinderInfinite</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ArcadiaAltameda.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ArcadiaAltameda.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 04, 2022
+  | title  = Pathfinder Infinite: February Month In Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzf
+  }}   
+| summary  = Pathfinder Infinite: Arcadia Files Altameda by Luis Loza
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DangerDossier.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DangerDossier.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 04, 2022
+  | title  = Pathfinder Infinite: February Month In Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzf
+  }}   
+| summary  = Starfinder Infinite: Danger Dossier By Andrew White
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Gunsmoke.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Gunsmoke.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 04, 2022
+  | title  = Pathfinder Infinite: February Month In Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzf
+  }}   
+| summary  = Pathfinder Infinite: Gunsmoke By Tylin Rezendes and James Beck
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KitsuneOfGolarion.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KitsuneOfGolarion.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 04, 2022
+  | title  = Pathfinder Infinite: February Month In Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzf
+  }}   
+| summary  = Pathfinder Infinite: Kitsune Of Golarion by Alezander Augunas, Joan Hong, Dustin Knight, Ruvaid Virk, and Sky Mahpiya Wall
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Queerfinder1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Queerfinder1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 04, 2022
+  | title  = Pathfinder Infinite: February Month In Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzf
+  }}   
+| summary  = Pathfinder Infinite: Queerfinder Bars of Absalom by The Gallant Goblin, Alexandra Nieto, Alison Cybe, Ben Joah, Grady Wang, Jan Martin, Jessica Marcrum, MicahDraws, Michelle Nguyen Bradley, Theo Thourson, Vanessa Hoskins
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzc">
+			Inevitable Excess – DLC For Pathfinder: Wrath Of The Righteous Is Now Available
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">videoGames</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Owlcat_DLC-2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Owlcat_DLC-2.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 03, 2022
+  | title  = Inevitable Excess – DLC For Pathfinder: Wrath Of The Righteous Is Now Available
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shzc
+  }}   
+| summary  = Pathfinder Wrath of the Righteous promotional graphic
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shzc}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shzb">
+			March 2022 Organized Play Monthly Update
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shza">
+			For My Best Customer
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110_IchorSlinger.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110_IchorSlinger.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Carl Springer
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = An ichor slinger dressed in a long red coat with their hair slicked back carrying a tray of brightly colored bottles
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110_Chapter1jpg.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110_Chapter1jpg.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = Pathfinder iconic Kyra driving back a skeleton with her symbol to Sarenrae
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110%20Chapter2_Opener.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2110%20Chapter2_Opener.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi and Kiki Moch Rizky
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = A skeletal version of iconic witch, Feiya call forth fellow undead iconics to rise from their graves
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Knights_chapter1_opener.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Knights_chapter1_opener.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Ainur Salimova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = A knight in shining armor reaches down to a child from the back of their horse while a battle rages around them
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7119_AfterTheCrash.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7119_AfterTheCrash.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Laslo Ludrovan
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = two travelers in space suits float outside of their ship that&#39;s crashed on an astroid floating near a bright rift in space
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90174_PathfinderAP_ShadowsoftheAncients.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90174_PathfinderAP_ShadowsoftheAncients.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = Pathfinder Strength of Thousands Adventure Path: Shadow&#39;s of the Ancients
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_PathfinderAP_BurningTundra.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90177_PathfinderAP_BurningTundra.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Setiawan Lee. Cover art
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = Pathfinder Adventure Path Question for the Frozen Flame: Burning Tundra
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_StarfinderAP_Icebound.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7243_StarfinderAP_Icebound.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = Starfinder Horizons of the Vast Adventure Path: Icebound
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244_StarfinderAP_AlliesAgainsttheEye.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7244_StarfinderAP_AlliesAgainsttheEye.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Rodrigo Gonzalez Toledo
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 02, 2022
+  | title  = For My Best Customer
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shza
+  }}   
+| summary  = Starfinde Horizons of the Vast Adventure Path: Allies Against The Eye
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shza}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-3-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shz9">
+			Iconic Encounter: Wreckers Reunion - Part Three
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2109_GearsIntroduction.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2109_GearsIntroduction.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Will O’Brien
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = März 01, 2022
+  | title  = Iconic Encounter: Wreckers Reunion - Part Three
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shz9
+  }}   
+| summary  = In a dark workshop or laboratory, the iconic alchemist and iconic inventor take cover behind a low metal wall extending from the chassis of the inventor’s clockwork companion. The alchemist readies to throw a vial of fluid at an ooze that is breaking out of a glass tank in front of them.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shz9}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2018-03</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2018-03-all.html" >All</option>
+			<option value="2018-03-pf.html" selected>Pathfinder only</option>
+			<option value="2018-03-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" selected>2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2018-3-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkoe">
+			Celebrating International Transgender Day of Visibility!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1129-Shaman.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1129-Shaman.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Staff]]
+  | date   = März 31, 2018
+  | title  = Celebrating International Transgender Day of Visibility!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkoe
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkoe}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Iseph.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Iseph.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Staff]]
+  | date   = März 31, 2018
+  | title  = Celebrating International Transgender Day of Visibility!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkoe
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkoe}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180331-Anevia.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180331-Anevia.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Anevia_Tirabade.jpg">Anevia_Tirabade.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Staff]]
+  | date   = März 31, 2018
+  | title  = Celebrating International Transgender Day of Visibility!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkoe
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkoe}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180331-Rexus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180331-Rexus.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Rexus_Victocora_Portrait.jpg">Rexus_Victocora_Portrait.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[—The Paizo Staff]]
+  | date   = März 31, 2018
+  | title  = Celebrating International Transgender Day of Visibility!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkoe
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkoe}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkod">
+			Critical Hits and Critical Failures
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180330-Weapons.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180330-Weapons.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Seifter]]
+  | date   = März 30, 2018
+  | title  = Critical Hits and Critical Failures
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkod
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkod}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-29
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkoa">
+			Adventure Card Game Homebrew, Tower of Doom
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">adventureCardGameHomebrew</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lko1">
+			Pathfinder Society 2: Replay, Rewards, and Rebuilds
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9269-Chronicler.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9269-Chronicler.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Chronicler.jpg">Chronicler.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 28, 2018
+  | title  = Pathfinder Society 2: Replay, Rewards, and Rebuilds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lko1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lko1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkn4">
+			Rogue Class Preview
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/rogues</span>
+				<span class="tag">iconics/merisiel</span>
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Merisiel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Merisiel.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Radney-MacFarland]]
+  | date   = März 26, 2018
+  | title  = Rogue Class Preview
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn4
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn4}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkn1">
+			No Bears, Oh My!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">jungleOfDespair54yeg</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-Lion.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-Lion.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 26, 2018
+  | title  = No Bears, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-Tiger.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-Tiger.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 26, 2018
+  | title  = No Bears, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Eagle.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Eagle.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 26, 2018
+  | title  = No Bears, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Vulture.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-Vulture.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 26, 2018
+  | title  = No Bears, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-HumanRanger.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180326-HumanRanger.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 26, 2018
+  | title  = No Bears, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkn0">
+			More Pathfinder Content on Fantasy Grounds
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">licensedProducts</span>
+				<span class="tag">mummysMask</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Manual.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Manual.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Player.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Player.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Spellcasting.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Spellcasting.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Stats.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-B3-Stats.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-MM1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-MM1.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-MM2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180324-MM2.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Doug Davison]]
+  | date   = März 24, 2018
+  | title  = More Pathfinder Content on Fantasy Grounds
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkn0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkn0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkmy">
+			Pathfinder a la Mode
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/2080323-Halfling.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/2080323-Halfling.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = März 23, 2018
+  | title  = Pathfinder a la Mode
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmy}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkmw">
+			She who Writes the Player&#39;s Guide Should Swing the Sword
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">warForTheCrown</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9000-22E_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9000-22E_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:War_for_the_Crown_Player&#39;s_Guide.jpg">War_for_the_Crown_Player&#39;s_Guide.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Crystal Frasier]]
+  | date   = März 22, 2018
+  | title  = She who Writes the Player&#39;s Guide Should Swing the Sword
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmw
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkmt">
+			Adventure Card Game Combat Goes to 11!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">ultimateDecks</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkmg">
+			New Pathfinder Society Scenarios, What&#39;s In a Name?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+				<span class="tag">tawnyFritz</span>
+				<span class="tag">teresaGuido</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0916E-Delara.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0916E-Delara.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Delara.jpg">Delara.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 21, 2018
+  | title  = New Pathfinder Society Scenarios, What&#39;s In a Name?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmg
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmg}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0916E-Rutilo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0916E-Rutilo.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Rutillo_Irrica.jpg">Rutillo_Irrica.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Tawny Fritz
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 21, 2018
+  | title  = New Pathfinder Society Scenarios, What&#39;s In a Name?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmg
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmg}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0917E-Abomination.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS0917E-Abomination.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ralzeros_the_Overwatched.jpg">Ralzeros_the_Overwatched.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Teresa Guido
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 21, 2018
+  | title  = New Pathfinder Society Scenarios, What&#39;s In a Name?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmg
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmg}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkmf">
+			Spiral of Bones is Here!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">licensedProducts</span>
+				<span class="tag">pathfinderComics</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DYN0042-A_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DYN0042-A_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page1.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page2.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page3.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page4.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page4.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page5.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180320-Page5.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 20, 2018
+  | title  = Spiral of Bones is Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkmf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkmf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkm9">
+			Fighter Class Preview
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/fighters</span>
+				<span class="tag">iconics/valeros</span>
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-Valeros.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-Valeros.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Valeros_playtest_sketch.jpg">Valeros_playtest_sketch.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = März 19, 2018
+  | title  = Fighter Class Preview
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm9
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkm8">
+			They Came From Below!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">jungleOfDespair54yeg</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-Morlock.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-Morlock.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 19, 2018
+  | title  = They Came From Below!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-SerpentfolkHunter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-SerpentfolkHunter.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 19, 2018
+  | title  = They Came From Below!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-SerpentfolkRogue.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-SerpentfolkRogue.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 19, 2018
+  | title  = They Came From Below!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-HumanPaladin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180319-HumanPaladin.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 19, 2018
+  | title  = They Came From Below!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm8}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkm3">
+			Are You Proficient?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180316-DwarfFighter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180316-DwarfFighter.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Seifter]]
+  | date   = März 16, 2018
+  | title  = Are You Proficient?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm3
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm3}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkm1">
+			Making the Most of Character Unlocks
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">adventureCardGuild</span>
+				<span class="tag">classDecks</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6021-SeoniCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6021-SeoniCharacterFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6021-ElementMaster.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6021-ElementMaster.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6822-WandOfFlame.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6822-WandOfFlame.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6822-AcadamaeScholar.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6822-AcadamaeScholar.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6031-MavaroCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6031-MavaroCharacterFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-TheMissingEye.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-TheMissingEye.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-MindThrust.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-MindThrust.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-ShrunkenHead_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6827-ShrunkenHead_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ImrijkaCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6020-ImrijkaCharacterFront.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-StalkersCrossbow.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-StalkersCrossbow.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-ChannelCorruption.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-ChannelCorruption.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-BladeLash.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6824-BladeLash.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1135-Vampirism.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1135-Vampirism.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Vampire_Kyra.jpg">Vampire_Kyra.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-Sinderbos.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-Sinderbos.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-CircleOfEvil.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-CircleOfEvil.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-HellfireHalo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO6823-HellfireHalo.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = März 15, 2018
+  | title  = Making the Most of Character Unlocks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkm1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkm1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkls">
+			Rituals and Rivals
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">jungleOfDespair</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-SummoningPillar.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-SummoningPillar.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 15, 2018
+  | title  = Rituals and Rivals
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkls
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkls}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-SerpentfolkWizard.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-SerpentfolkWizard.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 15, 2018
+  | title  = Rituals and Rivals
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkls
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkls}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-MorlockCleric.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-MorlockCleric.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 15, 2018
+  | title  = Rituals and Rivals
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkls
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkls}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-ElfAssassin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180315-ElfAssassin.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 15, 2018
+  | title  = Rituals and Rivals
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkls
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkls}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lklx">
+			Pathfinder Society 2, Expanding on the FAQ
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-StarfinderSociety.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-StarfinderSociety.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 14, 2018
+  | title  = Pathfinder Society 2, Expanding on the FAQ
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklx}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1138-PathfinderStudying.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1138-PathfinderStudying.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pathfinder_studying.jpg">Pathfinder_studying.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 14, 2018
+  | title  = Pathfinder Society 2, Expanding on the FAQ
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklx}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lklu">
+			Forest from the Trees
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAccessories</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4075_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4075_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Forest_Starter_Set_Flip-Tiles.jpg">Forest_Starter_Set_Flip-Tiles.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Radney-MacFarland]]
+  | date   = März 13, 2018
+  | title  = Forest from the Trees
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklu}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lklr">
+			Leveling Up!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-Harsk.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-Harsk.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Logan Bonner]]
+  | date   = März 12, 2018
+  | title  = Leveling Up!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklr
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklr}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lklq">
+			Fiendgully: The Last Painforest
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">jungleOfDespair</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-Astradaemon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-Astradaemon.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 12, 2018
+  | title  = Fiendgully: The Last Painforest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-VenomDaemon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-VenomDaemon.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 12, 2018
+  | title  = Fiendgully: The Last Painforest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-RavenousQlippoth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-RavenousQlippoth.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 12, 2018
+  | title  = Fiendgully: The Last Painforest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-InfectiousQlippoth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-InfectiousQlippoth.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 12, 2018
+  | title  = Fiendgully: The Last Painforest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-GongorinanQlippoth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180312-GongorinanQlippoth.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 12, 2018
+  | title  = Fiendgully: The Last Painforest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lklq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lklq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkln">
+			Pathfinder Playtest: Return to the Crypt
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9520_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9520_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = März 10, 2018
+  | title  = Pathfinder Playtest: Return to the Crypt
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkln
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkln}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-7
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lklh">
+			All About Actions
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkl9">
+			First Look at the Pathfinder Playtest
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PlaytestLogo.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PlaytestLogo.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pathfinder_Playtest.png">Pathfinder_Playtest.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = März 06, 2018
+  | title  = First Look at the Pathfinder Playtest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkl9
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkl9}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180307-Sketch.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180307-Sketch.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Wayne Reynolds
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = März 06, 2018
+  | title  = First Look at the Pathfinder Playtest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkl9
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkl9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkiy">
+			Covered in Creepy Crawlies
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">jungleOfDespair</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-MetalCobra.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-MetalCobra.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 02, 2018
+  | title  = Covered in Creepy Crawlies
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkiy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkiy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-ApparatusOfOctopus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-ApparatusOfOctopus.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 02, 2018
+  | title  = Covered in Creepy Crawlies
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkiy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkiy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-GiantAnt.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-GiantAnt.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 02, 2018
+  | title  = Covered in Creepy Crawlies
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkiy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkiy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-ThulgantQlippoth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180302-ThulgantQlippoth.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = März 02, 2018
+  | title  = Covered in Creepy Crawlies
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkiy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkiy}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkiw">
+			Hail Gom-Gom!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classDecks</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2018-3-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lkij">
+			Unseasonably Warm?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">majaDjeke</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+				<span class="tag">sebastianRodriguez</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180228-ErwynHarvacus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180228-ErwynHarvacus.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Erwyn_Harvacus.jpg">Erwyn_Harvacus.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Maja Djeke
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 01, 2018
+  | title  = Unseasonably Warm?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkij
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkij}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180228-Azure.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20180228-Azure.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Azure.jpg">Azure.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2018
+| copy     = Paizo Inc.
+| artist   = Sebastian Rodriguez
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = März 01, 2018
+  | title  = Unseasonably Warm?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lkij
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lkij}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

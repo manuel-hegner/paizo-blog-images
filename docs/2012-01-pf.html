@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2012-01</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2012-01-all.html" >All</option>
+			<option value="2012-01-pf.html" selected>Pathfinder only</option>
+			<option value="2012-01-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" selected>2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2012-1-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld2c">
+			RPG Superstar: Round 2!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld27">
+			Welcome to the Screaming Jungle
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+				<span class="tag">people/interns</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld24">
+			The Dawn of a New Era: Guide to Pathfinder Society Organized Play, Version 4.1
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">people/artists/kevinYan</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9025-Westcrown.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9025-Westcrown.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Westcrown.jpg">Westcrown.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 30, 2012
+  | title  = The Dawn of a New Era: Guide to Pathfinder Society Organized Play, Version 4.1
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld24
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld24}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld20">
+			Pathfinder Battles Preview: A First Look at Rise of the Runelords
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-HumanRanger_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-HumanRanger_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Human_Ranger_PFmini.jpg">Human_Ranger_PFmini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-BugbearHero_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-BugbearHero_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Malfeshnekor_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Malfeshnekor_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Harpy_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Harpy_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Sinspawn_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-Sinspawn_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-TreacheryDemon_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-TreacheryDemon_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-YoungRedDragon_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012712-YoungRedDragon_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 27, 2012
+  | title  = Pathfinder Battles Preview: A First Look at Rise of the Runelords
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld20
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld20}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld1v">
+			RPG Superstar: Item Feedback
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld1w">
+			More Monsters!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderReferenceDocument</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1120-Titan.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1120-Titan.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Hekatonkheires.jpg">Hekatonkheires.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 26, 2012
+  | title  = More Monsters!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld1w
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld1w}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld1r">
+			The Perfumer&#39;s Apprentice
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">people/artists/carlosVilla</span>
+				<span class="tag">people/authors/kevinAndrewMurphy</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-PriestessOfCalistria.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-PriestessOfCalistria.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Priestess_of_Calistria.jpg">Priestess_of_Calistria.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 25, 2012
+  | title  = The Perfumer&#39;s Apprentice
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld1r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld1r}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld1p">
+			RPG Superstar™ 2012 Top 32 Revealed
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld19">
+			Design Blog: Flashbacks
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">gameMastery</span>
+				<span class="tag">people/artists/emrahElmasli</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Dream.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Dream.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 24, 2012
+  | title  = Design Blog: Flashbacks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld19
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld19}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Nightmare.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Nightmare.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 24, 2012
+  | title  = Design Blog: Flashbacks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld19
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld19}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Schadenfreude.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO3021-Schadenfreude.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 24, 2012
+  | title  = Design Blog: Flashbacks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld19
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld19}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0y">
+			More Venture-Officers On Board
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0w">
+			Pathfinder Battles Preview: When Hell Freezes Over
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012012-Yeti_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/012012-Yeti_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 20, 2012
+  | title  = Pathfinder Battles Preview: When Hell Freezes Over
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld0w
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld0w}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0r">
+			Snowsplosion!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+				<span class="tag">paizo/snowpocalypse</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SnowedIn-Liz.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SnowedIn-Liz.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 19, 2012
+  | title  = Snowsplosion!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld0r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld0r}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0p">
+			Fingers of Death—No, Doom!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">people/artists/danielMasso</span>
+				<span class="tag">people/authors/lucienSoulban</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Darvin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Darvin.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Darvin.jpg">Darvin.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 18, 2012
+  | title  = Fingers of Death—No, Doom!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld0p
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld0p}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0d">
+			Mapping the Path
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">gameMastery</span>
+				<span class="tag">people/artists/jasonEngle</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011712-Sketch.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011712-Sketch.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 17, 2012
+  | title  = Mapping the Path
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld0d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld0d}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011712-Final.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011712-Final.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 17, 2012
+  | title  = Mapping the Path
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld0d
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld0d}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld0c">
+			Exploring the Worldwound
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld09">
+			Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Orc_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Orc_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-CityGuard2_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-CityGuard2_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-CityGuard1_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-CityGuard1_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-HumanRogue_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-HumanRogue_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Druid_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Druid_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-ElfWizard_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-ElfWizard_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-DwarfFighter_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-DwarfFighter_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Cleric_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/011312-Cleric_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 13, 2012
+  | title  = Pathfinder Battles Preview: A Last Look at Heroes &amp; Monsters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld09
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld09}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld06">
+			Words from the RPG Superstar Trenches
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SeanMcGowan_90.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SeanMcGowan_90.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 12, 2012
+  | title  = Words from the RPG Superstar Trenches
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld06
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld06}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JerallToi_90.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JerallToi_90.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 12, 2012
+  | title  = Words from the RPG Superstar Trenches
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld06
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld06}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld04">
+			Fingers of Death—No, Doom!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales</span>
+				<span class="tag">people/artists/danielMasso</span>
+				<span class="tag">people/authors/lucienSoulban</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Hand.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Hand.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Bladed_Hand.jpeg">Bladed_Hand.jpeg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 11, 2012
+  | title  = Fingers of Death—No, Doom!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld04
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld04}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ld00">
+			Analyzing a Magic Item Stat Block
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">people/artists/damienMammoliti</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9235-Wizard.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9235-Wizard.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Wizard.jpg">Wizard.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 10, 2012
+  | title  = Analyzing a Magic Item Stat Block
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ld00
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ld00}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lczo">
+			Official Call for PaizoCon 2012 Volunteers
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions/paizocon</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lczm">
+			Pathfinder Battles Preview: One More Look at the Bad Guys
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Zombie_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Zombie_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Zombie_PFmini.jpg">Zombie_PFmini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Werewolf_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Werewolf_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Werewolf_PFmini.jpg">Werewolf_PFmini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Spectre_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Spectre_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Spectre_PFmini.jpg">Spectre_PFmini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Snake_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Snake_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Medusa_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Medusa_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Ettin_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-Ettin_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ettin_PFmini.jpg">Ettin_PFmini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-MedusaEttin_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-MedusaEttin_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-DragonMedusa_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/010512-DragonMedusa_360.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 06, 2012
+  | title  = Pathfinder Battles Preview: One More Look at the Bad Guys
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczm}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lczj">
+			Round 1 Deadline is Tomorrow!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lczf">
+			Fingers of Death—No, Doom!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales</span>
+				<span class="tag">people/artists/danielMasso</span>
+				<span class="tag">people/authors/lucienSoulban</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Fife.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8500-Fife.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Fife.jpg">Fife.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 04, 2012
+  | title  = Fingers of Death—No, Doom!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lczf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lczf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lcza">
+			New Year, New Goblins
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters</span>
+				<span class="tag">monsters/goblins</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">people/artists/miroslavPetrov</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9053-Kijimuna.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9053-Kijimuna.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kijimuna.jpg">Kijimuna.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2012
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Januar 03, 2012
+  | title  = New Year, New Goblins
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lcza
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lcza}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2012-1-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lcz9">
+			Here&#39;s to a Wondrous 4712
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	</body>
+</html>

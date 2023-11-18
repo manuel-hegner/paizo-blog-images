@@ -1,13 +1,11 @@
-package paizo.crawler;
+package paizo.crawler.s02articleextractor;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.OffsetDateTime;
 import java.time.ZonedDateTime;
-import java.time.chrono.ChronoZonedDateTime;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
@@ -20,6 +18,11 @@ import org.jsoup.nodes.Element;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.HTMLCleaner;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
+import paizo.crawler.common.PBICallable;
+import paizo.crawler.common.model.BlogPost;
 
 @Getter
 @RequiredArgsConstructor

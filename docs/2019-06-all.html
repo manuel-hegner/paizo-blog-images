@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2019-06</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2019-06-all.html" selected>All</option>
+			<option value="2019-06-pf.html" >Pathfinder only</option>
+			<option value="2019-06-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-all.html" >2023-11 (16)</option>
+				<option value="2023-10-all.html" >2023-10 (31)</option>
+				<option value="2023-09-all.html" >2023-09 (45)</option>
+				<option value="2023-08-all.html" >2023-08 (52)</option>
+				<option value="2023-07-all.html" >2023-07 (46)</option>
+				<option value="2023-06-all.html" >2023-06 (67)</option>
+				<option value="2023-05-all.html" >2023-05 (54)</option>
+				<option value="2023-04-all.html" >2023-04 (34)</option>
+				<option value="2023-03-all.html" >2023-03 (37)</option>
+				<option value="2023-02-all.html" >2023-02 (35)</option>
+				<option value="2023-01-all.html" >2023-01 (20)</option>
+				<option value="2022-12-all.html" >2022-12 (36)</option>
+				<option value="2022-11-all.html" >2022-11 (39)</option>
+				<option value="2022-10-all.html" >2022-10 (82)</option>
+				<option value="2022-09-all.html" >2022-09 (46)</option>
+				<option value="2022-08-all.html" >2022-08 (69)</option>
+				<option value="2022-07-all.html" >2022-07 (50)</option>
+				<option value="2022-06-all.html" >2022-06 (33)</option>
+				<option value="2022-05-all.html" >2022-05 (30)</option>
+				<option value="2022-04-all.html" >2022-04 (65)</option>
+				<option value="2022-03-all.html" >2022-03 (44)</option>
+				<option value="2022-02-all.html" >2022-02 (31)</option>
+				<option value="2022-01-all.html" >2022-01 (36)</option>
+				<option value="2021-12-all.html" >2021-12 (31)</option>
+				<option value="2021-11-all.html" >2021-11 (37)</option>
+				<option value="2021-10-all.html" >2021-10 (51)</option>
+				<option value="2021-09-all.html" >2021-09 (50)</option>
+				<option value="2021-08-all.html" >2021-08 (74)</option>
+				<option value="2021-07-all.html" >2021-07 (48)</option>
+				<option value="2021-06-all.html" >2021-06 (56)</option>
+				<option value="2021-05-all.html" >2021-05 (44)</option>
+				<option value="2021-04-all.html" >2021-04 (44)</option>
+				<option value="2021-03-all.html" >2021-03 (68)</option>
+				<option value="2021-02-all.html" >2021-02 (84)</option>
+				<option value="2021-01-all.html" >2021-01 (77)</option>
+				<option value="2020-12-all.html" >2020-12 (115)</option>
+				<option value="2020-11-all.html" >2020-11 (50)</option>
+				<option value="2020-10-all.html" >2020-10 (58)</option>
+				<option value="2020-09-all.html" >2020-09 (51)</option>
+				<option value="2020-08-all.html" >2020-08 (58)</option>
+				<option value="2020-07-all.html" >2020-07 (31)</option>
+				<option value="2020-06-all.html" >2020-06 (88)</option>
+				<option value="2020-05-all.html" >2020-05 (102)</option>
+				<option value="2020-04-all.html" >2020-04 (61)</option>
+				<option value="2020-03-all.html" >2020-03 (53)</option>
+				<option value="2020-02-all.html" >2020-02 (46)</option>
+				<option value="2020-01-all.html" >2020-01 (80)</option>
+				<option value="2019-12-all.html" >2019-12 (44)</option>
+				<option value="2019-11-all.html" >2019-11 (54)</option>
+				<option value="2019-10-all.html" >2019-10 (102)</option>
+				<option value="2019-09-all.html" >2019-09 (57)</option>
+				<option value="2019-08-all.html" >2019-08 (117)</option>
+				<option value="2019-07-all.html" >2019-07 (85)</option>
+				<option value="2019-06-all.html" selected>2019-06 (13)</option>
+				<option value="2019-05-all.html" >2019-05 (8)</option>
+				<option value="2019-04-all.html" >2019-04 (2)</option>
+				<option value="2019-03-all.html" >2019-03 (21)</option>
+				<option value="2019-02-all.html" >2019-02 (36)</option>
+				<option value="2019-01-all.html" >2019-01 (24)</option>
+				<option value="2018-12-all.html" >2018-12 (30)</option>
+				<option value="2018-11-all.html" >2018-11 (12)</option>
+				<option value="2018-10-all.html" >2018-10 (41)</option>
+				<option value="2018-09-all.html" >2018-09 (31)</option>
+				<option value="2018-08-all.html" >2018-08 (22)</option>
+				<option value="2018-07-all.html" >2018-07 (15)</option>
+				<option value="2018-06-all.html" >2018-06 (7)</option>
+				<option value="2018-05-all.html" >2018-05 (19)</option>
+				<option value="2018-04-all.html" >2018-04 (37)</option>
+				<option value="2018-03-all.html" >2018-03 (65)</option>
+				<option value="2018-02-all.html" >2018-02 (14)</option>
+				<option value="2018-01-all.html" >2018-01 (20)</option>
+				<option value="2017-12-all.html" >2017-12 (27)</option>
+				<option value="2017-11-all.html" >2017-11 (33)</option>
+				<option value="2017-10-all.html" >2017-10 (49)</option>
+				<option value="2017-09-all.html" >2017-09 (67)</option>
+				<option value="2017-08-all.html" >2017-08 (18)</option>
+				<option value="2017-07-all.html" >2017-07 (45)</option>
+				<option value="2017-06-all.html" >2017-06 (20)</option>
+				<option value="2017-05-all.html" >2017-05 (37)</option>
+				<option value="2017-04-all.html" >2017-04 (35)</option>
+				<option value="2017-03-all.html" >2017-03 (64)</option>
+				<option value="2017-02-all.html" >2017-02 (40)</option>
+				<option value="2017-01-all.html" >2017-01 (51)</option>
+				<option value="2016-12-all.html" >2016-12 (53)</option>
+				<option value="2016-11-all.html" >2016-11 (42)</option>
+				<option value="2016-10-all.html" >2016-10 (63)</option>
+				<option value="2016-09-all.html" >2016-09 (69)</option>
+				<option value="2016-08-all.html" >2016-08 (39)</option>
+				<option value="2016-07-all.html" >2016-07 (28)</option>
+				<option value="2016-06-all.html" >2016-06 (40)</option>
+				<option value="2016-05-all.html" >2016-05 (40)</option>
+				<option value="2016-04-all.html" >2016-04 (47)</option>
+				<option value="2016-03-all.html" >2016-03 (36)</option>
+				<option value="2016-02-all.html" >2016-02 (33)</option>
+				<option value="2016-01-all.html" >2016-01 (72)</option>
+				<option value="2015-12-all.html" >2015-12 (52)</option>
+				<option value="2015-11-all.html" >2015-11 (68)</option>
+				<option value="2015-10-all.html" >2015-10 (87)</option>
+				<option value="2015-09-all.html" >2015-09 (58)</option>
+				<option value="2015-08-all.html" >2015-08 (54)</option>
+				<option value="2015-07-all.html" >2015-07 (84)</option>
+				<option value="2015-06-all.html" >2015-06 (76)</option>
+				<option value="2015-05-all.html" >2015-05 (72)</option>
+				<option value="2015-04-all.html" >2015-04 (66)</option>
+				<option value="2015-03-all.html" >2015-03 (45)</option>
+				<option value="2015-02-all.html" >2015-02 (61)</option>
+				<option value="2015-01-all.html" >2015-01 (35)</option>
+				<option value="2014-12-all.html" >2014-12 (37)</option>
+				<option value="2014-11-all.html" >2014-11 (37)</option>
+				<option value="2014-10-all.html" >2014-10 (38)</option>
+				<option value="2014-09-all.html" >2014-09 (41)</option>
+				<option value="2014-08-all.html" >2014-08 (33)</option>
+				<option value="2014-07-all.html" >2014-07 (14)</option>
+				<option value="2014-06-all.html" >2014-06 (10)</option>
+				<option value="2014-05-all.html" >2014-05 (49)</option>
+				<option value="2014-04-all.html" >2014-04 (13)</option>
+				<option value="2014-03-all.html" >2014-03 (14)</option>
+				<option value="2014-02-all.html" >2014-02 (8)</option>
+				<option value="2014-01-all.html" >2014-01 (5)</option>
+				<option value="2013-12-all.html" >2013-12 (10)</option>
+				<option value="2013-11-all.html" >2013-11 (23)</option>
+				<option value="2013-10-all.html" >2013-10 (31)</option>
+				<option value="2013-09-all.html" >2013-09 (4)</option>
+				<option value="2013-08-all.html" >2013-08 (44)</option>
+				<option value="2013-07-all.html" >2013-07 (9)</option>
+				<option value="2013-06-all.html" >2013-06 (21)</option>
+				<option value="2013-05-all.html" >2013-05 (7)</option>
+				<option value="2013-04-all.html" >2013-04 (31)</option>
+				<option value="2013-03-all.html" >2013-03 (28)</option>
+				<option value="2013-02-all.html" >2013-02 (14)</option>
+				<option value="2013-01-all.html" >2013-01 (21)</option>
+				<option value="2012-12-all.html" >2012-12 (25)</option>
+				<option value="2012-11-all.html" >2012-11 (35)</option>
+				<option value="2012-10-all.html" >2012-10 (19)</option>
+				<option value="2012-09-all.html" >2012-09 (19)</option>
+				<option value="2012-08-all.html" >2012-08 (30)</option>
+				<option value="2012-07-all.html" >2012-07 (63)</option>
+				<option value="2012-06-all.html" >2012-06 (30)</option>
+				<option value="2012-05-all.html" >2012-05 (41)</option>
+				<option value="2012-04-all.html" >2012-04 (32)</option>
+				<option value="2012-03-all.html" >2012-03 (46)</option>
+				<option value="2012-02-all.html" >2012-02 (31)</option>
+				<option value="2012-01-all.html" >2012-01 (27)</option>
+				<option value="2011-12-all.html" >2011-12 (20)</option>
+				<option value="2011-11-all.html" >2011-11 (13)</option>
+				<option value="2011-10-all.html" >2011-10 (26)</option>
+				<option value="2011-09-all.html" >2011-09 (23)</option>
+				<option value="2011-08-all.html" >2011-08 (7)</option>
+				<option value="2011-07-all.html" >2011-07 (14)</option>
+				<option value="2011-06-all.html" >2011-06 (15)</option>
+				<option value="2011-05-all.html" >2011-05 (12)</option>
+				<option value="2011-04-all.html" >2011-04 (5)</option>
+				<option value="2011-03-all.html" >2011-03 (14)</option>
+				<option value="2011-02-all.html" >2011-02 (15)</option>
+				<option value="2011-01-all.html" >2011-01 (9)</option>
+				<option value="2010-12-all.html" >2010-12 (9)</option>
+				<option value="2010-11-all.html" >2010-11 (20)</option>
+				<option value="2010-10-all.html" >2010-10 (10)</option>
+				<option value="2010-09-all.html" >2010-09 (22)</option>
+				<option value="2010-08-all.html" >2010-08 (30)</option>
+				<option value="2010-07-all.html" >2010-07 (6)</option>
+				<option value="2010-06-all.html" >2010-06 (17)</option>
+				<option value="2010-05-all.html" >2010-05 (40)</option>
+				<option value="2010-04-all.html" >2010-04 (29)</option>
+				<option value="2010-03-all.html" >2010-03 (12)</option>
+				<option value="2010-02-all.html" >2010-02 (2)</option>
+				<option value="2010-01-all.html" >2010-01 (8)</option>
+				<option value="2009-12-all.html" >2009-12 (25)</option>
+				<option value="2009-11-all.html" >2009-11 (16)</option>
+				<option value="2009-10-all.html" >2009-10 (20)</option>
+				<option value="2009-09-all.html" >2009-09 (4)</option>
+				<option value="2009-08-all.html" >2009-08 (5)</option>
+				<option value="2009-07-all.html" >2009-07 (8)</option>
+				<option value="2009-06-all.html" >2009-06 (21)</option>
+				<option value="2009-05-all.html" >2009-05 (9)</option>
+				<option value="2009-04-all.html" >2009-04 (22)</option>
+				<option value="2009-03-all.html" >2009-03 (20)</option>
+				<option value="2009-02-all.html" >2009-02 (26)</option>
+				<option value="2009-01-all.html" >2009-01 (23)</option>
+				<option value="2008-12-all.html" >2008-12 (16)</option>
+				<option value="2008-11-all.html" >2008-11 (18)</option>
+				<option value="2008-10-all.html" >2008-10 (12)</option>
+				<option value="2008-09-all.html" >2008-09 (25)</option>
+				<option value="2008-08-all.html" >2008-08 (23)</option>
+				<option value="2008-07-all.html" >2008-07 (11)</option>
+				<option value="2008-06-all.html" >2008-06 (20)</option>
+				<option value="2008-05-all.html" >2008-05 (6)</option>
+				<option value="2008-04-all.html" >2008-04 (20)</option>
+				<option value="2008-03-all.html" >2008-03 (26)</option>
+				<option value="2008-02-all.html" >2008-02 (17)</option>
+				<option value="2008-01-all.html" >2008-01 (18)</option>
+				<option value="2007-12-all.html" >2007-12 (8)</option>
+				<option value="2007-11-all.html" >2007-11 (8)</option>
+				<option value="2007-10-all.html" >2007-10 (12)</option>
+				<option value="2007-09-all.html" >2007-09 (10)</option>
+				<option value="2007-08-all.html" >2007-08 (20)</option>
+				<option value="2007-07-all.html" >2007-07 (20)</option>
+				<option value="2007-06-all.html" >2007-06 (29)</option>
+				<option value="2007-05-all.html" >2007-05 (24)</option>
+				<option value="2007-04-all.html" >2007-04 (7)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2019-6-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgrc">
+			So Much to Play in the Pathfinder Adventure Card Society!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">pathfinderAdventureCardSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-unlocks_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-unlocks_500.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = Juni 28, 2019
+  | title  = So Much to Play in the Pathfinder Adventure Card Society!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrc}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-aruey.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-aruey.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = Juni 28, 2019
+  | title  = So Much to Play in the Pathfinder Adventure Card Society!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrc}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-spells.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-spells.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = Juni 28, 2019
+  | title  = So Much to Play in the Pathfinder Adventure Card Society!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-thefangwoodthieves_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190628-thefangwoodthieves_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:The_Fangwood_Thieves.jpg">The_Fangwood_Thieves.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tyler &quot;Cartmanbeck&quot; Beck]]
+  | date   = Juni 28, 2019
+  | title  = So Much to Play in the Pathfinder Adventure Card Society!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrc}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgrb">
+			Paizo Wishes Everyone a Happy Pride Month!
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-pridepaizo_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-pridepaizo_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 27, 2019
+  | title  = Paizo Wishes Everyone a Happy Pride Month!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrb}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-zachrin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-zachrin.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 27, 2019
+  | title  = Paizo Wishes Everyone a Happy Pride Month!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgrb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgrb}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgra">
+			Tales of Lost Omens: The Sea&#39;s Vengeance
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-highseas.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190627-highseas.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Naval_battle.jpg">Naval_battle.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Yasen Stoilov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 27, 2019
+  | title  = Tales of Lost Omens: The Sea&#39;s Vengeance
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgra
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgra}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgr8">
+			Paizo Advantage and Subscription Updates
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgr6">
+			Pathfinder Society Factions Preview: Grand Archive and Vigilant Seal
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/factions</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgr1">
+			The High Seas
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderWorldGuides</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-highseas.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-highseas.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kraken_attack.jpg">Kraken_attack.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Roberto Pitturru
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-mordantspiresymbol.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-mordantspiresymbol.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Mordant_Spire_symbol.jpg">Mordant_Spire_symbol.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-mengkare.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-mengkare.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Mengkare.jpg">Mengkare.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Valeria Lutfullina
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-crimsoncitadel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-crimsoncitadel.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Crimson_Citadel.jpg">Crimson_Citadel.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-tessafairwind.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-tessafairwind.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Tessa_Fairwind.jpg">Tessa_Fairwind.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Cynthia F.G
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-thefloat.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-thefloat.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:The_Float.jpg">The_Float.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Fabio Gorla
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-merfolkwarrior.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190625-merfolkwarrior.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Merfolk_warrior.jpg">Merfolk_warrior.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = The High Seas
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgr0">
+			A First Look at Pathfinder Second Edition
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-4.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-4.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Welcome_to_Pathfinder.jpg">Welcome_to_Pathfinder.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Setiawan Lie
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = A First Look at Pathfinder Second Edition
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-3.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Michele Esposito
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = A First Look at Pathfinder Second Edition
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr0}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-2.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Dancer.jpg">Dancer.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Alexander Nanitchkov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = A First Look at Pathfinder Second Edition
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr0}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-5.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-5.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Crane_Monk.jpg">Crane_Monk.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Andrea Tentori Montalto
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = A First Look at Pathfinder Second Edition
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr0}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190624-1.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Harrow_Master.jpg">Harrow_Master.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Will O&#39;Brien
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Juni 25, 2019
+  | title  = A First Look at Pathfinder Second Edition
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgr0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgr0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgqx">
+			On Completing the Iconics in PACG
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-class0f2013.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-class0f2013.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2014.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2014.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2015.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2015.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2016.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2016.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2017.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2017.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2018.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2018.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2019.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190621-classof2019.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 22, 2019
+  | title  = On Completing the Iconics in PACG
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqx}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgqu">
+			Tales of Lost Omens: All That Glitters
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">pathfinderWorldGuides</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190620-GoldenRoad.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190620-GoldenRoad.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Streets_of_Sothis.jpg">Streets_of_Sothis.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Illustration by Tomasz Chistowski
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris A. Jackson]]
+  | date   = Juni 20, 2019
+  | title  = Tales of Lost Omens: All That Glitters
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqu}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgqt">
+			June 2019 Starfinder Society Scenarios
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgqm">
+			The Golden Road
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-GoldenRoad.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-GoldenRoad.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Golden_Road.jpg">Golden_Road.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mary Jane Pajaron
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Pactmaster.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Pactmaster.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pactmaster_LOWG.jpg">Pactmaster_LOWG.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Luca Bancone
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Merab.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Merab.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Merab.jpg">Merab.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Xerbystes.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-Xerbystes.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Xerbystes_II.jpg">Xerbystes_II.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Oksana Federova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-PureLegion.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-PureLegion.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pure_Legion_enforcer.jpg">Pure_Legion_enforcer.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-SunOrchidElixir.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-SunOrchidElixir.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sun_orchid_elixir_bottle.jpg">Sun_orchid_elixir_bottle.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-LivingMonolith.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190618-LivingMonolith.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Living_Monolith_2E.jpg">Living_Monolith_2E.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ksenia Kozhevnikova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 19, 2019
+  | title  = The Golden Road
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgqm
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgqm}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgqi">
+			PACG Rules Now on Dized!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgpw">
+			PACG at Origins and Free RPG Day!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">freeRPGDay</span>
+				<span class="tag">monsters/goblins</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9500-16_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9500-16_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:We_Be_Heroes?_(scenario_bundle).jpg">We_Be_Heroes?_(scenario_bundle).jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = Juni 14, 2019
+  | title  = PACG at Origins and Free RPG Day!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpw
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgps">
+			Tales of Lost Omens: Blood Fate
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">pathfinderWorldGuides</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190613-EyeOfDread.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190613-EyeOfDread.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ride_to_Bastardhall.jpg">Ride_to_Bastardhall.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mariusz Gandzel
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris A. Jackson]]
+  | date   = Juni 13, 2019
+  | title  = Tales of Lost Omens: Blood Fate
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgps
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgps}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgpr">
+			Free RPG Day 2019 Sanctioning
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">freeRPGDay</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgpo">
+			Pathfinder Society Preview: Legacy Backgrounds
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgpl">
+			Eye of Dread
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-EyeOfDread.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-EyeOfDread.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Zombies.jpg">Zombies.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Federico Musetti
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Gallowgarden.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Gallowgarden.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Gallowgarden.jpg">Gallowgarden.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Gravelands.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Gravelands.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Gravelands_symbol.jpg">Gravelands_symbol.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi and Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-DeadlyRivalry.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-DeadlyRivalry.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Deadly_Rivalry.jpg">Deadly_Rivalry.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ksenia Kozhevnikova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20160611-VaultOfTheOnyxCitadel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20160611-VaultOfTheOnyxCitadel.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Onyx_Citadel.jpg">Onyx_Citadel.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190911-Oprak.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190911-Oprak.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Oprak_symbol.jpg">Oprak_symbol.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Fabio Gorla and Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Unyielding.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190611-Unyielding.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Arazni_the_Unyielding.jpg">Arazni_the_Unyielding.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ainur Salimova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 11, 2019
+  | title  = Eye of Dread
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgpl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgpl}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-7
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgpd">
+			Core Principles: Conversion in the Pathfinder ACG
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgoe">
+			Tales of Lost Omens: Far From Heaven
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">pathfinderWorldGuides</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190606-BrokenLands.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190606-BrokenLands.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Broken_Lands.jpg">Broken_Lands.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mariusz Gandzel
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tim Pratt]]
+  | date   = Juni 06, 2019
+  | title  = Tales of Lost Omens: Far From Heaven
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoe
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoe}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-6-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgoc">
+			The Broken Lands
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-BrokenLands.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-BrokenLands.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sarkoris_Scar.jpg">Sarkoris_Scar.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Federico Musetti
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Kevoth.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Kevoth.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kevoth-Kul_LOWG.jpg">Kevoth-Kul_LOWG.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Symbol.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Symbol.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Casandalee_holy_symbol.jpg">Casandalee_holy_symbol.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Valeria Lutfullina and Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Lander.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Lander.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lander_Lebeda.jpg">Lander_Lebeda.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Irahai.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Irahai.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Chancellor_Irahai.jpg">Chancellor_Irahai.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Cynthia F. G
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Scar.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Scar.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sarkoris_symbol.jpg">Sarkoris_symbol.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Jamandi.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190604-Jamandi.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Jamandi_Aldori.jpg">Jamandi_Aldori.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = Juni 04, 2019
+  | title  = The Broken Lands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgoc
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgoc}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,21 +1,29 @@
-package paizo.crawler;
+package paizo.crawler.s09bloghasher;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.Callable;
-
-import javax.imageio.ImageIO;
+import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
- 
+import com.sksamuel.scrimage.ImmutableImage;
+
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
+import paizo.crawler.common.model.BlogImage;
+import paizo.crawler.common.model.BlogPost;
+import paizo.crawler.common.model.WikiImage;
+import paizo.crawler.s03articledetailsextractor.ArticleDetailsExtractor;
+import paizo.crawler.s08wikihasher.WikiHasher;
 
 @RequiredArgsConstructor
 public class BlogHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
 		File file = new File("meta/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
-				.readValue(file, HashedImage[].class));
+				.readValue(file, WikiImage[].class));
+		known.removeIf(i->i.getHash() == null);
 		
 		var pool = new MyPool("Blog Hasher");
 		for(var f:new File("blog_posts_details").listFiles()) {
@@ -23,14 +31,12 @@ public class BlogHasher implements Callable<Void> {
 			if(post.getImages() == null)
 				continue;
 			
-			if(post.getImages().stream().anyMatch(i->i.getHash()==null || i.getWikiImage()==null)) {
-				pool.submit(new BlogHasher(known, post));
-			}
+			pool.submit(new BlogHasher(known, post));
 		}
 		pool.shutdown();
 	}
 	
-	private final List<HashedImage> known;
+	private final List<WikiImage> known;
 	private final BlogPost post;
 
 	@Override
@@ -39,34 +45,42 @@ public class BlogHasher implements Callable<Void> {
 		
 		for(BlogImage img:post.getImages()) {
 			
-			if(img.getHash() == null) {
-				File f = new File("blog_post_images/"+img.getName());
+			if(img.getHash() == null && img.getLocalFile() != null) {
+				File f = img.getLocalFileAsFile();
 				if(f.exists()) {
-					var raw = ImageIO.read(f);
+					var raw = ImmutableImage.loader().fromFile(f);
 					if(raw != null) {
-						img.setHash(WikiHasher.hash(raw));
+						img.setHash(WikiHasher.hash(raw.awt()));
+						img.setPixels(raw.awt().getWidth()*raw.awt().getHeight());
 						changed = true;
 					}
 				}
 			}
 			
-			if(img.getWikiImage() == null && img.getHash() != null) {
-				var match = known.stream()
-					.filter(hi->WikiHasher.similarHashes(hi.getHash(), img.getHash()))
-					.findAny();
-				
-				if(match.isPresent()) {
-					img.setWikiImage(match.get().getName());
-					changed = true;
-				}
+			if(img.getHash() == null) {
+				continue;
 			}
 			
+			var matches = known.stream()
+				.filter(hi->WikiHasher.similarHashes(hi.getHash(), img.getHash()))
+				.collect(Collectors.groupingBy(hi->hi.getWiki(), Collectors.toList()));
+			
+			if(!matches.isEmpty()) {
+				if(matches.containsKey("pf") && img.getWikiMappings().getPf() == null) {
+					changed = true;
+					img.getWikiMappings().setPf(matches.get("pf").get(0));
+				}
+				if(matches.containsKey("sf") && img.getWikiMappings().getSf() == null) {
+					changed = true;
+					img.getWikiMappings().setSf(matches.get("sf").get(0));
+				}
+			}
 		}
 		
 		if(changed) {
 			ArticleDetailsExtractor.moveTimeZone(post);
 			Jackson.MAPPER.writeValue(
-				new File("blog_posts_details/"+post.getId()+".yaml"),
+				post.detailsFile(),
 				post
 			);
 		}

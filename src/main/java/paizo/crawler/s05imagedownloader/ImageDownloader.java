@@ -1,8 +1,8 @@
-package paizo.crawler;
+package paizo.crawler.s05imagedownloader;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -17,6 +17,11 @@ import org.apache.commons.io.FilenameUtils;
 import org.jsoup.Jsoup;
 
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
+import paizo.crawler.common.PBICallable;
+import paizo.crawler.common.model.BlogImage;
+import paizo.crawler.common.model.BlogPost;
 
 @RequiredArgsConstructor
 public class ImageDownloader implements PBICallable {
@@ -62,7 +67,7 @@ public class ImageDownloader implements PBICallable {
 	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
 	@Override
 	public void run() throws Exception {
-		if(!target.exists()) {
+		if(!target.exists() && (img.getLocalFile() == null || !img.getLocalFileAsFile().exists())) {
 			target.getParentFile().mkdirs();
 
 			byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();

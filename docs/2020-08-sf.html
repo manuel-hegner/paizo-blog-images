@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2020-08</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2020-08-all.html" >All</option>
+			<option value="2020-08-pf.html" >Pathfinder only</option>
+			<option value="2020-08-sf.html" selected>Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-sf.html" >2023-11 (3)</option>
+				<option value="2023-10-sf.html" >2023-10 (18)</option>
+				<option value="2023-09-sf.html" >2023-09 (28)</option>
+				<option value="2023-08-sf.html" >2023-08 (31)</option>
+				<option value="2023-07-sf.html" >2023-07 (29)</option>
+				<option value="2023-06-sf.html" >2023-06 (40)</option>
+				<option value="2023-05-sf.html" >2023-05 (23)</option>
+				<option value="2023-04-sf.html" >2023-04 (17)</option>
+				<option value="2023-03-sf.html" >2023-03 (29)</option>
+				<option value="2023-02-sf.html" >2023-02 (28)</option>
+				<option value="2023-01-sf.html" >2023-01 (15)</option>
+				<option value="2022-12-sf.html" >2022-12 (24)</option>
+				<option value="2022-11-sf.html" >2022-11 (32)</option>
+				<option value="2022-10-sf.html" >2022-10 (58)</option>
+				<option value="2022-09-sf.html" >2022-09 (24)</option>
+				<option value="2022-08-sf.html" >2022-08 (49)</option>
+				<option value="2022-07-sf.html" >2022-07 (37)</option>
+				<option value="2022-06-sf.html" >2022-06 (26)</option>
+				<option value="2022-05-sf.html" >2022-05 (23)</option>
+				<option value="2022-04-sf.html" >2022-04 (45)</option>
+				<option value="2022-03-sf.html" >2022-03 (29)</option>
+				<option value="2022-02-sf.html" >2022-02 (16)</option>
+				<option value="2022-01-sf.html" >2022-01 (28)</option>
+				<option value="2021-12-sf.html" >2021-12 (16)</option>
+				<option value="2021-11-sf.html" >2021-11 (19)</option>
+				<option value="2021-10-sf.html" >2021-10 (28)</option>
+				<option value="2021-09-sf.html" >2021-09 (25)</option>
+				<option value="2021-08-sf.html" >2021-08 (42)</option>
+				<option value="2021-07-sf.html" >2021-07 (20)</option>
+				<option value="2021-06-sf.html" >2021-06 (46)</option>
+				<option value="2021-05-sf.html" >2021-05 (33)</option>
+				<option value="2021-04-sf.html" >2021-04 (29)</option>
+				<option value="2021-03-sf.html" >2021-03 (57)</option>
+				<option value="2021-02-sf.html" >2021-02 (66)</option>
+				<option value="2021-01-sf.html" >2021-01 (30)</option>
+				<option value="2020-12-sf.html" >2020-12 (42)</option>
+				<option value="2020-11-sf.html" >2020-11 (27)</option>
+				<option value="2020-10-sf.html" >2020-10 (31)</option>
+				<option value="2020-09-sf.html" >2020-09 (27)</option>
+				<option value="2020-08-sf.html" selected>2020-08 (28)</option>
+				<option value="2020-07-sf.html" >2020-07 (23)</option>
+				<option value="2020-06-sf.html" >2020-06 (33)</option>
+				<option value="2020-05-sf.html" >2020-05 (35)</option>
+				<option value="2020-04-sf.html" >2020-04 (41)</option>
+				<option value="2020-03-sf.html" >2020-03 (45)</option>
+				<option value="2020-02-sf.html" >2020-02 (31)</option>
+				<option value="2020-01-sf.html" >2020-01 (20)</option>
+				<option value="2019-12-sf.html" >2019-12 (35)</option>
+				<option value="2019-11-sf.html" >2019-11 (28)</option>
+				<option value="2019-10-sf.html" >2019-10 (50)</option>
+				<option value="2019-09-sf.html" >2019-09 (10)</option>
+				<option value="2019-08-sf.html" >2019-08 (14)</option>
+				<option value="2019-07-sf.html" >2019-07 (6)</option>
+				<option value="2019-06-sf.html" >2019-06 (1)</option>
+				<option value="2019-05-sf.html" >2019-05 (2)</option>
+				<option value="2019-04-sf.html" >2019-04 (1)</option>
+				<option value="2019-03-sf.html" >2019-03 (9)</option>
+				<option value="2018-12-sf.html" >2018-12 (12)</option>
+				<option value="2018-11-sf.html" >2018-11 (6)</option>
+				<option value="2018-10-sf.html" >2018-10 (1)</option>
+				<option value="2018-08-sf.html" >2018-08 (6)</option>
+				<option value="2018-07-sf.html" >2018-07 (4)</option>
+				<option value="2018-06-sf.html" >2018-06 (1)</option>
+				<option value="2018-05-sf.html" >2018-05 (3)</option>
+				<option value="2018-03-sf.html" >2018-03 (6)</option>
+				<option value="2017-12-sf.html" >2017-12 (4)</option>
+				<option value="2017-11-sf.html" >2017-11 (8)</option>
+				<option value="2017-10-sf.html" >2017-10 (3)</option>
+				<option value="2017-09-sf.html" >2017-09 (7)</option>
+				<option value="2017-08-sf.html" >2017-08 (5)</option>
+				<option value="2017-07-sf.html" >2017-07 (4)</option>
+				<option value="2017-06-sf.html" >2017-06 (11)</option>
+				<option value="2017-05-sf.html" >2017-05 (28)</option>
+				<option value="2017-04-sf.html" >2017-04 (1)</option>
+				<option value="2017-03-sf.html" >2017-03 (8)</option>
+				<option value="2017-01-sf.html" >2017-01 (5)</option>
+				<option value="2016-12-sf.html" >2016-12 (2)</option>
+				<option value="2016-11-sf.html" >2016-11 (2)</option>
+				<option value="2016-10-sf.html" >2016-10 (1)</option>
+				<option value="2016-09-sf.html" >2016-09 (5)</option>
+				<option value="2016-08-sf.html" >2016-08 (3)</option>
+				<option value="2016-07-sf.html" >2016-07 (1)</option>
+				<option value="2016-05-sf.html" >2016-05 (5)</option>
+				<option value="2016-04-sf.html" >2016-04 (4)</option>
+				<option value="2016-03-sf.html" >2016-03 (1)</option>
+				<option value="2016-02-sf.html" >2016-02 (3)</option>
+				<option value="2016-01-sf.html" >2016-01 (10)</option>
+				<option value="2015-12-sf.html" >2015-12 (5)</option>
+				<option value="2015-10-sf.html" >2015-10 (3)</option>
+				<option value="2015-09-sf.html" >2015-09 (1)</option>
+				<option value="2015-07-sf.html" >2015-07 (15)</option>
+				<option value="2015-05-sf.html" >2015-05 (21)</option>
+				<option value="2015-04-sf.html" >2015-04 (19)</option>
+				<option value="2015-03-sf.html" >2015-03 (5)</option>
+				<option value="2015-02-sf.html" >2015-02 (10)</option>
+				<option value="2014-11-sf.html" >2014-11 (12)</option>
+				<option value="2014-09-sf.html" >2014-09 (16)</option>
+				<option value="2014-08-sf.html" >2014-08 (3)</option>
+				<option value="2014-07-sf.html" >2014-07 (1)</option>
+				<option value="2014-06-sf.html" >2014-06 (3)</option>
+				<option value="2014-05-sf.html" >2014-05 (37)</option>
+				<option value="2014-04-sf.html" >2014-04 (2)</option>
+				<option value="2014-03-sf.html" >2014-03 (2)</option>
+				<option value="2014-02-sf.html" >2014-02 (3)</option>
+				<option value="2013-12-sf.html" >2013-12 (5)</option>
+				<option value="2013-11-sf.html" >2013-11 (4)</option>
+				<option value="2013-10-sf.html" >2013-10 (5)</option>
+				<option value="2013-08-sf.html" >2013-08 (32)</option>
+				<option value="2013-07-sf.html" >2013-07 (2)</option>
+				<option value="2013-06-sf.html" >2013-06 (10)</option>
+				<option value="2013-05-sf.html" >2013-05 (4)</option>
+				<option value="2013-04-sf.html" >2013-04 (4)</option>
+				<option value="2013-03-sf.html" >2013-03 (1)</option>
+				<option value="2012-12-sf.html" >2012-12 (16)</option>
+				<option value="2012-11-sf.html" >2012-11 (16)</option>
+				<option value="2012-10-sf.html" >2012-10 (4)</option>
+				<option value="2012-09-sf.html" >2012-09 (9)</option>
+				<option value="2012-08-sf.html" >2012-08 (7)</option>
+				<option value="2012-07-sf.html" >2012-07 (49)</option>
+				<option value="2012-06-sf.html" >2012-06 (15)</option>
+				<option value="2012-05-sf.html" >2012-05 (12)</option>
+				<option value="2012-04-sf.html" >2012-04 (17)</option>
+				<option value="2012-03-sf.html" >2012-03 (18)</option>
+				<option value="2012-02-sf.html" >2012-02 (15)</option>
+				<option value="2012-01-sf.html" >2012-01 (8)</option>
+				<option value="2011-10-sf.html" >2011-10 (4)</option>
+				<option value="2011-09-sf.html" >2011-09 (7)</option>
+				<option value="2011-08-sf.html" >2011-08 (2)</option>
+				<option value="2011-07-sf.html" >2011-07 (11)</option>
+				<option value="2011-06-sf.html" >2011-06 (9)</option>
+				<option value="2011-05-sf.html" >2011-05 (2)</option>
+				<option value="2011-04-sf.html" >2011-04 (2)</option>
+				<option value="2011-03-sf.html" >2011-03 (2)</option>
+				<option value="2011-02-sf.html" >2011-02 (5)</option>
+				<option value="2011-01-sf.html" >2011-01 (2)</option>
+				<option value="2010-12-sf.html" >2010-12 (3)</option>
+				<option value="2010-11-sf.html" >2010-11 (16)</option>
+				<option value="2010-10-sf.html" >2010-10 (4)</option>
+				<option value="2010-08-sf.html" >2010-08 (18)</option>
+				<option value="2010-07-sf.html" >2010-07 (1)</option>
+				<option value="2010-06-sf.html" >2010-06 (1)</option>
+				<option value="2010-05-sf.html" >2010-05 (9)</option>
+				<option value="2010-04-sf.html" >2010-04 (11)</option>
+				<option value="2010-03-sf.html" >2010-03 (2)</option>
+				<option value="2010-02-sf.html" >2010-02 (1)</option>
+				<option value="2010-01-sf.html" >2010-01 (6)</option>
+				<option value="2009-12-sf.html" >2009-12 (14)</option>
+				<option value="2009-11-sf.html" >2009-11 (6)</option>
+				<option value="2009-10-sf.html" >2009-10 (4)</option>
+				<option value="2009-09-sf.html" >2009-09 (1)</option>
+				<option value="2009-08-sf.html" >2009-08 (4)</option>
+				<option value="2009-07-sf.html" >2009-07 (6)</option>
+				<option value="2009-06-sf.html" >2009-06 (17)</option>
+				<option value="2009-05-sf.html" >2009-05 (3)</option>
+				<option value="2009-04-sf.html" >2009-04 (5)</option>
+				<option value="2009-03-sf.html" >2009-03 (9)</option>
+				<option value="2009-02-sf.html" >2009-02 (6)</option>
+				<option value="2009-01-sf.html" >2009-01 (10)</option>
+				<option value="2008-12-sf.html" >2008-12 (9)</option>
+				<option value="2008-11-sf.html" >2008-11 (13)</option>
+				<option value="2008-10-sf.html" >2008-10 (5)</option>
+				<option value="2008-09-sf.html" >2008-09 (21)</option>
+				<option value="2008-08-sf.html" >2008-08 (21)</option>
+				<option value="2008-07-sf.html" >2008-07 (1)</option>
+				<option value="2008-06-sf.html" >2008-06 (13)</option>
+				<option value="2008-05-sf.html" >2008-05 (3)</option>
+				<option value="2008-04-sf.html" >2008-04 (9)</option>
+				<option value="2008-03-sf.html" >2008-03 (14)</option>
+				<option value="2008-02-sf.html" >2008-02 (14)</option>
+				<option value="2008-01-sf.html" >2008-01 (13)</option>
+				<option value="2007-12-sf.html" >2007-12 (3)</option>
+				<option value="2007-11-sf.html" >2007-11 (5)</option>
+				<option value="2007-10-sf.html" >2007-10 (2)</option>
+				<option value="2007-09-sf.html" >2007-09 (3)</option>
+				<option value="2007-08-sf.html" >2007-08 (5)</option>
+				<option value="2007-07-sf.html" >2007-07 (7)</option>
+				<option value="2007-06-sf.html" >2007-06 (6)</option>
+				<option value="2007-05-sf.html" >2007-05 (16)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2019-02-sf.html" >2019-02</option>
+				<option value="2019-01-sf.html" >2019-01</option>
+				<option value="2018-09-sf.html" >2018-09</option>
+				<option value="2018-04-sf.html" >2018-04</option>
+				<option value="2018-02-sf.html" >2018-02</option>
+				<option value="2018-01-sf.html" >2018-01</option>
+				<option value="2017-02-sf.html" >2017-02</option>
+				<option value="2016-06-sf.html" >2016-06</option>
+				<option value="2015-11-sf.html" >2015-11</option>
+				<option value="2015-08-sf.html" >2015-08</option>
+				<option value="2015-06-sf.html" >2015-06</option>
+				<option value="2015-01-sf.html" >2015-01</option>
+				<option value="2014-12-sf.html" >2014-12</option>
+				<option value="2014-10-sf.html" >2014-10</option>
+				<option value="2014-01-sf.html" >2014-01</option>
+				<option value="2013-09-sf.html" >2013-09</option>
+				<option value="2013-02-sf.html" >2013-02</option>
+				<option value="2013-01-sf.html" >2013-01</option>
+				<option value="2011-12-sf.html" >2011-12</option>
+				<option value="2011-11-sf.html" >2011-11</option>
+				<option value="2010-09-sf.html" >2010-09</option>
+				<option value="2007-04-sf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2020-8-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcu">
+			This Week on Twitch, Aug 31 - Sep 06
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082820_TwitchSchedule.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082820_TwitchSchedule.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2020
+  | title  = This Week on Twitch, Aug 31 - Sep 06
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082820_BandOfBravos.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082820_BandOfBravos.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2020
+  | title  = This Week on Twitch, Aug 31 - Sep 06
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/050120_TiS.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/050120_TiS.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2020
+  | title  = This Week on Twitch, Aug 31 - Sep 06
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcu}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcr">
+			Volunteering with the Organized Play Foundation
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/OPFLogo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/OPFLogo.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Tonya Woldridge]]
+  | date   = August 27, 2020
+  | title  = Volunteering with the Organized Play Foundation
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcr
+  }}   
+| summary  = Organized Play Foundation Logo
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcr}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcq">
+			The Devastation Ark: Ruins In The Ice
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">devastationArk</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082620_DevastationArkPrologue.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082620_DevastationArkPrologue.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Pixoloid Studios
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 26, 2020
+  | title  = The Devastation Ark: Ruins In The Ice
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcq
+  }}   
+| summary  = Three figures—an android, a kasatha, and a quorlu—step into a dark chamber, it’s walls made of spongy-looking purple material of unknown origin. In the center of the chamber, illuminated by their flashlights, stands a hexagonal metal pedestal, which is giving off a faint glow.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcp">
+			August 2020 New Releases
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAccessories</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7231.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7231.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Starfinder The Devastation Ark Adventure Path: Waking the Worldseed cover
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7502.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7502.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Starfinder Flip-Tiles: Space Station Emergency Expansion tiles
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90158.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90158.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sixty_Feet_Under.jpg">Sixty_Feet_Under.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder Adventure Path Agents of Edgewatch: Sixty Feet Under. Illustration of a woman wearing leather armor and weilding a bloody Kusarigama, a hook on a chain
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1039_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1039_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pathfinder_Bestiary_2_Pawn_Collection.jpg">Pathfinder_Bestiary_2_Pawn_Collection.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder Bestiary 2 cover art. A snakelike Serpentfolk, and pale Morlock standing in a cavern in front of a blue Ravener dragon.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO30108.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO30108.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Haunted_Dungeons_Flip-Mat_Multi-Pack.jpg">Haunted_Dungeons_Flip-Mat_Multi-Pack.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder haunted Dungeon flip mat cover. Checkered mat of first floor of a cave dungeon
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082520_OrgPlayBanner.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082520_OrgPlayBanner.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder illustration of a bear in the woods and Starfinder Illustration of a ringed planet floating in space behind the Paizo Organized Play logo
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFB001E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFB001E.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:The_Whitefang_Wyrm.jpg">The_Whitefang_Wyrm.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = A wooden sign board with a Wanted poster of a whitefang wyrm
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0201E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0201E.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Citadel_of_Corruption.jpg">Citadel_of_Corruption.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder Society: Year of Corruption&#39;s Grasp. An image of a ghostly white dragon over the top of an illustration of ruins in a red forest
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0202E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0202E.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Mountain_of_Sea_and_Sky.jpg">Mountain_of_Sea_and_Sky.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder Society: Year of Corruption&#39;s Grasp. An image of blue robed tengu over the top of an illustration of ruins in a red forest
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0305E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0305E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Starfinder Society Year of Exploration&#39;s Edge: A 4 armed green alien in purple robes over the image of a ringed planted in space
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0306E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0306E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Starfinder Society Year of Exploration&#39;s Edge: a dark hole of blue energy over the image of a ringed planted in space
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPACS0701E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPACS0701E.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Attack_of_the_Twice-Born.jpg">Attack_of_the_Twice-Born.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 26, 2020
+  | title  = August 2020 New Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcp
+  }}   
+| summary  = Pathfinder Adventure Cord Society: Attack of the Twice-Born
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcp}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcm">
+			Free RPG Day adventures now on paizo.com!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">freeRPGDay</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_SH.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_SH.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 25, 2020
+  | title  = Free RPG Day adventures now on paizo.com!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcm
+  }}   
+| summary  = Game covers for Starfinder: Skitter Home
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcm}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_LTiBA.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_LTiBA.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Little_Trouble_in_Big_Absalom_cover.jpeg">Little_Trouble_in_Big_Absalom_cover.jpeg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 25, 2020
+  | title  = Free RPG Day adventures now on paizo.com!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcm
+  }}   
+| summary  = Game covers for Pathfinder Little Trouble in Big Absalom
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcm}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcl">
+			This Week on Twitch, Aug 24 - Aug 30
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_UpdatedTwitch.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_UpdatedTwitch.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2020
+  | title  = This Week on Twitch, Aug 24 - Aug 30
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_GlassCannonLive.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_GlassCannonLive.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2020
+  | title  = This Week on Twitch, Aug 24 - Aug 30
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_CritsGiggles.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_CritsGiggles.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2020
+  | title  = This Week on Twitch, Aug 24 - Aug 30
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_RotR.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082420_RotR.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2020
+  | title  = This Week on Twitch, Aug 24 - Aug 30
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcl}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shci">
+			Organized Play Table Adjustments
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082120_AmbrusValsin.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082120_AmbrusValsin.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ambrus_Valsin_2.png">Ambrus_Valsin_2.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Sayre]]
+  | date   = August 21, 2020
+  | title  = Organized Play Table Adjustments
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shci
+  }}   
+| summary  = Ambrus Valsin
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shci}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcg">
+			August 2020 Starfinder Society Releases
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_VCKunorisVex.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_VCKunorisVex.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Nicolas Espinoza
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = August 20, 2020
+  | title  = August 2020 Starfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcg
+  }}   
+| summary  = Starfinder Venture Captain, light haired drow, Kunoris Vex
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcg}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_UnlivingMagefire.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_UnlivingMagefire.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Mark Molnar
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = August 20, 2020
+  | title  = August 2020 Starfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcg
+  }}   
+| summary  = a blue flaming hole of unliving magefire
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcg}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_Szelanius.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082020_Szelanius.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Mark Molnar
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = August 20, 2020
+  | title  = August 2020 Starfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcg
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcg}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shcc">
+			Tales from the Drift: Unconventional Weaponry
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">talesFromTheDrift</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081820_Liavara.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081820_Liavara.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Alexandur Alexandrov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2020
+  | title  = Tales from the Drift: Unconventional Weaponry
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shcc
+  }}   
+| summary  = On the cloudy surface of a gas giant planet, a squadron of small fighters scrambles to combat a massive space worm threatening their small, floating platform settlement
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shcc}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shca">
+			This Week on Twitch, Aug 17 - Aug 23
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081720_UpdatedTwitchSchedule.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081720_UpdatedTwitchSchedule.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2020
+  | title  = This Week on Twitch, Aug 17 - Aug 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shca
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shca}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081420_KingmakerDE.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081420_KingmakerDE.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2020
+  | title  = This Week on Twitch, Aug 17 - Aug 23
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shca
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shca}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc9">
+			The Ark Is Coming
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">devastationArk</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081120_PZO7232_TheStarstoneBlockade.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081120_PZO7232_TheStarstoneBlockade.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Ark_Prime.jpg">Ark_Prime.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Franklin Chan
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Keeley]]
+  | date   = August 14, 2020
+  | title  = The Ark Is Coming
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shc9
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shc9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc8">
+			Organized Play Online Convention Updates
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc6">
+			Tales from the Drift: Making Waves
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">talesFromTheDrift</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081220_Triaxus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081220_Triaxus.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Roberto Pitturru
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 12, 2020
+  | title  = Tales from the Drift: Making Waves
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shc6
+  }}   
+| summary  = = A military parade consisting of uniformed dragonkin and ryphorians makes its way through a snow-covered city street while a small crowd of citizens looks on. A massive red dragon oversees the proceedings.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shc6}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc5">
+			Community Use Policy Update
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">communityUsePolicy</span>
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc4">
+			This Week on Twitch, Aug 10 - Aug 16
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081020_TwitchSchedule.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081020_TwitchSchedule.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 10, 2020
+  | title  = This Week on Twitch, Aug 10 - Aug 16
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shc4
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shc4}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/050120_CritsGiggles.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/050120_CritsGiggles.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 10, 2020
+  | title  = This Week on Twitch, Aug 10 - Aug 16
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shc4
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shc4}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc2">
+			August Update— Release Schedule, Sanctioning, Spotlights and Conventions!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shc1">
+			Iconic Encounter: Interesting Times At Okira Station
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080520_RushingtoStarships.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080520_RushingtoStarships.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = Tomasz Chistowski
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 06, 2020
+  | title  = Iconic Encounter: Interesting Times At Okira Station
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shc1
+  }}   
+| summary  = The iconic biohacker, envoy, soldier, and vanguard race across a landing platform amid an aerial assault by a small squadron of single-person fighters. The heroes make their way to their own fighters, dodging laser blasts and explosions along the way
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shc1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2020-8-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shbz">
+			“Alexa, open the Starfinder game!”
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">amazonAlexa</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_Banner.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_Banner.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = using their voice. By simply saying “Alexa, play the Starfinder game,” customers can play one of the most captivating audio games available on Alexa-enabled devices today. Paizo and Amazon collaborated to reimagine the game for Alexa. Fans of the roleplaying game will enjoy this new extension of the familiar world, but previous experience with source material is not required
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 04, 2020
+  | title  = “Alexa, open the Starfinder game!”
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shbz
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shbz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_NathanFillion.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_NathanFillion.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = the Audible Studios team – featuring some of their most popular performers, with almost 2,000 audiobook performances between them. Starfinder’s script exceeds 745 pages and took a combined 125 hours in the studio to record all of the possible twists and turns, resulting in up to 13 hours of gameplay
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 04, 2020
+  | title  = “Alexa, open the Starfinder game!”
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shbz
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shbz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_LauraBailey.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080320_LauraBailey.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2020
+| copy     = Paizo Inc.
+| artist   = the Audible Studios team – featuring some of their most popular performers, with almost 2,000 audiobook performances between them. Starfinder’s script exceeds 745 pages and took a combined 125 hours in the studio to record all of the possible twists and turns, resulting in up to 13 hours of gameplay
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 04, 2020
+  | title  = “Alexa, open the Starfinder game!”
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shbz
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shbz}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

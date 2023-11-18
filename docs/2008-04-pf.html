@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2008-04</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2008-04-all.html" >All</option>
+			<option value="2008-04-pf.html" selected>Pathfinder only</option>
+			<option value="2008-04-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" selected>2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2008-4-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0k">
+			First look at Release 3
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/bards</span>
+				<span class="tag">monsters/orcs</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">statBlocks</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1110AE_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1110AE_180.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pathfinder_RPG_alpha.jpg">Pathfinder_RPG_alpha.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 30, 2008
+  | title  = First look at Release 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0k
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0k}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-29
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0l">
+			Playing Favorites
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/authors/leighBrackett</span>
+				<span class="tag">planetStories</span>
+				<span class="tag">planetStories/ericJohnStark</span>
+				<span class="tag">planetStories/gingerStar</span>
+				<span class="tag">planetStories/skaith</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8010_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8010_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = a few years, and has a definite florid charm of her own, Brackett stands out with just how modern her work feels. In reading The Ginger Star, the first of Brackett&#39;s Eric John Stark books set on the planet Skaith, I&#39;m constantly struck by the smooth flow of her prose, the way it slips cleanly through your mind and leaves nothing behind but an image. There&#39;s a school of thought that says the best sort of writing is invisible, work in which the author herself disappears and you&#39;re left with only the story. Brackett obviously understood that. And what ideas she presents! The intentionally mutated Children of the Sea and Children of Skaith-Our-Mother, humans who sought to avoid their planet&#39;s apocalypse by returning to the embrace of the sea and the subterranean realms. The Corn King and his masked men of the northern towers, who worship only hunger and cold. Even the psychic wolves that guard the citadel of the Lords Protector, who kill by projecting paralyzing fear into the minds of their prey. Ideas like these flow fast and furious in her books, and it was these flights of fancy that ultimately inspired so many. And if my own reasons aren&#39;t enough to convince you that The Ginger Star is worth checking out, consider this: Many years ago, at the height of her career, Ms. Brackett was sought out by a young author named Ray Bradbury in search of a mentor, and was taken on as her protégé. He&#39;s said himself that he learned much about the craft of writing at the feet of her and her husband, Edmond Hamilton. Which leads me to ask: who are we to argue with Ray&#39;s taste? James Sutter Planet Stories Editor
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 29, 2008
+  | title  = Playing Favorites
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0l
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0l}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0m">
+			He Who Walks In Blood
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizations/redMantis</span>
+				<span class="tag">pathfinderCampaignSetting/godsAndMagic</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-MantisGod.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-MantisGod.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Achaekek.jpg">Achaekek.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 28, 2008
+  | title  = He Who Walks In Blood
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0m
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0m}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0n">
+			The Red Raven, Revealed!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">openCall</span>
+				<span class="tag">pathfinderModules</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9512_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9512_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Flight_of_the_Red_Raven.jpg">Flight_of_the_Red_Raven.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 25, 2008
+  | title  = The Red Raven, Revealed!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0n
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0n}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0o">
+			Map Pack: Slums
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">gameMastery</span>
+				<span class="tag">maps/mapPacks</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4013-Market_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4013-Market_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 24, 2008
+  | title  = Map Pack: Slums
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0o
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4013_120.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4013_120.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 24, 2008
+  | title  = Map Pack: Slums
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0o
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0o}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0p">
+			Meet the Red Raven
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">openCall</span>
+				<span class="tag">pathfinderModules</span>
+				<span class="tag">portraits</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9512-RedRaven_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9512-RedRaven_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Red_Raven.jpg">Red_Raven.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 23, 2008
+  | title  = Meet the Red Raven
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0p
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0p}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0q">
+			The Yetisburg Address
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters/yeti</span>
+				<span class="tag">portraits</span>
+				<span class="tag">titanicGames</span>
+				<span class="tag">titanicGames/yetisburg</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Lincoln_120.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Lincoln_120.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = President Abraham Lincoln, November 19, 1863, after a two-hour fusillade of yowling by the Right Abominable Statesman, Senator Everett OrYARRadoogOOch&#39;ook!ook!: Four score and seven yetis ago, our fathers discovered on the northern fringes of this continent a new breed of soldier, conceived in the Belly of Hell, and dedicated to the proposition that not only men are created equal. Now we are engaged in a rarely civil war, testing whether those yetis, or any yetis, so ill-conceived and so odiferous, can long be endured. We are met on a great charnel house of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that those yetis might be once again returned to Canada. It is altogether fitting and proper that we should do this, for they do us no good at all here. But, in a larger sense, we can not dedicate—we can not consecrate—we can not even find—this ground. The brave yetis, living and dead, who struggled here, have pretty much torn it to ribbons, far above our poor power to reconstruct. The yetis will little note, nor long remember what we say here, as they have the attention span of a chamberpot. It is for us the humans, rather, to be dedicated here to the unfinished collection of random soldiers&#39; body parts, which they who fought here have gnawed down to the bone. It is rather for us to be here dedicated to the great task remaining before us—that
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 22, 2008
+  | title  = The Yetisburg Address
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0q
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0q}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0r">
+			The Red Mantis
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizations/redMantis</span>
+				<span class="tag">portraits</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-RedMantis.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-RedMantis.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Red_mantis.jpg">Red_mantis.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = their sawtoothed sabers do not just die, but will never rise again. James Jacobs Pathfinder Editor-in-Chief
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 21, 2008
+  | title  = The Red Mantis
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0r
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0r}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0s">
+			Last Gobby Down, Wins
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters/goblins</span>
+				<span class="tag">titanicGames</span>
+				<span class="tag">titanicGames/falling</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3001-Split_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3001-Split_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 18, 2008
+  | title  = Last Gobby Down, Wins
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0s
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3001-Extra_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3001-Extra_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 18, 2008
+  | title  = Last Gobby Down, Wins
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0s
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0s}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0t">
+			A Return to Adventure (Gear)!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">gameMastery</span>
+				<span class="tag">gameMastery/cards</span>
+				<span class="tag">people/artists/vincentDutrait</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card1_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card1_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Alchemist&#39;s_set_item_card.jpg">Alchemist&#39;s_set_item_card.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 17, 2008
+  | title  = A Return to Adventure (Gear)!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0t
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0t}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card4_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card4_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Board_game_item_card.jpg">Board_game_item_card.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 17, 2008
+  | title  = A Return to Adventure (Gear)!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0t
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0t}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card29_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card29_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Medal_item_card.jpg">Medal_item_card.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 17, 2008
+  | title  = A Return to Adventure (Gear)!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0t
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0t}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card45_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO5007-card45_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Smoke_bomb_item_card.jpg">Smoke_bomb_item_card.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 17, 2008
+  | title  = A Return to Adventure (Gear)!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0t
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0t}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0u">
+			First Peek: Guide to Darkmoon Vale
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/darkmoonVale</span>
+				<span class="tag">monsters</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1108-Chapter1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1108-Chapter1.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Wolves.jpg">Wolves.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 16, 2008
+  | title  = First Peek: Guide to Darkmoon Vale
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0u
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0u}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0v">
+			Wizard&#39;s Duel, Gygax-style
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/authors/garyGygax</span>
+				<span class="tag">planetStories/setneInhetep</span>
+				<span class="tag">planetStories/theSamarkandSolution</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0w">
+			Meet the Iconics: Lini
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/druids</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/lini</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">people/artists/wayneReynolds</span>
+				<span class="tag">portraits</span>
+				<span class="tag">races/gnomes</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9011-Druid.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9011-Druid.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lini.jpg">Lini.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = the cat&#39;s power and speed, and appreciative of the animal&#39;s beauty, Lini trembled under her massive paw and tears leaked
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike McArtor Editor]]
+  | date   = April 14, 2008
+  | title  = Meet the Iconics: Lini
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0w
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0w}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0x">
+			Quarantine!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/korvosa</span>
+				<span class="tag">pathfinderAdventurePath/curseOfTheCrimsonThrone</span>
+				<span class="tag">portraits</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-Quarantine.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-Quarantine.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Quarantine.jpg">Quarantine.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 11, 2008
+  | title  = Quarantine!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0x
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0x}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-FungusSkeleton.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-FungusSkeleton.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Fungal_janni.jpg">Fungal_janni.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 11, 2008
+  | title  = Quarantine!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0x
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0x}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0y">
+			Andoran
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety/factions/andoran</span>
+				<span class="tag">portraits</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1105-EagleKnight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1105-EagleKnight.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Eagle_Knight.jpg">Eagle_Knight.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = extension, Falcon&#39;s Hollow, was once a holding of Imperial Cheliax. With the death of Aroden and rise of Infernal Cheliax, Andoran broke away and became its own nation—one based on the rule of the people. The following information, pulled
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 10, 2008
+  | title  = Andoran
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la0y
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la0y}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la0z">
+			Pathfinder RPG Alpha Release 2 Preview
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/barbarians</span>
+				<span class="tag">iconics/amiri</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">statBlocks</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-8
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la10">
+			A Letter from the Front
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters/yeti</span>
+				<span class="tag">portraits</span>
+				<span class="tag">titanicGames</span>
+				<span class="tag">titanicGames/yetisburg</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Soldier.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Soldier.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 08, 2008
+  | title  = A Letter from the Front
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la10
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la10}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Yeti.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOTGL3002-Yeti.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 08, 2008
+  | title  = A Letter from the Front
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la10
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la10}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-7
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la11">
+			Who&#39;s up for a game of BLOOD PIG?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/korvosa</span>
+				<span class="tag">pathfinderAdventurePath/curseOfTheCrimsonThrone</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-Scoring.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9009-Scoring.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Blood_pig.jpg">Blood_pig.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 07, 2008
+  | title  = Who&#39;s up for a game of BLOOD PIG?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la11
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la11}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la12">
+			Across the Cinderlands
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/cinderlands</span>
+				<span class="tag">locations/varisia</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-ShoantiVsOgre.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-ShoantiVsOgre.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Shoanti_vs_Ogre.jpg">Shoanti_vs_Ogre.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 04, 2008
+  | title  = Across the Cinderlands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la12
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la12}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-RedRender.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-RedRender.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Red_reaver.jpg">Red_reaver.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 04, 2008
+  | title  = Across the Cinderlands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la12
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la12}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-EmberstormEscape.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9010-EmberstormEscape.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Emberstorm_escape.jpg">Emberstorm_escape.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 04, 2008
+  | title  = Across the Cinderlands
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la12
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la12}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la13">
+			The Proud Chelaxians
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety/factions/cheliax</span>
+				<span class="tag">portraits</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1105-Chelaxian.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1105-Chelaxian.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Chelaxian_ethnicity.jpg">Chelaxian_ethnicity.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = the gods themselves. Sharp-featured with dark hair, dark eyes, and pale skin, Chelaxians differ
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 03, 2008
+  | title  = The Proud Chelaxians
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la13
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la13}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la14">
+			The Birth of Bugbears
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters</span>
+				<span class="tag">monsters/bugbears</span>
+				<span class="tag">monsters/goblins</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1107-Bugbear.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1107-Bugbear.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Bugbear.jpg">Bugbear.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 02, 2008
+  | title  = The Birth of Bugbears
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la14
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la14}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-4-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5la15">
+			Don&#39;t Mess with the Wizard-Priest
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/authors/garyGygax</span>
+				<span class="tag">planetStories</span>
+				<span class="tag">planetStories/setneInhetep</span>
+				<span class="tag">planetStories/theSamarkandSolution</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8009_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8009_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = presenting an honest-to-goodness mystery in a fantasy setting, The Samarkand Solution pushes the envelope even farther by adding an element of the classic &quot;buddy cop&quot; film. Toss in Setne&#39;s desperate attempts to avoid the attentions of the—*ahem*—affectionate and beautiful Lady Xonaapi, and the novel ends up somewhat racier than its predecessor as well. But really, for me, reading a Gygax novel is all about the magic, and Samarkand certainly doesn&#39;t disappoint on that count, as can be seen in the following excerpt: A gigantic mass of living flames shifted, hot-violet spots fixing themselves upon the magister as if they were eyes. In fact they were eyes, and red-orange fires parted and a mouth spoke. &quot;You come to your death, fool! Run away, little man, or I shall sear your flesh and boil your blood ere I consume you!&quot; &quot;If you thought you could do that, efreet, you&#39;d act, not boast,&quot; Inhetep shouted back. &quot;Return now to your infernal realm, or it is I who will quench you!&quot; Although the magister had expected to encounter some form of creature
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = April 01, 2008
+  | title  = Don&#39;t Mess with the Wizard-Priest
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5la15
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5la15}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

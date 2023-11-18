@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2008-12</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2008-12-all.html" >All</option>
+			<option value="2008-12-pf.html" selected>Pathfinder only</option>
+			<option value="2008-12-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" selected>2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2008-12-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vu">
+			Pathfinder in 2009!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9020-Stegapede.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9020-Stegapede.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Stegocentipede_fight.jpg">Stegocentipede_fight.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 31, 2008
+  | title  = Pathfinder in 2009!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vu
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vu}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vv">
+			...and we&#39;re back!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/artists/jamesRyman</span>
+				<span class="tag">people/authors/leighBrackett</span>
+				<span class="tag">planetStories</span>
+				<span class="tag">planetStories/ericJohnStark</span>
+				<span class="tag">planetStories/reaversOfSkaith</span>
+				<span class="tag">planetStories/skaith</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vw">
+			Paizo Invades the Atomic Array
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">paizo/interviews</span>
+				<span class="tag">pathfinderAdventurePath/legacyOfFire</span>
+				<span class="tag">podcasts</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vx">
+			Snowpocalypse 2008
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo/snowpocalypse</span>
+				<span class="tag">people/authors/joshuaJFrost</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9356_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9356_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 23, 2008
+  | title  = Snowpocalypse 2008
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9359_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9359_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 23, 2008
+  | title  = Snowpocalypse 2008
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9362_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9362_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 23, 2008
+  | title  = Snowpocalypse 2008
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vx}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9364_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JoshFrost-9364_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 23, 2008
+  | title  = Snowpocalypse 2008
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vx
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vx}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vy">
+			I Think I Heard a Yeti Outside...
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters/yeti</span>
+				<span class="tag">paizo/snowpocalypse</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JamesJacobs_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Snowpocalypse2008-JamesJacobs_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = the way), it&#39;s worth remembering that a lot of the streets and freeways out this side are on hills. And when you mix snow and hills, you get icy chutes that can only be navigated by things like white dragons who have the icewalking ability. Anyway, rant about ranting aside, the reason there&#39;s been a dearth of blogs lately is that very few of us at Paizo have been able to get into the office lately, and as a result, blog writing has kinda been set aside. I&#39;m sitting at home, typing this blog with a blanket on my shoulders and a space heater aimed at my feet, after having ventured outside to snap the following picture. It was while I took the picture that I think I heard that yeti stomping around somewhere. I ain&#39;t going back outside till he&#39;s been driven off by the local sasquatches, who, of course, aren&#39;t coming out until the snow goes away. Stupid sasquatches. You can never trust them to be there when you need them... James Jacobs Editor-in-Chief
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 22, 2008
+  | title  = I Think I Heard a Yeti Outside...
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9vy
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9vy}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9vz">
+			Announcing Pathfinder Society Scenarios #11 &amp; #12
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w0">
+			Don&#39;t Fear the Reavers
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/authors/leighBrackett</span>
+				<span class="tag">planetStories/ericJohnStark</span>
+				<span class="tag">planetStories/reaversOfSkaith</span>
+				<span class="tag">planetStories/skaith</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8018_180.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8018_180.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = bringing more than a thousand pages of adventure to an elegant, satisfying close. It&#39;s not saccharine—Brackett&#39;s too much of a realist for that. As with our world, some people win and some people lose, and those results don&#39;t always line up neatly along the axis of good versus evil. But there can be no question that, as you turn that last page, you come away with a new world that is all the more real for its grittiness—a living, breathing place. This is the gift of Leigh Brackett, and a fitting end to the Eric John Stark books. Enjoy. James Sutter Planet Stories Editor
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 17, 2008
+  | title  = Don&#39;t Fear the Reavers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w1">
+			The Map of Absalom
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/absalom</span>
+				<span class="tag">maps</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-AbsalomMap.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-AbsalomMap.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Absalom_map.jpg">Absalom_map.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 16, 2008
+  | title  = The Map of Absalom
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w1}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-AbsalomMapSketch.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-AbsalomMapSketch.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = all devotees of the draftsman’s pencil. The heavy black lines, representing the cartographer’s stern intent. The green district borders and blue lines demarking the edges of the ship graveyard, attempts to inject a moment of life and joy into his work. The labels in red, representing the very blood he spilled to bring this map to completion. You can almost imagine him pausing, pen in hand, to wipe the sweat
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 16, 2008
+  | title  = The Map of Absalom
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w1
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w2">
+			All Aboard for Absalom!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">locations/absalom</span>
+				<span class="tag">people/artists/andrewHou</span>
+				<span class="tag">people/artists/benWootten</span>
+				<span class="tag">portraits</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-StarstoneCathedral.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-StarstoneCathedral.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Starstone_Cathedral.jpg">Starstone_Cathedral.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 15, 2008
+  | title  = All Aboard for Absalom!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w2
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w2}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-FirstGuard.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9205-FirstGuard.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:First_guard.jpg">First_guard.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = artist Andrew Hou, and a nice view of the Starstone Cathedral by Ben Wootten. James Jacobs Pathfinder Editor-in-Chief
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 15, 2008
+  | title  = All Aboard for Absalom!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w2
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w2}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w3">
+			Too Hot to Handle!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/artists/vincentDutrait</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9404-CoverArt_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9404-CoverArt_500.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:LoF_Player&#39;s_Guide_(clean).jpeg">LoF_Player&#39;s_Guide_(clean).jpeg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 12, 2008
+  | title  = Too Hot to Handle!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w3
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w3}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w4">
+			Open Call for 21 &amp; 22 and New Format
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">openCall</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w5">
+			Out and About
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">gameMastery/cards</span>
+				<span class="tag">pathfinderModules</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Butterfrog-ArrowCatching.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Butterfrog-ArrowCatching.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 10, 2008
+  | title  = Out and About
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w5
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w5}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w6">
+			Ryman For The Win
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/artists/jamesRyman</span>
+				<span class="tag">people/authors/leighBrackett</span>
+				<span class="tag">planetStories</span>
+				<span class="tag">planetStories/houndsOfSkaith</span>
+				<span class="tag">planetStories/reaversOfSkaith</span>
+				<span class="tag">planetStories/skaith</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8015_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8015_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 09, 2008
+  | title  = Ryman For The Win
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w6
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w6}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8018_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO8018_500.jpeg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 09, 2008
+  | title  = Ryman For The Win
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w6
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w6}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-8
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w7">
+			Bigger Beasts of the Black
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">monsters</span>
+				<span class="tag">monsters/genies</span>
+				<span class="tag">people/artists/tylerWalpole</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-Shaitan.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-Shaitan.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Shaitan.jpg">Shaitan.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 08, 2008
+  | title  = Bigger Beasts of the Black
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w7
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w7}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-AbraxasDemon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-AbraxasDemon.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Xacarba.jpg">Xacarba.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = Tyler Walpole. James Jacobs Pathfinder Editor-in-Chief
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 08, 2008
+  | title  = Bigger Beasts of the Black
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w7
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w7}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w8">
+			Legacy of Fire
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventurePath/legacyOfFire</span>
+				<span class="tag">people/artists/jesperEjsing</span>
+				<span class="tag">portraits</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9019-GnollAmbush.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9019-GnollAmbush.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Gnoll_ambush.jpg">Gnoll_ambush.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 05, 2008
+  | title  = Legacy of Fire
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w8}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO09019-PersianPrincess.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO09019-PersianPrincess.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Almah_Roveshki.jpg">Almah_Roveshki.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 05, 2008
+  | title  = Legacy of Fire
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9w8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9w8}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9w9">
+			Upcoming Pathfinder Society Conventions
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9wa">
+			Thugs, Delhi-style
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">people/authors/garyGygax</span>
+				<span class="tag">planetStories/deathInDelhi</span>
+				<span class="tag">planetStories/setneInhetep</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2008-12-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5l9wb">
+			Beasts of the Black Blood
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">animals</span>
+				<span class="tag">classes/druids</span>
+				<span class="tag">classes/monks</span>
+				<span class="tag">iconics</span>
+				<span class="tag">locations/darklands</span>
+				<span class="tag">monsters</span>
+				<span class="tag">monsters/aboleths</span>
+				<span class="tag">pathfinderAdventurePath/secondDarkness</span>
+				<span class="tag">people/artists/kevinYan</span>
+				<span class="tag">races/gnomes</span>
+				<span class="tag">wallpapers</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-LakeOfBlackBlood.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9018-LakeOfBlackBlood.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Black_Blood_aboleth.jpg">Black_Blood_aboleth.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2008
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Dezember 01, 2008
+  | title  = Beasts of the Black Blood
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5l9wb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5l9wb}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

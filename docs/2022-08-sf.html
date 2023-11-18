@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2022-08</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2022-08-all.html" >All</option>
+			<option value="2022-08-pf.html" >Pathfinder only</option>
+			<option value="2022-08-sf.html" selected>Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-sf.html" >2023-11 (3)</option>
+				<option value="2023-10-sf.html" >2023-10 (18)</option>
+				<option value="2023-09-sf.html" >2023-09 (28)</option>
+				<option value="2023-08-sf.html" >2023-08 (31)</option>
+				<option value="2023-07-sf.html" >2023-07 (29)</option>
+				<option value="2023-06-sf.html" >2023-06 (40)</option>
+				<option value="2023-05-sf.html" >2023-05 (23)</option>
+				<option value="2023-04-sf.html" >2023-04 (17)</option>
+				<option value="2023-03-sf.html" >2023-03 (29)</option>
+				<option value="2023-02-sf.html" >2023-02 (28)</option>
+				<option value="2023-01-sf.html" >2023-01 (15)</option>
+				<option value="2022-12-sf.html" >2022-12 (24)</option>
+				<option value="2022-11-sf.html" >2022-11 (32)</option>
+				<option value="2022-10-sf.html" >2022-10 (58)</option>
+				<option value="2022-09-sf.html" >2022-09 (24)</option>
+				<option value="2022-08-sf.html" selected>2022-08 (49)</option>
+				<option value="2022-07-sf.html" >2022-07 (37)</option>
+				<option value="2022-06-sf.html" >2022-06 (26)</option>
+				<option value="2022-05-sf.html" >2022-05 (23)</option>
+				<option value="2022-04-sf.html" >2022-04 (45)</option>
+				<option value="2022-03-sf.html" >2022-03 (29)</option>
+				<option value="2022-02-sf.html" >2022-02 (16)</option>
+				<option value="2022-01-sf.html" >2022-01 (28)</option>
+				<option value="2021-12-sf.html" >2021-12 (16)</option>
+				<option value="2021-11-sf.html" >2021-11 (19)</option>
+				<option value="2021-10-sf.html" >2021-10 (28)</option>
+				<option value="2021-09-sf.html" >2021-09 (25)</option>
+				<option value="2021-08-sf.html" >2021-08 (42)</option>
+				<option value="2021-07-sf.html" >2021-07 (20)</option>
+				<option value="2021-06-sf.html" >2021-06 (46)</option>
+				<option value="2021-05-sf.html" >2021-05 (33)</option>
+				<option value="2021-04-sf.html" >2021-04 (29)</option>
+				<option value="2021-03-sf.html" >2021-03 (57)</option>
+				<option value="2021-02-sf.html" >2021-02 (66)</option>
+				<option value="2021-01-sf.html" >2021-01 (30)</option>
+				<option value="2020-12-sf.html" >2020-12 (42)</option>
+				<option value="2020-11-sf.html" >2020-11 (27)</option>
+				<option value="2020-10-sf.html" >2020-10 (31)</option>
+				<option value="2020-09-sf.html" >2020-09 (27)</option>
+				<option value="2020-08-sf.html" >2020-08 (28)</option>
+				<option value="2020-07-sf.html" >2020-07 (23)</option>
+				<option value="2020-06-sf.html" >2020-06 (33)</option>
+				<option value="2020-05-sf.html" >2020-05 (35)</option>
+				<option value="2020-04-sf.html" >2020-04 (41)</option>
+				<option value="2020-03-sf.html" >2020-03 (45)</option>
+				<option value="2020-02-sf.html" >2020-02 (31)</option>
+				<option value="2020-01-sf.html" >2020-01 (20)</option>
+				<option value="2019-12-sf.html" >2019-12 (35)</option>
+				<option value="2019-11-sf.html" >2019-11 (28)</option>
+				<option value="2019-10-sf.html" >2019-10 (50)</option>
+				<option value="2019-09-sf.html" >2019-09 (10)</option>
+				<option value="2019-08-sf.html" >2019-08 (14)</option>
+				<option value="2019-07-sf.html" >2019-07 (6)</option>
+				<option value="2019-06-sf.html" >2019-06 (1)</option>
+				<option value="2019-05-sf.html" >2019-05 (2)</option>
+				<option value="2019-04-sf.html" >2019-04 (1)</option>
+				<option value="2019-03-sf.html" >2019-03 (9)</option>
+				<option value="2018-12-sf.html" >2018-12 (12)</option>
+				<option value="2018-11-sf.html" >2018-11 (6)</option>
+				<option value="2018-10-sf.html" >2018-10 (1)</option>
+				<option value="2018-08-sf.html" >2018-08 (6)</option>
+				<option value="2018-07-sf.html" >2018-07 (4)</option>
+				<option value="2018-06-sf.html" >2018-06 (1)</option>
+				<option value="2018-05-sf.html" >2018-05 (3)</option>
+				<option value="2018-03-sf.html" >2018-03 (6)</option>
+				<option value="2017-12-sf.html" >2017-12 (4)</option>
+				<option value="2017-11-sf.html" >2017-11 (8)</option>
+				<option value="2017-10-sf.html" >2017-10 (3)</option>
+				<option value="2017-09-sf.html" >2017-09 (7)</option>
+				<option value="2017-08-sf.html" >2017-08 (5)</option>
+				<option value="2017-07-sf.html" >2017-07 (4)</option>
+				<option value="2017-06-sf.html" >2017-06 (11)</option>
+				<option value="2017-05-sf.html" >2017-05 (28)</option>
+				<option value="2017-04-sf.html" >2017-04 (1)</option>
+				<option value="2017-03-sf.html" >2017-03 (8)</option>
+				<option value="2017-01-sf.html" >2017-01 (5)</option>
+				<option value="2016-12-sf.html" >2016-12 (2)</option>
+				<option value="2016-11-sf.html" >2016-11 (2)</option>
+				<option value="2016-10-sf.html" >2016-10 (1)</option>
+				<option value="2016-09-sf.html" >2016-09 (5)</option>
+				<option value="2016-08-sf.html" >2016-08 (3)</option>
+				<option value="2016-07-sf.html" >2016-07 (1)</option>
+				<option value="2016-05-sf.html" >2016-05 (5)</option>
+				<option value="2016-04-sf.html" >2016-04 (4)</option>
+				<option value="2016-03-sf.html" >2016-03 (1)</option>
+				<option value="2016-02-sf.html" >2016-02 (3)</option>
+				<option value="2016-01-sf.html" >2016-01 (10)</option>
+				<option value="2015-12-sf.html" >2015-12 (5)</option>
+				<option value="2015-10-sf.html" >2015-10 (3)</option>
+				<option value="2015-09-sf.html" >2015-09 (1)</option>
+				<option value="2015-07-sf.html" >2015-07 (15)</option>
+				<option value="2015-05-sf.html" >2015-05 (21)</option>
+				<option value="2015-04-sf.html" >2015-04 (19)</option>
+				<option value="2015-03-sf.html" >2015-03 (5)</option>
+				<option value="2015-02-sf.html" >2015-02 (10)</option>
+				<option value="2014-11-sf.html" >2014-11 (12)</option>
+				<option value="2014-09-sf.html" >2014-09 (16)</option>
+				<option value="2014-08-sf.html" >2014-08 (3)</option>
+				<option value="2014-07-sf.html" >2014-07 (1)</option>
+				<option value="2014-06-sf.html" >2014-06 (3)</option>
+				<option value="2014-05-sf.html" >2014-05 (37)</option>
+				<option value="2014-04-sf.html" >2014-04 (2)</option>
+				<option value="2014-03-sf.html" >2014-03 (2)</option>
+				<option value="2014-02-sf.html" >2014-02 (3)</option>
+				<option value="2013-12-sf.html" >2013-12 (5)</option>
+				<option value="2013-11-sf.html" >2013-11 (4)</option>
+				<option value="2013-10-sf.html" >2013-10 (5)</option>
+				<option value="2013-08-sf.html" >2013-08 (32)</option>
+				<option value="2013-07-sf.html" >2013-07 (2)</option>
+				<option value="2013-06-sf.html" >2013-06 (10)</option>
+				<option value="2013-05-sf.html" >2013-05 (4)</option>
+				<option value="2013-04-sf.html" >2013-04 (4)</option>
+				<option value="2013-03-sf.html" >2013-03 (1)</option>
+				<option value="2012-12-sf.html" >2012-12 (16)</option>
+				<option value="2012-11-sf.html" >2012-11 (16)</option>
+				<option value="2012-10-sf.html" >2012-10 (4)</option>
+				<option value="2012-09-sf.html" >2012-09 (9)</option>
+				<option value="2012-08-sf.html" >2012-08 (7)</option>
+				<option value="2012-07-sf.html" >2012-07 (49)</option>
+				<option value="2012-06-sf.html" >2012-06 (15)</option>
+				<option value="2012-05-sf.html" >2012-05 (12)</option>
+				<option value="2012-04-sf.html" >2012-04 (17)</option>
+				<option value="2012-03-sf.html" >2012-03 (18)</option>
+				<option value="2012-02-sf.html" >2012-02 (15)</option>
+				<option value="2012-01-sf.html" >2012-01 (8)</option>
+				<option value="2011-10-sf.html" >2011-10 (4)</option>
+				<option value="2011-09-sf.html" >2011-09 (7)</option>
+				<option value="2011-08-sf.html" >2011-08 (2)</option>
+				<option value="2011-07-sf.html" >2011-07 (11)</option>
+				<option value="2011-06-sf.html" >2011-06 (9)</option>
+				<option value="2011-05-sf.html" >2011-05 (2)</option>
+				<option value="2011-04-sf.html" >2011-04 (2)</option>
+				<option value="2011-03-sf.html" >2011-03 (2)</option>
+				<option value="2011-02-sf.html" >2011-02 (5)</option>
+				<option value="2011-01-sf.html" >2011-01 (2)</option>
+				<option value="2010-12-sf.html" >2010-12 (3)</option>
+				<option value="2010-11-sf.html" >2010-11 (16)</option>
+				<option value="2010-10-sf.html" >2010-10 (4)</option>
+				<option value="2010-08-sf.html" >2010-08 (18)</option>
+				<option value="2010-07-sf.html" >2010-07 (1)</option>
+				<option value="2010-06-sf.html" >2010-06 (1)</option>
+				<option value="2010-05-sf.html" >2010-05 (9)</option>
+				<option value="2010-04-sf.html" >2010-04 (11)</option>
+				<option value="2010-03-sf.html" >2010-03 (2)</option>
+				<option value="2010-02-sf.html" >2010-02 (1)</option>
+				<option value="2010-01-sf.html" >2010-01 (6)</option>
+				<option value="2009-12-sf.html" >2009-12 (14)</option>
+				<option value="2009-11-sf.html" >2009-11 (6)</option>
+				<option value="2009-10-sf.html" >2009-10 (4)</option>
+				<option value="2009-09-sf.html" >2009-09 (1)</option>
+				<option value="2009-08-sf.html" >2009-08 (4)</option>
+				<option value="2009-07-sf.html" >2009-07 (6)</option>
+				<option value="2009-06-sf.html" >2009-06 (17)</option>
+				<option value="2009-05-sf.html" >2009-05 (3)</option>
+				<option value="2009-04-sf.html" >2009-04 (5)</option>
+				<option value="2009-03-sf.html" >2009-03 (9)</option>
+				<option value="2009-02-sf.html" >2009-02 (6)</option>
+				<option value="2009-01-sf.html" >2009-01 (10)</option>
+				<option value="2008-12-sf.html" >2008-12 (9)</option>
+				<option value="2008-11-sf.html" >2008-11 (13)</option>
+				<option value="2008-10-sf.html" >2008-10 (5)</option>
+				<option value="2008-09-sf.html" >2008-09 (21)</option>
+				<option value="2008-08-sf.html" >2008-08 (21)</option>
+				<option value="2008-07-sf.html" >2008-07 (1)</option>
+				<option value="2008-06-sf.html" >2008-06 (13)</option>
+				<option value="2008-05-sf.html" >2008-05 (3)</option>
+				<option value="2008-04-sf.html" >2008-04 (9)</option>
+				<option value="2008-03-sf.html" >2008-03 (14)</option>
+				<option value="2008-02-sf.html" >2008-02 (14)</option>
+				<option value="2008-01-sf.html" >2008-01 (13)</option>
+				<option value="2007-12-sf.html" >2007-12 (3)</option>
+				<option value="2007-11-sf.html" >2007-11 (5)</option>
+				<option value="2007-10-sf.html" >2007-10 (2)</option>
+				<option value="2007-09-sf.html" >2007-09 (3)</option>
+				<option value="2007-08-sf.html" >2007-08 (5)</option>
+				<option value="2007-07-sf.html" >2007-07 (7)</option>
+				<option value="2007-06-sf.html" >2007-06 (6)</option>
+				<option value="2007-05-sf.html" >2007-05 (16)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2019-02-sf.html" >2019-02</option>
+				<option value="2019-01-sf.html" >2019-01</option>
+				<option value="2018-09-sf.html" >2018-09</option>
+				<option value="2018-04-sf.html" >2018-04</option>
+				<option value="2018-02-sf.html" >2018-02</option>
+				<option value="2018-01-sf.html" >2018-01</option>
+				<option value="2017-02-sf.html" >2017-02</option>
+				<option value="2016-06-sf.html" >2016-06</option>
+				<option value="2015-11-sf.html" >2015-11</option>
+				<option value="2015-08-sf.html" >2015-08</option>
+				<option value="2015-06-sf.html" >2015-06</option>
+				<option value="2015-01-sf.html" >2015-01</option>
+				<option value="2014-12-sf.html" >2014-12</option>
+				<option value="2014-10-sf.html" >2014-10</option>
+				<option value="2014-01-sf.html" >2014-01</option>
+				<option value="2013-09-sf.html" >2013-09</option>
+				<option value="2013-02-sf.html" >2013-02</option>
+				<option value="2013-01-sf.html" >2013-01</option>
+				<option value="2011-12-sf.html" >2011-12</option>
+				<option value="2011-11-sf.html" >2011-11</option>
+				<option value="2010-09-sf.html" >2010-09</option>
+				<option value="2007-04-sf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2022-8-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4s">
+			Available Now: Almanac, Armory, &amp; Aspis!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9313_PathfinderLostOmens_TravelGuide_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9313_PathfinderLostOmens_TravelGuide_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Lost Omens: Travel Guide
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7108-PE_StarfinderArmoryPocketEdition_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7108-PE_StarfinderArmoryPocketEdition_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Starfinder Armory Pocket Edition
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9302-SE_PathfinderLostOmens_CharacterGuideSpecialEdition_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9302-SE_PathfinderLostOmens_CharacterGuideSpecialEdition_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Lost Omens: Character Guide Special Edition
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7247_StarfinderAdventurePath_47NightmareScenario_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7247_StarfinderAdventurePath_47NightmareScenario_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Starfinder Adventure Path #47: Nightmare Scenario (Drift Crashers 2 of 3)
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90182_PathfinderAdventurePath_182-Graveclaw_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90182_PathfinderAdventurePath_182-Graveclaw_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Adventure Path #182: Graveclaw (Blood Lords 2 of 6)
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFB0020E_PathfinderBounty_20BurdeninBloodcove_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFB0020E_PathfinderBounty_20BurdeninBloodcove_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Bounty #20: Burden in Bloodcove
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4096_PathfinderFlip-Tiles_VillainLairsSet_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4096_PathfinderFlip-Tiles_VillainLairsSet_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Flip-Tiles: Villain Lairs Set
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0401E_PathfinderSocietyIntro_YearofBoundlessWonder_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0401E_PathfinderSocietyIntro_YearofBoundlessWonder_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Society Intro: Year of Boundless Wonder
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0402E_PathfinderSocietyScenario_4-02-ReturntotheGrave_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0402E_PathfinderSocietyScenario_4-02-ReturntotheGrave_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Society Scenario #4-02: Return to the Grave
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0402E_PathfinderSocietyScenario_4-02-ReturntotheGrave_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0402E_PathfinderSocietyScenario_4-02-ReturntotheGrave_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Society Scenario #4-03: Linnorm’s Legacy
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0506E_StarfinderSocietyScenario_5-06-TarnishedLegacy_HistoriasHoldout_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0506E_StarfinderSocietyScenario_5-06-TarnishedLegacy_HistoriasHoldout_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Starfinder Society Scenario #5-06: Tarnished Legacy: Historia’s Holdout
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0507E_StarfinderSocietyScenario_5-07_PlanarBloom_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0507E_StarfinderSocietyScenario_5-07_PlanarBloom_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Starfinder Society Scenario #5-07: Planar Bloom
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0399E_PathfinderSocietySpecial_3-99-FateintheFuture.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPFS0399E_PathfinderSocietySpecial_3-99-FateintheFuture.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Society Special #3-99: Fate in the Future
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0399E_StarfinderSocietySpecial_3-99-PerilsofthePast_1200X675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0399E_StarfinderSocietySpecial_3-99-PerilsofthePast_1200X675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Starfinder Society Special #3-99: Perils of the Past
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPACS0799E_TheProteansPrank.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPACS0799E_TheProteansPrank.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:The_Protean&#39;s_Prank.jpg">The_Protean&#39;s_Prank.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 31, 2022
+  | title  = Available Now: Almanac, Armory, &amp; Aspis!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4s
+  }}   
+| summary  = Pathfinder Adventure Card Society #7-99: The Protean’s Prank
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4s}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-29
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4o">
+			Meet the Infinite Masters: Part 3
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderInfinite</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderInfinite</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SashaHarving_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SashaHarving_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: Practically Perfect Panache, Swashbuckling Refined by Sasha Harving
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CeriRowland_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CeriRowland_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: Fearsome Foes and Fables by Ceri Rowland
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JamesBeck_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JamesBeck_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: Character Classes Precog by James Beck
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SimonHunter_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SimonHunter_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: Wrecked Upon the Shore by Simon Hunter
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JackyLeung_InfiniteAuthors_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JackyLeung_InfiniteAuthors_750.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lost_Omens_Gods_&amp;_Magic.jpg">Lost_Omens_Gods_&amp;_Magic.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Lost Omens Gods and Magic
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/AdrianKennelly_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/AdrianKennelly_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: 100 Hooks and Rumors To hear in or about Magnimar by Adrian Kennelly
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JamieTrollope_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JamieTrollope_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: NPC Index: Warriors by Jamie Trollope and Paul J. Steen
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/GremlinBrothers_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/GremlinBrothers_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: The Siege of Castle Savinoy by the Gremlin Brothers
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LuisLoza_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LuisLoza_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2022
+  | title  = Meet the Infinite Masters: Part 3
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4o
+  }}   
+| summary  = Pathfinder Infinite: Lost Omens Ancestries, Dragonkin by Luis Loza
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4o}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4n">
+			August/September 2022 Organized Play Monthly Update
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NivisGameTable_OrgPlay_1200x675.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NivisGameTable_OrgPlay_1200x675.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = Lucas Villalva Machado
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Alex Speidel]]
+  | date   = August 25, 2022
+  | title  = August/September 2022 Organized Play Monthly Update
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4n
+  }}   
+| summary  = Society members gathered around a game table
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4n}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4j">
+			Starfinder Society Survey: The Adamantine Bastille
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0300EXTRA_EhuHadif_2000.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0300EXTRA_EhuHadif_2000.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 25, 2022
+  | title  = Starfinder Society Survey: The Adamantine Bastille
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4j
+  }}   
+| summary  = First Seeker Ehu Hadif, a tall kasatha, contemplates the future
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4j}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4m">
+			Meet the Infinite Masters: Part 2
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderInfinite</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderInfinite</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JessicaRoss_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JessicaRoss_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Starfinder Fly Free or Die Adventure Path: Professional Courtesy
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/AlexanderAugunas_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/AlexanderAugunas_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite: Kitsune Of Golarion by Alezander Augunas, Joan Hong, Dustin Knight, Ruvaid Virk, and Sky Mahpiya Wall
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Dustin%20Knight_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Dustin%20Knight_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite Spell Tricksters of Lastwall by Dustin Knigth
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DylanWokeck_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DylanWokeck_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite Novel Options: Magic by Dylan Wokeck Novel Enigma
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TomRobinson_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TomRobinson_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite: The Caverns of Anguish by Ton Robinson
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WBrianLane_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/WBrianLane_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite: Inkfinder, over 100 tattoos for Pathfinder Second Edition by W. Brian Lane
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Arkon_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Arkon_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite: Arkon&#39;s Arkive: The Salvaged Scrap of Sir Sigmund Sturm&#39;s Spellbook, written by Arkon
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CalderWilliamCaDavid_InfiniteMasters_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CalderWilliamCaDavid_InfiniteMasters_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2022
+  | title  = Meet the Infinite Masters: Part 2
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4m
+  }}   
+| summary  = Pathfinder Infinite: Merrybears, A pathfinder Anvestry by Calder CaDavid
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4m}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4f">
+			Meet the Authors: Year of the Data Scourge
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">people/authors</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">starfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0402_minah_2000.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSFS0402_minah_2000.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 18, 2022
+  | title  = Meet the Authors: Year of the Data Scourge
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4f
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4f}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSF1003E-VeskariumIncapacitatorRobot_2000.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOSF1003E-VeskariumIncapacitatorRobot_2000.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 18, 2022
+  | title  = Meet the Authors: Year of the Data Scourge
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4f
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4f}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si4b">
+			Celebrating Pathfinder and Starfinder Infinite
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderInfinite</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderInfinite</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/VanessaHoskins_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/VanessaHoskins_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Pathfinder Infinite: Vellum and Lace by Vanessa Hoskins and Helen Savore
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/HelenSavore_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/HelenSavore_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Pathfinder Infinite: Origami Folder Archetype by Helen Savore
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TylerBeck_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TylerBeck_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Starfinder Infinite: Adventure Card Game Core Rules by Tyler Beck
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JeremyHochhalter_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JeremyHochhalter_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Starfinder Infinite: Peril Primer by Jeremy Hochhalter
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KimFrandsen_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KimFrandsen_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Starfinder Infinite: Into The Void by Kim Frandsen
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DerryLuttrell_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DerryLuttrell_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Pathfinder Infinite: Witches+ An Expansion and Errata to the Core Class by Derry Luttrell and Tony Saunders
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TonySaunders_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/TonySaunders_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Pathfinder Infinite: Oracles+ an expansion and errata to the core class by Derry Luttrell and Tony Saunders
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/GradyandTheo_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/GradyandTheo_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2022
+  | title  = Celebrating Pathfinder and Starfinder Infinite
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si4b
+  }}   
+| summary  = Pathfinder Infinite: Queerfinder Bars of Absalom by Theo Thourson and Grady Wang
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si4b}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si48">
+			Pathfinder Infinite: July in Review
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderInfinite</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderInfinite</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/BoostedBestiary_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/BoostedBestiary_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Boosted Bestiary (P2) By Ron Lundeen
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SunconsciousMinds_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SunconsciousMinds_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite Subconscious Minds By Luis Loza
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NPCIndexWarriors_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NPCIndexWarriors_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite NPC Index: Warriors by Jamie Trollope and Pail J. Steen
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Oozefolk_750.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Oozefolk_750.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite Oozefolk of Golarion by Garrick J. Williams
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ItemImplements_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ItemImplements_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite: Item Implements by W. Brian Lane
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SpellTrickstersOfTheDarkArchive_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SpellTrickstersOfTheDarkArchive_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite: Spell Tricksters Of The Dark Archive by Dustin Knight
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ToStudyEgosInGolarion_750.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ToStudyEgosInGolarion_750.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2022
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Dustin “Infiknight” Knight]]
+  | date   = August 12, 2022
+  | title  = Pathfinder Infinite: July in Review
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6si48
+  }}   
+| summary  = Pathfinder Infinite: To Study Egos in Golarion by Kevin Glusing
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6si48}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si49">
+			Gen Con Contact Tracing
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2022-8-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6si42">
+			We&#39;ll See You Tomorrow At Gen Con 2022
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">paizo</span>
+				<span class="tag">paizoStaff</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	</body>
+</html>

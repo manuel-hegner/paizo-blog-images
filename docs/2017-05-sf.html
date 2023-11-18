@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2017-05</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2017-05-all.html" >All</option>
+			<option value="2017-05-pf.html" >Pathfinder only</option>
+			<option value="2017-05-sf.html" selected>Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-sf.html" >2023-11 (3)</option>
+				<option value="2023-10-sf.html" >2023-10 (18)</option>
+				<option value="2023-09-sf.html" >2023-09 (28)</option>
+				<option value="2023-08-sf.html" >2023-08 (31)</option>
+				<option value="2023-07-sf.html" >2023-07 (29)</option>
+				<option value="2023-06-sf.html" >2023-06 (40)</option>
+				<option value="2023-05-sf.html" >2023-05 (23)</option>
+				<option value="2023-04-sf.html" >2023-04 (17)</option>
+				<option value="2023-03-sf.html" >2023-03 (29)</option>
+				<option value="2023-02-sf.html" >2023-02 (28)</option>
+				<option value="2023-01-sf.html" >2023-01 (15)</option>
+				<option value="2022-12-sf.html" >2022-12 (24)</option>
+				<option value="2022-11-sf.html" >2022-11 (32)</option>
+				<option value="2022-10-sf.html" >2022-10 (58)</option>
+				<option value="2022-09-sf.html" >2022-09 (24)</option>
+				<option value="2022-08-sf.html" >2022-08 (49)</option>
+				<option value="2022-07-sf.html" >2022-07 (37)</option>
+				<option value="2022-06-sf.html" >2022-06 (26)</option>
+				<option value="2022-05-sf.html" >2022-05 (23)</option>
+				<option value="2022-04-sf.html" >2022-04 (45)</option>
+				<option value="2022-03-sf.html" >2022-03 (29)</option>
+				<option value="2022-02-sf.html" >2022-02 (16)</option>
+				<option value="2022-01-sf.html" >2022-01 (28)</option>
+				<option value="2021-12-sf.html" >2021-12 (16)</option>
+				<option value="2021-11-sf.html" >2021-11 (19)</option>
+				<option value="2021-10-sf.html" >2021-10 (28)</option>
+				<option value="2021-09-sf.html" >2021-09 (25)</option>
+				<option value="2021-08-sf.html" >2021-08 (42)</option>
+				<option value="2021-07-sf.html" >2021-07 (20)</option>
+				<option value="2021-06-sf.html" >2021-06 (46)</option>
+				<option value="2021-05-sf.html" >2021-05 (33)</option>
+				<option value="2021-04-sf.html" >2021-04 (29)</option>
+				<option value="2021-03-sf.html" >2021-03 (57)</option>
+				<option value="2021-02-sf.html" >2021-02 (66)</option>
+				<option value="2021-01-sf.html" >2021-01 (30)</option>
+				<option value="2020-12-sf.html" >2020-12 (42)</option>
+				<option value="2020-11-sf.html" >2020-11 (27)</option>
+				<option value="2020-10-sf.html" >2020-10 (31)</option>
+				<option value="2020-09-sf.html" >2020-09 (27)</option>
+				<option value="2020-08-sf.html" >2020-08 (28)</option>
+				<option value="2020-07-sf.html" >2020-07 (23)</option>
+				<option value="2020-06-sf.html" >2020-06 (33)</option>
+				<option value="2020-05-sf.html" >2020-05 (35)</option>
+				<option value="2020-04-sf.html" >2020-04 (41)</option>
+				<option value="2020-03-sf.html" >2020-03 (45)</option>
+				<option value="2020-02-sf.html" >2020-02 (31)</option>
+				<option value="2020-01-sf.html" >2020-01 (20)</option>
+				<option value="2019-12-sf.html" >2019-12 (35)</option>
+				<option value="2019-11-sf.html" >2019-11 (28)</option>
+				<option value="2019-10-sf.html" >2019-10 (50)</option>
+				<option value="2019-09-sf.html" >2019-09 (10)</option>
+				<option value="2019-08-sf.html" >2019-08 (14)</option>
+				<option value="2019-07-sf.html" >2019-07 (6)</option>
+				<option value="2019-06-sf.html" >2019-06 (1)</option>
+				<option value="2019-05-sf.html" >2019-05 (2)</option>
+				<option value="2019-04-sf.html" >2019-04 (1)</option>
+				<option value="2019-03-sf.html" >2019-03 (9)</option>
+				<option value="2018-12-sf.html" >2018-12 (12)</option>
+				<option value="2018-11-sf.html" >2018-11 (6)</option>
+				<option value="2018-10-sf.html" >2018-10 (1)</option>
+				<option value="2018-08-sf.html" >2018-08 (6)</option>
+				<option value="2018-07-sf.html" >2018-07 (4)</option>
+				<option value="2018-06-sf.html" >2018-06 (1)</option>
+				<option value="2018-05-sf.html" >2018-05 (3)</option>
+				<option value="2018-03-sf.html" >2018-03 (6)</option>
+				<option value="2017-12-sf.html" >2017-12 (4)</option>
+				<option value="2017-11-sf.html" >2017-11 (8)</option>
+				<option value="2017-10-sf.html" >2017-10 (3)</option>
+				<option value="2017-09-sf.html" >2017-09 (7)</option>
+				<option value="2017-08-sf.html" >2017-08 (5)</option>
+				<option value="2017-07-sf.html" >2017-07 (4)</option>
+				<option value="2017-06-sf.html" >2017-06 (11)</option>
+				<option value="2017-05-sf.html" selected>2017-05 (28)</option>
+				<option value="2017-04-sf.html" >2017-04 (1)</option>
+				<option value="2017-03-sf.html" >2017-03 (8)</option>
+				<option value="2017-01-sf.html" >2017-01 (5)</option>
+				<option value="2016-12-sf.html" >2016-12 (2)</option>
+				<option value="2016-11-sf.html" >2016-11 (2)</option>
+				<option value="2016-10-sf.html" >2016-10 (1)</option>
+				<option value="2016-09-sf.html" >2016-09 (5)</option>
+				<option value="2016-08-sf.html" >2016-08 (3)</option>
+				<option value="2016-07-sf.html" >2016-07 (1)</option>
+				<option value="2016-05-sf.html" >2016-05 (5)</option>
+				<option value="2016-04-sf.html" >2016-04 (4)</option>
+				<option value="2016-03-sf.html" >2016-03 (1)</option>
+				<option value="2016-02-sf.html" >2016-02 (3)</option>
+				<option value="2016-01-sf.html" >2016-01 (10)</option>
+				<option value="2015-12-sf.html" >2015-12 (5)</option>
+				<option value="2015-10-sf.html" >2015-10 (3)</option>
+				<option value="2015-09-sf.html" >2015-09 (1)</option>
+				<option value="2015-07-sf.html" >2015-07 (15)</option>
+				<option value="2015-05-sf.html" >2015-05 (21)</option>
+				<option value="2015-04-sf.html" >2015-04 (19)</option>
+				<option value="2015-03-sf.html" >2015-03 (5)</option>
+				<option value="2015-02-sf.html" >2015-02 (10)</option>
+				<option value="2014-11-sf.html" >2014-11 (12)</option>
+				<option value="2014-09-sf.html" >2014-09 (16)</option>
+				<option value="2014-08-sf.html" >2014-08 (3)</option>
+				<option value="2014-07-sf.html" >2014-07 (1)</option>
+				<option value="2014-06-sf.html" >2014-06 (3)</option>
+				<option value="2014-05-sf.html" >2014-05 (37)</option>
+				<option value="2014-04-sf.html" >2014-04 (2)</option>
+				<option value="2014-03-sf.html" >2014-03 (2)</option>
+				<option value="2014-02-sf.html" >2014-02 (3)</option>
+				<option value="2013-12-sf.html" >2013-12 (5)</option>
+				<option value="2013-11-sf.html" >2013-11 (4)</option>
+				<option value="2013-10-sf.html" >2013-10 (5)</option>
+				<option value="2013-08-sf.html" >2013-08 (32)</option>
+				<option value="2013-07-sf.html" >2013-07 (2)</option>
+				<option value="2013-06-sf.html" >2013-06 (10)</option>
+				<option value="2013-05-sf.html" >2013-05 (4)</option>
+				<option value="2013-04-sf.html" >2013-04 (4)</option>
+				<option value="2013-03-sf.html" >2013-03 (1)</option>
+				<option value="2012-12-sf.html" >2012-12 (16)</option>
+				<option value="2012-11-sf.html" >2012-11 (16)</option>
+				<option value="2012-10-sf.html" >2012-10 (4)</option>
+				<option value="2012-09-sf.html" >2012-09 (9)</option>
+				<option value="2012-08-sf.html" >2012-08 (7)</option>
+				<option value="2012-07-sf.html" >2012-07 (49)</option>
+				<option value="2012-06-sf.html" >2012-06 (15)</option>
+				<option value="2012-05-sf.html" >2012-05 (12)</option>
+				<option value="2012-04-sf.html" >2012-04 (17)</option>
+				<option value="2012-03-sf.html" >2012-03 (18)</option>
+				<option value="2012-02-sf.html" >2012-02 (15)</option>
+				<option value="2012-01-sf.html" >2012-01 (8)</option>
+				<option value="2011-10-sf.html" >2011-10 (4)</option>
+				<option value="2011-09-sf.html" >2011-09 (7)</option>
+				<option value="2011-08-sf.html" >2011-08 (2)</option>
+				<option value="2011-07-sf.html" >2011-07 (11)</option>
+				<option value="2011-06-sf.html" >2011-06 (9)</option>
+				<option value="2011-05-sf.html" >2011-05 (2)</option>
+				<option value="2011-04-sf.html" >2011-04 (2)</option>
+				<option value="2011-03-sf.html" >2011-03 (2)</option>
+				<option value="2011-02-sf.html" >2011-02 (5)</option>
+				<option value="2011-01-sf.html" >2011-01 (2)</option>
+				<option value="2010-12-sf.html" >2010-12 (3)</option>
+				<option value="2010-11-sf.html" >2010-11 (16)</option>
+				<option value="2010-10-sf.html" >2010-10 (4)</option>
+				<option value="2010-08-sf.html" >2010-08 (18)</option>
+				<option value="2010-07-sf.html" >2010-07 (1)</option>
+				<option value="2010-06-sf.html" >2010-06 (1)</option>
+				<option value="2010-05-sf.html" >2010-05 (9)</option>
+				<option value="2010-04-sf.html" >2010-04 (11)</option>
+				<option value="2010-03-sf.html" >2010-03 (2)</option>
+				<option value="2010-02-sf.html" >2010-02 (1)</option>
+				<option value="2010-01-sf.html" >2010-01 (6)</option>
+				<option value="2009-12-sf.html" >2009-12 (14)</option>
+				<option value="2009-11-sf.html" >2009-11 (6)</option>
+				<option value="2009-10-sf.html" >2009-10 (4)</option>
+				<option value="2009-09-sf.html" >2009-09 (1)</option>
+				<option value="2009-08-sf.html" >2009-08 (4)</option>
+				<option value="2009-07-sf.html" >2009-07 (6)</option>
+				<option value="2009-06-sf.html" >2009-06 (17)</option>
+				<option value="2009-05-sf.html" >2009-05 (3)</option>
+				<option value="2009-04-sf.html" >2009-04 (5)</option>
+				<option value="2009-03-sf.html" >2009-03 (9)</option>
+				<option value="2009-02-sf.html" >2009-02 (6)</option>
+				<option value="2009-01-sf.html" >2009-01 (10)</option>
+				<option value="2008-12-sf.html" >2008-12 (9)</option>
+				<option value="2008-11-sf.html" >2008-11 (13)</option>
+				<option value="2008-10-sf.html" >2008-10 (5)</option>
+				<option value="2008-09-sf.html" >2008-09 (21)</option>
+				<option value="2008-08-sf.html" >2008-08 (21)</option>
+				<option value="2008-07-sf.html" >2008-07 (1)</option>
+				<option value="2008-06-sf.html" >2008-06 (13)</option>
+				<option value="2008-05-sf.html" >2008-05 (3)</option>
+				<option value="2008-04-sf.html" >2008-04 (9)</option>
+				<option value="2008-03-sf.html" >2008-03 (14)</option>
+				<option value="2008-02-sf.html" >2008-02 (14)</option>
+				<option value="2008-01-sf.html" >2008-01 (13)</option>
+				<option value="2007-12-sf.html" >2007-12 (3)</option>
+				<option value="2007-11-sf.html" >2007-11 (5)</option>
+				<option value="2007-10-sf.html" >2007-10 (2)</option>
+				<option value="2007-09-sf.html" >2007-09 (3)</option>
+				<option value="2007-08-sf.html" >2007-08 (5)</option>
+				<option value="2007-07-sf.html" >2007-07 (7)</option>
+				<option value="2007-06-sf.html" >2007-06 (6)</option>
+				<option value="2007-05-sf.html" >2007-05 (16)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2019-02-sf.html" >2019-02</option>
+				<option value="2019-01-sf.html" >2019-01</option>
+				<option value="2018-09-sf.html" >2018-09</option>
+				<option value="2018-04-sf.html" >2018-04</option>
+				<option value="2018-02-sf.html" >2018-02</option>
+				<option value="2018-01-sf.html" >2018-01</option>
+				<option value="2017-02-sf.html" >2017-02</option>
+				<option value="2016-06-sf.html" >2016-06</option>
+				<option value="2015-11-sf.html" >2015-11</option>
+				<option value="2015-08-sf.html" >2015-08</option>
+				<option value="2015-06-sf.html" >2015-06</option>
+				<option value="2015-01-sf.html" >2015-01</option>
+				<option value="2014-12-sf.html" >2014-12</option>
+				<option value="2014-10-sf.html" >2014-10</option>
+				<option value="2014-01-sf.html" >2014-01</option>
+				<option value="2013-09-sf.html" >2013-09</option>
+				<option value="2013-02-sf.html" >2013-02</option>
+				<option value="2013-01-sf.html" >2013-01</option>
+				<option value="2011-12-sf.html" >2011-12</option>
+				<option value="2011-11-sf.html" >2011-11</option>
+				<option value="2010-09-sf.html" >2010-09</option>
+				<option value="2007-04-sf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2017-5-29
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljug">
+			Raise Defense Screens!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">ignacioBazNLazcano</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7102-Cover.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7102-Cover.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:GM_Screen_clean_cover.jpg">GM_Screen_clean_cover.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Ignacio Bazán Lazcano
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Keeley]]
+  | date   = Mai 29, 2017
+  | title  = Raise Defense Screens!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljug
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljug}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljuq">
+			Stay Alert, Holy Plasma Cannons Ahead!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">adventureCardGuild</span>
+				<span class="tag">conventions/paizocon</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">paizoCon2017</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZ07101-Landscape.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZ07101-Landscape.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Preview1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Preview1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyCEO.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyCEO.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyScoundrel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyScoundrel.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-MechanicTank.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-MechanicTank.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7105_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7105_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1139_120.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1139_120.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1140.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1140.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ultimate_Wilderness.jpg">Ultimate_Wilderness.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1140-Shifter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1140-Shifter.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Zova.jpg">Zova.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFS-NextSeason.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFS-NextSeason.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Chris Lambertz]]
+  | date   = Mai 28, 2017
+  | title  = Stay Alert, Holy Plasma Cannons Ahead!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljuj">
+			A Talk About Cooperation
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pavelRtishev</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/StarfinderSociety_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/StarfinderSociety_500.jpeg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Starfinder_Society_Roleplaying_Guild.jpg">Starfinder_Society_Roleplaying_Guild.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = Mai 27, 2017
+  | title  = A Talk About Cooperation
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuj
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuj}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-StarfinderSociety.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-StarfinderSociety.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Starfinder_Society_agent.jpg">Starfinder_Society_agent.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Pavel Rtishev
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Thurston Hillman]]
+  | date   = Mai 27, 2017
+  | title  = A Talk About Cooperation
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuj
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuj}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljuf">
+			Class Preview: The Soldier
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">soldiers</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-SoldierGuard.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-SoldierGuard.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Android_soldier_guard.jpg">Android_soldier_guard.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen KC Stephens]]
+  | date   = Mai 26, 2017
+  | title  = Class Preview: The Soldier
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljuf
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljuf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lju5">
+			The Sounds of PaizoCon Approach!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions/paizocon</span>
+				<span class="tag">licensedProducts</span>
+				<span class="tag">paizoCon2017</span>
+				<span class="tag">syrinscape</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170523-MaskedBen.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170523-MaskedBen.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Ben Loomes]]
+  | date   = Mai 23, 2017
+  | title  = The Sounds of PaizoCon Approach!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lju5
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lju5}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5lju2">
+			Meet the Iconics: Obozaya
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">obozaya</span>
+				<span class="tag">remkoTroost</span>
+				<span class="tag">soldiers</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Obozaya.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Obozaya.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Remko Troost
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James L. Sutter]]
+  | date   = Mai 22, 2017
+  | title  = Meet the Iconics: Obozaya
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5lju2
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5lju2}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljtz">
+			Class Preview: The Mystic
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">mystics</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-MysticEmpath.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-MysticEmpath.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Mystic_empath.jpg">Mystic_empath.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = Mai 20, 2017
+  | title  = Class Preview: The Mystic
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljtz
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljtz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljty">
+			The Golem Send-off
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Mai 20, 2017
+  | title  = The Golem Send-off
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljty
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljty}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS2.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Mai 20, 2017
+  | title  = The Golem Send-off
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljty
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljty}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-WS3.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Mai 20, 2017
+  | title  = The Golem Send-off
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljty
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljty}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-Coconut.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20170519-Coconut.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = Mai 20, 2017
+  | title  = The Golem Send-off
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljty
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljty}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljtw">
+			Wes&#39;s Last Words
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/cover_500.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/cover_500.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[F. Wesley Schneider]]
+  | date   = Mai 19, 2017
+  | title  = Wes&#39;s Last Words
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljtw
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljtw}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Carbuncle.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Carbuncle.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[F. Wesley Schneider]]
+  | date   = Mai 19, 2017
+  | title  = Wes&#39;s Last Words
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljtw
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljtw}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1127-Nosoi.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO1127-Nosoi.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[F. Wesley Schneider]]
+  | date   = Mai 19, 2017
+  | title  = Wes&#39;s Last Words
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljtw
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljtw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljts">
+			Gen Con 50 Events
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">adventureCardGuild</span>
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">genCon2017</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljti">
+			Meet the Iconics: Keskodai
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/keskodai</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">mystics</span>
+				<span class="tag">remkoTroost</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Keskodai.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Keskodai.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Remko Troost
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James L. Sutter]]
+  | date   = Mai 15, 2017
+  | title  = Meet the Iconics: Keskodai
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljti
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljti}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljt9">
+			Meet the Iconics: Iseph
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/iseph</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">operatives</span>
+				<span class="tag">remkoTroost</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Iseph.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Iseph.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Iseph.jpg">Iseph.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Remko Troost
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[James L. Sutter]]
+  | date   = Mai 12, 2017
+  | title  = Meet the Iconics: Iseph
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt9
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljt8">
+			The End is Nigh
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFBattles_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PFBattles_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Kenway]]
+  | date   = Mai 12, 2017
+  | title  = The End is Nigh
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ReclamationSquire.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/ReclamationSquire.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Kenway]]
+  | date   = Mai 12, 2017
+  | title  = The End is Nigh
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-022-ReclamationKnight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-022-ReclamationKnight.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Kenway]]
+  | date   = Mai 12, 2017
+  | title  = The End is Nigh
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-028-MonstrousSkeleton.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-028-MonstrousSkeleton.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Kenway]]
+  | date   = Mai 12, 2017
+  | title  = The End is Nigh
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-037-Shadowcount-Sial.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/CoF-037-Shadowcount-Sial.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Michael Kenway]]
+  | date   = Mai 12, 2017
+  | title  = The End is Nigh
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljt8
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljt8}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-8
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljsh">
+			Class Preview: The Operative
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">operatives</span>
+				<span class="tag">people/artists/miroslavPetrov</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-OperativeThief.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-OperativeThief.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Operative_thief.jpg">Operative_thief.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Miroslav Petrov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = Mai 08, 2017
+  | title  = Class Preview: The Operative
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljsh
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljsh}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljrq">
+			Class Preview: The Envoy
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">envoys</span>
+				<span class="tag">people/artists/miroslavPetrov</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyAmbassador.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-EnvoyAmbassador.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Vesk_envoy_ambassador.jpg">Vesk_envoy_ambassador.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Miroslav Petrov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Owen K.C. Stephens]]
+  | date   = Mai 05, 2017
+  | title  = Class Preview: The Envoy
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljrq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljrq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljs0">
+			Help us Win the Gauntlet Infinity!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">charity</span>
+				<span class="tag">paizo</span>
+				<span class="tag">theGauntlet</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Gauntletcover.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Gauntletcover.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Justin Treadway. Used with Permission. Copyright Mox Boarding House 2017
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = Mai 04, 2017
+  | title  = Help us Win the Gauntlet Infinity!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljs0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KDavisGauntlet_180.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/KDavisGauntlet_180.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = Mai 04, 2017
+  | title  = Help us Win the Gauntlet Infinity!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljs0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JKeeleyGauntlet_180.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JKeeleyGauntlet_180.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = Mai 04, 2017
+  | title  = Help us Win the Gauntlet Infinity!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljs0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SCopasGauntlet_180.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/SCopasGauntlet_180.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = Mai 04, 2017
+  | title  = Help us Win the Gauntlet Infinity!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljs0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JBulmahnGauntlet_180.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/JBulmahnGauntlet_180.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = Mai 04, 2017
+  | title  = Help us Win the Gauntlet Infinity!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljs0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljs0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2017-5-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo5ljrp">
+			Meet the Iconics: Navasi
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">envoys</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/meetTheIconics</span>
+				<span class="tag">navasi</span>
+				<span class="tag">remkoTroost</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Navasi.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7101-Navasi.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Navasi.jpg">Navasi.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2017
+| copy     = Paizo Inc.
+| artist   = Remko Troost
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Amanda Hamon Kunz]]
+  | date   = Mai 01, 2017
+  | title  = Meet the Iconics: Navasi
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo5ljrp
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo5ljrp}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

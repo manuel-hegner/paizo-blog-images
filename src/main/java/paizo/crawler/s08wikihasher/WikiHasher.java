@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.s08wikihasher;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -14,8 +14,6 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.IOUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.internal.StringUtil;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,28 +26,36 @@ import dev.brachtendorf.jimagehash.hash.Hash;
 import dev.brachtendorf.jimagehash.hashAlgorithms.HashingAlgorithm;
 import dev.brachtendorf.jimagehash.hashAlgorithms.PerceptiveHash;
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.ImageHelper;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
+import paizo.crawler.common.model.WikiImage;
+import paizo.crawler.s05imagedownloader.Cropper;
 
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
 	    hash(false,
-	        "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000",
-	        "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000"
+	        new Target("pf", "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000"),
+	        new Target("sf", "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000")
 	    );
 	}
+	
+	private static record Target(String wiki, String url) {}
 
-	private static void hash(boolean replace, String... urls) throws Exception {
+	@SafeVarargs
+	private static void hash(boolean replace, Target... targets) throws Exception {
 		File file = new File("meta/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
-				.readValue(file, HashedImage[].class));
+				.readValue(file, WikiImage[].class));
 
 		MyPool pool = new MyPool("wiki hashing");
 
-		for(String url : urls) {
+		for(var target : targets) {
 		    String aicontinue = null;
 		    List<JsonNode> all = new ArrayList<>();
 		    do {
-		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(new URL(url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue)))));
+		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(new URL(target.url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue)))));
 
     		    aicontinue = result.path("continue").path("aicontinue").asText();
     		    ((ArrayNode)(result.get("query").get("allimages"))).elements().forEachRemaining(all::add);
@@ -58,17 +64,18 @@ public class WikiHasher implements Callable<Void> {
 		    for(var n:all) {
 		        String name = n.get("name").asText();
 		        String imgUrl = n.get("url").asText();
-		        pool.submit(new WikiHasher(replace, known, name, imgUrl));
+		        pool.submit(new WikiHasher(replace, target.wiki, known, name, imgUrl));
 		    }
 		}
 
 		pool.shutdown();
-		known.sort(Comparator.comparing(HashedImage::getName));
+		known.sort(Comparator.comparing(WikiImage::getName));
 		Jackson.MAPPER.writeValue(file, known);
 	}
 
 	private final boolean replace;
-	private final List<HashedImage> known;
+	private final String wiki;
+	private final List<WikiImage> known;
 	private final String name;
 	private final String url;
 
@@ -95,10 +102,13 @@ public class WikiHasher implements Callable<Void> {
 		}
 		img = Cropper.crop(img);
 
-		HashedImage hi = new HashedImage();
+		WikiImage hi = new WikiImage();
+		hi.setWiki(wiki);
 		hi.setName(name);
 		hi.setUrl(url);
+		hi.setUsesTransparency(ImageHelper.usesTransparency(img));
 		hi.setHash(hash(img));
+		hi.setPixels((long)img.getWidth()*img.getHeight());
 		synchronized (known) {
 			if(replace) {
 				known.removeIf(i->i.getName().equals(name));
@@ -116,7 +126,7 @@ public class WikiHasher implements Callable<Void> {
 	}
 
 	public static Hash hash(BufferedImage img) {
-		return HASHER.hash(img);
+		return HASHER.hash(ImageHelper.normalizeForHashing(img));
 	}
 
 	private static final HashingAlgorithm HASHER = new PerceptiveHash(128);

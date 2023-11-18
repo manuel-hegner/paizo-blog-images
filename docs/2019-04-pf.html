@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2019-04</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2019-04-all.html" >All</option>
+			<option value="2019-04-pf.html" selected>Pathfinder only</option>
+			<option value="2019-04-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" >2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" selected>2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2019-4-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgm7">
+			Iconic Evolution: Seelah
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/paladins</span>
+				<span class="tag">iconicEvolutions</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/seelah</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190430-Seelah.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190430-Seelah.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Seelah_2nd_edition.jpg">Seelah_2nd_edition.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 30, 2019
+  | title  = Iconic Evolution: Seelah
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgm7
+  }}   
+| summary  = Artist&#39;s rendering of a bald tan man dressed in blue, white, and gold weilding a temple sword.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgm7}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgmb">
+			Beach Trips, Druids, and Starfinder Beginner Box Live Play!
+			</a>
+		</h3>
+		<div class="tags">
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-26
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgm4">
+			Core Principles: Rewarding Heroism in the Pathfinder ACG
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sglr">
+			Iconic Encounter: Test of the Hidden Peaks
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/monks</span>
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/sajan</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190425-Encounter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190425-Encounter.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Troll_duel.jpg">Troll_duel.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Robert Pitturru
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 25, 2019
+  | title  = Iconic Encounter: Test of the Hidden Peaks
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sglr
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sglr}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sglh">
+			Pathfinder Society Second Edition Preview: Earned Benefits
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgle">
+			Iconic Evolution: Sajan
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/monks</span>
+				<span class="tag">iconicEvolutions</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/sajan</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190423-Sajan.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190423-Sajan.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Sajan_2nd_edition.jpeg">Sajan_2nd_edition.jpeg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 23, 2019
+  | title  = Iconic Evolution: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgle
+  }}   
+| summary  = Artist&#39;s rendering of a bald tan man dressed in blue, white, and gold weilding a temple sword.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgle}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgl7">
+			The Dead Rise
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">tyrantsGrasp</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90139-Bestiary.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90139-Bestiary.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Shardra_Lem_Fight.jpg">Shardra_Lem_Fight.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Anthony Star
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Ron Lundeen]]
+  | date   = April 22, 2019
+  | title  = The Dead Rise
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl7
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl7}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90142-WhisperingTyrant.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90142-WhisperingTyrant.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Whispering_Tyrant.jpg">Whispering_Tyrant.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Kurt Jacobi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Ron Lundeen]]
+  | date   = April 22, 2019
+  | title  = The Dead Rise
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl7
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl7}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90143-ChicomeCouatl.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90143-ChicomeCouatl.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Chicome_couatl.jpg">Chicome_couatl.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Artur Nakhodkin
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Ron Lundeen]]
+  | date   = April 22, 2019
+  | title  = The Dead Rise
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl7
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl7}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgl6">
+			Oblivion Oath, Nidal, and Year of a Thousand Bites!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">oblivionOath</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgl5">
+			Core Principles: Encouraging Teamwork in the Pathfinder ACG
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgl2">
+			Iconic Encounter: Party Crasher
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/rogues</span>
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/merisiel</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190418-Encounter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190418-Encounter.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Scheming_vampires.jpg">Scheming_vampires.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mary Jane Pajaron
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 18, 2019
+  | title  = Iconic Encounter: Party Crasher
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl2
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl2}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgl0">
+			Pathfinder Society Scenarios: A Tip of the Hats
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">pathfinderSociety/pathfinderSocietyScenarios</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS1018E-ChalosVisanda.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS1018E-ChalosVisanda.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Chalos_Visanda.jpg">Chalos_Visanda.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Leonardo Santanna
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = April 17, 2019
+  | title  = Pathfinder Society Scenarios: A Tip of the Hats
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl0}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS1019E-ElluxShost.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPSS1019E-ElluxShost.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Ellux_Shost.jpg">Ellux_Shost.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Hannah Boving
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[John Compton]]
+  | date   = April 17, 2019
+  | title  = Pathfinder Society Scenarios: A Tip of the Hats
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgl0
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgl0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkz">
+			Iconic Evolution: Merisiel
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/rogues</span>
+				<span class="tag">iconicEvolutions</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/merisiel</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190416-Merisiel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190416-Merisiel.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Merisiel_2nd_edition.jpeg">Merisiel_2nd_edition.jpeg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 16, 2019
+  | title  = Iconic Evolution: Merisiel
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkz
+  }}   
+| summary  = Artist&#39;s rendering of a thin elf female with long white hair and dark eyes.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgky">
+			What Makes a Man Turn Neutral?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderCampaignSetting</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Opener.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Opener.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Monitor_worshiper.jpg">Monitor_worshiper.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Nicolas Espinoza
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = April 15, 2019
+  | title  = What Makes a Man Turn Neutral?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgky
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgky}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Monad.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Monad.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Monad.jpg">Monad.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Sammy Khalid
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = April 15, 2019
+  | title  = What Makes a Man Turn Neutral?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgky
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgky}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Summoner.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-Summoner.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Gnome_summoner.jpg">Gnome_summoner.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Gabriela Marchioro
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = April 15, 2019
+  | title  = What Makes a Man Turn Neutral?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgky
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgky}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-IllurishiProtean.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO92114-IllurishiProtean.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Illureshi.jpg">Illureshi.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Nicolas Espinoza
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = April 15, 2019
+  | title  = What Makes a Man Turn Neutral?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgky
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgky}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkx">
+			New on YouTube: The First Episode of Oblivion Oath and More!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">newOnYouTube</span>
+				<span class="tag">oblivionOath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkt">
+			Iconic Encounter: The Green Within
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/druids</span>
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics/lini</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190411-Lini.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190411-Lini.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Drider_battle.jpg">Drider_battle.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Sam Yang
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 11, 2019
+  | title  = Iconic Encounter: The Green Within
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkt
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkt}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkq">
+			Iconic Evolution: Lini
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/druids</span>
+				<span class="tag">iconicEvolutions</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/lini</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190409-P2_Iconic_Lini.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190409-P2_Iconic_Lini.jpg">
+						</a><br>
+								Manually checked
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 09, 2019
+  | title  = Iconic Evolution: Lini
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkq
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkp">
+			Paizo’s YouTube Week in Review
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgki">
+			PACG, Starring Not Your Typical Goblins!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">freeRPGDay</span>
+				<span class="tag">monsters/goblins</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9500-16_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9500-16_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:We_Be_Heroes?_(scenario_bundle).jpg">We_Be_Heroes?_(scenario_bundle).jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mike Selinker]]
+  | date   = April 05, 2019
+  | title  = PACG, Starring Not Your Typical Goblins!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgki
+  }}   
+| summary  = We Be Heroes? cover image, featuring three goblins in a fight with three large pigs.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgki}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkl">
+			Iconic Encounter: Tough Crowd
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/bards</span>
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/lem</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190404-Harpies.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190404-Harpies.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Harpy_battle.jpg">Harpy_battle.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Biagio d&#39;Alessandro
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 04, 2019
+  | title  = Iconic Encounter: Tough Crowd
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkl
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkl}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkh">
+			April Update—Second Seekers, Novas, Spotlights, and Conventions!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-2
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkg">
+			Iconic Evolution: Lem
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">classes/bards</span>
+				<span class="tag">iconicEvolutions</span>
+				<span class="tag">iconics</span>
+				<span class="tag">iconics/lem</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">wayneReynolds</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190402-Lem.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190402-Lem.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lem_2nd_edition.jpg">Lem_2nd_edition.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = April 02, 2019
+  | title  = Iconic Evolution: Lem
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkg
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkg}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-4-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgkf">
+			The Oblivion Oath Begins!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">oblivionOath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190401-OblivionOathCharacters.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190401-OblivionOathCharacters.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Oblivion_Oath_party.jpg">Oblivion_Oath_party.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Bulmahn]]
+  | date   = April 01, 2019
+  | title  = The Oblivion Oath Begins!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgkf
+  }}   
+| summary  = 4 Pathfinder Oblivion Oath player character illustrations, from left to right: Zel, a green lizardfolk rogue with one hand resting his sword and balancing a bag of coins in the other, Mykah, a pink-haired gnome wizard carries a staff and spellbook in her hands, Carina, a blonde dwarf champion wields an axe and shield, and Qundle, a grey silver-eyed goblin sorcerer clutches a golden light and spear.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgkf}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

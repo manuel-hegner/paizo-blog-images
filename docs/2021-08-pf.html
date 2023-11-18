@@ -1,0 +1,3148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2021-08</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2021-08-all.html" >All</option>
+			<option value="2021-08-pf.html" selected>Pathfinder only</option>
+			<option value="2021-08-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-pf.html" >2023-11 (14)</option>
+				<option value="2023-10-pf.html" >2023-10 (20)</option>
+				<option value="2023-09-pf.html" >2023-09 (29)</option>
+				<option value="2023-08-pf.html" >2023-08 (38)</option>
+				<option value="2023-07-pf.html" >2023-07 (39)</option>
+				<option value="2023-06-pf.html" >2023-06 (55)</option>
+				<option value="2023-05-pf.html" >2023-05 (37)</option>
+				<option value="2023-04-pf.html" >2023-04 (29)</option>
+				<option value="2023-03-pf.html" >2023-03 (26)</option>
+				<option value="2023-02-pf.html" >2023-02 (30)</option>
+				<option value="2023-01-pf.html" >2023-01 (18)</option>
+				<option value="2022-12-pf.html" >2022-12 (33)</option>
+				<option value="2022-11-pf.html" >2022-11 (35)</option>
+				<option value="2022-10-pf.html" >2022-10 (50)</option>
+				<option value="2022-09-pf.html" >2022-09 (42)</option>
+				<option value="2022-08-pf.html" >2022-08 (63)</option>
+				<option value="2022-07-pf.html" >2022-07 (48)</option>
+				<option value="2022-06-pf.html" >2022-06 (29)</option>
+				<option value="2022-05-pf.html" >2022-05 (25)</option>
+				<option value="2022-04-pf.html" >2022-04 (58)</option>
+				<option value="2022-03-pf.html" >2022-03 (43)</option>
+				<option value="2022-02-pf.html" >2022-02 (25)</option>
+				<option value="2022-01-pf.html" >2022-01 (32)</option>
+				<option value="2021-12-pf.html" >2021-12 (30)</option>
+				<option value="2021-11-pf.html" >2021-11 (34)</option>
+				<option value="2021-10-pf.html" >2021-10 (46)</option>
+				<option value="2021-09-pf.html" >2021-09 (45)</option>
+				<option value="2021-08-pf.html" selected>2021-08 (68)</option>
+				<option value="2021-07-pf.html" >2021-07 (45)</option>
+				<option value="2021-06-pf.html" >2021-06 (46)</option>
+				<option value="2021-05-pf.html" >2021-05 (33)</option>
+				<option value="2021-04-pf.html" >2021-04 (37)</option>
+				<option value="2021-03-pf.html" >2021-03 (47)</option>
+				<option value="2021-02-pf.html" >2021-02 (43)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2021-01-pf.html" >2021-01</option>
+				<option value="2020-12-pf.html" >2020-12</option>
+				<option value="2020-11-pf.html" >2020-11</option>
+				<option value="2020-10-pf.html" >2020-10</option>
+				<option value="2020-09-pf.html" >2020-09</option>
+				<option value="2020-08-pf.html" >2020-08</option>
+				<option value="2020-07-pf.html" >2020-07</option>
+				<option value="2020-06-pf.html" >2020-06</option>
+				<option value="2020-05-pf.html" >2020-05</option>
+				<option value="2020-04-pf.html" >2020-04</option>
+				<option value="2020-03-pf.html" >2020-03</option>
+				<option value="2020-02-pf.html" >2020-02</option>
+				<option value="2020-01-pf.html" >2020-01</option>
+				<option value="2019-12-pf.html" >2019-12</option>
+				<option value="2019-11-pf.html" >2019-11</option>
+				<option value="2019-10-pf.html" >2019-10</option>
+				<option value="2019-09-pf.html" >2019-09</option>
+				<option value="2019-08-pf.html" >2019-08</option>
+				<option value="2019-07-pf.html" >2019-07</option>
+				<option value="2019-06-pf.html" >2019-06</option>
+				<option value="2019-05-pf.html" >2019-05</option>
+				<option value="2019-04-pf.html" >2019-04</option>
+				<option value="2019-03-pf.html" >2019-03</option>
+				<option value="2019-02-pf.html" >2019-02</option>
+				<option value="2019-01-pf.html" >2019-01</option>
+				<option value="2018-12-pf.html" >2018-12</option>
+				<option value="2018-11-pf.html" >2018-11</option>
+				<option value="2018-10-pf.html" >2018-10</option>
+				<option value="2018-09-pf.html" >2018-09</option>
+				<option value="2018-08-pf.html" >2018-08</option>
+				<option value="2018-07-pf.html" >2018-07</option>
+				<option value="2018-06-pf.html" >2018-06</option>
+				<option value="2018-05-pf.html" >2018-05</option>
+				<option value="2018-04-pf.html" >2018-04</option>
+				<option value="2018-03-pf.html" >2018-03</option>
+				<option value="2018-02-pf.html" >2018-02</option>
+				<option value="2018-01-pf.html" >2018-01</option>
+				<option value="2017-12-pf.html" >2017-12</option>
+				<option value="2017-11-pf.html" >2017-11</option>
+				<option value="2017-10-pf.html" >2017-10</option>
+				<option value="2017-09-pf.html" >2017-09</option>
+				<option value="2017-08-pf.html" >2017-08</option>
+				<option value="2017-07-pf.html" >2017-07</option>
+				<option value="2017-06-pf.html" >2017-06</option>
+				<option value="2017-05-pf.html" >2017-05</option>
+				<option value="2017-04-pf.html" >2017-04</option>
+				<option value="2017-03-pf.html" >2017-03</option>
+				<option value="2017-02-pf.html" >2017-02</option>
+				<option value="2017-01-pf.html" >2017-01</option>
+				<option value="2016-12-pf.html" >2016-12</option>
+				<option value="2016-11-pf.html" >2016-11</option>
+				<option value="2016-10-pf.html" >2016-10</option>
+				<option value="2016-09-pf.html" >2016-09</option>
+				<option value="2016-08-pf.html" >2016-08</option>
+				<option value="2016-07-pf.html" >2016-07</option>
+				<option value="2016-06-pf.html" >2016-06</option>
+				<option value="2016-05-pf.html" >2016-05</option>
+				<option value="2016-04-pf.html" >2016-04</option>
+				<option value="2016-03-pf.html" >2016-03</option>
+				<option value="2016-02-pf.html" >2016-02</option>
+				<option value="2016-01-pf.html" >2016-01</option>
+				<option value="2015-12-pf.html" >2015-12</option>
+				<option value="2015-11-pf.html" >2015-11</option>
+				<option value="2015-10-pf.html" >2015-10</option>
+				<option value="2015-09-pf.html" >2015-09</option>
+				<option value="2015-08-pf.html" >2015-08</option>
+				<option value="2015-07-pf.html" >2015-07</option>
+				<option value="2015-06-pf.html" >2015-06</option>
+				<option value="2015-05-pf.html" >2015-05</option>
+				<option value="2015-04-pf.html" >2015-04</option>
+				<option value="2015-03-pf.html" >2015-03</option>
+				<option value="2015-02-pf.html" >2015-02</option>
+				<option value="2015-01-pf.html" >2015-01</option>
+				<option value="2014-12-pf.html" >2014-12</option>
+				<option value="2014-11-pf.html" >2014-11</option>
+				<option value="2014-10-pf.html" >2014-10</option>
+				<option value="2014-09-pf.html" >2014-09</option>
+				<option value="2014-08-pf.html" >2014-08</option>
+				<option value="2014-07-pf.html" >2014-07</option>
+				<option value="2014-06-pf.html" >2014-06</option>
+				<option value="2014-05-pf.html" >2014-05</option>
+				<option value="2014-04-pf.html" >2014-04</option>
+				<option value="2014-03-pf.html" >2014-03</option>
+				<option value="2014-02-pf.html" >2014-02</option>
+				<option value="2014-01-pf.html" >2014-01</option>
+				<option value="2013-12-pf.html" >2013-12</option>
+				<option value="2013-11-pf.html" >2013-11</option>
+				<option value="2013-10-pf.html" >2013-10</option>
+				<option value="2013-09-pf.html" >2013-09</option>
+				<option value="2013-08-pf.html" >2013-08</option>
+				<option value="2013-07-pf.html" >2013-07</option>
+				<option value="2013-06-pf.html" >2013-06</option>
+				<option value="2013-05-pf.html" >2013-05</option>
+				<option value="2013-04-pf.html" >2013-04</option>
+				<option value="2013-03-pf.html" >2013-03</option>
+				<option value="2013-02-pf.html" >2013-02</option>
+				<option value="2013-01-pf.html" >2013-01</option>
+				<option value="2012-12-pf.html" >2012-12</option>
+				<option value="2012-11-pf.html" >2012-11</option>
+				<option value="2012-10-pf.html" >2012-10</option>
+				<option value="2012-09-pf.html" >2012-09</option>
+				<option value="2012-08-pf.html" >2012-08</option>
+				<option value="2012-07-pf.html" >2012-07</option>
+				<option value="2012-06-pf.html" >2012-06</option>
+				<option value="2012-05-pf.html" >2012-05</option>
+				<option value="2012-04-pf.html" >2012-04</option>
+				<option value="2012-03-pf.html" >2012-03</option>
+				<option value="2012-02-pf.html" >2012-02</option>
+				<option value="2012-01-pf.html" >2012-01</option>
+				<option value="2011-12-pf.html" >2011-12</option>
+				<option value="2011-11-pf.html" >2011-11</option>
+				<option value="2011-10-pf.html" >2011-10</option>
+				<option value="2011-09-pf.html" >2011-09</option>
+				<option value="2011-08-pf.html" >2011-08</option>
+				<option value="2011-07-pf.html" >2011-07</option>
+				<option value="2011-06-pf.html" >2011-06</option>
+				<option value="2011-05-pf.html" >2011-05</option>
+				<option value="2011-04-pf.html" >2011-04</option>
+				<option value="2011-03-pf.html" >2011-03</option>
+				<option value="2011-02-pf.html" >2011-02</option>
+				<option value="2011-01-pf.html" >2011-01</option>
+				<option value="2010-12-pf.html" >2010-12</option>
+				<option value="2010-11-pf.html" >2010-11</option>
+				<option value="2010-10-pf.html" >2010-10</option>
+				<option value="2010-09-pf.html" >2010-09</option>
+				<option value="2010-08-pf.html" >2010-08</option>
+				<option value="2010-07-pf.html" >2010-07</option>
+				<option value="2010-06-pf.html" >2010-06</option>
+				<option value="2010-05-pf.html" >2010-05</option>
+				<option value="2010-04-pf.html" >2010-04</option>
+				<option value="2010-03-pf.html" >2010-03</option>
+				<option value="2010-02-pf.html" >2010-02</option>
+				<option value="2010-01-pf.html" >2010-01</option>
+				<option value="2009-12-pf.html" >2009-12</option>
+				<option value="2009-11-pf.html" >2009-11</option>
+				<option value="2009-10-pf.html" >2009-10</option>
+				<option value="2009-09-pf.html" >2009-09</option>
+				<option value="2009-08-pf.html" >2009-08</option>
+				<option value="2009-07-pf.html" >2009-07</option>
+				<option value="2009-06-pf.html" >2009-06</option>
+				<option value="2009-05-pf.html" >2009-05</option>
+				<option value="2009-04-pf.html" >2009-04</option>
+				<option value="2009-03-pf.html" >2009-03</option>
+				<option value="2009-02-pf.html" >2009-02</option>
+				<option value="2009-01-pf.html" >2009-01</option>
+				<option value="2008-12-pf.html" >2008-12</option>
+				<option value="2008-11-pf.html" >2008-11</option>
+				<option value="2008-10-pf.html" >2008-10</option>
+				<option value="2008-09-pf.html" >2008-09</option>
+				<option value="2008-08-pf.html" >2008-08</option>
+				<option value="2008-07-pf.html" >2008-07</option>
+				<option value="2008-06-pf.html" >2008-06</option>
+				<option value="2008-05-pf.html" >2008-05</option>
+				<option value="2008-04-pf.html" >2008-04</option>
+				<option value="2008-03-pf.html" >2008-03</option>
+				<option value="2008-02-pf.html" >2008-02</option>
+				<option value="2008-01-pf.html" >2008-01</option>
+				<option value="2007-12-pf.html" >2007-12</option>
+				<option value="2007-11-pf.html" >2007-11</option>
+				<option value="2007-10-pf.html" >2007-10</option>
+				<option value="2007-09-pf.html" >2007-09</option>
+				<option value="2007-08-pf.html" >2007-08</option>
+				<option value="2007-07-pf.html" >2007-07</option>
+				<option value="2007-06-pf.html" >2007-06</option>
+				<option value="2007-05-pf.html" >2007-05</option>
+				<option value="2007-04-pf.html" >2007-04</option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2021-8-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsn">
+			Strength of Thousands: Magaambya Staff
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">strengthOfThousands</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90169_LUMUSIYAO.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90169_LUMUSIYAO.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Vlada Hladkova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 31, 2021
+  | title  = Strength of Thousands: Magaambya Staff
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsn
+  }}   
+| summary  = Illustration by Vlada Hladkova: headshot of a dark skinned young woman in a blue robe with her hair tied back with a purple hairband
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsn}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_STUDENTSOFTHEMAGAAMBYA.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_STUDENTSOFTHEMAGAAMBYA.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Vlada Hladkova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 31, 2021
+  | title  = Strength of Thousands: Magaambya Staff
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsn
+  }}   
+| summary  = A light skinned human in and a dark skinned halfling, both in purple robes, laugh while they run away from a red kobold with their arms full of equipment
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsn}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-31
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsl">
+			Monsters and Dragons and Pirates, Oh My!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Quickstart_Guide.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Quickstart_Guide.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = BattleZoo Bestiary Quick Start guide. Step 1: Slay Monsters! Step 2: Gather Ingredients. Step 3: Craft Item! Step 4: Imbue Item with Magic!
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Campfire-Square.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Campfire-Square.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = Adventurers sitting with a dragon around a small campfire, working on their crafts
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_IndigoIslesCoverArt.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_IndigoIslesCoverArt.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = Adventurers run through a dense jungle from a number of different monsters
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_02.Gmayun.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_02.Gmayun.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = Gmayun, a humanoid, parot ,bird-folk with bright blue feathers. Wearing leather armor and wielding a dagger
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Orpok_FINAL.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_Orpok_FINAL.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = Orpok; A humanoid pig-folk dressed in a red jackets and striped pants
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_WildFire-Leshies.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083121_WildFire-Leshies.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Stephen Glicker]]
+  | date   = August 31, 2021
+  | title  = Monsters and Dragons and Pirates, Oh My!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsl
+  }}   
+| summary  = Wild fire leshies, armored and glowing internally
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsl}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsk">
+			Coming Soon: Tech &amp; Teachers
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">horizonsOfTheVast</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">strengthOfThousands</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7117-4_TechRev.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7117-4_TechRev.png">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Tech_Revolution.png">Tech_Revolution.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Starfinder Tech Revolution: Large mech robots fire on the starfinder iconics in a city street that&#39;s been partially destroyed
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7117-111.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7117-111.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Starfinder large mech blueprint, one mech is a large, skeletal, insect-like ship with many red viewports for eyes while the other is a large humanoid mech with a blade attached to its arm
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7117_Pages74-75.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7117_Pages74-75.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Starfinder iconics Navasi and Zemir flee from a helicopter-like craft via waterway
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_VeskPirate.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_VeskPirate.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = A vesk holding a dagger appears on a floating screen in the middle of a mall-like complex. Many people standing on an escalator near the screen stare at it in shock
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO90171.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO90171.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Hurricane&#39;s_Howl.jpg">Hurricane&#39;s_Howl.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Strength of Thousands: Hurricane&#39;s Howl. Pathfinder iconics fight against armored warriors on a dark street. In the foreground overlayed over the background image is a muscled cyclops, summoning green magic over their head
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO90171coverscene.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO90171coverscene.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Setiawan Lee
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Pathfinder iconics Quinn and Feiya fight against armored warriors armed with tritons on a dark street.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7241.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7241.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Serpents_in_the_Cradle.jpg">Serpents_in_the_Cradle.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Horizons of the Vast: Serpents in the Cradle. Starfinder iconics Iseph and Navasi explore a dark cave
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7241ADVENTUREOPENER.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083021_PZO7241ADVENTUREOPENER.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2021
+  | title  = Coming Soon: Tech &amp; Teachers
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsk
+  }}   
+| summary  = Starfinder iconic Raia faces off against a large, carnivorous swamp plant
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsk}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsi">
+			Pledge to the NIOBE &amp; DURA: Wrath of the Ancient Kickstarter and Get the Pathfinder: Niobe Adventure!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082721_Niobe01.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082721_Niobe01.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2021
+  | title  = Pledge to the NIOBE &amp; DURA: Wrath of the Ancient Kickstarter and Get the Pathfinder: Niobe Adventure!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsi
+  }}   
+| summary  = Niobe, profile headshot of a dark skinned half-elf with hair pulled back in gold clasps and white paint across her nose and forhead
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NiobeandDura_1HyoungTradeKS.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/NiobeandDura_1HyoungTradeKS.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2021
+  | title  = Pledge to the NIOBE &amp; DURA: Wrath of the Ancient Kickstarter and Get the Pathfinder: Niobe Adventure!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsi
+  }}   
+| summary  = Niobe And Dura cover featuring a pale elf in dark armor decorated in skulls
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082721_Niobe02.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082721_Niobe02.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2021
+  | title  = Pledge to the NIOBE &amp; DURA: Wrath of the Ancient Kickstarter and Get the Pathfinder: Niobe Adventure!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsi
+  }}   
+| summary  = Close up on the face of a woman with Heterochromia, her left eye is brown while her right eye is blues
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsi}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsh">
+			More Stream Overlays for Pathfinder &amp; Starfinder
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">communityUse</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Pathfinder_Charity_Stream_Overlay.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Pathfinder_Charity_Stream_Overlay.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2021
+  | title  = More Stream Overlays for Pathfinder &amp; Starfinder
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsh
+  }}   
+| summary  = Pathfinder Charity Stream Overlay
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsh}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Starfinder_Charity_Stream_Overlay.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/Starfinder_Charity_Stream_Overlay.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2021
+  | title  = More Stream Overlays for Pathfinder &amp; Starfinder
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsh
+  }}   
+| summary  = Starfinder Charity Stream Overlay
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsh}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-25
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsf">
+			New Spells from the Pathfinder: Secrets of Magic Liveplay!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shse">
+			Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">rPGSuperstar</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ThreeBooks.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ThreeBooks.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = three books, BattleZoo Ancestries Dragons, BattleZoo Bestiary, and Jewel of the Indigo Isles
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_sketch_shalespitter.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_sketch_shalespitter.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = Sketch of a Shale Spitter, an insect-like monster with an armored back and many legs
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ShaleSpitter.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ShaleSpitter.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = Shale Spitter, an insect-like monster with an armored back, many legs, and a glowing underbelly
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ShaleBehemoth.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_ShaleBehemoth.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = Shale Behemoth, an insect-like monster with an armored back covered in brightly colored crystal-like growths, many legs, and a glowing underbelly
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_CurtainCaller.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_CurtainCaller.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = Curtain Caller, a humanoid monster wrapped in curtain-like fabric with tassels hanging off and masks in place for its face
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_Parrotbear.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_Parrotbear.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Patrick Renie,]]
+  | date   = August 24, 2021
+  | title  = Roll For Combat’s Battlezoo Bestiary Coming to Kickstarter!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shse
+  }}   
+| summary  = Parrot Bear, a brightly colored bear with feathered ears and parrot-like beaks for snouts
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shse}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-24
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsd">
+			Strength of Thousands: Music Is Math Is Magic
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">strengthOfThousands</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_SoTKeyArt.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082421_SoTKeyArt.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Music_Is_Math_Is_Magic.jpg">Music_Is_Math_Is_Magic.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Kent Hamilton
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 24, 2021
+  | title  = Strength of Thousands: Music Is Math Is Magic
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shsd
+  }}   
+| summary  = Two magic users summoning a glowing green light in the shape of an elephant
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shsd}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shsb">
+			Save the Date for a New Pathfinder Class Playtest!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderRoleplayingGame/playtest</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shs9">
+			Scrying on Subscriptions: Pathfinder Lost Omens
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">lostOmens</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderLostOmens</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190521-LostOmensMap_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190521-LostOmensMap_500.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2021
+  | title  = Scrying on Subscriptions: Pathfinder Lost Omens
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs9
+  }}   
+| summary  = Lost Omens Setting Map featuring the different lands of the Age of Lost Omens
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs9}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9310-2.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9310-2.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lost_Omens_The_Grand_Bazaar.png">Lost_Omens_The_Grand_Bazaar.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2021
+  | title  = Scrying on Subscriptions: Pathfinder Lost Omens
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs9
+  }}   
+| summary  = Lost Omens The Grand Bazaar: The iconics shop at a bustling bazaar full of colorfully dressed people, booths, and wares
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs9}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9311.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9311.png">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Lost_Omens_Monsters_of_Myth.png">Lost_Omens_Monsters_of_Myth.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2021
+  | title  = Scrying on Subscriptions: Pathfinder Lost Omens
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs9
+  }}   
+| summary  = Pathfinder Lost Omens Monsters of Myth: a giant dragon rampages through a dark forests
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs9}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9304.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO9304.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Absalom_City_of_Lost_Omens.jpg">Absalom_City_of_Lost_Omens.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2021
+  | title  = Scrying on Subscriptions: Pathfinder Lost Omens
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs9
+  }}   
+| summary  = Absalom City of Lost Omens: The iconics battle red robed cultists in a city square while a large monster lurks behind them
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shs5">
+			Combat Tracker Apps for All from Digital Dragon Studios
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082021_DigitalDragons.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082021_DigitalDragons.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 20, 2021
+  | title  = Combat Tracker Apps for All from Digital Dragon Studios
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs5
+  }}   
+| summary  = Digital Dragons Combat Tracker App ui for both pathfinder and starfinder
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs5}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shs4">
+			Pathfinder: Wrath of the Righteous is Almost Here!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">videoGames</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_WotR.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_WotR.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2021
+  | title  = Pathfinder: Wrath of the Righteous is Almost Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs4
+  }}   
+| summary  = Pathfinder Wrath of the Righteous
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs4}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_companionshowcase.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_companionshowcase.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2021
+  | title  = Pathfinder: Wrath of the Righteous is Almost Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs4
+  }}   
+| summary  = A line up of possible companion characters
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs4}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythicazata.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythicazata.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2021
+  | title  = Pathfinder: Wrath of the Righteous is Almost Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs4
+  }}   
+| summary  = Mythic Azata, a long eared, winged azata dips their toes into a forested pond while they play the fluit
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs4}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythiclich.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythiclich.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2021
+  | title  = Pathfinder: Wrath of the Righteous is Almost Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs4
+  }}   
+| summary  = Mythic Litch, an armored, skeletal litch, with glowing purple eyes
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs4}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythictrickster.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081921_mythictrickster.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2021
+  | title  = Pathfinder: Wrath of the Righteous is Almost Here!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs4
+  }}   
+| summary  = Mythic Trickster, a young woman is a blue dress and top hat stands in a market square with a large wooden mallet and a broken piñata behind her
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs4}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-18
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shs1">
+			New Cantrips from the Pathfinder: Secrets of Magic Liveplay!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shs0">
+			Conjuring Phrases: Meet the Secrets of Magic Authors part 2!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacEvoker_LucasVillalvaMachado.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacEvoker_LucasVillalvaMachado.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Lucas Villalva Machado
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 2!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs0
+  }}   
+| summary  = Almanac Evoker, a woman in a red head-scarf with a jewel on her forhead lunges forward while summoning blue electricity in both hands
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_MAGUS3-ARCHER_LoicCanavaggia.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_MAGUS3-ARCHER_LoicCanavaggia.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Loïc Canavaggia
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 2!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs0
+  }}   
+| summary  = Magus Archer: A half orc archer in studded leather armor draws their bow with a glowing blue arrow
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacTransmuter_LucasVillalvaMachado.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacTransmuter_LucasVillalvaMachado.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Lucas Villalva Machado
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 2!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shs0
+  }}   
+| summary  = Almanac Transmuter: an elf with a white mohawk and a low backed tunic,
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shs0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrz">
+			Conjuring Phrases: Meet the Secrets of Magic Authors part 1!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacEnchanter_LucasVillalvaMachado.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_AlmanacEnchanter_LucasVillalvaMachado.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Lucas Villalva Machado
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 1!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrz
+  }}   
+| summary  = Almanac Enchanter
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_EIDOLONFEY_ChristopherKimball.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_EIDOLONFEY_ChristopherKimball.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Christopher Kimball
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 1!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrz
+  }}   
+| summary  = Eidolon fey, a sprite-like eidolon with bark-like skin, leafy hair, and butterfly wings
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_RunelordWizard_AndrewHuerta.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_RunelordWizard_AndrewHuerta.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Andrew Huerta
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2021
+  | title  = Conjuring Phrases: Meet the Secrets of Magic Authors part 1!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrz
+  }}   
+| summary  = Runelord Wizard, stands in long yellow robes with long hair and a spear in one hand
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-16
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shry">
+			Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCBRBE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCBRBE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = S-Class Characters: The Barbarian (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCMNKE_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCMNKE_500.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = S-Class Characters: The Monk (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCRGRE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCRGRE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = &gt;S-Class Characters: The Ranger (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCWIZE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-SSDSCCWIZE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = S-Class Characters: The Wizard (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFRSP102105E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFRSP102105E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = GM&#39;s Miscellany: Towns &amp; Cities (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFRSP102106E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFRSP102106E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = GM&#39;s Miscellany: Towns &amp; Cities (PF2E) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LSPCOTLS06E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LSPCOTLS06E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Classes of the Lost Spheres: Spellweaver (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFLRGBALEE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDFLRGBALEE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Simple Classes: Bale Child (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP498LC28PFE_500.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP498LC28PFE_500.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Legendary Monks II (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP503LC29PFE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP503LC29PFE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Legendary Sorcerers (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP504NC04PF2E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP504NC04PF2E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Second Edition Classes: Cartomancer (PF2E) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP497SC05SFE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/LGP497SC05SFE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Star Classes: Class Grafts (SFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSALIENISTE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSALIENISTE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = The Alienist&#39;s Handbook (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSEXPANDEDARCHETYPESE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSEXPANDEDARCHETYPESE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Expanded Archetypes (PF2E) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSMARTIALDRAWBACKS2E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSMARTIALDRAWBACKS2E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Spheres Apocrypha: Martial Drawbacks 2 (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSMONSTERTRADITIONS2E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/DDSMONSTERTRADITIONS2E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Spheres Apocrypha: Monster Traditions 2 (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-ASCAG04E.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZOPDF-ASCAG04E.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks]]
+  | date   = August 16, 2021
+  | title  = Grafts and Drawbacks: More Pathfinder and Starfinder-Compatible Products
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shry
+  }}   
+| summary  = Paths of Magic (PFRPG) PDF
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shry}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrx">
+			Gen Con Online Streaming Schedule
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">paizo</span>
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrw">
+			Tonight on Paizo LIVE: Magic, Tech, or Junk?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">horizonsOfTheVast</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">strengthOfThousands</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081321_PZO7117.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081321_PZO7117.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = August 13, 2021
+  | title  = Tonight on Paizo LIVE: Magic, Tech, or Junk?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrw
+  }}   
+| summary  = Starfinder large mech blueprint
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrw}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081321_SOMWheelofMagic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081321_SOMWheelofMagic.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Aaron Shanks,]]
+  | date   = August 13, 2021
+  | title  = Tonight on Paizo LIVE: Magic, Tech, or Junk?
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrw
+  }}   
+| summary  = Pathfinder Secrets of Magic: wheel of magic with the points pointing towards the words &#39;mind&#39; &#39;spirit&#39; &#39;life&#39; and &#39;matter&#39;
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrt">
+			Organized Play Update: Increased Rewards for Sanctioned Content
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shru">
+			Iconic Encounter: Firsthand Experience
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081121_CyberneticLab.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081121_CyberneticLab.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Alexandur Alexandrov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 11, 2021
+  | title  = Iconic Encounter: Firsthand Experience
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shru
+  }}   
+| summary  = The iconic biohacker and iconic mystic are in a small medical operating room, where they have recently finished installing a cybernetic leg prosthesis for a lashunta on the operating table. The lashunta is conscious and watching as the biohacker adjusts some of the leg’s wiring. The mystic is examining medical charts on a tablet computer.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shru}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-11
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrs">
+			Pathfinder: Secrets of Magic Liveplay Has Gone to the Goats!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-10
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrr">
+			Iconic Encounter: Water and Bone
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">iconics/lini</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_WallofWater.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO2108_WallofWater.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Miguel Regodón Harkness
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 10, 2021
+  | title  = Iconic Encounter: Water and Bone
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrr
+  }}   
+| summary  = The gnome druid, Lini, conjures a magical wall of water, blocking the path of an army of animated skeletons. Nearby, her snow leopard companion gnaws on a skeleton that avoided the spell.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrr}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrq">
+			Blast off to the Cosmos for the Mox Gauntlet!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizo</span>
+				<span class="tag">paizoStaff</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080921_GauntletBanner.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080921_GauntletBanner.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Katina Davis]]
+  | date   = August 09, 2021
+  | title  = Blast off to the Cosmos for the Mox Gauntlet!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrq
+  }}   
+| summary  = The Gauntlet: Cosmos. White text for a space background with a small green spaceship on the left flying towards a large red planet on the right
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrq}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shro">
+			Tales From The Drift: Only Nice People Come Here
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">talesFromTheDrift</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080621_Noodles.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080621_Noodles.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Michael Soong
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 06, 2021
+  | title  = Tales From The Drift: Only Nice People Come Here
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shro
+  }}   
+| summary  = In a gritty, neon light-lit urban setting, a skittermander serves a bowl of noodles to a customer in an unassuming hole-in-the-wall diner.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shro}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-6
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrn">
+			On the Next Paizo LIVE: Magic, Tech, or Junk?
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">horizonsOfTheVast</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderAdventurePath</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+				<span class="tag">strengthOfThousands</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrm">
+			From Akiton to Magaambya: New Releases from Paizo
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderAccessories</span>
+				<span class="tag">pathfinderPawns</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAccessories</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90169_PFAdv169_KindledMagic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO90169_PFAdv169_KindledMagic.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Pathfinder Strength of Thousands Kindled Magic: Iconics Seelah and Feiya walk through the ruins of an old library, coming face to face with large insects
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7601_SFAdv_JunkersDelight.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7601_SFAdv_JunkersDelight.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Starfinder Junker&#39;s Delight: Starfinder Iconic Soldier, Obozaya the vesk, standing on the back of a large robot, being cheered on by other vesk and goblins
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO30114_PFFlipMat_BiggerIsland.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO30114_PFFlipMat_BiggerIsland.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Pathfinder Flip Mat Bigger Island: Top down view of large square tiled island maps
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4091_PFFlipTile_fortressstarterset.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO4091_PFFlipTile_fortressstarterset.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Pathfinder Flip-Tiles Fortress Starter Set
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7326_SFFlipMat_ForestMoon.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7326_SFFlipMat_ForestMoon.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Starfinder Flip-Mat Forest Moon: top down view of a large, square tiled, forested area
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7424_SFPawn_FlyFreeorDie.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/PZO7424_SFPawn_FlyFreeorDie.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 05, 2021
+  | title  = From Akiton to Magaambya: New Releases from Paizo
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrm
+  }}   
+| summary  = Starfinder Fly Free or Die Adventure Path: Pawn Collection. SF iconic andriod Iseph in the middle of a gunfight with a number of green aliens
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrm}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrl">
+			August 2021 Organized Play Update
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrk">
+			Iconic Encounter: Fighting Fire
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080421_PLASMALISKBATTLE.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080421_PLASMALISKBATTLE.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Michele Giorgi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 04, 2021
+  | title  = Iconic Encounter: Fighting Fire
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shrk
+  }}   
+| summary  = the iconic soldier and iconic nanocyte are battling a large reptile that glows with the color and brightness of plasma
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shrk}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-4
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shrj">
+			Catch up on the Secrets of Magic Liveplay!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2021-8-3
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6shri">
+			Iconic Encounter: Swimming Lessons
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinder</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/070321_SummonerActionshot.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/070321_SummonerActionshot.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2021
+| copy     = Paizo Inc.
+| artist   = Rubén Pomares
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 03, 2021
+  | title  = Iconic Encounter: Swimming Lessons
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6shri
+  }}   
+| summary  = A small girl stands on the seashore casting a spell, and electricity arcs from her hands to a group of water elementals attacking her. A pink dragon, twice her size, stands between her and the oncoming elementals, shielding her from attack.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6shri}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

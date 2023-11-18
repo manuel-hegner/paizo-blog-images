@@ -1,0 +1,5410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Paizo Blog Images 2019-08</title>
+	    <style>
+			body {
+				font-family: arial;
+			}
+			
+			.tag {
+				background-color: lightgray;
+				padding: .2rem .4rem;
+				border-radius: .4rem;
+			}
+			
+			.g2 {
+				grid-template-columns: 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
+			
+			.w100 {
+				width: 100%;
+			}
+			
+			img {
+				max-height: 30rem;
+				max-width: 100%;
+			}
+			
+			.raw-text {
+				height: 30rem;
+			}
+			
+			.not-uploaded {
+				background-color: lightsalmon;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a.small {
+				font-size: 60%;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		Modes: <select id="mode-select" onchange="location = this.value;" autocomplete="off">
+			<option value="2019-08-all.html" selected>All</option>
+			<option value="2019-08-pf.html" >Pathfinder only</option>
+			<option value="2019-08-sf.html" >Starfinder only</option>
+		</select>
+	</div>
+	<div>
+		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+				<option value="2023-11-all.html" >2023-11 (16)</option>
+				<option value="2023-10-all.html" >2023-10 (31)</option>
+				<option value="2023-09-all.html" >2023-09 (45)</option>
+				<option value="2023-08-all.html" >2023-08 (52)</option>
+				<option value="2023-07-all.html" >2023-07 (46)</option>
+				<option value="2023-06-all.html" >2023-06 (67)</option>
+				<option value="2023-05-all.html" >2023-05 (54)</option>
+				<option value="2023-04-all.html" >2023-04 (34)</option>
+				<option value="2023-03-all.html" >2023-03 (37)</option>
+				<option value="2023-02-all.html" >2023-02 (35)</option>
+				<option value="2023-01-all.html" >2023-01 (20)</option>
+				<option value="2022-12-all.html" >2022-12 (36)</option>
+				<option value="2022-11-all.html" >2022-11 (39)</option>
+				<option value="2022-10-all.html" >2022-10 (82)</option>
+				<option value="2022-09-all.html" >2022-09 (46)</option>
+				<option value="2022-08-all.html" >2022-08 (69)</option>
+				<option value="2022-07-all.html" >2022-07 (50)</option>
+				<option value="2022-06-all.html" >2022-06 (33)</option>
+				<option value="2022-05-all.html" >2022-05 (30)</option>
+				<option value="2022-04-all.html" >2022-04 (65)</option>
+				<option value="2022-03-all.html" >2022-03 (44)</option>
+				<option value="2022-02-all.html" >2022-02 (31)</option>
+				<option value="2022-01-all.html" >2022-01 (36)</option>
+				<option value="2021-12-all.html" >2021-12 (31)</option>
+				<option value="2021-11-all.html" >2021-11 (37)</option>
+				<option value="2021-10-all.html" >2021-10 (51)</option>
+				<option value="2021-09-all.html" >2021-09 (50)</option>
+				<option value="2021-08-all.html" >2021-08 (74)</option>
+				<option value="2021-07-all.html" >2021-07 (48)</option>
+				<option value="2021-06-all.html" >2021-06 (56)</option>
+				<option value="2021-05-all.html" >2021-05 (44)</option>
+				<option value="2021-04-all.html" >2021-04 (44)</option>
+				<option value="2021-03-all.html" >2021-03 (68)</option>
+				<option value="2021-02-all.html" >2021-02 (84)</option>
+				<option value="2021-01-all.html" >2021-01 (77)</option>
+				<option value="2020-12-all.html" >2020-12 (115)</option>
+				<option value="2020-11-all.html" >2020-11 (50)</option>
+				<option value="2020-10-all.html" >2020-10 (58)</option>
+				<option value="2020-09-all.html" >2020-09 (51)</option>
+				<option value="2020-08-all.html" >2020-08 (58)</option>
+				<option value="2020-07-all.html" >2020-07 (31)</option>
+				<option value="2020-06-all.html" >2020-06 (88)</option>
+				<option value="2020-05-all.html" >2020-05 (102)</option>
+				<option value="2020-04-all.html" >2020-04 (61)</option>
+				<option value="2020-03-all.html" >2020-03 (53)</option>
+				<option value="2020-02-all.html" >2020-02 (46)</option>
+				<option value="2020-01-all.html" >2020-01 (80)</option>
+				<option value="2019-12-all.html" >2019-12 (44)</option>
+				<option value="2019-11-all.html" >2019-11 (54)</option>
+				<option value="2019-10-all.html" >2019-10 (102)</option>
+				<option value="2019-09-all.html" >2019-09 (57)</option>
+				<option value="2019-08-all.html" selected>2019-08 (117)</option>
+				<option value="2019-07-all.html" >2019-07 (85)</option>
+				<option value="2019-06-all.html" >2019-06 (13)</option>
+				<option value="2019-05-all.html" >2019-05 (8)</option>
+				<option value="2019-04-all.html" >2019-04 (2)</option>
+				<option value="2019-03-all.html" >2019-03 (21)</option>
+				<option value="2019-02-all.html" >2019-02 (36)</option>
+				<option value="2019-01-all.html" >2019-01 (24)</option>
+				<option value="2018-12-all.html" >2018-12 (30)</option>
+				<option value="2018-11-all.html" >2018-11 (12)</option>
+				<option value="2018-10-all.html" >2018-10 (41)</option>
+				<option value="2018-09-all.html" >2018-09 (31)</option>
+				<option value="2018-08-all.html" >2018-08 (22)</option>
+				<option value="2018-07-all.html" >2018-07 (15)</option>
+				<option value="2018-06-all.html" >2018-06 (7)</option>
+				<option value="2018-05-all.html" >2018-05 (19)</option>
+				<option value="2018-04-all.html" >2018-04 (37)</option>
+				<option value="2018-03-all.html" >2018-03 (65)</option>
+				<option value="2018-02-all.html" >2018-02 (14)</option>
+				<option value="2018-01-all.html" >2018-01 (20)</option>
+				<option value="2017-12-all.html" >2017-12 (27)</option>
+				<option value="2017-11-all.html" >2017-11 (33)</option>
+				<option value="2017-10-all.html" >2017-10 (49)</option>
+				<option value="2017-09-all.html" >2017-09 (67)</option>
+				<option value="2017-08-all.html" >2017-08 (18)</option>
+				<option value="2017-07-all.html" >2017-07 (45)</option>
+				<option value="2017-06-all.html" >2017-06 (20)</option>
+				<option value="2017-05-all.html" >2017-05 (37)</option>
+				<option value="2017-04-all.html" >2017-04 (35)</option>
+				<option value="2017-03-all.html" >2017-03 (64)</option>
+				<option value="2017-02-all.html" >2017-02 (40)</option>
+				<option value="2017-01-all.html" >2017-01 (51)</option>
+				<option value="2016-12-all.html" >2016-12 (53)</option>
+				<option value="2016-11-all.html" >2016-11 (42)</option>
+				<option value="2016-10-all.html" >2016-10 (63)</option>
+				<option value="2016-09-all.html" >2016-09 (69)</option>
+				<option value="2016-08-all.html" >2016-08 (39)</option>
+				<option value="2016-07-all.html" >2016-07 (28)</option>
+				<option value="2016-06-all.html" >2016-06 (40)</option>
+				<option value="2016-05-all.html" >2016-05 (40)</option>
+				<option value="2016-04-all.html" >2016-04 (47)</option>
+				<option value="2016-03-all.html" >2016-03 (36)</option>
+				<option value="2016-02-all.html" >2016-02 (33)</option>
+				<option value="2016-01-all.html" >2016-01 (72)</option>
+				<option value="2015-12-all.html" >2015-12 (52)</option>
+				<option value="2015-11-all.html" >2015-11 (68)</option>
+				<option value="2015-10-all.html" >2015-10 (87)</option>
+				<option value="2015-09-all.html" >2015-09 (58)</option>
+				<option value="2015-08-all.html" >2015-08 (54)</option>
+				<option value="2015-07-all.html" >2015-07 (84)</option>
+				<option value="2015-06-all.html" >2015-06 (76)</option>
+				<option value="2015-05-all.html" >2015-05 (72)</option>
+				<option value="2015-04-all.html" >2015-04 (66)</option>
+				<option value="2015-03-all.html" >2015-03 (45)</option>
+				<option value="2015-02-all.html" >2015-02 (61)</option>
+				<option value="2015-01-all.html" >2015-01 (35)</option>
+				<option value="2014-12-all.html" >2014-12 (37)</option>
+				<option value="2014-11-all.html" >2014-11 (37)</option>
+				<option value="2014-10-all.html" >2014-10 (38)</option>
+				<option value="2014-09-all.html" >2014-09 (41)</option>
+				<option value="2014-08-all.html" >2014-08 (33)</option>
+				<option value="2014-07-all.html" >2014-07 (14)</option>
+				<option value="2014-06-all.html" >2014-06 (10)</option>
+				<option value="2014-05-all.html" >2014-05 (49)</option>
+				<option value="2014-04-all.html" >2014-04 (13)</option>
+				<option value="2014-03-all.html" >2014-03 (14)</option>
+				<option value="2014-02-all.html" >2014-02 (8)</option>
+				<option value="2014-01-all.html" >2014-01 (5)</option>
+				<option value="2013-12-all.html" >2013-12 (10)</option>
+				<option value="2013-11-all.html" >2013-11 (23)</option>
+				<option value="2013-10-all.html" >2013-10 (31)</option>
+				<option value="2013-09-all.html" >2013-09 (4)</option>
+				<option value="2013-08-all.html" >2013-08 (44)</option>
+				<option value="2013-07-all.html" >2013-07 (9)</option>
+				<option value="2013-06-all.html" >2013-06 (21)</option>
+				<option value="2013-05-all.html" >2013-05 (7)</option>
+				<option value="2013-04-all.html" >2013-04 (31)</option>
+				<option value="2013-03-all.html" >2013-03 (28)</option>
+				<option value="2013-02-all.html" >2013-02 (14)</option>
+				<option value="2013-01-all.html" >2013-01 (21)</option>
+				<option value="2012-12-all.html" >2012-12 (25)</option>
+				<option value="2012-11-all.html" >2012-11 (35)</option>
+				<option value="2012-10-all.html" >2012-10 (19)</option>
+				<option value="2012-09-all.html" >2012-09 (19)</option>
+				<option value="2012-08-all.html" >2012-08 (30)</option>
+				<option value="2012-07-all.html" >2012-07 (63)</option>
+				<option value="2012-06-all.html" >2012-06 (30)</option>
+				<option value="2012-05-all.html" >2012-05 (41)</option>
+				<option value="2012-04-all.html" >2012-04 (32)</option>
+				<option value="2012-03-all.html" >2012-03 (46)</option>
+				<option value="2012-02-all.html" >2012-02 (31)</option>
+				<option value="2012-01-all.html" >2012-01 (27)</option>
+				<option value="2011-12-all.html" >2011-12 (20)</option>
+				<option value="2011-11-all.html" >2011-11 (13)</option>
+				<option value="2011-10-all.html" >2011-10 (26)</option>
+				<option value="2011-09-all.html" >2011-09 (23)</option>
+				<option value="2011-08-all.html" >2011-08 (7)</option>
+				<option value="2011-07-all.html" >2011-07 (14)</option>
+				<option value="2011-06-all.html" >2011-06 (15)</option>
+				<option value="2011-05-all.html" >2011-05 (12)</option>
+				<option value="2011-04-all.html" >2011-04 (5)</option>
+				<option value="2011-03-all.html" >2011-03 (14)</option>
+				<option value="2011-02-all.html" >2011-02 (15)</option>
+				<option value="2011-01-all.html" >2011-01 (9)</option>
+				<option value="2010-12-all.html" >2010-12 (9)</option>
+				<option value="2010-11-all.html" >2010-11 (20)</option>
+				<option value="2010-10-all.html" >2010-10 (10)</option>
+				<option value="2010-09-all.html" >2010-09 (22)</option>
+				<option value="2010-08-all.html" >2010-08 (30)</option>
+				<option value="2010-07-all.html" >2010-07 (6)</option>
+				<option value="2010-06-all.html" >2010-06 (17)</option>
+				<option value="2010-05-all.html" >2010-05 (40)</option>
+				<option value="2010-04-all.html" >2010-04 (29)</option>
+				<option value="2010-03-all.html" >2010-03 (12)</option>
+				<option value="2010-02-all.html" >2010-02 (2)</option>
+				<option value="2010-01-all.html" >2010-01 (8)</option>
+				<option value="2009-12-all.html" >2009-12 (25)</option>
+				<option value="2009-11-all.html" >2009-11 (16)</option>
+				<option value="2009-10-all.html" >2009-10 (20)</option>
+				<option value="2009-09-all.html" >2009-09 (4)</option>
+				<option value="2009-08-all.html" >2009-08 (5)</option>
+				<option value="2009-07-all.html" >2009-07 (8)</option>
+				<option value="2009-06-all.html" >2009-06 (21)</option>
+				<option value="2009-05-all.html" >2009-05 (9)</option>
+				<option value="2009-04-all.html" >2009-04 (22)</option>
+				<option value="2009-03-all.html" >2009-03 (20)</option>
+				<option value="2009-02-all.html" >2009-02 (26)</option>
+				<option value="2009-01-all.html" >2009-01 (23)</option>
+				<option value="2008-12-all.html" >2008-12 (16)</option>
+				<option value="2008-11-all.html" >2008-11 (18)</option>
+				<option value="2008-10-all.html" >2008-10 (12)</option>
+				<option value="2008-09-all.html" >2008-09 (25)</option>
+				<option value="2008-08-all.html" >2008-08 (23)</option>
+				<option value="2008-07-all.html" >2008-07 (11)</option>
+				<option value="2008-06-all.html" >2008-06 (20)</option>
+				<option value="2008-05-all.html" >2008-05 (6)</option>
+				<option value="2008-04-all.html" >2008-04 (20)</option>
+				<option value="2008-03-all.html" >2008-03 (26)</option>
+				<option value="2008-02-all.html" >2008-02 (17)</option>
+				<option value="2008-01-all.html" >2008-01 (18)</option>
+				<option value="2007-12-all.html" >2007-12 (8)</option>
+				<option value="2007-11-all.html" >2007-11 (8)</option>
+				<option value="2007-10-all.html" >2007-10 (12)</option>
+				<option value="2007-09-all.html" >2007-09 (10)</option>
+				<option value="2007-08-all.html" >2007-08 (20)</option>
+				<option value="2007-07-all.html" >2007-07 (20)</option>
+				<option value="2007-06-all.html" >2007-06 (29)</option>
+				<option value="2007-05-all.html" >2007-05 (24)</option>
+				<option value="2007-04-all.html" >2007-04 (7)</option>
+		</select>
+		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
+			<option></option>
+		</select>
+	</div>
+	<div>
+	
+	</div>
+	<hr>
+	<div>
+		<h3>
+			2019-8-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwj">
+			Love &#39;Em Or Leaf &#39;Em
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">lostOmensCharacterGuide</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083019_LeafLeshy_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083019_LeafLeshy_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ksenia Kozhevnikova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = Love &#39;Em Or Leaf &#39;Em
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwj
+  }}   
+| summary  = A tall, graceful humanoid composed of tree branches and leaves cradles a huge seed pod in its hands.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwj}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083019_GourdLeshy.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/083019_GourdLeshy.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Gourd_leshy.jpg">Gourd_leshy.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ksenia Kozhevnikova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = Love &#39;Em Or Leaf &#39;Em
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwj
+  }}   
+| summary  = A humanoid with tree-branch limbs, a mantle of leaves and flowers across its shoulders, and a decoratively carved gourd in place of its head.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwj}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgw0">
+			Core Design: Sajan
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconics/sajan</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRotRCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRotRCharacterFront.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Rise of the Runelords: Sajan, Character C, Male Human Monk.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRotRCharacterBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRotRCharacterBack.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Rise of the Runelords: Sajan, Character C, Favored Card Type: Item.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCDCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCDCharacterFront.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Monk Class Deck: Sajan, Character B, Male Human Monk.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCDCharacterBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCDCharacterBack.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Monk Class Deck: Sajan, Character B, Favored Card Type: Weapon.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCharacterFront.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCharacterFront.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Sajan, Character 0, Human Monk.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCharacterBack.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanCharacterBack.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Sajan, Character 0: A member of a disciplined caste of warriors in the service of the knowledge god Irori, Sajan scours the world for his kindnapped sister Sajni, whose martial arts porwess matches his own. He is as comfortable with a tatani mat as a temple sword, or his fists that move with lightning speed. Favored Card: Blessing.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_WeaponStarknife.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_WeaponStarknife.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Starknife, Weapon 0: Knife, Melee, Ranged, Piercing, Finesse.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_WeaponDogslicer.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_WeaponDogslicer.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Dogslicer, Weapon 0: Sword, Melee, Slashing, Finesse.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanBlessingCalistria.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanBlessingCalistria.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Calistria&#39;s Sting, Blessing 1, Deity: Calistria, Divine, Veteran.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanBlessingGrandmother_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanBlessingGrandmother_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Grandmother Nightmare, Blessing 3, Deity: Lamashtu, Divine.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_BlessingBigSky.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_BlessingBigSky.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = The Big Sky, Blessing 1, Suit: Hammers, Harrow, Veteran. WHEN THIS IS THE HOUR: At the start of your turn, you may remove 1 of your scourges.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_BlessingSickness.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_BlessingSickness.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = The Sickness, Blessing 1, Suit: Shields, Harrow, Veteran. WHEN THIS IS THE HOUR: When you suffer damage, suffer the scourge Plagued.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRoleExiled.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRoleExiled.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Sajan, Role 0, Exiled Padaprajna: The goddess Suyuddha teaches anyone who will listen, whether by word or fist.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRoleIroran.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_SajanRoleIroran.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Keith Richmond]]
+  | date   = August 30, 2019
+  | title  = Core Design: Sajan
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw0
+  }}   
+| summary  = Sajan, Role 0, Iroran Dedicant: Knowing yourself means first knowing everything else.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw0}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwi">
+			We Should Travel By Map!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">lostOmensCharacterGuide</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-starstonecathedral.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-starstonecathedral.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Starstone_Cathedral_3.jpg">Starstone_Cathedral_3.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = The ivory spires of Absalom&#39;s iconic Starstone Cathedral soar into the sky.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-archaicwayfinder.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-archaicwayfinder.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Archaic Wayfinder, Item 2. Uncommon, Evocation, Magical. An archaic wayfinder functions as a compass and acts as a repository for one cangtrip cast into it.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-aldoriduelingsword.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-aldoriduelingsword.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Aldori Dueling Sword, Item 1. Uncommon, Finesse, Versatile(P). An Aldori dueling sword is a slim, single-bladed dueling sword with a slight curve and a sharp, reinforced point.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-onyxtrader.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-onyxtrader.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Onyx Trader, Background. Oprak doesn&#39;t share the secrets of the Onyx Vault with many, but you are one of the lucky few to be permitted into the heart of the nation.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-merab.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-merab.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Merab.jpg">Merab.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = A tree-lined walk leads to the ornate front entryway of an elaborate temple, topped by a winged female statue and featuring multiple white obelisks looming in the background.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-godlesshealing.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-godlesshealing.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Godless Healing, Feat 2. Prerequisites: Battle Medicine, can&#39;t have a patron deity. You recover an additional 5 Hit Points from a successful attempt to Treat your Wounds or use Battle Medicine on you.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-mantisform.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-mantisform.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Mantis Form, Focus 4. Uncommon, Polymorph, Transmutation. Cast: somatic, verbsal. Duration: 1 minute. You become a mantis. You gain the effects of insect form, heightened to mantis form&#39;s level, and you can only transform into a mantis.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-houseofperfection.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-houseofperfection.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:House_of_Perfection.jpg">House_of_Perfection.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ainur Salimova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = A three-tiered pagoda-like building with golden roofs and red trim sits surrounded by lush forest.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-nexianmystic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-nexianmystic.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Nexian Mystic, Background. Your initiations into the Nexian mysteries and the philosophies of the Arclords of Nex grant you a preternatural comprehension of the arcane underpinnings of existence.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-magaambyaacademic.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-magaambyaacademic.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Magaambya Academic, Background. You studied magic at the prestigious Magaambya academy in Nantambu, learning magical traditions dating back to Old-Mage Jatembe and earning a pedigree respected by magical scholars almost everywhere.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-kintargo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-kintargo.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kintargo.jpg">Kintargo.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Mirco Paganessi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = A massive ivory dome decorated with spires and towers sits on a hill overlooking the walled seaside city of Kintargo.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-hellknightarmigerdedication.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-hellknightarmigerdedication.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Hellknight Armiger Dedication, Feat 2. Uncommon, Archetype, Dedication. Prerequisites: member of a Hellknight order; trained in heavy armor as well as your order&#39;s favorite weapon. Access: You are from Old Cheliax. Your Hellknight training teaches you to terrorize others into compliance, but you also study the stricture and hierarchy of Hell.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-eurithina.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-eurithina.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Eurythnia.jpg">Eurythnia.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Ainur Salimova
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Citizens mill about a wide dirt road between two rows of high-roofed structures, one of which is decorated with red paper lanterns. Trees laden with pink cherry blossoms grow between the buildings.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-spellrunes.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-spellrunes.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Spell Runes, Feat 4. Archetype. Prerequisites: Runescarred Dedication. The magical runes on your body grant you several magical abilities.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-goldenlegionepaulet.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-goldenlegionepaulet.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = We Should Travel By Map!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwi
+  }}   
+| summary  = Golden Legion Epaulet, Item 3. Uncommon, Enchantment, Magical, Invested. These gleaming golden epaulets are issued to Eagle Knight officers and worn as part of the uniform.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwi}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-30
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwf">
+			Iconic Encounter: The First Rule of Captaining
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinderRoleplayingGame</span>
+				<span class="tag">starfinderRoleplayingGame1csf2</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/image002.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/image002.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Alexander Nanitchkov
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 30, 2019
+  | title  = Iconic Encounter: The First Rule of Captaining
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwf
+  }}   
+| summary  = Navasi, the iconic envoy, peeks around the corner of a starship corridor, narrowly dodging a yellow energy beam fired by a four-armed security robot at the opposite end.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-29
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwc">
+			Tales of Lost Omens: Bad Dogs
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082919_BadDogs.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082919_BadDogs.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Hyenafolk_slavers.jpg">Hyenafolk_slavers.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Tomasz Chistowski
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 29, 2019
+  | title  = Tales of Lost Omens: Bad Dogs
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwc
+  }}   
+| summary  = An armored knight with a sword and shield and a half-elf with a long bow battle four ferocious gnolls, while a masked humanoid frees captives from a wooden cage in the background.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwc}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwb">
+			Guest Organized Play Blog: Playing Pathfinder Adventure Card Society
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderAdventureCardGame</span>
+				<span class="tag">pathfinderAdventureCardSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-normalscenario.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-normalscenario.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 28, 2019
+  | title  = Guest Organized Play Blog: Playing Pathfinder Adventure Card Society
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwb}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-nineships.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-nineships.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 28, 2019
+  | title  = Guest Organized Play Blog: Playing Pathfinder Adventure Card Society
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwb}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-adventurechest.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-adventurechest.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 28, 2019
+  | title  = Guest Organized Play Blog: Playing Pathfinder Adventure Card Society
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwb
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwb}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-28
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgwa">
+			The Dawn of Flame AP Concludes in Assault on the Crucible!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">starfinder</span>
+				<span class="tag">starfinderAdventurePath</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-crucible.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190828-crucible.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jason Tondro]]
+  | date   = August 28, 2019
+  | title  = The Dawn of Flame AP Concludes in Assault on the Crucible!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgwa
+  }}   
+| summary  = the crucible
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgwa}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgw9">
+			Bestiary 2 Coming in April
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">bestiary2</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082719_Bestiary2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082719_Bestiary2.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Bestiary_2_cover_clean.jpg">Bestiary_2_cover_clean.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Bestiary 2 Coming in April
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw9
+  }}   
+| summary  = Bestiary 2: Coming in April
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw9}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-27
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgw8">
+			Beasts of Legend
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">wizKids</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_009_Orc_Brawler.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_009_Orc_Brawler.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Orc Brawler
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_037_Orc_Warlord.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_037_Orc_Warlord.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Orc Warlord
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_020_Shadow.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_020_Shadow.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Shadow
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_021_Wraith_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_021_Wraith_360.jpeg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Wraith
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_023_Wight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_023_Wight.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Wight
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_041_Nightmare.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082619_041_Nightmare.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = Nightmare
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-yeti.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190827-yeti.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 27, 2019
+  | title  = Beasts of Legend
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgw8
+  }}   
+| summary  = It&#39;s a Yeti! Mouth open and snarling!&#39;
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgw8}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-23
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgvl">
+			All We Are Saying Is Give Peace a Chance
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">lostOmensCharacterGuide</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_HobgoblinAlchemist.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_HobgoblinAlchemist.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Hobgoblin_Alchemist.jpg">Hobgoblin_Alchemist.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2019
+  | title  = All We Are Saying Is Give Peace a Chance
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvl
+  }}   
+| summary  = A hobgoblin alchemist clutching a sharp blade in one hand and a bomb with a lit fuse in the other.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvl}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_KaoLingHobgoblin_360.jpeg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_KaoLingHobgoblin_360.jpeg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kaoling_Hobgoblin.jpg">Kaoling_Hobgoblin.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2019
+  | title  = All We Are Saying Is Give Peace a Chance
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvl
+  }}   
+| summary  = A Kao Ling hobgoblin in an ornate mask dual-wielding a sword and axe.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvl}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_ElfbaneHobgoblin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082319_ElfbaneHobgoblin.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 23, 2019
+  | title  = All We Are Saying Is Give Peace a Chance
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvl
+  }}   
+| summary  = Elfbane Hobgoblin. Hobgoblins were engineered long ago from the unreliable and fecund goblins, to be used as an army against the elves. Although the elves ultimately freed the hobgoblins from their bondage, some hobgoblins retain ancestral resistance to magic, which they refer to as “elf magic.” You gain the Resist Elf Magic reaction. RESIST ELF MAGIC (reaction). Trigger: You attempt a saving throw against a magical effect but haven’t rolled yet. Your ancestral resistance to magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. If the triggering effect is arcane, you gain a +2 circumstance bonus instead.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvl}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgve">
+			Iconic Encounter: Cathedrals of the Mind
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_CathedralsOfTheMind.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_CathedralsOfTheMind.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Rodrigo Gonzalez Toledo
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Iconic Encounter: Cathedrals of the Mind
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgve
+  }}   
+| summary  = Keskodai, the iconic mystic, unleases a blast of psychic energy against an enemy Gray alien, who clutches his head in pain as the magic washes over him.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgve}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-22
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgvd">
+			Alien Archive 3: Designer Diary
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Morlamaw.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Morlamaw.png">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Morlamaw.png">Morlamaw.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Michele Giorgi
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Alien Archive 3: Designer Diary
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvd
+  }}   
+| summary  = A walrus-like creature with four tusks and scintillating multicolored skin.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvd}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Jinsul.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Jinsul.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Graey Erb
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Alien Archive 3: Designer Diary
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvd
+  }}   
+| summary  = An imposing purple arachnoid alien bristling with blades and spikes.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvd}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Dirindi.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Dirindi.png">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Dirindi.png">Dirindi.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Tom Ventre
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Alien Archive 3: Designer Diary
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvd
+  }}   
+| summary  = A smiling three-eyed, gray-skinned humanoid raises his right hand in a gesture of friendship.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvd}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Espraksa.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Espraksa.png">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Espraksa.png">Espraksa.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Javier Charro
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Alien Archive 3: Designer Diary
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvd
+  }}   
+| summary  = A tall, white-feathered bird-like humanoid with a sheathed sword on its back.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvd}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Cephalume.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082219_Cephalume.png">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Cephalume.png">Cephalume.png</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Nathanael James
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 22, 2019
+  | title  = Alien Archive 3: Designer Diary
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgvd
+  }}   
+| summary  = A blue alien with a tentacled face, lower body and appendages holds a spear.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgvd}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgv1">
+			August 2019 Starfinder Society Releases
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_formian.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_formian.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Taskmaster.jpg">Taskmaster.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Brian Syme
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 21, 2019
+  | title  = August 2019 Starfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgv1
+  }}   
+| summary  = Profile of a formian, an ant-like humanoid alien.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgv1}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_angel.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_angel.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Angel.jpg">Angel.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = William Marton
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 21, 2019
+  | title  = August 2019 Starfinder Society Releases
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgv1
+  }}   
+| summary  = A cloaked and armored humanoid figure in a glowing crown, her image distorted as if by pixelation.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgv1}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguz">
+			Guest Organized Play Blog: SkålCon turns Five Years Old
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_SkalConPreview.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082119_SkalConPreview.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Jon Dehning]]
+  | date   = August 21, 2019
+  | title  = Guest Organized Play Blog: SkålCon turns Five Years Old
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguz
+  }}   
+| summary  = SkålCon Logo
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-21
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguy">
+			Get Ready for 3-Action Game Night!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-gamenight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-gamenight.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 21, 2019
+  | title  = Get Ready for 3-Action Game Night!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguy
+  }}   
+| summary  = Pathfinder 3-action game night
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 21, 2019
+  | title  = Get Ready for 3-Action Game Night!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguy
+  }}   
+| summary  = Black one action symbol
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 21, 2019
+  | title  = Get Ready for 3-Action Game Night!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguy
+  }}   
+| summary  = Black one action symbol
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-oneaction.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 21, 2019
+  | title  = Get Ready for 3-Action Game Night!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguy
+  }}   
+| summary  = Black one action symbol
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguy}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-reaction.png" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190820-reaction.png">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 21, 2019
+  | title  = Get Ready for 3-Action Game Night!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguy
+  }}   
+| summary  = Black reaction symbol
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguy}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-20
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguw">
+			Alien Archive 3: Catch the Drift
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_FerrofluidMagnetoCluster.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_FerrofluidMagnetoCluster.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:FerrofluidMagnetoCluster.jpg">FerrofluidMagnetoCluster.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Hannah Böving
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 20, 2019
+  | title  = Alien Archive 3: Catch the Drift
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguw
+  }}   
+| summary  = A black blob-like creature covefred with metallic spikes engulfs Quig, a ratfolk mechanic, as his drone attempts to pull him to safety.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguw}}</textarea>
+			</div>
+			<div class="w100 g2   sf">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_Raxilite.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_Raxilite.jpg">
+						</a><br>
+								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:Raxilite.jpg">Raxilite.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Nathanael James
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 20, 2019
+  | title  = Alien Archive 3: Catch the Drift
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguw
+  }}   
+| summary  = A plant-like humanoid with a gourd-shaped head topped by growths that look like dandelion seeds.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguw}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_CreatureCompanion.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/082019_CreatureCompanion.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Raphael Madureira
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 20, 2019
+  | title  = Alien Archive 3: Catch the Drift
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguw
+  }}   
+| summary  = A pistol-wielding soldier directs his companion, a four-eyed tiger-like creature, to spring into battle.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguw}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-19
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguu">
+			Ancestries Abound
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderBattles</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Champion.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Champion.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A heavily armored Dwarf Champion wields an axe in his right hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Rogue.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Rogue.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A Dwarf Rogue brandishes a fist dagger in her right hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Sorcerer.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Dwarf_Sorcerer.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A white-haired Dwarf Sorcerer confidently wields a staff on her right hand, purple magic swirling around her.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Elf_Ranger_1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Elf_Ranger_1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A sword-wielding Elven Ranger stalks his prey.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Elf_Ranger_Bow.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Elf_Ranger_Bow.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A bow-wielding Elven Ranger stalks his prey.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Gnome_Rogue.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Gnome_Rogue.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A dagger-wielding Gnome Rogue in a colorful traveling outfit with a number of staves crossed on her back.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Gnome_Soldier.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Gnome_Soldier.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A heavily armored Gnome Soldier with a green beard and eyebrows stands at attention, halberd at the ready.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Halfling_Druid.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Halfling_Druid.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A Halfling Druid wields a staff in her left hand and a translucent blue shield in her right.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Halfling_Wizard.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Halfling_Wizard.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A bald-headed Halfling Wizard with bushy sideburns scowls over his eyeglasses as he raises a glowing yellow gem in his right hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Ashen_Man.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Ashen_Man.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A faceless, robed humanoid figure, gray ash pouring from his sleeves and cowl, wields a staff covered with spidery red veins and capped with what appears to be a human heart.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Storm_Giant.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Storm_Giant.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A gray-bearded, purple-skinned Storm Giant raises his left hand while gesturing with the sword in his right.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Cloud_Giant_1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Cloud_Giant_1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A white-haired, blue-skinned Cloud Giant stands at attention, a long spear in her right hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Cloud_Giant_Sword.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081919_Cloud_Giant_Sword.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 19, 2019
+  | title  = Ancestries Abound
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguu
+  }}   
+| summary  = A white-haired, blue-skinned Cloud Giant stands at attention, a greatsword in her right hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguu}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgur">
+			Order of the Amber Die—The Azlant Odyssey, Part 5
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">community</span>
+				<span class="tag">orderOfTheAmberDie</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">ruinsOfAzlant</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image001.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image001.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image002.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image002.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image003.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image003.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image004.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image004.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image005.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image005.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image006.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/081719_amberdie_image006.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 17, 2019
+  | title  = Order of the Amber Die—The Azlant Odyssey, Part 5
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgur
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgur}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-17
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgut">
+			Such a Lovely Place, Such a Lovely Face
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">lostOmensCharacterGuide</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-varki.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-varki.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Varki.jpg">Varki.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Portrait picture of a woman with angled markings on her forehead and chin, shoulder length dark hair and dark eyes. She wears a bandana across her forehead and red feathers are placed on each side of her head, tucked in.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-lobarian.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-lobarian.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Iobarian.jpg">Iobarian.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Portrait of a woman with light brown eyes and black braided hair, secured in blue and brownish red beads.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tian_sing.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tian_sing.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Tian-Sing.jpg">Tian-Sing.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Portrait of a woman with long dark hair and black eyes. She wears swirling earrings with arrows poking out from one side. She wears a red scarf with gold edges, folded neatly, and a chunky necklace of stones in different sizes and shapes. Her upper right arm can be seen and has a hexagonal pattern on it.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tupilaq_carver.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tupilaq_carver.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = TUPILAQ CARVER. FEAT 1.
+Prerequisites: You have a spellcasting class feature with the divine or primal tradition 
+Access Erutaki ethnicity.
+You know the truth behind old stories that tell of sending a fetish of bone and sinew to seek vengeance. These old magics allow you to conjure constructs with ease. Add the summon construct spell to your spell list. The constructs you summon have a distinct ivory scrimshaw appearance, and if you include a drop of blood, lock of hair, or other portion of a creature&#39;s body as part of the spell&#39;s material component, the summoned construct gains a +4 status bonus to Perception checks to sense or locate that creature.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-kulenett_dwarf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-kulenett_dwarf.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Kulenett_dwarf.jpg">Kulenett_dwarf.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Kulenett dwarf with leather goggles and mask, thick facial hair.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-mbeke_dwarf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-mbeke_dwarf.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Mbe&#39;ke_dwarf.jpg">Mbe&#39;ke_dwarf.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Darker skinned Mbe&#39;ke dwarf with wire framed glasses. A white scarf is wrapped around the head, leaving the top of the head exposed. He wears what looks like a heavy red robe with an animal pattern on it.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-pahmet_dwarf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-pahmet_dwarf.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Pahmet_woman.jpg">Pahmet_woman.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Female Pahmet dwarf, long wavy hair pulled back behind her ear. She wears a green top with purple striping on the sleeves and a gold chevron necklace.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-vahird_dwarf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-vahird_dwarf.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Vahird_dwarf.jpg">Vahird_dwarf.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Vahird dwarf, black shoulder length hair on the sides of the head but only a light bit of fuzz on the top. They are wearing a plain white shirt and appear to have a dagger on a braided rope around their neck.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-elemental_heart_dwarf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-elemental_heart_dwarf.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = ELEMENTAL HEART DWARF
+Whether through a connection to Torag&#39;s forge, the azers of the Plane of Fire, or another source, you can exude a burst of energy. Mbe&#39;ke and Taralu dwarves of the Mwangi Expanse believe this heritage is a gift from dragons or elemental spirits. Choose one of the following damage types: acid, cold, electricity, or fire. Once chosen, this can&#39;t be changed. You gain the Energy Emanation activity.
+ENERGY EMANATION [two-actions]
+Evocation, Primal
+Frequency once per day
+Energy bursts forth from your body. You deal 1d6 damage of your chosen type to all adjacent creatures (basic Reflex save using your class DC or spell DC, whichever is higher). At 3rd level, and every 2 levels thereafter, this damage increases by 1d6.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-ilverani_elf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-ilverani_elf.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Rogier van de Beek
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Slender elf in a long thick cloak with ornate shoulder pads.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-ancient_elf.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-ancient_elf.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Ancient Elf.
+In your long life, you&#39;ve dabbled in many paths and many styles. Choose a class other than your own. You gain the multiclass dedication feat for that class, even though you don&#39;t meet its level prerequisite. You must still meet its other prerequisites to gain the feat.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-monkey_goblin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-monkey_goblin.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Monkey_goblin_LOCG.jpg">Monkey_goblin_LOCG.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Klaher Baklaher
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = A monkey pirate goblin!
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tailed_goblin.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-tailed_goblin.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = TAILED GOBLIN.
+You have a powerful tail, likely because you descend from a community of monkey goblins. You gain a +2 circumstance bonus to Athletics checks to Climb, you gain Combat Climber as a bonus feat, and you reduce the number of free hands required to Climb or Trip by one.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-othoban_halfing.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190816-othoban_halfing.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Othoban_halfling.jpg">Othoban_halfling.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Emile Denis
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Eleanor Ferron]]
+  | date   = August 17, 2019
+  | title  = Such a Lovely Place, Such a Lovely Face
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgut
+  }}   
+| summary  = Othoban halfing with dark swept-back hair is wearing green vertically striped pants that stop at the calf and is barefoot. Under a red vest and brown and gold belt is a white and red striped shirt.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgut}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-15
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgum">
+			Iconic Encounter: The Museum Job
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">people/authors/jamesSutter</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190815-iseph.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190815-iseph.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 15, 2019
+  | title  = Iconic Encounter: The Museum Job
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgum
+  }}   
+| summary  = Iseph stands in a darkened museum surrounded by priceless items in glass cases. Before him is a pedestal with a glowing crystal. He holds the case&#39;s cover in his left hand and reaches for the crystal with his right.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgum}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguj">
+			Choosing the Future Path
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-14
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgui">
+			Pathfinder Society Guide to Play
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-13
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sguf">
+			It Takes A Village
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-largetent.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-largetent.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A double-tentpole goblin tent covered in roughly sewn-on patches.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-small_tent.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-small_tent.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A single tentpole goblin tent with frayed edges.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-barricades.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-barricades.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = Set of three miniatures, each with sharpened pikes sticking up at various angles.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bonfire.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bonfire.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A bonfire!
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-junk_statue.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-junk_statue.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A goblin-like figure made from various pieces of junk. The head is a glowing jack-o-lantern with a skull on top.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-junk_piles.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-junk_piles.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A big pile of junk.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-chief_goblin_on_throne.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-chief_goblin_on_throne.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A goblin chief sits on a skull-faced throne.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_babies.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_babies.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = Four grinning goblin babies.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-palisade_gate.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-palisade_gate.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A gate made of tightly packed wooden poles.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-pigpen.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-pigpen.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A makeshift pig-pen made of sticks and stones.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-magicpig.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-magicpig.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A happy, smiling pig in a sitting position. He wears a wooden crown with flowers on it.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village1.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village1.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A closeup of a goblin village, focused on a large goblin tent with a gate across the opening.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village2.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village2.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = Three goblin tents sit inside a circular gated area. The gating is made from long wooden poles. A bonfire is aglow in the center. A pigpen has been set up next o one of the tents and the magic pig sits in hte middle.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village3.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A close-up shot of the front of the gates of the village. The gates are closed.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village4.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-village4.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A closeup of the goblin chieftain on his throne in front of one of the tents. A group of goblin babies stand nearby.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_chieftain.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_chieftain.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A goblin chieftain with both hands in the air. The left hand holds a mace with a skull on the end, spikes poking through the openings.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_ankle_slasher.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-goblin_ankle_slasher.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A goblin with weapons in each hand, ready to slash any ankles that make themselves available.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bugbear_mauler.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bugbear_mauler.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A bugbear mauler, large rectangular shield in the left hand, right arm raised with a weapon similar to a glaive. He leans forward as though rushing toward battle.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-hobgoblin_shooter.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-hobgoblin_shooter.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A hobgoblin sharpshooter has bow and arrow at the ready, waiting for a good angle.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-hobgoblin_commander.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-hobgoblin_commander.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = The hobgoblin commander stands at the read with a long weapon with curved blades on each end.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bugbear_butcher.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-bugbear_butcher.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = The bugbear butcher menaces with sharp tools in each hand.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-pteranadon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-pteranadon.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A large prehistoric-looking bird with a long face and beak, wings up as though flying.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-boar-demon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-boar-demon.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 13, 2019
+  | title  = It Takes A Village
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sguf
+  }}   
+| summary  = A huge demonic-looking boar, mouth open in a large grin.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sguf}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-12
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgue">
+			Pathfinder Second Edition Conversion Guide
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">patfhinderResources</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-cg.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190812-cg.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 12, 2019
+  | title  = Pathfinder Second Edition Conversion Guide
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgue
+  }}   
+| summary  = Pathfinder Second Edition. Unleash your hero!
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgue}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgu6">
+			Paizo Twitch Streams Return!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">paizoTwitch</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-twitchsched.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-twitchsched.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Paizo Twitch Streams Return!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu6
+  }}   
+| summary  = graphic version of the calendar, listed in text following this image.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu6}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-9
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgu5">
+			Gen Con 2019 Highlights
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">conventions</span>
+				<span class="tag">conventions/genCon</span>
+				<span class="tag">genCon2019</span>
+				<span class="tag">paizoTwitch</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">starfinder</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-knowdirection.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-knowdirection.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = and visit, I saw tons of gamers enjoying Pathfinder and Starfinder. It was great to see them playing demos right next door to the booth. I want to thank the GM volunteers who helped show off the magic of Starfinder and Pathfinder!
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Picture of 3 people showing off their Pathfinder rulebooks.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-demo.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-demo.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Many folks playing demos at near our GenCon booth.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-ballroom.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-ballroom.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Many round tables filled with Organized Play players.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-ss.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-ss.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = null
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-absalom.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-absalom.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Large map of Absalom
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-alienarchive3.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-alienarchive3.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Alien Archive 3 book
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-nearspace.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190809-nearspace.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Payton Smith]]
+  | date   = August 09, 2019
+  | title  = Gen Con 2019 Highlights
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu5
+  }}   
+| summary  = Near Space.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu5}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-8
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgu4">
+			Iconic Encounter: Personal Magnetism
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">iconicEncounters</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080819_Altronus.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080819_Altronus.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Alyssa McCarthy
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 08, 2019
+  | title  = Iconic Encounter: Personal Magnetism
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgu4
+  }}   
+| summary  = Altronus, a four-armed kasatha wielding a blade of light in one hand and brandishing a pistol with another, stands his ground before a pair of enormous tentacled creatures hovering in mid-air and crackling with blue lightning.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgu4}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-7
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgu2">
+			August Update— Team News, OPF News, Spotlights and Conventions!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-7
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgu1">
+			Gen Con Recap
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSociety</span>
+				<span class="tag">starfinderSociety</span>
+		</div>
+		<br>
+		<div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-5
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgtz">
+			Legendary Adventures Await!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderBattles</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">wizKids</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-algholithu.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-algholithu.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 05, 2019
+  | title  = Legendary Adventures Await!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtz
+  }}   
+| summary  = 3d sculpt of an algholithu miniature: a green fish-like creature with red fins and 4 tentacles sprouting near its front. It has three red eyes lined up vertically in the front of its face.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-kobolds.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-kobolds.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 05, 2019
+  | title  = Legendary Adventures Await!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtz
+  }}   
+| summary  = 3 kobold miniature figures. On the left, a red kobold holding a staff before him. The staff is pointed on both ends and looks deadly. In the center, a green kobold wields a large dagger in its left hand and a hand crossbow in its right. On the right, a blue kobold appears to be a spellcaster, wielding a staff high in the air in his left hand while a blue &#39;glow&#39; comes from his right.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-bluedragon.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-bluedragon.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 05, 2019
+  | title  = Legendary Adventures Await!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtz
+  }}   
+| summary  = Blue-scale dragon miniature, large wings unfurled.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-pblap.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-pblap.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 05, 2019
+  | title  = Legendary Adventures Await!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtz
+  }}   
+| summary  = 8 miniatures shown: a goblin dog-slicer with a lowered sword in hand, goblin guard with large bladed weapon - taller than the guard itself - resting on the ground in hand, halfling slinger, charging orc charger, bugbear skulker with diamond shield and mace, orc battler with sword in hand and additional arrows or spears strapped on the back, hobgoblin soldier with hexagon shield on arm, long spear and pointed sword in hand, and armored elf soldier holding a long sword aloft.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtz}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-weaponswap.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190805-weaponswap.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Mark Moreland]]
+  | date   = August 05, 2019
+  | title  = Legendary Adventures Await!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtz
+  }}   
+| summary  = 2 miniatures shown: a goblin with a long axe in hand, and a charging orc rampager with daggers.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtz}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgt6">
+			Pathfinder Second Edition Launches NOW!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119-innersea.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119-innersea.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Heroes_battling_Treerazer.jpg">Heroes_battling_Treerazer.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = August 01, 2019
+  | title  = Pathfinder Second Edition Launches NOW!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt6
+  }}   
+| summary  = The Inner Sea.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt6}}</textarea>
+			</div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119-undeadfight.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119-undeadfight.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Undead_Fight.jpg">Undead_Fight.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Erik Mona]]
+  | date   = August 01, 2019
+  | title  = Pathfinder Second Edition Launches NOW!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt6
+  }}   
+| summary  = Undead fight!
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt6}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgt5">
+			Dwarven Forge Fall of Plaguestone Set
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">miniatures</span>
+				<span class="tag">pathfinderAdventurePath</span>
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderSecondEdition</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge01.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge01.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge02.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge02.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge03.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge03.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge04.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge04.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge05.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge05.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge06.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/080119_DwarvenForge06.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Dwarven Forge Fall of Plaguestone Set
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgt5
+  }}   
+| summary  = A closeup photograph of Dwarven Forge&#39;s new terrain created for the Fall of Plaguestone adventure.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgt5}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgtt">
+			Pathfinder Society Pregen Debut!
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">organizedPlay</span>
+				<span class="tag">pathfinderSecondEdition</span>
+				<span class="tag">pathfinderSociety</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2 not-uploaded  ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/073119_Linni.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/073119_Linni.jpg">
+						</a><br>
+								Maybe no yet uploaded
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = 
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = 
+  | date   = August 01, 2019
+  | title  = Pathfinder Society Pregen Debut!
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtt
+  }}   
+| summary  = Linni, the iconic gnome druid, and her snow leopard companion Droogami.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtt}}</textarea>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h3>
+			2019-8-1
+			- 
+			<a href="https://paizo.com/community/blog/v5748dyo6sgtu">
+			Tales of Lost Omens: Dragonfear
+			</a>
+		</h3>
+		<div class="tags">
+				<span class="tag">pathfinderRoleplayingGame</span>
+				<span class="tag">pathfinderTales/webFiction</span>
+				<span class="tag">talesOfLostOmens</span>
+		</div>
+		<br>
+		<div>
+			<div class="w100 g2  pf ">
+					<div>
+						<a href="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190731-sklarge.jpg" download>
+							<img src="https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/20190731-sklarge.jpg">
+						</a><br>
+								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:Dragon_and_knights.jpg">Dragon_and_knights.jpg</a><br>
+					</div>
+				<textarea class="w100 raw-text">== Summary ==
+
+{{File
+| year     = 2019
+| copy     = Paizo Inc.
+| artist   = Tomasz Chistowski
+| print    = 
+| page     = 
+| web      = {{Cite web
+  | author = [[Liane Merciel]]
+  | date   = August 01, 2019
+  | title  = Tales of Lost Omens: Dragonfear
+  | page   = Paizo Blog
+  | url    = https://paizo.com/community/blog/v5748dyo6sgtu
+  }}   
+| summary  = A massive red dragon spreads its wings as it unleashes fiery breath on a battlefield of mounted knights.
+| keyword1 = 
+| keyword2 = 
+}}   
+
+== Licensing ==
+
+{{Paizo CUP|blog|url=https://paizo.com/community/blog/v5748dyo6sgtu}}</textarea>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.common;
 
 import java.util.regex.Pattern;
 

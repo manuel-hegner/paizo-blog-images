@@ -1,12 +1,13 @@
-package paizo.crawler;
-import java.time.LocalDate;
+package paizo.crawler.common.model;
+
+import java.io.File;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.jsoup.nodes.Element;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,8 +19,8 @@ public class BlogPost {
 	private String title;
 	private String author;
 	private ZonedDateTime date;
-	private String[] tags;
-	private List<BlogImage> images;
+	private String[] tags = new String[0];
+	private List<BlogImage> images = new ArrayList<>();
 	private Element html;
 
 	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
@@ -29,9 +30,16 @@ public class BlogPost {
 		else
 			return DIR_FORMAT.format(date);
 	}
+	
+	public File detailsFile() {
+		return new File("blog_posts_details", id+".yaml");
+	}
 
-	@JsonIgnore
-	public boolean checked() {
-		return date!=null && date.toLocalDate().isBefore(LocalDate.of(2021,2,1));
+	public boolean belongsToPf() {
+		return Arrays.stream(tags).anyMatch(t->t.toLowerCase().contains("pathfinder"));
+	}
+
+	public boolean belongsToSf() {
+		return Arrays.stream(tags).anyMatch(t->t.toLowerCase().contains("starfinder"));
 	}
 }

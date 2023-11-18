@@ -1,10 +1,12 @@
-package paizo.crawler;
+package paizo.crawler.s07unusedimageremover;
 import java.io.File;
 import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.model.BlogPost;
 
 @RequiredArgsConstructor
 public class UnusedImageRemover {

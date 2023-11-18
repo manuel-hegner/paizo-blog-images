@@ -1,10 +1,13 @@
-package paizo.crawler;
+package paizo.crawler.s04duplicateimageremover;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Comparator;
 
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.model.BlogPost;
 
+/* Removes any image that appears after already appearing in a previous post */
 @RequiredArgsConstructor
 public class DuplicateImageRemover {
 
@@ -33,7 +36,7 @@ public class DuplicateImageRemover {
 		    }
 		    if(removed) {
                 System.out.println("Removed image(s) from "+post.getId());
-                Jackson.MAPPER.writeValue(new File("blog_posts_details", post.getId()+".yaml"), post);
+                Jackson.MAPPER.writeValue(post.detailsFile(), post);
             }
 		}
 	}

@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.s01blogcollector;
 import java.io.File;
 import java.nio.file.Files;
 import java.util.Collections;
@@ -13,6 +13,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.HTMLCleaner;
+import paizo.crawler.common.MyPool;
 
 @RequiredArgsConstructor
 public class BlogCollector implements Callable<Void> {

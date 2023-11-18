@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.common;
 import java.io.IOException;
 import java.math.BigInteger;
 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 
 import dev.brachtendorf.jimagehash.hash.Hash;
+import paizo.crawler.common.model.BlogPost;
 
 public class Jackson {
 

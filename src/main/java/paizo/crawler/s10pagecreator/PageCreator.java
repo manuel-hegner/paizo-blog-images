@@ -1,20 +1,32 @@
-package paizo.crawler;
+package paizo.crawler.s10pagecreator;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map.Entry;
+import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.tuple.Pair;
 
+import com.fasterxml.jackson.databind.util.TokenBuffer;
 import com.fizzed.rocker.runtime.RockerRuntime;
 
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.model.BlogPost;
+
 public class PageCreator {
+	
+	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
+		"pf", LocalDate.of(2021,2,1),
+		"sf", LocalDate.of(1000,1,1),
+		"all", LocalDate.of(1000,1,1)
+	);
 
 	public static void main(String... args) throws IOException {
 		RockerRuntime.getInstance().setReloading(true);
@@ -22,7 +34,7 @@ public class PageCreator {
 		pages.mkdir();
 		
 	
-		var allPosts = Arrays.stream(new File("blog_posts_details").listFiles())
+		var allMonths = Arrays.stream(new File("blog_posts_details").listFiles())
 			.map(f->{
 				try {
 					return Jackson.BLOG_READER.<BlogPost>readValue(f);
@@ -31,30 +43,83 @@ public class PageCreator {
 				}
 			})
 			.sorted(Comparator.comparing(BlogPost::getDate).reversed())
-			.collect(Collectors.groupingBy(BlogPost::printedDate));
-		
-		var posts = allPosts.entrySet()
+			.collect(Collectors.groupingBy(BlogPost::printedDate))
+			.entrySet()
 			.stream()
-			.sorted(Comparator.comparing(Entry::getKey))
-			.collect(Collectors.toList());
+			.map(e->new Month(e.getKey(), e.getValue()))
+			.sorted(Comparator.comparing(Month::month))
+			.toList();
 		
-		for(var month : posts) {
+		for(String mode:new String[] {"pf","sf","all"}) {
+			var months = filterMonths(mode, allMonths);
 			
-			Page p = Page.template(
-					month.getKey(),
-					month.getValue(),
-					allPosts.entrySet().stream()
-						.map(e->Pair.of(e.getKey(), e.getValue().stream().filter(po->!po.checked()).filter(po->po.getImages()!=null).flatMap(po->po.getImages().stream()).filter(i->i.getWikiImage()==null).count()))
-						.sorted()
-						.collect(Collectors.toList())
-			);
-			
-			Files.writeString(
-				new File(pages, month.getKey()+".html").toPath(),
-				p.render().toString()
-			);
+			var monthCounts = months.stream()
+					.map(e->new MonthCount(
+						e.month(),
+						e.posts().stream()
+							.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
+							.filter(po->po.getImages()!=null)
+							.flatMap(po->po.getImages().stream())
+							.filter(i->!i.getWikiMappings().hasMapping())
+							.count()
+					))
+					.sorted(Comparator.comparing(MonthCount::month).reversed())
+					.collect(Collectors.toList());
+				
+				for(var month : months) {
+					Page p = Page.template(
+						mode,
+						month,
+						monthCounts,
+						CHECKED_UP_TO.get(mode)
+					);
+					
+					Files.writeString(
+						new File(pages, month.month()+"-"+mode+".html").toPath(),
+						p.render().toString()
+					);
+				}
 		}
-		File last = new File(pages, posts.get(posts.size()-1).getKey()+".html");
+		
+		
+		File last = new File(pages, allMonths.get(allMonths.size()-1).month()+"-all.html");
 		FileUtils.copyFile(last, new File(pages, "index.html"));
+	}
+
+	private static List<Month> filterMonths(String mode, List<Month> allMonths) {
+		if("all".equals(mode)) return allMonths;
+		if(!"pf".equals(mode) && !"sf".equals(mode)) throw new IllegalStateException();
+		
+		return allMonths.stream()
+			.map(m->new Month(
+				m.month(),
+				m.posts()
+					.stream()
+					.flatMap(p->filterPost(mode, p))
+					.filter(Objects::nonNull)
+					.toList()
+			))
+			.toList();
+	}
+
+	private static Stream<BlogPost> filterPost(String mode, BlogPost p) {
+		try {
+			TokenBuffer tb = new TokenBuffer(Jackson.MAPPER.getFactory().getCodec(), false);
+			Jackson.MAPPER.writeValue(tb, p);
+			var copy = Jackson.MAPPER.readValue(tb.asParser(), BlogPost.class);
+			
+			if("sf".equals(mode)) {
+				if(p.belongsToPf() && ! p.belongsToSf()) return Stream.of();
+				p.getImages().forEach(img->img.getWikiMappings().setPf(null));
+			}
+			if("pf".equals(mode)) {
+				if(p.belongsToSf() && ! p.belongsToPf()) return Stream.of();
+				p.getImages().forEach(img->img.getWikiMappings().setSf(null));
+			}
+			
+			return Stream.of(copy);
+		} catch(Exception e) {
+			throw new IllegalStateException(e);
+		}
 	}
 }

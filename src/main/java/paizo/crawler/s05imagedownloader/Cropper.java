@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.s05imagedownloader;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;

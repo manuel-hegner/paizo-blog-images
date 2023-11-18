@@ -1,4 +1,4 @@
-package paizo.crawler;
+package paizo.crawler.s03articledetailsextractor;
 import java.io.File;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -19,6 +19,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Element;
 
 import lombok.RequiredArgsConstructor;
+import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
+import paizo.crawler.common.PBICallable;
+import paizo.crawler.common.model.BlogImage;
+import paizo.crawler.common.model.BlogPost;
 
 @RequiredArgsConstructor
 public class ArticleDetailsExtractor implements PBICallable {
@@ -54,7 +59,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 
 		post.setHtml(null);
 
-		File target = new File(new File("blog_posts_details"), file.getName());
+		File target = post.detailsFile();
 		if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			Jackson.BLOG_WRITER.writeValue(target, post);
@@ -140,8 +145,18 @@ public class ArticleDetailsExtractor implements PBICallable {
 		img.setFullPath(src);
 		img.setName(src.substring(src.lastIndexOf("/")+1));
 		img.setAlt(StringUtils.stripToNull(alt.replaceAll("\s+", " ")));
-		return img;
+		
+		//filter for filetype
+		for(var ext:IMAGE_TYPES) {
+			if(img.getName().toLowerCase().endsWith("."+ext))
+				return img;
+		}
+		return null;
 	}
+	
+	private static final String[] IMAGE_TYPES = {
+		"gif", "jpeg", "jpg", "png", "webp"
+	};
 
 	private String[] findTags(BlogPost post) {
 		String[] tags = post.getHtml()

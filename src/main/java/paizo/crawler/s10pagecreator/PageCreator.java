@@ -109,12 +109,12 @@ public class PageCreator {
 			var copy = Jackson.MAPPER.readValue(tb.asParser(), BlogPost.class);
 			
 			if("sf".equals(mode)) {
-				if(p.belongsToPf() && ! p.belongsToSf()) return Stream.of();
-				p.getImages().forEach(img->img.getWikiMappings().setPf(null));
+				if(copy.belongsToPf() && ! copy.belongsToSf()) return Stream.of();
+				copy.getImages().forEach(img->img.getWikiMappings().setPf(null));
 			}
 			if("pf".equals(mode)) {
-				if(p.belongsToSf() && ! p.belongsToPf()) return Stream.of();
-				p.getImages().forEach(img->img.getWikiMappings().setSf(null));
+				if(copy.belongsToSf() && ! copy.belongsToPf()) return Stream.of();
+				copy.getImages().forEach(img->img.getWikiMappings().setSf(null));
 			}
 			
 			return Stream.of(copy);

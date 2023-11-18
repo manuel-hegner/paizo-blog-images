@@ -107,9 +107,9 @@
 		<br>
 		@if(post.getImages() != null) {
 		<div>
-		@for(BlogImage img : post.getImages()) {
+		@for(BlogImage img : post.getImages()) {@if(img.getLocalFile() != null) {
 			<div class="w100 g2 @if(!img.getWikiMappings().hasMapping()){not-uploaded} @if(img.getWikiMappings().getPf()!=null){pf} @if(img.getWikiMappings().getSf()!=null){sf}">
-				@with(String link = "https://github.com/manuel-hegner/paizo-blog-images/raw/main/blog_post_images/"+img.getName()) {
+				@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main"+img.getLocalFile().substring(1)) {
 					<div>
 						<a href="@link" download>
 							<img src="@link">
@@ -132,7 +132,7 @@
 				}
 				<textarea class="w100 raw-text">@ImageDownloader.wikitext(post, img)</textarea>
 			</div>
-		}
+		}}
 		</div>
 		}
 	</div>

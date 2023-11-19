@@ -32,7 +32,7 @@ public class BlogPost {
 	}
 	
 	public File detailsFile() {
-		return new File("blog_posts_details", id+".yaml");
+		return new File("data/blog_posts_details", id+".yaml");
 	}
 
 	public boolean belongsToPf() {

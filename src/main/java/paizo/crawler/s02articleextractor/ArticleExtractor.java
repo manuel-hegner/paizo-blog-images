@@ -31,7 +31,7 @@ public class ArticleExtractor implements PBICallable {
 	private static final Pattern LINK = Pattern.compile("^https://paizo\\.com/community/blog/([0-9a-z]{5,})(\\?.*)?$");
 	
 	public static void main(String... args) throws IOException, InterruptedException {
-		run(new File("blog").listFiles());
+		run(new File("data/blog").listFiles());
 	}
 	
 	public static void run(File[] files) throws IOException, InterruptedException {
@@ -116,7 +116,7 @@ public class ArticleExtractor implements PBICallable {
 
 	@Override
 	public void run() throws Exception {
-		File target = new File("blog_posts/"+blogId+".yaml");
+		File target = new File("data/blog_posts/"+blogId+".yaml");
 		
 		if(target.exists() && (date==null || date.plusDays(30).isBefore(ZonedDateTime.now())))
 			return;

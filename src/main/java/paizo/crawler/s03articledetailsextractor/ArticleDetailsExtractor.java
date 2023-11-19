@@ -60,7 +60,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setHtml(null);
 
 		File target = post.detailsFile();
-		if(!target.exists()) {
+		if(!target.exists() || true) {
 			target.getParentFile().mkdirs();
 			Jackson.BLOG_WRITER.writeValue(target, post);
 		}
@@ -159,10 +159,6 @@ public class ArticleDetailsExtractor implements PBICallable {
 	};
 
 	private String[] findTags(BlogPost post) {
-		if(file.toString().contains("v5748dyo5lj27")) {
-			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
-		}
-		
 		String[] tags = post.getHtml()
 			.getElementsByAttributeValueStarting("href", "https://paizo.com/community/blog/tags/")
 			.stream()

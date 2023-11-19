@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 public class MyPool {
 
 	private final String name;
-	private final ExecutorService pool = Executors.newFixedThreadPool(Math.min(99999, Runtime.getRuntime().availableProcessors()));
+	private final ExecutorService pool = Executors.newFixedThreadPool(Math.min(4, Runtime.getRuntime().availableProcessors()));
 	private final AtomicInteger submitted = new AtomicInteger();
 	private final AtomicInteger done = new AtomicInteger();
 

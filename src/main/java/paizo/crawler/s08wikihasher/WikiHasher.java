@@ -30,7 +30,7 @@ import paizo.crawler.common.ImageHelper;
 import paizo.crawler.common.Jackson;
 import paizo.crawler.common.MyPool;
 import paizo.crawler.common.model.WikiImage;
-import paizo.crawler.s05imagedownloader.Cropper;
+import paizo.crawler.s06imageoptimizer.Cropper;
 
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
@@ -45,7 +45,7 @@ public class WikiHasher implements Callable<Void> {
 
 	@SafeVarargs
 	private static void hash(boolean replace, Target... targets) throws Exception {
-		File file = new File("meta/wiki_hashes.yaml");
+		File file = new File("data/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, WikiImage[].class));
 

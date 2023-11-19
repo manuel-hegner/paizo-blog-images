@@ -2,11 +2,20 @@
 @import java.util.List
 @import org.apache.commons.lang3.tuple.Pair
 @import paizo.crawler.common.model.BlogPost
+@import paizo.crawler.common.WikiText
 @import paizo.crawler.common.model.BlogImage
+@import paizo.crawler.common.model.ImageInfo
 @import paizo.crawler.s05imagedownloader.ImageDownloader
 @import java.time.LocalDate
+@import java.util.Map
 
-@args (String mode, Month month, List<MonthCount> monthCounts, LocalDate checkedUpTo)
+@args (
+	String mode,
+	Month month,
+	List<MonthCount> monthCounts,
+	Map<String, ImageInfo> images,
+	LocalDate checkedUpTo
+)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,32 +116,35 @@
 		<br>
 		@if(post.getImages() != null) {
 		<div>
-		@for(BlogImage img : post.getImages()) {@if(img.getLocalFile() != null) {
-			<div class="w100 g2 @if(!img.getWikiMappings().hasMapping()){not-uploaded} @if(img.getWikiMappings().getPf()!=null){pf} @if(img.getWikiMappings().getSf()!=null){sf}">
-				@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main"+img.getLocalFile().substring(1)) {
-					<div>
-						<a href="@link" download>
-							<img src="@link">
-						</a><br>
-						@if(img.getWikiMappings().hasMapping()) {
-							@if(img.getWikiMappings().getPf()!=null){
-								Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:@img.getWikiMappings().getPf().getName()">@img.getWikiMappings().getPf().getName()</a><br>
-							}
-							@if(img.getWikiMappings().getSf()!=null){
-								Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:@img.getWikiMappings().getSf().getName()">@img.getWikiMappings().getSf().getName()</a><br>
-							}
-						} else {
-							@if(!post.getDate().toLocalDate().isAfter(checkedUpTo)) {
-								Manually checked
+		@for(BlogImage img : post.getImages()) {
+			@with(file = images.get(img.getFullPath()).getOptimizedFile(),
+					wikiMappings = images.get(img.getFullPath()).getWikiMappings()) {
+				<div class="w100 g2 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
+					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/data/"+file.toString()) {
+						<div>
+							<a href="@link" download>
+								<img src="@link">
+							</a><br>
+							@if(wikiMappings.hasMapping()) {
+								@if(wikiMappings.getPf()!=null){
+									Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:@wikiMappings.getPf().getName()">@wikiMappings.getPf().getName()</a><br>
+								}
+								@if(wikiMappings.getSf()!=null){
+									Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:@wikiMappings.getSf().getName()">@wikiMappings.getSf().getName()</a><br>
+								}
 							} else {
-								Maybe no yet uploaded
+								@if(!post.getDate().toLocalDate().isAfter(checkedUpTo)) {
+									Manually checked
+								} else {
+									Maybe no yet uploaded
+								}
 							}
-						}
-					</div>
-				}
-				<textarea class="w100 raw-text">@ImageDownloader.wikitext(post, img)</textarea>
-			</div>
-		}}
+						</div>
+					}}
+					<textarea class="w100 raw-text">@WikiText.wikitext(post, img)</textarea>
+				</div>
+			}
+		}
 		</div>
 		}
 	</div>

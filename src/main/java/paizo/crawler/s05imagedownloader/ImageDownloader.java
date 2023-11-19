@@ -1,20 +1,17 @@
 package paizo.crawler.s05imagedownloader;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-
-import javax.imageio.ImageIO;
+import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.jsoup.Jsoup;
+
+import com.fasterxml.jackson.databind.DatabindException;
+import com.google.common.hash.Hashing;
 
 import lombok.RequiredArgsConstructor;
 import paizo.crawler.common.Jackson;
@@ -22,91 +19,90 @@ import paizo.crawler.common.MyPool;
 import paizo.crawler.common.PBICallable;
 import paizo.crawler.common.model.BlogImage;
 import paizo.crawler.common.model.BlogPost;
+import paizo.crawler.common.model.ImageInfo;
 
 @RequiredArgsConstructor
 public class ImageDownloader implements PBICallable {
 
-	private static final Map<String, String> IMAGES = new HashMap<>();
 	public static void main(String... args) throws InterruptedException, IOException {
 		var pool = new MyPool("Image Downloader");
-		for(var f:new File("blog_posts_details").listFiles()) {
+		for(var f:new File("data/blog_posts_details").listFiles()) {
 			BlogPost post = Jackson.BLOG_READER.readValue(f);
 			if(post.getImages() == null)
 				continue;
 
 			for(BlogImage img : post.getImages()) {
-				String old = IMAGES.put(img.getName(), img.getFullPath());
-				if(old == null) {
-					File target = Path.of(
-							"blog_post_images",
-							img.getName()
-					).toFile();
-
-					if(!target.exists()) {
-						pool.submit(new ImageDownloader(post, img, target));
-					}
-				}
-				else if(!old.equals(img.getFullPath())) {
-					//System.err.println("same name "+img.getName()+" for:\n\t"+img.getFullPath()+"\n\t"+old);
-				}
+				pool.submit(new ImageDownloader(img));
 			}
 
 		}
 		pool.shutdown();
 	}
 
-	private final BlogPost post;
 	private final BlogImage img;
-	private final File target;
 
 	@Override
 	public String getBlogId() {
 		return img.getName();
 	}
 
-	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+	
 	@Override
 	public void run() throws Exception {
-		if(!target.exists() && (img.getLocalFile() == null || !img.getLocalFileAsFile().exists())) {
-			target.getParentFile().mkdirs();
+		var info = loadImageInfo(img.getFullPath());
+		if(info.isDownloaded()) {
+			return;
+		}
 
-			byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
-			var img = ImageIO.read(new ByteArrayInputStream(bytes));
-			var cropped = Cropper.crop(img);
-			if(cropped == img || img == null)
-			    FileUtils.writeByteArrayToFile(target, bytes);
-			else
-			    ImageIO.write(
-			        cropped,
-			        FilenameUtils.getExtension(target.getName()),
-			        target
-			    );
+		byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
+		var extension = FilenameUtils.getExtension(img.getName());
+		info.setRawExtension(extension);
+		FileUtils.writeByteArrayToFile(info.getRawFile(), bytes);
+		Jackson.MAPPER.writeValue(infoFile(info.getId()), info);
+	}
+	
+	public synchronized static ImageInfo loadImageInfo(String fullURL) throws IOException, DatabindException, IOException {
+		var potentialId = potentialImageId(fullURL);
+		
+		for(int varCounter=1;true;varCounter++) {
+			var id = potentialId+(varCounter==1?"":("-"+varCounter));
+			File infoFile = infoFile(id);
+			if(!infoFile.isFile()) {
+				var result = new ImageInfo();
+				result.setFullPath(fullURL);
+				result.setId(id);
+				infoFile.getParentFile().mkdirs();
+				Jackson.MAPPER.writeValue(infoFile, result);
+				return result;
+			}
+			
+			var info = Jackson.MAPPER.readValue(infoFile, ImageInfo.class);
+			if(fullURL.equals(info.getFullPath())) {
+				return info;
+			}
 		}
 	}
-
-	public static String wikitext(BlogPost post, BlogImage img) {
-		return "== Summary ==\n"
-				+ "\n"
-				+ "{{File\n"
-				+ "| year     = "+(post.getDate()==null?"":post.getDate().getYear())+"\n"
-				+ "| copy     = Paizo Inc.\n"
-				+ "| artist   = "+Objects.requireNonNullElse(img.getArtist(),"")+"\n"
-				+ "| print    = \n"
-				+ "| page     = \n"
-				+ "| web      = {{Cite web\n"
-				+ "  | author = "+Optional.ofNullable(post.getAuthor()).map(a->"[["+a+"]]").orElse("")+"\n"
-				+ "  | date   = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
-				+ "  | title  = "+post.getTitle()+"\n"
-				+ "  | page   = Paizo Blog\n"
-				+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
-				+ "  }}   \n"
-				+ "| summary  = "+img.getAlt()+"\n"
-				+ "| keyword1 = \n"
-				+ "| keyword2 = \n"
-				+ "}}   \n"
-				+ "\n"
-				+ "== Licensing ==\n"
-				+ "\n"
-				+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
+	
+	public static File infoDir(String id) {
+		return Path.of(
+			"data",
+			"images",
+			id.substring(0,1),
+			id.substring(1)
+		).toFile();
 	}
+	
+	public static File infoFile(String id) {
+		return new File(infoDir(id), "info.yaml");
+	}
+	
+	public static String potentialImageId(String fullURL) {
+		return Base64.getUrlEncoder().withoutPadding().encodeToString(
+			Hashing.murmur3_128()
+				.hashBytes(fullURL.getBytes(StandardCharsets.UTF_8))
+				.asBytes()
+		);
+	}
+
+	
 }

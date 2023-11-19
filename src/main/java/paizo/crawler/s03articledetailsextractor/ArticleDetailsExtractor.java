@@ -29,7 +29,7 @@ import paizo.crawler.common.model.BlogPost;
 public class ArticleDetailsExtractor implements PBICallable {
 
 	public static void main(String... args) throws Exception {
-		var blacklist = Jackson.MAPPER.readValue(new File("meta/blacklist.yaml"), Pattern[].class);
+		var blacklist = Jackson.MAPPER.readValue(new File("data/blacklist.yaml"), Pattern[].class);
 		var pool = new MyPool("Article Details Extractor");
 		for(var f:new File("data/blog_posts").listFiles()) {
 			pool.submit(new ArticleDetailsExtractor(blacklist, f));

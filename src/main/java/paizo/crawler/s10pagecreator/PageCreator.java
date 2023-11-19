@@ -3,12 +3,14 @@ package paizo.crawler.s10pagecreator;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,6 +21,7 @@ import com.fizzed.rocker.runtime.RockerRuntime;
 
 import paizo.crawler.common.Jackson;
 import paizo.crawler.common.model.BlogPost;
+import paizo.crawler.common.model.ImageInfo;
 
 public class PageCreator {
 	
@@ -33,8 +36,20 @@ public class PageCreator {
 		File pages = new File("docs/");
 		pages.mkdir();
 		
+		var images = Files.walk(Path.of("data/images/"))
+			.map(Path::toFile)
+			.filter(f->"info.yaml".equals(f.getName()))
+			.map(f->{
+				try {
+					return Jackson.MAPPER.readValue(f, ImageInfo.class);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+			})
+			.collect(Collectors.toMap(ImageInfo::getFullPath, Function.identity()));
+		
 	
-		var allMonths = Arrays.stream(new File("blog_posts_details").listFiles())
+		var allMonths = Arrays.stream(new File("data/blog_posts_details").listFiles())
 			.map(f->{
 				try {
 					return Jackson.BLOG_READER.<BlogPost>readValue(f);
@@ -60,7 +75,7 @@ public class PageCreator {
 							.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
 							.filter(po->po.getImages()!=null)
 							.flatMap(po->po.getImages().stream())
-							.filter(i->!i.getWikiMappings().hasMapping())
+							.filter(i->!images.get(i.getFullPath()).getWikiMappings().hasMapping())
 							.count()
 					))
 					.sorted(Comparator.comparing(MonthCount::month).reversed())
@@ -71,6 +86,7 @@ public class PageCreator {
 						mode,
 						month,
 						monthCounts,
+						images,
 						CHECKED_UP_TO.get(mode)
 					);
 					
@@ -110,11 +126,9 @@ public class PageCreator {
 			
 			if("sf".equals(mode)) {
 				if(copy.belongsToPf() && ! copy.belongsToSf()) return Stream.of();
-				copy.getImages().forEach(img->img.getWikiMappings().setPf(null));
 			}
 			if("pf".equals(mode)) {
 				if(copy.belongsToSf() && ! copy.belongsToPf()) return Stream.of();
-				copy.getImages().forEach(img->img.getWikiMappings().setSf(null));
 			}
 			
 			return Stream.of(copy);

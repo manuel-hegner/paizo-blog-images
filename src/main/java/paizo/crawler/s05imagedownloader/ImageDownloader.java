@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Base64;
+import java.util.HexFormat;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -97,8 +98,8 @@ public class ImageDownloader implements PBICallable {
 	}
 	
 	public static String potentialImageId(String fullURL) {
-		return Base64.getUrlEncoder().withoutPadding().encodeToString(
-			Hashing.murmur3_128()
+		return HexFormat.of().formatHex(
+			Hashing.murmur3_32_fixed()
 				.hashBytes(fullURL.getBytes(StandardCharsets.UTF_8))
 				.asBytes()
 		);

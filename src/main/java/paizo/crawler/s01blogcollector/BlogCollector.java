@@ -23,7 +23,7 @@ public class BlogCollector implements Callable<Void> {
 	private static AtomicInteger COUNTER = new AtomicInteger(0);
 	
 	public static void main(String[] args) throws InterruptedException {
-		start(Integer.MAX_VALUE);
+		start(3);
 	}
 	
 	public static File[] start(int maxDepth) throws InterruptedException {
@@ -61,7 +61,7 @@ public class BlogCollector implements Callable<Void> {
 			findNextLink(doc.toString());
 			HTMLCleaner.clean(doc);
 			
-			File target = new File("blog/"+name.replaceAll("[^a-zA-Z0-9]", "_")+".html");
+			File target = new File("data/blog/"+name.replaceAll("[^a-zA-Z0-9]", "_")+".html");
 			target.getParentFile().mkdirs();
 			Files.writeString(target.toPath(), doc.toString());
 			System.out.println("Written "+target);

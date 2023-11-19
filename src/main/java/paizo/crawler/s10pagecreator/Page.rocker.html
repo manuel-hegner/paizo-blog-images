@@ -120,7 +120,7 @@
 			@with(file = images.get(img.getFullPath()).getOptimizedFile(),
 					wikiMappings = images.get(img.getFullPath()).getWikiMappings()) {
 				<div class="w100 g2 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
-					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/data/"+file.toString()) {
+					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+file.toString()) {
 						<div>
 							<a href="@link" download>
 								<img src="@link">

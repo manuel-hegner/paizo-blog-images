@@ -58,6 +58,11 @@
 				background-color: lightsalmon;
 			}
 			
+			.resolution-warning {
+				color: red;
+				font-weight: bold;
+			}
+			
 			a {
 				text-decoration: none;
 			}
@@ -117,8 +122,11 @@
 		@if(post.getImages() != null) {
 		<div>
 		@for(BlogImage img : post.getImages()) {
-			@with(file = images.get(img.getFullPath()).getOptimizedFile(),
-					wikiMappings = images.get(img.getFullPath()).getWikiMappings()) {
+			@with(
+					info = images.get(img.getFullPath()),
+					file = images.get(img.getFullPath()).getOptimizedFile(),
+					wikiMappings = images.get(img.getFullPath()).getWikiMappings()
+			) {
 				<div class="w100 g2 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
 					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+file.toString().replace('\\','/')) {
 						<div>
@@ -128,9 +136,15 @@
 							@if(wikiMappings.hasMapping()) {
 								@if(wikiMappings.getPf()!=null){
 									Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:@wikiMappings.getPf().getName()">@wikiMappings.getPf().getName()</a><br>
+									@if(wikiMappings.getPf().getPixels()<info.getPixels()) {
+										<span class="resolution-warning">but the wiki version has a lower resolution!!!</span><br>
+									}
 								}
 								@if(wikiMappings.getSf()!=null){
 									Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:@wikiMappings.getSf().getName()">@wikiMappings.getSf().getName()</a><br>
+									@if(wikiMappings.getSf().getPixels()<info.getPixels()) {
+										<span class="resolution-warning">but the wiki version has a lower resolution!!!</span><br>
+									}
 								}
 							} else {
 								@if(!post.getDate().toLocalDate().isAfter(checkedUpTo)) {

@@ -1,6 +1,7 @@
 package paizo.crawler.common;
 
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -8,7 +9,7 @@ import paizo.crawler.common.model.BlogImage;
 import paizo.crawler.common.model.BlogPost;
 
 public class WikiText {
-	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy", Locale.US);
 	public static String wikitext(BlogPost post, BlogImage img) {
 		return "== Summary ==\n"
 				+ "\n"

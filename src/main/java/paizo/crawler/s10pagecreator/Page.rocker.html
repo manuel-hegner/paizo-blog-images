@@ -139,11 +139,17 @@
 									@if(wikiMappings.getPf().getPixels()<info.getPixels()) {
 										<span class="resolution-warning">but the wiki version has a lower resolution!!!</span><br>
 									}
+									@if(!wikiMappings.getPf().getUsesTransparency() && info.getUsesTransparency()) {
+										<span class="resolution-warning">but the wiki version is not transparent!!!</span><br>
+									}
 								}
 								@if(wikiMappings.getSf()!=null){
 									Already uploaded to Starfinderwiki as <a href="https://starfinderwiki.com/wiki/File:@wikiMappings.getSf().getName()">@wikiMappings.getSf().getName()</a><br>
 									@if(wikiMappings.getSf().getPixels()<info.getPixels()) {
 										<span class="resolution-warning">but the wiki version has a lower resolution!!!</span><br>
+									}
+									@if(!wikiMappings.getSf().getUsesTransparency() && info.getUsesTransparency()) {
+										<span class="resolution-warning">but the wiki version is not transparent!!!</span><br>
 									}
 								}
 							} else {

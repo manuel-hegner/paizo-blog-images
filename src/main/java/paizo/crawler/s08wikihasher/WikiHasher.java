@@ -6,10 +6,15 @@ import java.io.File;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import javax.imageio.ImageIO;
 
@@ -20,7 +25,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.Uninterruptibles;
+import com.sksamuel.scrimage.ImmutableImage;
 
 import dev.brachtendorf.jimagehash.hash.Hash;
 import dev.brachtendorf.jimagehash.hashAlgorithms.HashingAlgorithm;
@@ -36,8 +43,8 @@ import paizo.crawler.s06imageoptimizer.Cropper;
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
 	    hash(false,
-	        new Target("pf", "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000"),
-	        new Target("sf", "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aiprop=url&ailimit=5000")
+	        new Target("pf", "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000"),
+	        new Target("sf", "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000")
 	    );
 	}
 	
@@ -48,9 +55,10 @@ public class WikiHasher implements Callable<Void> {
 		File file = new File("data/wiki_hashes.yaml");
 		var known = Lists.newArrayList(Jackson.MAPPER
 				.readValue(file, WikiImage[].class));
+		var foundUrls = new HashSet<>();
 
-		MyPool pool = new MyPool("wiki hashing");
-
+		
+		var tasks = new ArrayList<WikiHasher>();
 		for(var target : targets) {
 		    String aicontinue = null;
 		    List<JsonNode> all = new ArrayList<>();
@@ -64,10 +72,20 @@ public class WikiHasher implements Callable<Void> {
 		    for(var n:all) {
 		        String name = n.get("name").asText();
 		        String imgUrl = n.get("url").asText();
-		        pool.submit(new WikiHasher(replace, target.wiki, known, name, imgUrl));
+		        foundUrls.add(imgUrl);
+		        tasks.add(new WikiHasher(replace, target.wiki, known, name, imgUrl));
 		    }
 		}
-
+		
+		//remove outdated entries
+		known.removeIf(img->!foundUrls.contains(img.getUrl()));
+		var knownUrls = Sets.newConcurrentHashSet(known.stream().map(img->img.getUrl()).toList());
+		
+		MyPool pool = new MyPool("wiki hashing");
+		tasks.forEach(t->{
+			t.knownUrls=knownUrls;
+			pool.submit(t);
+		});
 		pool.shutdown();
 		known.sort(Comparator.comparing(WikiImage::getName));
 		Jackson.MAPPER.writeValue(file, known);
@@ -76,16 +94,14 @@ public class WikiHasher implements Callable<Void> {
 	private final boolean replace;
 	private final String wiki;
 	private final List<WikiImage> known;
+	private Set<String> knownUrls;
 	private final String name;
 	private final String url;
 
 	@Override
 	public Void call() throws Exception {
-		if(!replace) {
-			synchronized (known) {
-				if(known.stream().anyMatch(k->k.getUrl().equals(url)))
-					return null;
-			}
+		if(!replace && knownUrls.contains(url)) {
+				return null;
 		}
 
 		if(name.endsWith(".svg") || name.endsWith(".mp3")) {
@@ -95,7 +111,7 @@ public class WikiHasher implements Callable<Void> {
 		Uninterruptibles.sleepUninterruptibly((int)(Math.random()*20), TimeUnit.SECONDS);
 
 		byte[] bytes = IOUtils.toByteArray(new URL(url));
-		BufferedImage img = ImageIO.read(new ByteArrayInputStream(bytes));
+		BufferedImage img = ImmutableImage.loader().fromBytes(bytes).awt();
 		if(img == null) {
 		    System.err.println("\tCould not parse "+url);
 		    return null;
@@ -113,13 +129,8 @@ public class WikiHasher implements Callable<Void> {
 			if(replace) {
 				known.removeIf(i->i.getName().equals(name));
 			}
-			else {
-				synchronized (known) {
-					if(known.stream().anyMatch(k->k.getName().equals(name)))
-						return null;
-				}
-			}
 			known.add(hi);
+			knownUrls.add(hi.getUrl());
 		}
 
 		return null;

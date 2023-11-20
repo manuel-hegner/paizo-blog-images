@@ -4,19 +4,27 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.util.function.UnaryOperator;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class Cropper {
 
     public static BufferedImage crop(BufferedImage img) {
         if(img == null) {
             return null;
         }
-        var cm = img.getColorModel();
-
-        img = whileChanging(img, i->cropTop(cm, i));
-        img = whileChanging(img, i->cropBottom(cm, i));
-        img = whileChanging(img, i->cropLeft(cm, i));
-        img = whileChanging(img, i->cropRight(cm, i));
-        return img;
+        try {
+	        var cm = img.getColorModel();
+	
+	        img = whileChanging(img, i->cropTop(cm, i));
+	        img = whileChanging(img, i->cropBottom(cm, i));
+	        img = whileChanging(img, i->cropLeft(cm, i));
+	        img = whileChanging(img, i->cropRight(cm, i));
+	        return img;
+        } catch(Exception e) {
+        	log.error("Failed to crop", e);
+        	return img;
+        }
     }
 
     private static BufferedImage whileChanging(BufferedImage in, UnaryOperator<BufferedImage> changer) {

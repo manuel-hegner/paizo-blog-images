@@ -60,14 +60,25 @@ public class BlogHasher implements Callable<Void> {
 		var matches = known.stream().filter(hi -> WikiHasher.similarHashes(hi.getHash(), image.getHash()))
 				.collect(Collectors.groupingBy(hi -> hi.getWiki(), Collectors.toList()));
 
+		var wikiMappings = image.getWikiMappings();
+		var pfMatches = matches.get("pf");
+		var sfMatches = matches.get("sf");
 		if (!matches.isEmpty()) {
-			if (matches.containsKey("pf") && image.getWikiMappings().getPf() == null) {
-				changed = true;
-				image.getWikiMappings().setPf(matches.get("pf").get(0));
+			if (pfMatches != null) {
+				changed|= !pfMatches.get(0).equals(wikiMappings.getPf());
+				wikiMappings.setPf(pfMatches.get(0));
 			}
-			if (matches.containsKey("sf") && image.getWikiMappings().getSf() == null) {
-				changed = true;
-				image.getWikiMappings().setSf(matches.get("sf").get(0));
+			else {
+				changed|=wikiMappings.getPf()!=null;
+				wikiMappings.setPf(null);
+			}
+			if (sfMatches != null) {
+				changed|= !sfMatches.get(0).equals(wikiMappings.getSf());
+				wikiMappings.setSf(sfMatches.get(0));
+			}
+			else {
+				changed|=wikiMappings.getSf()!=null;
+				wikiMappings.setSf(null);
 			}
 		}
 

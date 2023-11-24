@@ -154,7 +154,7 @@
 									}
 								}
 							} else {
-								@if(!post.getDate().toLocalDate().isAfter(checkedUpTo)) {
+								@if(post.getDate().toLocalDate().isBefore(checkedUpTo)) {
 									Manually checked
 								} else {
 									Maybe no yet uploaded

@@ -26,7 +26,7 @@ import paizo.crawler.common.model.ImageInfo;
 public class PageCreator {
 	
 	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
-		"pf", LocalDate.of(2021,12,1),
+		"pf", LocalDate.of(2023,1,1),
 		"sf", LocalDate.of(1000,1,1),
 		"all", LocalDate.of(1000,1,1)
 	);

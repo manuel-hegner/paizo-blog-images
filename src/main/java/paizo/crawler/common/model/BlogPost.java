@@ -22,6 +22,7 @@ public class BlogPost {
 	private String[] tags = new String[0];
 	private List<BlogImage> images = new ArrayList<>();
 	private Element html;
+	private Boolean reported;
 
 	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
 	public String printedDate() {

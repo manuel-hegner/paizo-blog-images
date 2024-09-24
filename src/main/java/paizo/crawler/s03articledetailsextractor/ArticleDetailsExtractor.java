@@ -60,7 +60,7 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setHtml(null);
 
 		File target = post.detailsFile();
-		if(!target.exists() || true) {
+		if(!target.exists()) {
 			target.getParentFile().mkdirs();
 			Jackson.BLOG_WRITER.writeValue(target, post);
 		}

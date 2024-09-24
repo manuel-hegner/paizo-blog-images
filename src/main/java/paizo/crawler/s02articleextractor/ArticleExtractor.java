@@ -132,6 +132,7 @@ public class ArticleExtractor implements PBICallable {
 		blogPost.setId(blogId);
 		blogPost.setHtml(post);
 		blogPost.setDate(date);
+		blogPost.setReported(false);
 		
 		target.getParentFile().mkdirs();
 		Jackson.BLOG_WRITER.writeValue(target, blogPost);

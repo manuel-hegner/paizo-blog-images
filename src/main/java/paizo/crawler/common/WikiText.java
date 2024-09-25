@@ -26,7 +26,7 @@ public class WikiText {
 				+ "  | page   = Paizo Blog\n"
 				+ "  | url    = https://paizo.com/community/blog/"+post.getId()+"\n"
 				+ "  }}   \n"
-				+ "| summary  = "+img.getAlt()+"\n"
+				+ "| summary  = "+Optional.ofNullable(img.getAlt()).orElse("")+"\n"
 				+ "| keyword1 = \n"
 				+ "| keyword2 = \n"
 				+ "}}   \n"

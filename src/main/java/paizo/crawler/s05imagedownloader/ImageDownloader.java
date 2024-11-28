@@ -56,6 +56,8 @@ public class ImageDownloader implements PBICallable {
 		}
 
 		byte[] bytes = Jsoup.connect(img.getFullPath()).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
+		if(bytes.length<10)
+			throw new IllegalStateException(img.getFullPath()+" results in an illegal image file");
 		var extension = FilenameUtils.getExtension(img.getName());
 		info.setRawExtension(extension);
 		FileUtils.writeByteArrayToFile(info.getRawFile(), bytes);

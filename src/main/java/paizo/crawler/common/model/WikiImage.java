@@ -13,5 +13,5 @@ public class WikiImage {
 	private String wiki;
 	private Boolean usesTransparency;
 	private Hash hash;
-	private Long pixels;
+	private long pixels = Long.MAX_VALUE;
 }

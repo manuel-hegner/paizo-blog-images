@@ -27,8 +27,17 @@ public class BlogHasher implements Callable<Void> {
 			for(var f : d.listFiles()) {
 				var img = Jackson.MAPPER.readValue(new File(f, "info.yaml"), ImageInfo.class);
 	
-				if(img.getOptimizedFile()!=null && img.getOptimizedFile().isFile())
-					pool.submit(new BlogHasher(known, img));
+				if(img.getOptimizedFile()!=null && img.getOptimizedFile().isFile()) {
+					var bh = new BlogHasher(known, img);
+					pool.submit(()->{
+						try {
+							bh.call();
+						} catch(Exception e) {
+							throw new IllegalStateException("Failed to hash "+img.getOptimizedFile(), e);
+						}
+						return null;
+					});
+				}
 			}
 		}
 		pool.shutdown();

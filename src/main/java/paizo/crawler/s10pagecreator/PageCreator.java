@@ -27,8 +27,8 @@ public class PageCreator {
 	
 	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
 		"pf", LocalDate.of(2024,9,23),
-		"sf", LocalDate.of(2020,5,1),
-		"all", LocalDate.of(2020,5,1)
+		"sf", LocalDate.of(2020,7,1),
+		"all", LocalDate.of(2020,7,1)
 	);
 
 	public static void main(String... args) throws IOException {
@@ -57,7 +57,7 @@ public class PageCreator {
 					throw new RuntimeException(e);
 				}
 			})
-			.sorted(Comparator.comparing(BlogPost::getDate).reversed())
+			.sorted(Comparator.comparing(BlogPost::getDate).reversed().thenComparing(BlogPost::getId))
 			.collect(Collectors.groupingBy(BlogPost::printedDate))
 			.entrySet()
 			.stream()

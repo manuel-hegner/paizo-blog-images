@@ -95,7 +95,7 @@ public class ImageOptimizer implements PBICallable {
 		}
 		else {
 			tmpWebp.delete();
-			info.setOptimizedExtension(FilenameUtils.getExtension(rawFile.getName()));
+			info.setOptimizedExtension(FilenameUtils.getExtension(rawFile.getName()).toLowerCase());
 			FileUtils.writeByteArrayToFile(info.getOptimizedFile(), croppedOnly);
 			rawFile.delete();
 		}

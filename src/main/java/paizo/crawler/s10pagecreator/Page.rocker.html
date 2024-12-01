@@ -8,6 +8,7 @@
 @import paizo.crawler.s05imagedownloader.ImageDownloader
 @import java.time.LocalDate
 @import java.util.Map
+@import org.apache.commons.io.FilenameUtils
 
 @args (
 	String mode,
@@ -123,17 +124,17 @@
 		<div>
 		@for(BlogImage img : post.getImages()) {
 			@with(
-					info = images.get(img.getFullPath()),
-					file = images.get(img.getFullPath()).getOptimizedFile(),
-					wikiMappings = images.get(img.getFullPath()).getWikiMappings()
+					info = images.get(img.getId()),
+					file = images.get(img.getId()).getOptimizedFile(),
+					wikiMappings = images.get(img.getId()).getWikiMappings()
 			) {
 				<div class="w100 g2 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
 					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+file.toString().replace('\\','/')) {
 						<div>
-							<a href="@link" download>
+							<a href="@link" download="@FilenameUtils.getBaseName(info.getName()).@?info.getOptimizedExtension()">
 								<img src="@link">
 							</a><br>
-							Original filename: <code>@info.getFullPath().substring(info.getFullPath().lastIndexOf('/')+1)</code><br>
+							Original filename: <code>@info.getName()</code><br>
 							@if(wikiMappings.hasMapping()) {
 								@if(wikiMappings.getPf()!=null){
 									Already uploaded to Pathfinderwiki as <a href="https://pathfinderwiki.com/wiki/File:@wikiMappings.getPf().getName()">@wikiMappings.getPf().getName()</a><br>

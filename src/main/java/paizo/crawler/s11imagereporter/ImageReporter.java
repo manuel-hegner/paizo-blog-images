@@ -39,7 +39,7 @@ public class ImageReporter {
 					throw new RuntimeException(e);
 				}
 			})
-			.collect(Collectors.toMap(ImageInfo::getFullPath, Function.identity()));
+			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 		var jda = JDABuilder.createDefault(args[0])
 				.build()
@@ -53,7 +53,7 @@ public class ImageReporter {
 					throw new RuntimeException(e);
 				}
 			})
-			.filter(p->Boolean.FALSE.equals(p.getReported()))
+			.filter(p->!Boolean.TRUE.equals(p.getReported()))
 			.sorted(Comparator.comparing(BlogPost::getDate))
 			.forEach(p->report(jda, p, images));
 		
@@ -112,13 +112,12 @@ public class ImageReporter {
 	private static void report(JDA jda, BlogPost post, Map<String, ImageInfo> images) {
 		try {
 			var toReport = post.getImages().stream()
-				.map(i->new Image(i,images.get(i.getFullPath())))
+				.map(i->new Image(i,images.get(i.getId())))
 				.filter(i->i.status() != null)
 				.filter(i->i.imageInfo.getOptimizedFile() != null)
 				.toList();
 			
 			if(!toReport.isEmpty()) {
-				var channel = jda.getTextChannelById(CHANNEL_BLOG_WATCH);
 				log.info("Reporting on {} images from {}", toReport.size(), post.getTitle());
 				
 				var sb = new StringBuilder();
@@ -135,13 +134,14 @@ public class ImageReporter {
 					.append("The given Wikitext is a best effor basis, but could also contain mistakes.\n")
 					.append("If you check/upload them, please react with a checkmark to inform your peers. ");
 				
+				var channel = jda.getTextChannelById(CHANNEL_BLOG_WATCH);
 				channel
 					.sendMessage(sb.toString())
 					.queue();
 				
 				int i=1;
 				for(var p:toReport) {
-					var name = FilenameUtils.removeExtension(p.blogImage().getName())+".webp";
+					var name = FilenameUtils.removeExtension(p.imageInfo().getName())+".webp";
 					channel
 						.sendMessage((i++)+". ["+name+"]"
 							+"(https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+p.imageInfo().getOptimizedFile().toString().replace('\\','/')+"):\n"

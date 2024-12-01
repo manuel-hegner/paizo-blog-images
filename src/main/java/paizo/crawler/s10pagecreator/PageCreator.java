@@ -46,7 +46,7 @@ public class PageCreator {
 					throw new RuntimeException(e);
 				}
 			})
-			.collect(Collectors.toMap(ImageInfo::getFullPath, Function.identity()));
+			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 	
 		var allMonths = Arrays.stream(new File("data/blog_posts_details").listFiles())
@@ -75,7 +75,7 @@ public class PageCreator {
 							.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
 							.filter(po->po.getImages()!=null)
 							.flatMap(po->po.getImages().stream())
-							.filter(i->!images.get(i.getFullPath()).getWikiMappings().hasMapping())
+							.filter(i->!images.get(i.getId()).getWikiMappings().hasMapping())
 							.count()
 					))
 					.sorted(Comparator.comparing(MonthCount::month).reversed())

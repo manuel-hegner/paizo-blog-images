@@ -1,6 +1,7 @@
 package paizo.crawler.common.model;
 
 import java.io.File;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -16,7 +17,9 @@ import paizo.crawler.s05imagedownloader.ImageDownloader;
 public class ImageInfo {
 
 	private String id;
-	private String fullPath;
+	private List<String> candidatePaths;
+	private String selectedPath;
+	private String name;
 	private String rawExtension;
 	private String optimizedExtension;
 	private Hash hash;
@@ -65,6 +68,4 @@ public class ImageInfo {
 			return true;
 		return false;
 	}
-
-	
 }

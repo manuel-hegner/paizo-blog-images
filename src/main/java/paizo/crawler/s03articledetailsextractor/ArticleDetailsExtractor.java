@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Element;
 
+import com.google.common.collect.Lists;
+
 import lombok.RequiredArgsConstructor;
 import paizo.crawler.common.Jackson;
 import paizo.crawler.common.MyPool;
@@ -102,7 +104,6 @@ public class ArticleDetailsExtractor implements PBICallable {
 			.filter(e->!e.attr("src").contains("youtube.com"))
 			.map(this::toImage)
 			.filter(Objects::nonNull)
-			.filter(img->!Arrays.stream(blacklist).anyMatch(p->p.matcher(img.getFullPath()).matches()))
 			.collect(Collectors.toList());
 		if(imgs.isEmpty())
 			return null;
@@ -111,23 +112,28 @@ public class ArticleDetailsExtractor implements PBICallable {
 
 	private BlogImage toImage(Element e) {
 		BlogImage img = new BlogImage();
-		String src = e.absUrl("src");
+		List<String> srcs = Lists.newArrayList(e.absUrl("src"));
 		if(e.parent().tagName().equals("a")) {
-			int extensionIndex = src.lastIndexOf('.');
-			if(extensionIndex>0) {
-				String path = src.substring(0, extensionIndex-4).toLowerCase();
-				String pUrl = e.parent().absUrl("href");
-				if(pUrl.toLowerCase().startsWith(path))
-					src = pUrl;
-			}
+			srcs.add(e.parent().absUrl("href"));
 		}
 		String alt = e.attr("alt");
-		if(StringUtils.isBlank(src))
-			return null;
-		if(src.contains("?"))
-			src=src.substring(0,src.indexOf("?"));
-
-		src=src.trim().replaceAll("\\s", "");
+		
+		srcs = srcs.stream()
+			.map(src->src.contains("?")?src.substring(0,src.indexOf("?")):src)
+			.map(src->src.trim().replaceAll("\\s", ""))
+			.filter(StringUtils::isNotBlank)
+			.filter(src->{
+				for(var ext:IMAGE_TYPES) {
+					if(src.toLowerCase().endsWith("."+ext))
+						return true;
+				}
+				return false;
+			})
+			.filter(src->!Arrays.stream(blacklist).anyMatch(p->p.matcher(src).matches()))
+			.distinct()
+			.toList();
+		
+		if(srcs.size()==0) return null;
 
 		var sib = e.parent().nextElementSibling();
 		if(sib != null) {
@@ -142,16 +148,9 @@ public class ArticleDetailsExtractor implements PBICallable {
 		}
 
 
-		img.setFullPath(src);
-		img.setName(src.substring(src.lastIndexOf("/")+1));
+		img.setCandidatePaths(srcs);
 		img.setAlt(StringUtils.stripToNull(alt.replaceAll("\s+", " ")));
-		
-		//filter for filetype
-		for(var ext:IMAGE_TYPES) {
-			if(img.getName().toLowerCase().endsWith("."+ext))
-				return img;
-		}
-		return null;
+		return img;
 	}
 	
 	private static final String[] IMAGE_TYPES = {

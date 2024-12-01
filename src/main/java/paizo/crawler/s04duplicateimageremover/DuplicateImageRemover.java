@@ -2,6 +2,9 @@ package paizo.crawler.s04duplicateimageremover;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import lombok.RequiredArgsConstructor;
 import paizo.crawler.common.Jackson;
@@ -18,23 +21,22 @@ public class DuplicateImageRemover {
 		    posts.add(post);
 		}
 		posts.sort(Comparator.comparing(BlogPost::getDate));
+		
+		Set<String> knownImages = new HashSet<>();
 
 		for(int i=0;i<posts.size();i++) {
 		    var post = posts.get(i);
 
 		    if(post.getImages() == null) continue;
 
-		    boolean removed = false;
-		    for(int j=0;j<i;j++) {
-		        var before = posts.get(j);
+		    AtomicBoolean removed = new AtomicBoolean(false);
+		    post.getImages().removeIf(img-> {
+		    	var anyRem = img.getCandidatePaths().removeIf(c->!knownImages.add(c));
+		    	removed.set(removed.get()||anyRem);
+		    	return img.getCandidatePaths().isEmpty();
+		    });
 
-		        if(before.getImages() != null) {
-    		        removed|=post.getImages().removeIf(img ->
-    		            before.getImages().stream().anyMatch(befImg -> befImg.getFullPath().equals(img.getFullPath()))
-    		        );
-		        }
-		    }
-		    if(removed) {
+		    if(removed.get()) {
                 System.out.println("Removed image(s) from "+post.getId());
                 Jackson.MAPPER.writeValue(post.detailsFile(), post);
             }

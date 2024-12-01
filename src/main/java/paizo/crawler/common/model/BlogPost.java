@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.jsoup.nodes.Element;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,6 +25,8 @@ public class BlogPost {
 	private List<BlogImage> images = new ArrayList<>();
 	private Element html;
 	private Boolean reported;
+	@JsonIgnore
+	private boolean changed = false;
 
 	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
 	public String printedDate() {

@@ -41,6 +41,12 @@
 				display: grid;
 				grid-gap: 1rem;
 			}
+
+			.g3 {
+				grid-template-columns: 1fr 1fr 1fr;
+				display: grid;
+				grid-gap: 1rem;
+			}
 			
 			.w100 {
 				width: 100%;
@@ -128,7 +134,7 @@
 					file = images.get(img.getId()).getOptimizedFile(),
 					wikiMappings = images.get(img.getId()).getWikiMappings()
 			) {
-				<div class="w100 g2 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
+				<div class="w100 g3 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
 					@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+file.toString().replace('\\','/')) {
 						<div>
 							<a href="@link" download="@FilenameUtils.getBaseName(info.getName()).@?info.getOptimizedExtension()">
@@ -164,6 +170,7 @@
 						</div>
 					}}
 					<textarea class="w100 raw-text">@WikiText.wikitext(post, img)</textarea>
+					<textarea class="w100 raw-text">@WikiText.blogWikitext(post, img)</textarea>
 				</div>
 			}
 		}

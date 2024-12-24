@@ -9,7 +9,7 @@ import paizo.crawler.common.model.BlogImage;
 import paizo.crawler.common.model.BlogPost;
 
 public class WikiText {
-	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("MMMM dd, yyyy", Locale.US);
+	private final static DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("yyyy-dd-MM", Locale.US);
 	public static String wikitext(BlogPost post, BlogImage img) {
 		return "== Summary ==\n"
 				+ "\n"
@@ -28,5 +28,15 @@ public class WikiText {
 				+ "== Licensing ==\n"
 				+ "\n"
 				+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
+	}
+
+	public static String blogWikitext(BlogPost post, BlogImage img) {
+		return "{{Facts/Web citation
+				+ "  | Author = "+Optional.ofNullable(post.getAuthor()).map(a->"[["+a+"]]").orElse("")+"\n"
+				+ "  | Release date = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
+				+ "  | Name = "+post.getTitle()+"\n"
+				+ "  | Website name=Paizo blog\n"
+				+ "  | Website = https://paizo.com/community/blog/"+post.getId()+"\n"
+				+ "  }}";
 	}
 }

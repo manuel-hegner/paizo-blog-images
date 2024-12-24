@@ -32,7 +32,7 @@ public class WikiText {
 
 	public static String blogWikitext(BlogPost post, BlogImage img) {
 		return "{{Facts/Web citation\n"
-				+ "  | Author = "+Optional.ofNullable(post.getAuthor()).map(a->"[["+a+"]]").orElse("")+"\n"
+				+ "  | Author = "+Optional.ofNullable(post.getAuthor()).orElse("")+"\n"
 				+ "  | Release date = "+(post.getDate()==null?"":FORMAT.format(post.getDate()))+"\n"
 				+ "  | Name = "+post.getTitle()+"\n"
 				+ "  | Website name=Paizo blog\n"

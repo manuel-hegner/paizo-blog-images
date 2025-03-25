@@ -27,7 +27,7 @@ public class PageCreator {
 	
 	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
 		"pf", LocalDate.of(2024,9,23),
-		"sf", LocalDate.of(2020,7,1),
+		"sf", LocalDate.of(2020,12,31),
 		"all", LocalDate.of(2020,7,1)
 	);
 

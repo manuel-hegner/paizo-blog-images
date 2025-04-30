@@ -19,7 +19,7 @@ public class WikiText {
 				+ "| artist   = "+Objects.requireNonNullElse(img.getArtist(),"")+"\n"
 				+ "| print    = \n"
 				+ "| page     = \n"
-				+ "| web      = {{Cite/Paizo blog/"+post.getId()+"}}\n"
+				+ "| web      = {{Cite|Paizo blog/"+post.getId()+"}}\n"
 				+ "| summary  = "+Optional.ofNullable(img.getAlt()).orElse("")+"\n"
 				+ "| keyword1 = \n"
 				+ "| keyword2 = \n"

@@ -27,7 +27,7 @@ public class WikiText {
 				+ "\n"
 				+ "== Licensing ==\n"
 				+ "\n"
-				+ "{{Paizo CUP|blog|url=https://paizo.com/community/blog/"+post.getId()+"}}";
+				+ "{{Paizo CUP|blog|source=Facts:Paizo blog/"+post.getId()+"}}";
 	}
 
 	public static String blogWikitext(BlogPost post, BlogImage img) {

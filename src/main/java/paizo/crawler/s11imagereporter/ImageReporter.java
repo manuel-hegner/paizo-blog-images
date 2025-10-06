@@ -13,6 +13,7 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 
 import org.apache.commons.io.FilenameUtils;
@@ -189,10 +190,10 @@ public class ImageReporter {
 
 	private static String compress(String txt) {
 		try (var baos = new ByteArrayOutputStream();
-			var out = new OutputStreamWriter(new DeflaterOutputStream(baos))) {
+			var out = new OutputStreamWriter(new DeflaterOutputStream(baos, new Deflater(9)))) {
 			out.write(txt);
 			out.close();
-			return Base64.getUrlEncoder().encodeToString(baos.toByteArray());
+			return Base64.getUrlEncoder().withoutPadding().encodeToString(baos.toByteArray());
 		} catch(Exception e) {
 			e.printStackTrace();
 			return "";

@@ -1,17 +1,23 @@
 package paizo.crawler.s11imagereporter;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.zip.DeflaterOutputStream;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.hc.core5.net.URIBuilder;
 
 import lombok.extern.slf4j.Slf4j;
 import net.dv8tion.jda.api.JDA;
@@ -141,14 +147,25 @@ public class ImageReporter {
 				
 				int i=1;
 				for(var p:toReport) {
-					var name = FilenameUtils.removeExtension(p.imageInfo().getName())+".webp";
-					channel
-						.sendMessage((i++)+". ["+name+"]"
-							+"(https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+p.imageInfo().getOptimizedFile().toString().replace('\\','/')+"):\n"
-							+"Status: "+p.status()+"\n"
-							+"```\n"+WikiText.wikitext(post, p.blogImage())+"\n```")
-						.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(name))
-						.queue();
+					try {
+						var name = FilenameUtils.removeExtension(p.imageInfo().getName())+".webp";
+						var url = new URIBuilder()
+							.setScheme("https")
+							.setHost("pathfinderwiki.com")
+							.setPath("wiki/Widget:UploadHelper")
+							.addParameter("name", name);
+							addCompressed(url, "text", WikiText.wikitext(post, p.blogImage()));
+							addCompressed(url, "url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+p.imageInfo().getOptimizedFile().toString().replace('\\','/'));
+						channel
+							.sendMessage("**"+(i++)+". "+name+"**\n"
+								+"Status: "+p.status()+"\n"
+								+"[Upload here]("+url.build().toString()+")")
+							.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(name))
+							.setSuppressEmbeds(true)
+							.queue();
+					} catch(Exception e) {
+						e.printStackTrace();
+					}
 				}
 			}
 			
@@ -157,6 +174,28 @@ public class ImageReporter {
 			Jackson.BLOG_WRITER.writeValue(target, post);
 		} catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	private static void addCompressed(URIBuilder url, String key, String val) {
+		var compr = compress(val);
+		if(compr.length()<val.length()) {
+			url.addParameter(key+"Gz", compr);
+		}
+		else {
+			url.addParameter(key, val);
+		}
+	}
+
+	private static String compress(String txt) {
+		try (var baos = new ByteArrayOutputStream();
+			var out = new OutputStreamWriter(new DeflaterOutputStream(baos))) {
+			out.write(txt);
+			out.close();
+			return Base64.getUrlEncoder().encodeToString(baos.toByteArray());
+		} catch(Exception e) {
+			e.printStackTrace();
+			return "";
 		}
 	}
 

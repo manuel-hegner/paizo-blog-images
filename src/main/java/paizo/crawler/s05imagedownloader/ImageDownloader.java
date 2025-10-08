@@ -80,14 +80,18 @@ public class ImageDownloader implements PBICallable {
 		byte[] biggest = null;
 		String best = null;
 		for(var path:img.getCandidatePaths()) {
-			byte[] bytes = Jsoup.connect(path).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
-			if(bytes.length<10 || Bytes.indexOf(bytes, HTML_INDICATOR)!=-1) {
-				log.error("{} results in an illegal image file", path);
-				continue;
-			}
-			if(biggest == null || bytes.length>biggest.length) {
-				biggest = bytes;
-				best = path;
+			try {
+				byte[] bytes = Jsoup.connect(path).maxBodySize(0).ignoreContentType(true).execute().bodyAsBytes();
+				if(bytes.length<10 || Bytes.indexOf(bytes, HTML_INDICATOR)!=-1) {
+					log.error("{} results in an illegal image file", path);
+					continue;
+				}
+				if(biggest == null || bytes.length>biggest.length) {
+					biggest = bytes;
+					best = path;
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
 			}
 		}
 		

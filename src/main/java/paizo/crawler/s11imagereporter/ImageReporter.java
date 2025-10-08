@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
@@ -149,19 +150,11 @@ public class ImageReporter {
 				int i=1;
 				for(var p:toReport) {
 					try {
-						var name = FilenameUtils.removeExtension(p.imageInfo().getName())+".webp";
-						var url = new URIBuilder()
-							.setScheme("https")
-							.setHost("pathfinderwiki.com")
-							.setPath("wiki/Widget:UploadHelper")
-							.addParameter("name", name);
-							addCompressed(url, "text", WikiText.wikitext(post, p.blogImage()));
-							addCompressed(url, "url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+p.imageInfo().getOptimizedFile().toString().replace('\\','/'));
 						channel
-							.sendMessage("**"+(i++)+". "+name+"**\n"
+							.sendMessage("**"+(i++)+". "+imageName(p.imageInfo)+"**\n"
 								+"Status: "+p.status()+"\n"
-								+"[Upload here]("+url.build().toString()+")")
-							.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(name))
+								+"[Upload to pathfinderwiki]("+buildUrl("pathfinderwiki.com", post, p.blogImage, p.imageInfo)+") or [Upload to starfinderwiki]("+buildUrl("starfinderwiki.com", post, p.blogImage, p.imageInfo)+")")
+							.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(imageName(p.imageInfo)))
 							.setSuppressEmbeds(true)
 							.queue();
 					} catch(Exception e) {
@@ -175,6 +168,25 @@ public class ImageReporter {
 			Jackson.BLOG_WRITER.writeValue(target, post);
 		} catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public static String imageName(ImageInfo img) {
+		return FilenameUtils.removeExtension(img.getName())+"."+img.getOptimizedExtension();
+	}
+
+	public static String buildUrl(String wiki, BlogPost post, BlogImage bImg, ImageInfo iImg) {
+		var url = new URIBuilder()
+				.setScheme("https")
+				.setHost(wiki)
+				.setPath("wiki/Widget:UploadHelper")
+				.addParameter("name", imageName(iImg));
+				addCompressed(url, "text", WikiText.wikitext(post, bImg));
+				addCompressed(url, "url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+iImg.getOptimizedFile().toString().replace('\\','/'));
+		try {
+			return url.build().toString();
+		} catch (URISyntaxException e) {
+			throw new IllegalStateException(e);
 		}
 	}
 

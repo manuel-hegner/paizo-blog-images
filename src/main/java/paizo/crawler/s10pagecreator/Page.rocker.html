@@ -9,6 +9,7 @@
 @import java.time.LocalDate
 @import java.util.Map
 @import org.apache.commons.io.FilenameUtils
+@import paizo.crawler.s11imagereporter.ImageReporter
 
 @args (
 	String mode,
@@ -170,7 +171,9 @@
 						</div>
 					}}
 					<div>
-						<br>
+						@if(file!=null){
+							<a target="_blank" href="@ImageReporter.buildUrl("pathfinderwiki.com", post, img, info)">PF</a> | <a target="_blank" href="@ImageReporter.buildUrl("starfinderwiki.com", post, img, info)">SF</a>
+						} else {<br>}
 						<textarea class="w100 raw-text">@WikiText.wikitext(post, img)</textarea>
 					</div>
 					<div>

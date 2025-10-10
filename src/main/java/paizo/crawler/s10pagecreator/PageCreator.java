@@ -34,8 +34,8 @@ public class PageCreator {
 	
 	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
 		"pf", LocalDate.of(2024, 9, 23),
-		"sf", LocalDate.of(2021, 6, 30),
-		"all", LocalDate.of(2021,6, 30)
+		"sf", LocalDate.of(2021, 10, 30),
+		"all", LocalDate.of(2021,10, 30)
 	);
 
 	public static void main(String... args) throws IOException {

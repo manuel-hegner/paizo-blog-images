@@ -2,24 +2,31 @@ package paizo.crawler.s10pagecreator;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.hc.core5.net.URIBuilder;
 
 import com.fasterxml.jackson.databind.util.TokenBuffer;
+import com.fizzed.rocker.RockerContent;
 import com.fizzed.rocker.runtime.RockerRuntime;
 
 import paizo.crawler.common.Jackson;
+import paizo.crawler.common.WikiText;
 import paizo.crawler.common.model.BlogPost;
 import paizo.crawler.common.model.ImageInfo;
 
@@ -133,6 +140,24 @@ public class PageCreator {
 			
 			return Stream.of(copy);
 		} catch(Exception e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	private static DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd MMMM yyyy").withLocale(Locale.US);
+	public static String buildCitationLink(String wiki, BlogPost post) {
+		var url = new URIBuilder()
+				.setScheme("https")
+				.setHost(wiki)
+				.setPath("wiki/Special:FormEdit/Web_citation/Facts:Paizo_blog/"+post.getId())
+				.addParameter("Facts/Web citation[Name]", post.getTitle())
+				.addParameter("Facts/Web citation[Author]", Optional.ofNullable(post.getAuthor()).orElse(""))
+				.addParameter("Facts/Web citation[Release date]", post.getDate()==null?"":DATE_FORMAT.format(post.getDate().toLocalDate()))
+				.addParameter("Facts/Web citation[Website name]", "Paizo blog")
+				.addParameter("Facts/Web citation[Website]", "https://paizo.com/community/blog/"+post.getId());
+		try {
+			return url.build().toString();
+		} catch (URISyntaxException e) {
 			throw new IllegalStateException(e);
 		}
 	}

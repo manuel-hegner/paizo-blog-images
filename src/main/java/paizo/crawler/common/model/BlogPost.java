@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -18,12 +19,13 @@ import lombok.Setter;
 public class BlogPost {
 
 	private String id;
+	private String url;
 	private String title;
 	private String author;
 	private ZonedDateTime date;
 	private String[] tags = new String[0];
 	private List<BlogImage> images = new ArrayList<>();
-	private Element html;
+	private Document html;
 	private Boolean reported;
 	@JsonIgnore
 	private boolean changed = false;
@@ -36,15 +38,19 @@ public class BlogPost {
 			return DIR_FORMAT.format(date);
 	}
 	
-	public File detailsFile() {
-		return new File("data/blog_posts_details", id+".yaml");
-	}
-
 	public boolean belongsToPf() {
 		return Arrays.stream(tags).anyMatch(t->t.toLowerCase().contains("pathfinder"));
 	}
 
 	public boolean belongsToSf() {
 		return Arrays.stream(tags).anyMatch(t->t.toLowerCase().contains("starfinder"));
+	}
+
+	public File postFile() {
+		return new File("data/blog_posts/"+date.getYear()+"/"+id+".yaml");
+	}
+	
+	public File detailsFile() {
+		return new File("data/blog_posts_details/"+date.getYear()+"/"+id+".yaml");
 	}
 }

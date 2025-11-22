@@ -1,19 +1,21 @@
 package paizo.crawler.common;
 
-import java.util.regex.Pattern;
-
+import org.jsoup.nodes.Comment;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
 public class HTMLCleaner {
 
-	private static final Pattern COMMENTS_LINK = Pattern.compile("^https://paizo.com/community/blog/.*\\#discuss$");
 	
 	public static void clean(Document doc) {
+		doc.forEachNode(n->{if(n instanceof Comment) n.remove();});
+		doc.getElementsByTag("style").remove();
+		doc.getElementsByAttributeValue("rel", "preload");
 		doc.getElementsByTag("script").remove();
 		doc.getElementsByTag("nav").remove();
-		doc.getElementsByClass("sub-menu").remove();
-		doc.getElementsByAttributeValueMatching("href", COMMENTS_LINK).forEach(Element::empty);
+		doc.getElementsByTag("footer").remove();
+		doc.getElementsByTag("header").remove();
+		doc.getElementsByClass("header-wrapper").remove();
+		doc.getElementsByClass("blog_feed_row").remove();
 		doc.getElementsByTag("time").forEach(e-> {
 			if(e.hasAttr("datetime"))
 				e.empty();

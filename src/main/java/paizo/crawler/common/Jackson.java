@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -47,9 +48,9 @@ public class Jackson {
 			.registerModule(new ParameterNamesModule())
 			.registerModule(new JavaTimeModule())
 			.registerModule(new SimpleModule()
-				.addDeserializer(Element.class, new FromStringDeserializer<>(Element.class) {
-					protected Element _deserialize(String html, DeserializationContext ctxt) throws IOException {
-						return Jsoup.parseBodyFragment(html, "https://paizo.com").body().child(0);
+				.addDeserializer(Document.class, new FromStringDeserializer<>(Document.class) {
+					protected Document _deserialize(String html, DeserializationContext ctxt) throws IOException {
+						return Jsoup.parse(html, "https://paizo.com");
 					}
 				})
 				/*.addDeserializer(Hash.class, new FromStringDeserializer<>(Hash.class) {

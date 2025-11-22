@@ -1,16 +1,8 @@
 package paizo.crawler.s03articledetailsextractor;
 import java.io.File;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.TextStyle;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -33,8 +25,10 @@ public class ArticleDetailsExtractor implements PBICallable {
 	public static void main(String... args) throws Exception {
 		var blacklist = Jackson.MAPPER.readValue(new File("data/blacklist.yaml"), Pattern[].class);
 		var pool = new MyPool("Article Details Extractor");
-		for(var f:new File("data/blog_posts").listFiles()) {
-			pool.submit(new ArticleDetailsExtractor(blacklist, f));
+		for(var d:new File("data/blog_posts").listFiles()) {
+			for(var f:d.listFiles()) {
+				pool.submit(new ArticleDetailsExtractor(blacklist, f));
+			}
 		}
 		pool.shutdown();
 	}
@@ -52,12 +46,11 @@ public class ArticleDetailsExtractor implements PBICallable {
 		BlogPost post = Jackson.BLOG_READER.readValue(file);
 
 		removeInvisible(post);
-		findDate(post);
 		moveTimeZone(post);
 		post.setTitle(findTitle(post));
 		post.setTags(findTags(post));
 		post.setImages(findImages(post));
-		post.setAuthor(findAuthor(post));
+		post.setAuthor(findAuthors(post));
 
 		post.setHtml(null);
 
@@ -81,19 +74,14 @@ public class ArticleDetailsExtractor implements PBICallable {
 		post.setDate(post.getDate().withZoneSameInstant(ZONE));
 	}
 
-	private String findAuthor(BlogPost post) {
-        var authEl = post.getHtml().getElementsByAttributeValueContaining("style", "margin-left: 20px; font-weight: bold;").first();
-        if(authEl != null)
-        	return StringUtils.trimToNull(authEl.ownText());
-
-        var article = post.getHtml().getElementsByAttributeValue("itemprop", "articlebody").first();
-        if(article == null)
-        	return null;
-        var last = article.children().last();
-        if(last.is("p") && last.ownText().length()<40)
-        	return StringUtils.trimToNull(last.ownText());
-
-        return null;
+	private String findAuthors(BlogPost post) {
+		var byline = post.getHtml().getElementsByClass("byline").getFirst();
+		return StringUtils.trimToNull(byline.getElementsByClass("name").stream()
+				.map(e->e.text())
+				.map(a->StringUtils.removeEnd(a.trim(), ",").trim())
+				.map(a->a.contains("(")?a.substring(0, a.indexOf('(')).trim():a)
+				.filter(StringUtils::isNotBlank)
+				.collect(Collectors.joining(";")));
 	}
 
 	private List<BlogImage> findImages(BlogPost post) {
@@ -135,15 +123,18 @@ public class ArticleDetailsExtractor implements PBICallable {
 		
 		if(srcs.size()==0) return null;
 
-		var sib = e.parent().nextElementSibling();
-		if(sib != null) {
-			String nextText = sib.text();
-			if(nextText.contains(" by ")) {
-				String by = nextText.substring(nextText.indexOf(" by ")+4);
+		var caption = e.parent().getElementsByTag("figcaption").first();
+		if(caption != null) {
+			String captionTxt = caption.text();
+			if(captionTxt.contains(" by ")) {
+				String by = captionTxt.substring(captionTxt.indexOf(" by ")+4);
 				by = StringUtils.removeEnd(by, ".");
 				if(by.contains(" from "))
 					by = by.substring(0, by.indexOf(" from "));
 				img.setArtist(by);
+			}
+			else {
+				img.setArtist(captionTxt);
 			}
 		}
 
@@ -154,73 +145,33 @@ public class ArticleDetailsExtractor implements PBICallable {
 	}
 	
 	private static final String[] IMAGE_TYPES = {
-		"gif", "jpeg", "jpg", "png", "webp"
+		"gif", "jpeg", "jpg", "png", "webp", "avif"
 	};
 
 	private String[] findTags(BlogPost post) {
 		String[] tags = post.getHtml()
-			.getElementsByAttributeValueStarting("href", "https://paizo.com/community/blog/tags/")
-			.stream()
-			.map(e->e.attr("href"))
-			.filter(StringUtils::isNotBlank)
-			.map(l->StringUtils.removeStart(l, "https://paizo.com/community/blog/tags/"))
-			.distinct()
-			.sorted()
-			.toArray(String[]::new);
+				.getElementsByClass("tags").stream()
+				.flatMap(e->e.getElementsByTag("a").stream())
+				.map(e->e.text().trim())
+				.filter(StringUtils::isNotBlank)
+				.sorted()
+				.toArray(String[]::new);
 		if(tags.length == 0)
 			return null;
 		return tags;
 	}
 
 	private String findTitle(BlogPost post) {
-		var first = post.getHtml().getElementsByAttributeValue("itemprop", "headline").first();
+		var first = post.getHtml()
+			.getElementsByClass("title-and-author")
+			.first()
+			.getElementsByTag("h1")
+			.first();
 		if (first != null)
 			return first.text();
 		first = post.getHtml().getElementsByTag("h1").first();
 		if (first != null)
 			return first.text();
 		return null;
-	}
-
-	private static final ZoneId PST = ZoneId.of("PST", ZoneId.SHORT_IDS);
-	private static final DateTimeFormatter FORMAT_FULL = DateTimeFormatter.ofPattern("MMMM dd['st']['nd']['th'], yyyy", Locale.US);
-	private static final DateTimeFormatter FORMAT_SHORT = DateTimeFormatter.ofPattern("EE, MMM d, yyyy 'at' hh:mm a 'Pacific'", Locale.US);
-	private String[] DAYS_FULL = Arrays.stream(DayOfWeek.values())
-			.map(d->d.getDisplayName(TextStyle.FULL, Locale.US))
-			.toArray(String[]::new);
-	private void findDate(BlogPost post) {
-		if(post.getDate()!=null)
-			return;
-
-		var dateElem = post.getHtml().getElementsByClass("date").first();
-		if(dateElem == null)
-			return;
-		String date = dateElem.ownText();
-		if(StringUtils.startsWithAny(date, DAYS_FULL)) {
-			try {
-				for(String day : DAYS_FULL) {
-					date = StringUtils.removeStart(date, day+", ");
-				}
-				date = date.replaceFirst("(\\D)(\\d\\D)", "$1\\0$2");
-				post.setDate(ZonedDateTime.of(
-					LocalDate.parse(date, FORMAT_FULL),
-					LocalTime.of(12, 0), PST
-				));
-			} catch(Exception e) {
-				//unparsable
-			}
-		}
-		else {
-			try {
-				post.setDate(ZonedDateTime.of(
-					LocalDateTime.parse(date, FORMAT_SHORT),
-					PST
-				));
-			} catch(Exception e) {
-				//unparsable
-			}
-		}
-
-
 	}
 }

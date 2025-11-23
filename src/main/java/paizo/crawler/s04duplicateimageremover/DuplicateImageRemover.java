@@ -16,9 +16,11 @@ public class DuplicateImageRemover {
 
 	public static void main(String... args) throws Exception {
 	    var posts = new ArrayList<BlogPost>();
-		for(var f:new File("data/blog_posts_details").listFiles()) {
-		    var post = Jackson.MAPPER.readValue(f, BlogPost.class);
-		    posts.add(post);
+	    for(var d:new File("data/blog_posts_details").listFiles()) {
+	    	for(var f:d.listFiles()) {
+			    var post = Jackson.MAPPER.readValue(f, BlogPost.class);
+			    posts.add(post);
+	    	}
 		}
 		posts.sort(Comparator.comparing(BlogPost::getDate));
 		

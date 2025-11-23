@@ -75,7 +75,8 @@ public class ArticleDetailsExtractor implements PBICallable {
 	}
 
 	private String findAuthors(BlogPost post) {
-		var byline = post.getHtml().getElementsByClass("byline").getFirst();
+		var byline = post.getHtml().getElementsByClass("byline").first();
+		if(byline == null) return null;
 		return StringUtils.trimToNull(byline.getElementsByClass("name").stream()
 				.map(e->e.text())
 				.map(a->StringUtils.removeEnd(a.trim(), ",").trim())

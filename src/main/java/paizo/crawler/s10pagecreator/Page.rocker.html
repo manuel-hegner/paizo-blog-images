@@ -85,6 +85,10 @@
 				max-width: 40rem;
 			}
 			
+			.nav .nothing-new {
+				font-size: 80%;
+			}
+			
 			.nav > .prev > a::before {
 				content: '⮜ ';
 			}
@@ -106,7 +110,7 @@
 		<div class="prev">
 			@if(month.index() > 0) {
 				@with(prev = monthCounts.get(month.index()-1)) {
-					<a @if(prev.count()==0) {class="nothing-new"} href="@prev.month()-@(mode).html">@prev.month() (@prev.count())</a>
+					<a @if(prev.count()==0) {class="nothing-new"} href="@prev.month()-@(mode).html">@prev.month()@if(prev.count()>0) { (@prev.count())}</a>
 				}
 			}
 		</div>
@@ -116,7 +120,7 @@
 		<div class="next">
 			@if(month.index() < monthCounts.size()-1) {
 				@with(next = monthCounts.get(month.index()+1)) {
-					<a @if(next.count()==0) {class="nothing-new"} href="@next.month()-@(mode).html">@next.month() (@next.count())</a>
+					<a @if(next.count()==0) {class="nothing-new"} href="@next.month()-@(mode).html">@next.month()@if(next.count()>0) { (@next.count())}</a>
 				}
 			}
 		</div>

@@ -7,15 +7,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
@@ -56,7 +59,7 @@ public class PageCreator {
 			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 	
-		var allMonths = BlogPost.allDetailsFiles().stream()
+		var monthList = BlogPost.allDetailsFiles().stream()
 			.map(f->{
 				try {
 					return Jackson.BLOG_READER.<BlogPost>readValue(f);
@@ -68,8 +71,10 @@ public class PageCreator {
 			.collect(Collectors.groupingBy(BlogPost::printedDate))
 			.entrySet()
 			.stream()
-			.map(e->new Month(e.getKey(), e.getValue()))
-			.sorted(Comparator.comparing(Month::month))
+			.sorted(Comparator.comparing(Entry::getKey))
+			.toList();
+		var allMonths = IntStream.range(0, monthList.size())
+			.mapToObj(i->new Month(monthList.get(i).getKey(), i, monthList.get(i).getValue()))
 			.toList();
 		
 		for(String mode:new String[] {"pf","sf","all"}) {
@@ -85,7 +90,7 @@ public class PageCreator {
 							.filter(i->!images.get(i.getId()).getWikiMappings().hasMapping())
 							.count()
 					))
-					.sorted(Comparator.comparing(MonthCount::month).reversed())
+					.sorted(Comparator.comparing(MonthCount::month))
 					.collect(Collectors.toList());
 				
 				for(var month : months) {
@@ -113,16 +118,20 @@ public class PageCreator {
 		if("all".equals(mode)) return allMonths;
 		if(!"pf".equals(mode) && !"sf".equals(mode)) throw new IllegalStateException();
 		
-		return allMonths.stream()
-			.map(m->new Month(
+		var res = new ArrayList<Month>();
+		int i=0;
+		for(var m:allMonths) {
+			res.add(new Month(
 				m.month(),
+				i++,
 				m.posts()
 					.stream()
 					.flatMap(p->filterPost(mode, p))
 					.filter(Objects::nonNull)
 					.toList()
-			))
-			.toList();
+			));
+		}
+		return res;
 	}
 
 	private static Stream<BlogPost> filterPost(String mode, BlogPost p) {

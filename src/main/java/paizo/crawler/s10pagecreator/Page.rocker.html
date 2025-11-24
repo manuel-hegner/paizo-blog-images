@@ -78,6 +78,20 @@
 			a.small {
 				font-size: 60%;
 			}
+			
+			.nav {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				max-width: 40rem;
+			}
+			
+			.nav > .prev > a::before {
+				content: '⮜ ';
+			}
+			
+			.nav > .next > a::after {
+				content: ' ⮞';
+			}
 		</style>
 	</head>
 	<body>
@@ -88,23 +102,24 @@
 			<option value="@month.month()-sf.html" @if("sf".equals(mode)){selected}>Starfinder only</option>
 		</select>
 	</div>
-	<div>
-		Months: <select id="month-select" onchange="location = this.value;" autocomplete="off">
-			<option></option>
-		@for(MonthCount mc : monthCounts) {
-			@if(mc.count()>0) {
-				<option value="@mc.month()-@(mode).html" @if(mc.month().equals(month.month())){selected}>@mc.month() (@mc.count())</option>
+	<div class="nav">
+		<div class="prev">
+			@if(month.index() > 0) {
+				@with(prev = monthCounts.get(month.index()-1)) {
+					<a @if(prev.count()==0) {class="nothing-new"} href="@prev.month()-@(mode).html">@prev.month() (@prev.count())</a>
+				}
 			}
-		}
-		</select>
-		Manually Checked Months: <select id="month-checked-select" onchange="location = this.value;" autocomplete="off">
-			<option></option>
-		@for(MonthCount mc : monthCounts) {
-			@if(mc.count()==0) {
-				<option value="@mc.month()-@(mode).html" @if(mc.month().equals(month.month())){selected}>@mc.month()</option>
+		</div>
+		<div class="cur">
+			<b>@month.month()</b>
+		</div>
+		<div class="next">
+			@if(month.index() < monthCounts.size()-1) {
+				@with(next = monthCounts.get(month.index()+1)) {
+					<a @if(next.count()==0) {class="nothing-new"} href="@next.month()-@(mode).html">@next.month() (@next.count())</a>
+				}
 			}
-		}
-		</select>
+		</div>
 	</div>
 	<div>
 	

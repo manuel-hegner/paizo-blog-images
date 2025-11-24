@@ -53,7 +53,7 @@ public class ImageReporter {
 				.build()
 				.awaitReady();
 		
-		Arrays.stream(new File("data/blog_posts_details").listFiles())
+		BlogPost.allDetailsFiles().stream()
 			.map(f->{
 				try {
 					return Jackson.BLOG_READER.<BlogPost>readValue(f);
@@ -133,7 +133,7 @@ public class ImageReporter {
 				sb
 					.append("**"+post.getDate().toLocalDate()+" post: ")
 					.append("["+post.getTitle()+"]")
-					.append("(https://paizo.com/community/blog/"+post.getId()+")")
+					.append("("+post.getUrl()+")")
 					.append("**\n")
 					
 					.append("This article contains "+toReport.size()+" interesting image(s). ")

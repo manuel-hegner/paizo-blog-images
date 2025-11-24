@@ -35,7 +35,7 @@ public class ImageDownloader implements PBICallable {
 	public static void main(String... args) throws InterruptedException, IOException {
 		var pool = new MyPool("Image Downloader");
 		var posts = new ArrayList<BlogPost>();
-		for(var f:new File("data/blog_posts_details").listFiles()) {
+		for(var f:BlogPost.allDetailsFiles()) {
 			BlogPost post = Jackson.BLOG_READER.readValue(f);
 			posts.add(post);
 			if(post.getImages() == null)

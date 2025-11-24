@@ -36,7 +36,7 @@ public class WikiText {
 				+ "  | Release date = "+(post.getDate()==null?"":DATE_FORMAT.format(post.getDate()))+"\n"
 				+ "  | Name = "+post.getTitle()+"\n"
 				+ "  | Website name=Paizo blog\n"
-				+ "  | Website = https://paizo.com/community/blog/"+post.getId()+"\n"
+				+ "  | Website = "+post.getUrl()+"\n"
 				+ "}}";
 	}
 }

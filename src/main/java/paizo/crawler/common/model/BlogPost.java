@@ -53,4 +53,24 @@ public class BlogPost {
 	public File detailsFile() {
 		return new File("data/blog_posts_details/"+date.getYear()+"/"+id+".yaml");
 	}
+
+	public static List<File> allPostFiles() {
+		var res = new ArrayList<File>();
+		for(var d:new File("data/blog_posts").listFiles()) {
+			for(var f:d.listFiles()) {
+				res.add(f);
+			}
+		}
+		return res;
+	}
+	
+	public static List<File> allDetailsFiles() {
+		var res = new ArrayList<File>();
+		for(var d:new File("data/blog_posts_details").listFiles()) {
+			for(var f:d.listFiles()) {
+				res.add(f);
+			}
+		}
+		return res;
+	}
 }

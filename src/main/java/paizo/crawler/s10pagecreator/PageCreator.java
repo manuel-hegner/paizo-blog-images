@@ -56,7 +56,7 @@ public class PageCreator {
 			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 	
-		var allMonths = Arrays.stream(new File("data/blog_posts_details").listFiles())
+		var allMonths = BlogPost.allDetailsFiles().stream()
 			.map(f->{
 				try {
 					return Jackson.BLOG_READER.<BlogPost>readValue(f);

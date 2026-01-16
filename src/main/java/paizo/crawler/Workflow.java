@@ -13,15 +13,18 @@ import paizo.crawler.s11imagereporter.ImageReporter;
 
 public class Workflow {
 	public static void main(String[] args) throws Exception {
+		String discordToken = args[0];
+		String antiProtectionSecret = args[1];
+		
 		BlogCollector.start(1);
 		ArticleDetailsExtractor.main();
 		DuplicateImageRemover.main();
 		ImageDownloader.main();
 		ImageOptimizer.main();
 		UnusedImageRemover.main();
-		WikiHasher.main();
+		WikiHasher.main(antiProtectionSecret);
 		BlogHasher.main();
 		PageCreator.main();
-		ImageReporter.main(args[0]);
+		ImageReporter.main(discordToken);
 	}
 }

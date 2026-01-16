@@ -17,7 +17,7 @@ jobs:
           cache: maven
       - name: Run Workflow
         run: |
-          mvn compile exec:java -Dexec.mainClass="paizo.crawler.Workflow" -Dexec.args="'${{ secrets.DISCORD_TOKEN }}'"
+          mvn compile exec:java -Dexec.mainClass="paizo.crawler.Workflow" -Dexec.args="'${{ secrets.DISCORD_TOKEN }}' '${{ secrets.ANTI_PROTECTION_SECRET }}'"
           mvn clean
       - name: Commit files
         run: |

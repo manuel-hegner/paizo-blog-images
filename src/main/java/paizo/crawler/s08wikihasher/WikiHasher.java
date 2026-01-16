@@ -1,24 +1,19 @@
 package paizo.crawler.s08wikihasher;
 
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.net.URL;
+import java.net.URI;
 import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.IOUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -42,13 +37,14 @@ import paizo.crawler.s06imageoptimizer.Cropper;
 @RequiredArgsConstructor
 public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
+		var antiProtectionSecret = args[0];
 	    hash(false,
-	        new Target("pf", "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000"),
-	        new Target("sf", "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000")
+	        new Target("pf", antiProtectionSecret, "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000"),
+	        new Target("sf", antiProtectionSecret, "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000")
 	    );
 	}
 	
-	private static record Target(String wiki, String url) {}
+	private static record Target(String wiki, String antiProtectionSecret, String url) {}
 
 	@SafeVarargs
 	private static void hash(boolean replace, Target... targets) throws Exception {
@@ -57,13 +53,19 @@ public class WikiHasher implements Callable<Void> {
 				.readValue(file, WikiImage[].class));
 		var foundUrls = new HashSet<>();
 
-		
+		HttpClient httpClient = HttpClient.newHttpClient();
 		var tasks = new ArrayList<WikiHasher>();
 		for(var target : targets) {
 		    String aicontinue = null;
 		    List<JsonNode> all = new ArrayList<>();
+		    System.out.println("Loading list of images from "+target.wiki);
 		    do {
-		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(new URL(target.url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue)))));
+		    	System.out.println("\t"+aicontinue);
+		    	HttpRequest request = HttpRequest.newBuilder()
+		    		.header("User-Agent", target.antiProtectionSecret)
+		    		.uri(new URI(target.url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue))))).build();
+		    	var resp = httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
+		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(resp.body());
 
     		    aicontinue = result.path("continue").path("aicontinue").asText();
     		    ((ArrayNode)(result.get("query").get("allimages"))).elements().forEachRemaining(all::add);
@@ -73,7 +75,7 @@ public class WikiHasher implements Callable<Void> {
 		        String name = n.get("name").asText();
 		        String imgUrl = n.get("url").asText();
 		        foundUrls.add(imgUrl);
-		        tasks.add(new WikiHasher(replace, target.wiki, known, name, imgUrl));
+		        tasks.add(new WikiHasher(replace, target.wiki, known, name, target.antiProtectionSecret, imgUrl));
 		    }
 		}
 		
@@ -96,6 +98,7 @@ public class WikiHasher implements Callable<Void> {
 	private final List<WikiImage> known;
 	private Set<String> knownUrls;
 	private final String name;
+	private final String antiProtectionSecret;
 	private final String url;
 
 	@Override
@@ -110,7 +113,12 @@ public class WikiHasher implements Callable<Void> {
 
 		Uninterruptibles.sleepUninterruptibly((int)(Math.random()*20), TimeUnit.SECONDS);
 
-		byte[] bytes = IOUtils.toByteArray(new URL(url));
+		HttpClient httpClient = HttpClient.newHttpClient();
+		HttpRequest request = HttpRequest.newBuilder()
+    		.header("User-Agent", antiProtectionSecret)
+    		.uri(new URI(url)).build();
+    	var resp = httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
+		byte[] bytes = resp.body();
 		BufferedImage img = ImmutableImage.loader().fromBytes(bytes).awt();
 		if(img == null) {
 		    System.err.println("\tCould not parse "+url);

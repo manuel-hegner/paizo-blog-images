@@ -62,7 +62,7 @@ public class WikiHasher implements Callable<Void> {
 		    do {
 		    	System.out.println("\t"+aicontinue);
 		    	HttpRequest request = HttpRequest.newBuilder()
-		    		.header("User-Agent", target.antiProtectionSecret)
+		    		.header("anti-protection", target.antiProtectionSecret)
 		    		.uri(new URI(target.url+(aicontinue==null?"":("&aicontinue="+URLEncoder.encode(aicontinue))))).build();
 		    	var resp = httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
 		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(resp.body());

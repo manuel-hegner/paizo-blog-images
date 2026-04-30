@@ -149,17 +149,13 @@ public class ImageReporter {
 				
 				int i=1;
 				for(var p:toReport) {
-					try {
-						channel
-							.sendMessage("**"+(i++)+". "+imageName(p.imageInfo)+"**\n"
-								+"Status: "+p.status()+"\n"
-								+"[Upload to pathfinderwiki]("+buildUrl("pathfinderwiki.com", post, p.blogImage, p.imageInfo)+") or [Upload to starfinderwiki]("+buildUrl("starfinderwiki.com", post, p.blogImage, p.imageInfo)+")")
-							.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(imageName(p.imageInfo)))
-							.setSuppressEmbeds(true)
-							.queue();
-					} catch(Exception e) {
-						e.printStackTrace();
-					}
+					channel
+						.sendMessage("**"+(i++)+". "+imageName(p.imageInfo)+"**\n"
+							+"Status: "+p.status()+"\n"
+							+"[Upload to pathfinderwiki]("+buildUrl("pathfinderwiki.com", post, p.blogImage, p.imageInfo)+") or [Upload to starfinderwiki]("+buildUrl("starfinderwiki.com", post, p.blogImage, p.imageInfo)+")")
+						.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(imageName(p.imageInfo)))
+						.setSuppressEmbeds(true)
+						.queue();
 				}
 			}
 			
@@ -167,7 +163,7 @@ public class ImageReporter {
 			File target = post.detailsFile();
 			Jackson.BLOG_WRITER.writeValue(target, post);
 		} catch(Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 	

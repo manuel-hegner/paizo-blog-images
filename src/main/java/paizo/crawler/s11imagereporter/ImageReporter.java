@@ -145,7 +145,8 @@ public class ImageReporter {
 				var channel = jda.getTextChannelById(CHANNEL_BLOG_WATCH);
 				channel
 					.sendMessage(sb.toString())
-					.queue();
+					.submit()
+					.join();
 				
 				int i=1;
 				for(var p:toReport) {
@@ -155,7 +156,8 @@ public class ImageReporter {
 							+"[Upload to pathfinderwiki]("+buildUrl("pathfinderwiki.com", post, p.blogImage, p.imageInfo)+") or [Upload to starfinderwiki]("+buildUrl("starfinderwiki.com", post, p.blogImage, p.imageInfo)+")")
 						.addFiles(FileUpload.fromData(p.imageInfo().getOptimizedFile()).setName(imageName(p.imageInfo)))
 						.setSuppressEmbeds(true)
-						.queue();
+						.submit()
+						.join();
 				}
 			}
 			

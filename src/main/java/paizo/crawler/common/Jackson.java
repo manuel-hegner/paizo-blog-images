@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
@@ -27,19 +28,16 @@ import paizo.crawler.common.model.BlogPost;
 
 public class Jackson {
 
-	public static final ObjectMapper MAPPER = create();
+	public static final ObjectMapper MAPPER = create(new YAMLFactory()
+			.enable(YAMLGenerator.Feature.MINIMIZE_QUOTES)
+			.disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER)
+			.enable(YAMLGenerator.Feature.LITERAL_BLOCK_STYLE));
+	public static final ObjectMapper JSON = create(new JsonFactory());
 	public static final ObjectReader BLOG_READER = MAPPER.readerFor(BlogPost.class);
 	public static final ObjectWriter BLOG_WRITER = MAPPER.writerFor(BlogPost.class);
 
-	@SuppressWarnings("serial")
-	private static ObjectMapper create() {
-		YAMLFactory yaml = new YAMLFactory()
-			.enable(YAMLGenerator.Feature.MINIMIZE_QUOTES)
-			.disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER)
-			.enable(YAMLGenerator.Feature.LITERAL_BLOCK_STYLE);
-		
-		
-		return new ObjectMapper(yaml)
+	private static ObjectMapper create(JsonFactory factory) {
+		return new ObjectMapper(factory)
 			.addMixIn(Element.class, ElementMixIn.class)
 			.addMixIn(Hash.class, HashMixIn.class)
 			.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)

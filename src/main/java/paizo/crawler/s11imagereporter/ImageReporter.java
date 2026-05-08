@@ -1,21 +1,14 @@
 package paizo.crawler.s11imagereporter;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Base64;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.zip.Deflater;
-import java.util.zip.DeflaterOutputStream;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -26,7 +19,6 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.utils.FileUpload;
 import paizo.crawler.common.Jackson;
-import paizo.crawler.common.WikiText;
 import paizo.crawler.common.model.BlogImage;
 import paizo.crawler.common.model.BlogPost;
 import paizo.crawler.common.model.ImageInfo;
@@ -178,36 +170,11 @@ public class ImageReporter {
 				.setScheme("https")
 				.setHost(wiki)
 				.setPath("wiki/Widget:UploadHelper")
-				.addParameter("name", imageName(iImg));
-				addCompressed(url, "text", WikiText.wikitext(post, bImg));
-				addCompressed(url, "url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+iImg.getOptimizedFile().toString().replace('\\','/'));
+				.addParameter("fromId", iImg.getId());
 		try {
 			return url.build().toString();
 		} catch (URISyntaxException e) {
 			throw new IllegalStateException(e);
 		}
 	}
-
-	private static void addCompressed(URIBuilder url, String key, String val) {
-		var compr = compress(val);
-		if(compr.length()<val.length()) {
-			url.addParameter(key+"Gz", compr);
-		}
-		else {
-			url.addParameter(key, val);
-		}
-	}
-
-	private static String compress(String txt) {
-		try (var baos = new ByteArrayOutputStream();
-			var out = new OutputStreamWriter(new DeflaterOutputStream(baos, new Deflater(9)))) {
-			out.write(txt);
-			out.close();
-			return Base64.getUrlEncoder().withoutPadding().encodeToString(baos.toByteArray());
-		} catch(Exception e) {
-			e.printStackTrace();
-			return "";
-		}
-	}
-
 }

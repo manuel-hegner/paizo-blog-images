@@ -155,7 +155,7 @@
 						file = images.get(img.getId()).getOptimizedFile(),
 						wikiMappings = images.get(img.getId()).getWikiMappings()
 				) {
-					<div class="w100 g3 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
+					<div class="w100 g1 @if(!wikiMappings.hasMapping()){not-uploaded} @if(wikiMappings.getPf()!=null){pf} @if(wikiMappings.getSf()!=null){sf}">
 						@if(file!=null){@with(String link = "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+file.toString().replace('\\','/')) {
 							<div>
 								<a href="@link" download="@FilenameUtils.getBaseName(info.getName()).@?info.getOptimizedExtension()">
@@ -190,21 +190,24 @@
 								}
 							</div>
 						}}
-						<div>
+						<div class="g2">
+							<div>
 							@if(file!=null){
-								<a target="_blank" href="@raw(ImageReporter.buildUrl("pathfinderwiki.com", post, img, info))">PF</a>
-								|
-								<a target="_blank" href="@raw(ImageReporter.buildUrl("starfinderwiki.com", post, img, info))">SF</a>
-							} else {<br>}
-							<textarea class="w100 raw-text">@WikiText.wikitext(post, img)</textarea>
-						</div>
-						<div>
-							<a href="@raw(PageCreator.buildCitationLink("pathfinderwiki.com", post))">PF</a>
-							|
-							<a href="@raw(PageCreator.buildCitationLink("starfinderwiki.com", post))">SF</a>
-							<textarea class="w100 raw-text">@WikiText.blogWikitext(post, img)</textarea>
+								
+								<a target="_blank" href="@raw(ImageReporter.buildUrl("pathfinderwiki.com", post, img, info))">Upload image to PF</a>
+								<br>
+								<a target="_blank" href="@raw(ImageReporter.buildUrl("starfinderwiki.com", post, img, info))">Upload image to SF</a>
+								
+							}
+							</div>
+							<div>
+								<a href="@raw(PageCreator.buildCitationLink("pathfinderwiki.com", post))">Upload blogpost to PF</a>
+								<br>
+								<a href="@raw(PageCreator.buildCitationLink("starfinderwiki.com", post))">Upload blogpost to SF</a>
+							</div>
 						</div>
 					</div>
+					<hr>
 				}
 			}
 		}

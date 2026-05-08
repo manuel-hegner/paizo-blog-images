@@ -16,6 +16,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -25,13 +27,18 @@ import org.apache.commons.io.FileUtils;
 import org.apache.hc.core5.net.URIBuilder;
 
 import com.fasterxml.jackson.databind.util.TokenBuffer;
+import com.fizzed.rocker.RenderingException;
 import com.fizzed.rocker.RockerContent;
 import com.fizzed.rocker.runtime.RockerRuntime;
+import com.google.common.util.concurrent.Futures;
 
+import lombok.SneakyThrows;
 import paizo.crawler.common.Jackson;
+import paizo.crawler.common.MyPool;
 import paizo.crawler.common.WikiText;
 import paizo.crawler.common.model.BlogPost;
 import paizo.crawler.common.model.ImageInfo;
+import paizo.crawler.s11imagereporter.ImageReporter;
 
 public class PageCreator {
 	
@@ -58,7 +65,6 @@ public class PageCreator {
 			})
 			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
-	
 		var monthList = BlogPost.allDetailsFiles().stream()
 			.map(f->{
 				try {
@@ -77,41 +83,88 @@ public class PageCreator {
 			.mapToObj(i->new Month(monthList.get(i).getKey(), i, monthList.get(i).getValue()))
 			.toList();
 		
-		for(String mode:new String[] {"pf","sf","all"}) {
-			var months = filterMonths(mode, allMonths);
-			
-			var monthCounts = months.stream()
-					.map(e->new MonthCount(
-						e.month(),
-						e.posts().stream()
-							.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
-							.filter(po->po.getImages()!=null)
-							.flatMap(po->po.getImages().stream())
-							.filter(i->!images.get(i.getId()).getWikiMappings().hasMapping())
-							.count()
-					))
-					.sorted(Comparator.comparing(MonthCount::month))
-					.collect(Collectors.toList());
-				
-				for(var month : months) {
-					Page p = Page.template(
-						mode,
-						month,
-						monthCounts,
-						images,
-						CHECKED_UP_TO.get(mode)
-					);
-					
-					Files.writeString(
-						new File(pages, month.month()+"-"+mode+".html").toPath(),
-						p.render().toString()
-					);
-				}
-		}
-		
+		var pool = Executors.newVirtualThreadPerTaskExecutor();
+		var futures = List.of(
+			pool.submit(()->createApiJsons(pages, allMonths, images)),
+			pool.submit(()->createHTMLPages(pages, allMonths, images, "pf")),
+			pool.submit(()->createHTMLPages(pages, allMonths, images, "sf")),
+			pool.submit(()->createHTMLPages(pages, allMonths, images, "all"))
+		);
+		futures.forEach(f->{
+			try {
+				f.get();
+			} catch (InterruptedException | ExecutionException e) {
+				throw new RuntimeException();
+			}
+		});
+		pool.shutdown();
 		
 		File last = new File(pages, allMonths.get(allMonths.size()-1).month()+"-all.html");
 		FileUtils.copyFile(last, new File(pages, "index.html"));
+	}
+
+	private static Void createHTMLPages(File pages, List<Month> allMonths, Map<String, ImageInfo> images, String mode) throws RenderingException, IOException {
+		System.out.println("Generating HTML pages in mode "+mode);
+		var months = filterMonths(mode, allMonths);
+		
+		var monthCounts = months.stream()
+				.map(e->new MonthCount(
+					e.month(),
+					e.posts().stream()
+						.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
+						.filter(po->po.getImages()!=null)
+						.flatMap(po->po.getImages().stream())
+						.filter(i->!images.get(i.getId()).getWikiMappings().hasMapping())
+						.count()
+				))
+				.sorted(Comparator.comparing(MonthCount::month))
+				.collect(Collectors.toList());
+			
+			for(var month : months) {
+				Page p = Page.template(
+					mode,
+					month,
+					monthCounts,
+					images,
+					CHECKED_UP_TO.get(mode)
+				);
+				
+				Files.writeString(
+					new File(pages, month.month()+"-"+mode+".html").toPath(),
+					p.render().toString()
+				);
+			}
+		return null;
+	}
+
+	private static Void createApiJsons(File pages, List<Month> allMonths, Map<String, ImageInfo> images) {
+		File apiDir = new File(pages, "api");
+		apiDir.mkdir();
+		System.out.println("Generating API JSONs");
+		
+		allMonths.stream()
+			.flatMap(m->m.posts().stream())
+			.forEach(post-> {
+				post.getImages().forEach(bImg -> {
+					try {
+						var ii = images.get(bImg.getId());
+						if(ii == null || ii.getOptimizedFile() == null)
+							return;
+						Jackson.JSON.writerWithDefaultPrettyPrinter().writeValue(
+							new File(apiDir, ii.getId()+".json"),
+							Map.of(
+								"id", ii.getId(),
+								"name", ImageReporter.imageName(ii),
+								"text", WikiText.wikitext(post, bImg),
+								"url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+ii.getOptimizedFile().toString().replace('\\','/')
+							)
+						);
+					} catch (IOException e) {
+						throw new RuntimeException(e);
+					}
+				});
+			});
+		return null;
 	}
 
 	private static List<Month> filterMonths(String mode, List<Month> allMonths) {

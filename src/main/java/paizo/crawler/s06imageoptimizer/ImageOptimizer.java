@@ -53,16 +53,20 @@ public class ImageOptimizer implements PBICallable {
 			return;
 		}
 		
-		optimize(rawFile);
+		var optResult = optimize(rawFile);
+		info.setUsesTransparency(optResult.usesTransparency);
+		FileUtils.moveFile(optResult.result, info.getOptimizedFile());
+		
 		Jackson.MAPPER.writeValue(info.getInfoFile(), info);
 	}
 
-	private void optimize(File rawFile) throws IOException {
+	public static record OptimizationResult(boolean usesTransparency, String optimizedExtension, File result) {};
+	public static OptimizationResult optimize(File rawFile) throws IOException {
 		var buffered = ImageIO.read(rawFile);
 		if(buffered == null) {
 			throw new IllegalStateException("Can't load file "+rawFile);
 		}
-		info.setUsesTransparency(ImageHelper.usesTransparency(buffered));
+		boolean usesTransparency = ImageHelper.usesTransparency(buffered);
 		
 		var cropped = Cropper.crop(buffered);
 		if(cropped == null)
@@ -79,25 +83,32 @@ public class ImageOptimizer implements PBICallable {
 			lossless?100:80,
 			6,
 			lossless,
-			!info.getUsesTransparency()
+			!usesTransparency
 		);
 		
 		var tmpWebp = Files.createTempFile("", ".webp").toFile();
 		webp.output(writer, tmpWebp);
 		
 		long webpSize = tmpWebp.length();
-		long croppedSIze = croppedOnly.length;
+		long croppedSize = croppedOnly.length;
 		
-		if(webpSize < croppedSIze) {
-			info.setOptimizedExtension("webp");
-			FileUtils.moveFile(tmpWebp, info.getOptimizedFile());
+		String optimizedExtension;
+		File result;
+		
+		if(webpSize < croppedSize) {
+			optimizedExtension = "webp";
+			result = tmpWebp;
 			rawFile.delete();
 		}
 		else {
 			tmpWebp.delete();
-			info.setOptimizedExtension(FilenameUtils.getExtension(rawFile.getName()).toLowerCase());
-			FileUtils.writeByteArrayToFile(info.getOptimizedFile(), croppedOnly);
+			optimizedExtension = FilenameUtils.getExtension(rawFile.getName()).toLowerCase();
+			var tmpF = Files.createTempFile("", "."+optimizedExtension).toFile();
+			FileUtils.writeByteArrayToFile(tmpF, croppedOnly);
 			rawFile.delete();
+			result = tmpF;
 		}
+		
+		return new OptimizationResult(usesTransparency, optimizedExtension, result);
 	}
 }

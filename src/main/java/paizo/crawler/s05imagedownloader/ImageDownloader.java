@@ -62,7 +62,7 @@ public class ImageDownloader implements PBICallable {
 		return img.getCandidatePaths().get(0);
 	}
 
-	private static final byte[] HTML_INDICATOR = "!doctype html".getBytes(StandardCharsets.UTF_8); 
+	public static final byte[] HTML_INDICATOR = "!doctype html".getBytes(StandardCharsets.UTF_8); 
 	
 	@Override
 	public void run() throws Exception {

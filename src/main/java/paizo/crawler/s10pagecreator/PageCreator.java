@@ -8,7 +8,6 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
@@ -28,13 +27,9 @@ import org.apache.hc.core5.net.URIBuilder;
 
 import com.fasterxml.jackson.databind.util.TokenBuffer;
 import com.fizzed.rocker.RenderingException;
-import com.fizzed.rocker.RockerContent;
 import com.fizzed.rocker.runtime.RockerRuntime;
-import com.google.common.util.concurrent.Futures;
 
-import lombok.SneakyThrows;
 import paizo.crawler.common.Jackson;
-import paizo.crawler.common.MyPool;
 import paizo.crawler.common.WikiText;
 import paizo.crawler.common.model.BlogPost;
 import paizo.crawler.common.model.ImageInfo;
@@ -137,6 +132,7 @@ public class PageCreator {
 		return null;
 	}
 
+	private static record APIJson(String id, String name, String text, String url) {}
 	private static Void createApiJsons(File pages, List<Month> allMonths, Map<String, ImageInfo> images) {
 		File apiDir = new File(pages, "api");
 		apiDir.mkdir();
@@ -152,11 +148,11 @@ public class PageCreator {
 							return;
 						Jackson.JSON.writerWithDefaultPrettyPrinter().writeValue(
 							new File(apiDir, ii.getId()+".json"),
-							Map.of(
-								"id", ii.getId(),
-								"name", ImageReporter.imageName(ii),
-								"text", WikiText.wikitext(post, bImg),
-								"url", "https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+ii.getOptimizedFile().toString().replace('\\','/')
+							new APIJson(
+								ii.getId(),
+								ImageReporter.imageName(ii),
+								WikiText.wikitext(post, bImg),
+								"https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+ii.getOptimizedFile().toString().replace('\\','/')
 							)
 						);
 					} catch (IOException e) {

@@ -55,6 +55,7 @@ public class ImageOptimizer implements PBICallable {
 		
 		var optResult = optimize(rawFile);
 		info.setUsesTransparency(optResult.usesTransparency);
+		info.setOptimizedExtension(optResult.optimizedExtension);
 		FileUtils.moveFile(optResult.result, info.getOptimizedFile());
 		
 		Jackson.MAPPER.writeValue(info.getInfoFile(), info);

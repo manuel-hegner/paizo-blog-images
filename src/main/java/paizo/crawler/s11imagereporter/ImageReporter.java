@@ -58,6 +58,7 @@ public class ImageReporter {
 			.forEach(p->report(jda, p, images));
 		
 		jda.shutdown();
+		jda.awaitShutdown();
 	}
 	
 	private static record Image(BlogImage blogImage, ImageInfo imageInfo, String status) {

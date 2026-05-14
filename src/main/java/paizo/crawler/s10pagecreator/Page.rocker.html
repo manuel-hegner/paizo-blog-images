@@ -6,7 +6,7 @@
 @import paizo.crawler.common.model.BlogImage
 @import paizo.crawler.common.model.ImageInfo
 @import paizo.crawler.s05imagedownloader.ImageDownloader
-@import java.time.LocalDate
+@import java.time.Instant
 @import java.util.Map
 @import org.apache.commons.io.FilenameUtils
 @import paizo.crawler.s11imagereporter.ImageReporter
@@ -16,7 +16,7 @@
 	Month month,
 	List<MonthCount> monthCounts,
 	Map<String, ImageInfo> images,
-	LocalDate checkedUpTo
+	Instant checkedUpTo
 )
 
 <!DOCTYPE html>
@@ -132,7 +132,7 @@
 	@for(BlogPost post : month.posts()) {
 	<div>
 		<h3>
-			@post.getDate().getYear()-@post.getDate().getMonthValue()-@post.getDate().getDayOfMonth()
+			@post.getDatePacific().getYear()-@post.getDatePacific().getMonthValue()-@post.getDatePacific().getDayOfMonth()
 			- 
 			<a href="@post.getUrl()">
 			@post.getTitle()
@@ -182,7 +182,7 @@
 										}
 									}
 								} else {
-									@if(post.getDate().toLocalDate().isBefore(checkedUpTo)) {
+									@if(post.getDate().isBefore(checkedUpTo)) {
 										Manually checked
 									} else {
 										Maybe not yet uploaded

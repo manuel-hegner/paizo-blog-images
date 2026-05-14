@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -37,10 +40,10 @@ import paizo.crawler.s11imagereporter.ImageReporter;
 
 public class PageCreator {
 	
-	private static final Map<String, LocalDate> CHECKED_UP_TO = Map.of(
-		"pf", LocalDate.of(2024, 9, 23),
-		"sf", LocalDate.of(2021, 10, 30),
-		"all", LocalDate.of(2021,10, 30)
+	private static final Map<String, Instant> CHECKED_UP_TO = Map.of(
+		"pf", LocalDate.of(2024, 9, 23).atStartOfDay().toInstant(ZoneOffset.UTC),
+		"sf", LocalDate.of(2021, 10, 30).atStartOfDay().toInstant(ZoneOffset.UTC),
+		"all", LocalDate.of(2021,10, 30).atStartOfDay().toInstant(ZoneOffset.UTC)
 	);
 
 	public static void main(String... args) throws IOException {
@@ -69,7 +72,7 @@ public class PageCreator {
 				}
 			})
 			.sorted(Comparator.comparing(BlogPost::getDate).reversed().thenComparing(BlogPost::getId))
-			.collect(Collectors.groupingBy(BlogPost::printedDate))
+			.collect(Collectors.groupingBy(bp->printedDate(bp)))
 			.entrySet()
 			.stream()
 			.sorted(Comparator.comparing(Entry::getKey))
@@ -89,13 +92,21 @@ public class PageCreator {
 			try {
 				f.get();
 			} catch (InterruptedException | ExecutionException e) {
-				throw new RuntimeException();
+				throw new RuntimeException(e);
 			}
 		});
 		pool.shutdown();
 		
 		File last = new File(pages, allMonths.get(allMonths.size()-1).month()+"-all.html");
 		FileUtils.copyFile(last, new File(pages, "index.html"));
+	}
+	
+	private final static DateTimeFormatter DIR_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
+	private static String printedDate(BlogPost bp) {
+		if(bp.getDatePacific() == null)
+			return "unknown-date";
+		else
+			return DIR_FORMAT.format(bp.getDatePacific());
 	}
 
 	private static Void createHTMLPages(File pages, List<Month> allMonths, Map<String, ImageInfo> images, String mode) throws RenderingException, IOException {
@@ -106,7 +117,7 @@ public class PageCreator {
 				.map(e->new MonthCount(
 					e.month(),
 					e.posts().stream()
-						.filter(po->po.getDate() == null || po.getDate().toLocalDate().isAfter(CHECKED_UP_TO.get(mode)))
+						.filter(po->po.getDate() == null || po.getDate().isAfter(CHECKED_UP_TO.get(mode)))
 						.filter(po->po.getImages()!=null)
 						.flatMap(po->po.getImages().stream())
 						.filter(i->!images.get(i.getId()).getWikiMappings().hasMapping())
@@ -210,7 +221,7 @@ public class PageCreator {
 				.setPath("wiki/Special:FormEdit/Web_citation/Facts:Paizo_blog/"+post.getId())
 				.addParameter("Facts/Web citation[Name]", post.getTitle())
 				.addParameter("Facts/Web citation[Author]", Optional.ofNullable(post.getAuthor()).orElse(""))
-				.addParameter("Facts/Web citation[Release date]", post.getDate()==null?"":DATE_FORMAT.format(post.getDate().toLocalDate()))
+				.addParameter("Facts/Web citation[Release date]", post.getDate()==null?"":DATE_FORMAT.format(post.getDatePacific()))
 				.addParameter("Facts/Web citation[Website name]", "Paizo blog")
 				.addParameter("Facts/Web citation[Website]", "https://paizo.com/community/blog/"+post.getId());
 		try {

@@ -124,7 +124,7 @@ public class ImageReporter {
 				var sb = new StringBuilder();
 				
 				sb
-					.append("**"+post.getDate().toLocalDate()+" post: ")
+					.append("**"+post.getDatePacific().toLocalDate()+" post: ")
 					.append("["+post.getTitle()+"]")
 					.append("("+post.getUrl()+")")
 					.append("**\n")
@@ -135,12 +135,14 @@ public class ImageReporter {
 					.append("The given Wikitext is a best effor basis, but could also contain mistakes.\n")
 					.append("If you check/upload them, please react with a checkmark to inform your peers. ");
 				
+
 				var channel = jda.getTextChannelById(CHANNEL_BLOG_WATCH);
 				channel
 					.sendMessage(sb.toString())
 					.submit()
 					.join();
-				
+
+
 				int i=1;
 				for(var p:toReport) {
 					channel

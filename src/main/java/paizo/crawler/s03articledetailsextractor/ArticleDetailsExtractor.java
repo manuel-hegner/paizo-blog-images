@@ -44,7 +44,6 @@ public class ArticleDetailsExtractor implements PBICallable {
 		BlogPost post = Jackson.BLOG_READER.readValue(file);
 
 		removeInvisible(post);
-		moveTimeZone(post);
 		post.setTitle(findTitle(post));
 		post.setTags(findTags(post));
 		post.setImages(findImages(post));
@@ -64,13 +63,6 @@ public class ArticleDetailsExtractor implements PBICallable {
             .getElementsByAttributeValueMatching("style", "display *: *none")
             .remove();
     }
-
-    private static final ZoneId ZONE = ZoneId.of("US/Pacific");
-	public static void moveTimeZone(BlogPost post) {
-		if(post.getDate()==null)
-			return;
-		post.setDate(post.getDate().withZoneSameInstant(ZONE));
-	}
 
 	private String findAuthors(BlogPost post) {
 		var byline = post.getHtml().getElementsByClass("byline").first();

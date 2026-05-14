@@ -100,7 +100,7 @@ public class BlogCollector implements Callable<Void> {
 			BlogPost blogPost = new BlogPost();
 			blogPost.setId(id);
 			blogPost.setUrl(url);
-			blogPost.setDate(date);
+			blogPost.setDate(date.toInstant());
 			
 			File target = blogPost.postFile();
 			

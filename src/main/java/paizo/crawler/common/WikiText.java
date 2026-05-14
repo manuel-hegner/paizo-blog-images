@@ -14,7 +14,7 @@ public class WikiText {
 		return "== Summary ==\n"
 				+ "\n"
 				+ "{{File\n"
-				+ "| year     = "+(post.getDate()==null?"":post.getDate().getYear())+"\n"
+				+ "| year     = "+(post.getDate()==null?"":post.getDatePacific().getYear())+"\n"
 				+ "| copy     = Paizo Inc.\n"
 				+ "| artist   = "+Objects.requireNonNullElse(img.getArtist(),"")+"\n"
 				+ "| print    = \n"

@@ -42,8 +42,8 @@ public class PageCreator {
 	
 	private static final Map<String, Instant> CHECKED_UP_TO = Map.of(
 		"pf", LocalDate.of(2024, 9, 23).atStartOfDay().toInstant(ZoneOffset.UTC),
-		"sf", LocalDate.of(2021, 10, 30).atStartOfDay().toInstant(ZoneOffset.UTC),
-		"all", LocalDate.of(2021,10, 30).atStartOfDay().toInstant(ZoneOffset.UTC)
+		"sf", LocalDate.of(2023, 04, 30).atStartOfDay().toInstant(ZoneOffset.UTC),
+		"all", LocalDate.of(2023,04, 30).atStartOfDay().toInstant(ZoneOffset.UTC)
 	);
 
 	public static void main(String... args) throws IOException {

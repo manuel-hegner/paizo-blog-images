@@ -39,8 +39,8 @@ public class WikiHasher implements Callable<Void> {
 	public static void main(String... args) throws Exception {
 		var antiProtectionSecret = args[0];
 	    hash(false,
-	        new Target("pf", antiProtectionSecret, "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000"),
-	        new Target("sf", antiProtectionSecret, "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=5000")
+	        new Target("pf", antiProtectionSecret, "https://pathfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=500"),
+	        new Target("sf", antiProtectionSecret, "https://starfinderwiki.com/w/api.php?action=query&format=json&list=allimages&utf8=1&formatversion=2&aisort=timestamp&aidir=older&aiprop=url&ailimit=500")
 	    );
 	}
 	
@@ -89,7 +89,7 @@ public class WikiHasher implements Callable<Void> {
 			pool.submit(t);
 		});
 		pool.shutdown();
-		known.sort(Comparator.comparing(WikiImage::getName));
+		known.sort(Comparator.comparing(WikiImage::getName).thenComparing(WikiImage::getWiki));
 		Jackson.MAPPER.writeValue(file, known);
 	}
 
@@ -103,6 +103,10 @@ public class WikiHasher implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
+		if(name.equals("Novian.webp")) {
+			int i=0;
+		}
+		
 		if(!replace && knownUrls.contains(url)) {
 				return null;
 		}
@@ -135,7 +139,7 @@ public class WikiHasher implements Callable<Void> {
 		hi.setPixels((long)img.getWidth()*img.getHeight());
 		synchronized (known) {
 			if(replace) {
-				known.removeIf(i->i.getName().equals(name));
+				known.removeIf(i->i.getName().equals(name) && i.getWiki().equals(wiki));
 			}
 			known.add(hi);
 			knownUrls.add(hi.getUrl());

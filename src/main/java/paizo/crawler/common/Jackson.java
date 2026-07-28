@@ -1,5 +1,5 @@
 package paizo.crawler.common;
-import java.io.IOException;
+
 import java.math.BigInteger;
 
 import org.jsoup.Jsoup;
@@ -10,67 +10,48 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.deser.std.FromStringDeserializer;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 
 import dev.brachtendorf.jimagehash.hash.Hash;
 import paizo.crawler.common.model.BlogPost;
+import tools.jackson.databind.DeserializationContext;
+import tools.jackson.databind.MapperFeature;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectReader;
+import tools.jackson.databind.ObjectWriter;
+import tools.jackson.databind.cfg.DateTimeFeature;
+import tools.jackson.databind.cfg.MapperBuilder;
+import tools.jackson.databind.deser.std.FromStringDeserializer;
+import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.module.SimpleModule;
+import tools.jackson.dataformat.yaml.YAMLMapper;
+import tools.jackson.dataformat.yaml.YAMLWriteFeature;
 
 public class Jackson {
 
-	public static final ObjectMapper MAPPER = create(new YAMLFactory()
-			.enable(YAMLGenerator.Feature.MINIMIZE_QUOTES)
-			.disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER)
-			.enable(YAMLGenerator.Feature.LITERAL_BLOCK_STYLE));
-	public static final ObjectMapper JSON = create(new JsonFactory());
+	public static final YAMLMapper MAPPER = create(YAMLMapper.builder()
+			.enable(YAMLWriteFeature.MINIMIZE_QUOTES)
+			.disable(YAMLWriteFeature.WRITE_DOC_START_MARKER)
+			.enable(YAMLWriteFeature.LITERAL_BLOCK_STYLE));
+	public static final JsonMapper JSON = create(JsonMapper.builder());
 	public static final ObjectReader BLOG_READER = MAPPER.readerFor(BlogPost.class);
 	public static final ObjectWriter BLOG_WRITER = MAPPER.writerFor(BlogPost.class);
 
-	private static ObjectMapper create(JsonFactory factory) {
-		return new ObjectMapper(factory)
+	private static <R extends ObjectMapper, T extends MapperBuilder<R,?>> R create(T mapper) {
+		return mapper
 			.addMixIn(Element.class, ElementMixIn.class)
 			.addMixIn(Hash.class, HashMixIn.class)
-			.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-			.setSerializationInclusion(Include.NON_NULL)
-			.findAndRegisterModules()
-			.registerModule(new ParameterNamesModule())
-			.registerModule(new JavaTimeModule())
-			.registerModule(new SimpleModule()
+			.disable(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY)
+			.disable(DateTimeFeature.WRITE_DATES_AS_TIMESTAMPS)
+			.changeDefaultPropertyInclusion(incl -> incl.withValueInclusion(Include.NON_NULL))
+			.changeDefaultPropertyInclusion(incl -> incl.withContentInclusion(Include.NON_NULL))
+			.addModule(new SimpleModule()
 				.addDeserializer(Document.class, new FromStringDeserializer<>(Document.class) {
-					protected Document _deserialize(String html, DeserializationContext ctxt) throws IOException {
+					protected Document _deserialize(String html, DeserializationContext ctxt) {
 						return Jsoup.parse(html, "https://paizo.com");
 					}
 				})
-				/*.addDeserializer(Hash.class, new FromStringDeserializer<>(Hash.class) {
-					protected Hash _deserialize(String raw, DeserializationContext ctxt) throws IOException {
-						try(var in = new ObjectInputStream(new ByteArrayInputStream(Base64.getDecoder().decode(raw)))) {
-							try {
-								return (Hash) in.readObject();
-							} catch (ClassNotFoundException | IOException e) {
-								throw new RuntimeException(e);
-							}
-						}
-					}
-				})
-				.addSerializer(Hash.class, new StdScalarSerializer<Hash>(Hash.class) {
-					public void serialize(Hash hash, JsonGenerator gen, SerializerProvider provider) throws IOException {
-						var baos = new ByteArrayOutputStream();
-						try(var out = new DataOutputStream(baos)) {
-							hash.getBig
-						}
-						gen.writeString(Base64.getEncoder().encodeToString(baos.toByteArray()));
-					}
-				})*/);
+			)
+			.build();
 	}
 	
 	public static interface ElementMixIn {

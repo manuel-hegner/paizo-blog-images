@@ -15,7 +15,7 @@ public class Workflow {
 	public static void main(String[] args) throws Exception {
 		String discordToken = args[0];
 		String antiProtectionSecret = args[1];
-		
+
 		BlogCollector.start(1);
 		ArticleDetailsExtractor.main();
 		DuplicateImageRemover.main();

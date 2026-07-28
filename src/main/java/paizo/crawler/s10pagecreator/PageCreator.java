@@ -28,7 +28,7 @@ import java.util.stream.Stream;
 import org.apache.commons.io.FileUtils;
 import org.apache.hc.core5.net.URIBuilder;
 
-import com.fasterxml.jackson.databind.util.TokenBuffer;
+import tools.jackson.databind.util.TokenBuffer;
 import com.fizzed.rocker.RenderingException;
 import com.fizzed.rocker.runtime.RockerRuntime;
 
@@ -54,23 +54,11 @@ public class PageCreator {
 		var images = Files.walk(Path.of("data/images/"))
 			.map(Path::toFile)
 			.filter(f->"info.yaml".equals(f.getName()))
-			.map(f->{
-				try {
-					return Jackson.MAPPER.readValue(f, ImageInfo.class);
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-				}
-			})
+			.map(f->Jackson.MAPPER.readValue(f, ImageInfo.class))
 			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 		var monthList = BlogPost.allDetailsFiles().stream()
-			.map(f->{
-				try {
-					return Jackson.BLOG_READER.<BlogPost>readValue(f);
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-				}
-			})
+			.map(f->Jackson.BLOG_READER.<BlogPost>readValue(f))
 			.sorted(Comparator.comparing(BlogPost::getDate).reversed().thenComparing(BlogPost::getId))
 			.collect(Collectors.groupingBy(bp->printedDate(bp)))
 			.entrySet()
@@ -153,22 +141,18 @@ public class PageCreator {
 			.flatMap(m->m.posts().stream())
 			.forEach(post-> {
 				post.getImages().forEach(bImg -> {
-					try {
-						var ii = images.get(bImg.getId());
-						if(ii == null || ii.getOptimizedFile() == null)
-							return;
-						Jackson.JSON.writerWithDefaultPrettyPrinter().writeValue(
-							new File(apiDir, ii.getId()+".json"),
-							new APIJson(
-								ii.getId(),
-								ImageReporter.imageName(ii),
-								WikiText.wikitext(post, bImg),
-								"https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+ii.getOptimizedFile().toString().replace('\\','/')
-							)
-						);
-					} catch (IOException e) {
-						throw new RuntimeException(e);
-					}
+					var ii = images.get(bImg.getId());
+					if(ii == null || ii.getOptimizedFile() == null)
+						return;
+					Jackson.JSON.writerWithDefaultPrettyPrinter().writeValue(
+						new File(apiDir, ii.getId()+".json"),
+						new APIJson(
+							ii.getId(),
+							ImageReporter.imageName(ii),
+							WikiText.wikitext(post, bImg),
+							"https://raw.githubusercontent.com/manuel-hegner/paizo-blog-images/main/"+ii.getOptimizedFile().toString().replace('\\','/')
+						)
+					);
 				});
 			});
 		return null;
@@ -196,7 +180,7 @@ public class PageCreator {
 
 	private static Stream<BlogPost> filterPost(String mode, BlogPost p) {
 		try {
-			TokenBuffer tb = new TokenBuffer(Jackson.MAPPER.getFactory().getCodec(), false);
+			TokenBuffer tb = new TokenBuffer(Jackson.MAPPER._serializationContext(), false);
 			Jackson.MAPPER.writeValue(tb, p);
 			var copy = Jackson.MAPPER.readValue(tb.asParser(), BlogPost.class);
 			

@@ -32,13 +32,7 @@ public class ImageReporter {
 		var images = Files.walk(Path.of("data/images/"))
 			.map(Path::toFile)
 			.filter(f->"info.yaml".equals(f.getName()))
-			.map(f->{
-				try {
-					return Jackson.MAPPER.readValue(f, ImageInfo.class);
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-				}
-			})
+			.map(f->Jackson.MAPPER.readValue(f, ImageInfo.class))
 			.collect(Collectors.toMap(ImageInfo::getId, Function.identity()));
 		
 		var jda = JDABuilder.createDefault(args[0])
@@ -46,13 +40,7 @@ public class ImageReporter {
 				.awaitReady();
 		
 		BlogPost.allDetailsFiles().stream()
-			.map(f->{
-				try {
-					return Jackson.BLOG_READER.<BlogPost>readValue(f);
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-				}
-			})
+			.map(f->Jackson.BLOG_READER.<BlogPost>readValue(f))
 			.filter(p->!Boolean.TRUE.equals(p.getReported()))
 			.sorted(Comparator.comparing(BlogPost::getDate))
 			.forEach(p->report(jda, p, images));

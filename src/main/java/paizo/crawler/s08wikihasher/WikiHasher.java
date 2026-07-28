@@ -15,10 +15,10 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.node.ObjectNode;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.Uninterruptibles;
@@ -68,7 +68,7 @@ public class WikiHasher implements Callable<Void> {
 		        ObjectNode result = (ObjectNode) new ObjectMapper().readTree(resp.body());
 
     		    aicontinue = result.path("continue").path("aicontinue").asText();
-    		    ((ArrayNode)(result.get("query").get("allimages"))).elements().forEachRemaining(all::add);
+    		    ((ArrayNode)(result.get("query").get("allimages"))).elements().forEach(all::add);
 		    } while(!aicontinue.isEmpty());
 
 		    for(var n:all) {

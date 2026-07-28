@@ -14,7 +14,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jsoup.Jsoup;
 
-import com.fasterxml.jackson.databind.DatabindException;
+import tools.jackson.databind.DatabindException;
 import com.google.common.collect.Lists;
 import com.google.common.hash.Hashing;
 import com.google.common.primitives.Bytes;
